@@ -1248,7 +1248,6 @@
         <div class="panel">
           <div class="panel-heading">
             <h3 class="panel-title">分類檢索設定
-              <span class="panel-desc">* 請填入分類檢索代碼</span>
             </h3>
           </div>
           <div class="panel-body">
@@ -1362,37 +1361,52 @@
                                 <span class="input-group-addon">
                                   <i class="icon wb-calendar" aria-hidden="true"></i>
                                 </span>
-                                <input type="text" name="postdate" class="form-control" placeholder="YYYY/MM/DD" required="">
+                                <input type="text" name="postdate" class="form-control" placeholder="YYYY/MM/DD" data-fv-notempty="true" data-fv-notempty-message="請輸入發布日期，格式範例：2018/10/05"
+                                  required="">
                               </div>
                             </div>
                           </div>
 
-<div class="form-group row">
-  <label class="col-xl-12 col-md-3 form-control-label">公告期限
-    <span class="required">*</span>
-  </label>
-  <div class="col-xl-12 col-md-9">
-    <div class="input-group">
-      <span class="input-group-addon">
-        <i class="icon wb-calendar" aria-hidden="true"></i>
-      </span>
-      <input type="text" class="form-control" name="enddate" placeholder="YYYY-MM-DD">
-    </div>
-  </div>
-</div>
-                            <div class="form-group row">
-                                <label class="col-xl-12 col-md-3 form-control-label">Password
-                                    <span class="required">*</span>
-                                </label>
-                                <div class="col-xl-12 col-md-9">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <i class="icon wb-lock" aria-hidden="true"></i>
-                                        </span>
-                                        <input type="password" class="form-control" name="password" placeholder="Min length 8" required="">
-                                    </div>
-                                </div>
+                          <div class="form-group row">
+                            <label class="col-xl-12 col-md-3 form-control-label">公告期限
+                              <br> ※ 如果文章沒有下架期限問題的話，本欄請空白
+                            </label>
+                            <div class="col-xl-12 col-md-9">
+                              <div class="input-group">
+                                <span class="input-group-addon">
+                                  <i class="icon wb-calendar" aria-hidden="true"></i>
+                                </span>
+                                <input type="text" class="form-control" name="enddate" placeholder="YYYY/MM/DD">
+                              </div>
                             </div>
+                          </div>
+
+                          <div class="form-group row">
+                            <label class="col-xl-12 col-md-3 form-control-label">檔案上傳
+                              <br>※ 如果有上傳檔案，檔案說明必填
+                            </label>
+                            <div class="col-xl-12 col-md-9">
+                              <div class="input-group input-group-file" data-plugin="inputGroupFile">
+                                <input type="text" class="form-control" readonly="">
+                                <span class="input-group-btn">
+                                  <span class="btn btn-success btn-file">
+                                    <i class="icon wb-upload" aria-hidden="true"></i>
+                                    <input type="file" name="" multiple="">
+                                  </span>
+                                </span>
+                              </div>
+                            </div>
+                            <div class=" col-xl-12 col-md-9" style="padding-top:5px;">
+                              <input type="text" class="form-control" name="file1_memo" placeholder="請輸入檔案說明">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <div class="col-xl-12 col-md-9">
+                              <span class="input-group-btn" style="float: right;">
+                                <button class="btn btn-outline btn-primary btn-sm" type="button">+ 新增一組檔案上傳</button>
+                              </span>                          
+                            </div>
+                          </div>
 
                             <div class="form-group row">
                                 <label class="col-xl-12 col-md-3 form-control-label">Birthday
@@ -1798,8 +1812,9 @@
     <script src="global/js/Plugin/jt-timepicker.js"></script>
     <script src="global/js/Plugin/datepair.js"></script>
     <script src="global/js/Plugin/jquery-strength.js"></script>
-    <script src="global/js/Plugin/multi-select.js"></script>
-    <script src="global/js/Plugin/jquery-placeholder.js"></script> -->
+    <script src="global/js/Plugin/multi-select.js"></script> -->
+    <script src="global/js/Plugin/jquery-placeholder.js"></script>
+    <script src="global/js/Plugin/input-group-file.js"></script>
     
     <script src="base/assets/examples/js/forms/advanced.js"></script>
     
