@@ -102,6 +102,27 @@
             }
           }
         },
+        office: {
+          validators: {
+            notEmpty: {
+              message: '請選擇訊息聯絡單位'
+            }
+          }
+        },
+        owner: {
+          validators: {
+            notEmpty: {
+              message: '請輸入聯絡人姓名'
+            }
+          }
+        },
+        ownerPhone: {
+          validators: {
+            notEmpty: {
+              message: '請輸入聯絡人電話'
+            }
+          }
+        },
         subject: {
           validators: {
             notEmpty: {

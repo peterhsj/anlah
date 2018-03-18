@@ -55,9 +55,30 @@
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
 
     <style>
+      html, body {
+        font-family: 'gotham_lightregular', "微軟正黑體" !important;
+      }
       .h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6 {
         color: #333;
-        font-family: 'gotham_lightregular', "微軟正黑體" !important;
+        font-family: 'gotham_lightregular', "微軟正黑體";
+      }
+      .navbar-brand-text,
+      .scrollable-container {
+        font-family: 'gotham_lightregular', "微軟正黑體";
+      }
+      .site-menubar-unfold .site-menu-category {
+        font-size: 16px;
+      }
+      .site-menubar-unfold .site-menu>.site-menu-item>a .site-menu-title {
+        font-size: 15px;
+      }
+      .form-horizontal .form-control-label, label {
+        font-family: 'gotham_lightregular', "微軟正黑體";
+        font-size: 1.105rem;
+        font-weight: 700;
+      }
+      .btn {
+        font-weight: 700;
       }
     </style>
     
@@ -1309,409 +1330,174 @@
         </div>
         <!-- /分類檢索設定 -->
 
-
-
-<!-- 內文編輯區 -->
-        <div class="panel">
-            <div class="panel-heading">
-                <h3 class="panel-title">內文編輯區
-                <span class="panel-desc">訊息及公告發布編輯區塊</span>
-                </h3>
-            </div>
-            <div class="panel-body">
-                    <div class="row row-lg">
-                        <div class="col-xl-5 form-horizontal">
-                          <div class="form-group row">
-                            <label class="col-xl-12 col-md-3 form-control-label" for="author">新聞類別<span class="required"></span>
-                              *</span></label>
-                            <div class="col-xl-12 col-md-9">
-                              <select class="show-tick" data-plugin="selectpicker" id="author" name="author" required="">
-                                <option value="">請選擇訊息類別</option>
-                                <option>地價</option>
-                                <option>測量</option>
-                                <option>登記</option>
-                                <option>黨管</option>
-                                <option>政風</option>
-                                <option>會計</option>
-                                <option>政風</option>
-                                <option>人事</option>
-                                <option>研考</option>
-                                <option>總務</option>
-                                <option>資訊</option>
-                                <option>其他</option>
-                              </select>
-                            </div>
-                          </div>
-
-                          <div class="form-group row">
-                              <label class="col-xl-12 col-md-3 form-control-label">主標題
-                                  <span class="required">*</span>
-                              </label>
-                              <div class=" col-xl-12 col-md-9">
-                                  <input type="text" class="form-control" name="subject" placeholder="請輸入主標題" required="">
-                              </div>
-                          </div>
-
-                          <div class="form-group row">
-                            <label class="col-xl-12 col-md-3 form-control-label">發布日期
-                              <span class="required">*</span>
-                            </label>
-                            <div class="col-xl-12 col-md-9">
-                              <div class="input-group">
-                                <span class="input-group-addon">
-                                  <i class="icon wb-calendar" aria-hidden="true"></i>
-                                </span>
-                                <input type="text" name="postdate" class="form-control" placeholder="YYYY/MM/DD" data-fv-notempty="true" data-fv-notempty-message="請輸入發布日期，格式範例：2018/10/05"
-                                  required="">
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="form-group row">
-                            <label class="col-xl-12 col-md-3 form-control-label">公告期限
-                              <br> ※ 如果文章沒有下架期限問題的話，本欄請空白
-                            </label>
-                            <div class="col-xl-12 col-md-9">
-                              <div class="input-group">
-                                <span class="input-group-addon">
-                                  <i class="icon wb-calendar" aria-hidden="true"></i>
-                                </span>
-                                <input type="text" class="form-control" name="enddate" placeholder="YYYY/MM/DD">
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="form-group row">
-                            <label class="col-xl-12 col-md-3 form-control-label">檔案上傳
-                              <br>※ 如果有上傳檔案，檔案說明必填
-                            </label>
-                            <div class="col-xl-12 col-md-9">
-                              <div class="input-group input-group-file" data-plugin="inputGroupFile">
-                                <input type="text" class="form-control" readonly="">
-                                <span class="input-group-btn">
-                                  <span class="btn btn-success btn-file">
-                                    <i class="icon wb-upload" aria-hidden="true"></i>
-                                    <input type="file" name="" multiple="">
-                                  </span>
-                                </span>
-                              </div>
-                            </div>
-                            <div class=" col-xl-12 col-md-9" style="padding-top:5px;">
-                              <input type="text" class="form-control" name="file1_memo" placeholder="請輸入檔案說明">
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <div class="col-xl-12 col-md-9">
-                              <span class="input-group-btn" style="float: right;">
-                                <button class="btn btn-outline btn-primary btn-sm" type="button">+ 新增一組檔案上傳</button>
-                              </span>                          
-                            </div>
-                          </div>
-
-                            <div class="form-group row">
-                                <label class="col-xl-12 col-md-3 form-control-label">Birthday
-                                    <span class="required">*</span>
-                                </label>
-                                <div class="col-xl-12 col-md-9">
-                                    <input type="text" class="form-control" name="birthday" placeholder="YYYY/MM/DD" required="" />
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label class="col-xl-12 col-md-3 form-control-label">GitHub</label>
-                                <div class="col-xl-12 col-md-9">
-                                    <input type="url" class="form-control" name="github" placeholder="https://github.com/amazingSurge">
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label class="col-xl-12 col-md-3 form-control-label">Company</label>
-                                <div class="col-xl-12 col-md-9">
-                                    <select class="form-control" id="company" name="company" required="">
-                                        <option value="">Choose a Company</option>
-                                        <option value="apple">Apple</option>
-                                        <option value="google">Google</option>
-                                        <option value="microsoft">Microsoft</option>
-                                        <option value="yahoo">Yahoo</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-7 form-horizontal">
-                            <div class="form-group row">
-                                <label class="col-xl-12 col-md-3 form-control-label">Remark Admin is
-                                    <span class="required">*</span>
-                                </label>
-                                <div class="col-xl-12 col-md-9">
-                                    <div class="d-flex flex-column">
-                                        <div class="radio-custom radio-primary">
-                                            <input type="radio" id="inputAwesome" name="porto_is" value="awesome" required="">
-                                            <label for="inputAwesome">Awesome</label>
-                                        </div>
-
-                                        <div class="radio-custom radio-primary">
-                                            <input type="radio" id="inputVeryAwesome" name="porto_is" value="very-awesome">
-                                            <label for="inputVeryAwesome">Very Awesome</label>
-                                        </div>
-
-                                        <div class="radio-custom radio-primary">
-                                            <input type="radio" id="inputUltraAwesome" name="porto_is" value="ultra-awesome">
-                                            <label for="inputUltraAwesome">Ultra Awesome</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label class="col-xl-12 col-md-3 form-control-label">I will use it for
-                                    <span class="required">*</span>
-                                </label>
-                                <div class="col-xl-12 col-md-9">
-                                    <div class="d-flex flex-column">
-                                        <div class="checkbox-custom checkbox-primary">
-                                            <input type="checkbox" id="inputForProject" name="for[]" value="project" required="">
-                                            <label for="inputForProject">My Project</label>
-                                        </div>
-
-                                        <div class="checkbox-custom checkbox-primary">
-                                            <input type="checkbox" id="inputForWebsite" name="for[]" value="website">
-                                            <label for="inputForWebsite">My Website</label>
-                                        </div>
-
-                                        <div class="checkbox-custom checkbox-primary">
-                                            <input type="checkbox" id="inputForAll" name="for[]" value="all">
-                                            <label for="inputForAll">All things I do</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label class="col-xl-12 col-md-3 form-control-label">Skills
-                                    <span class="required">*</span>
-                                </label>
-                                <div class="col-xl-12 col-md-9">
-                                    <textarea class="form-control" name="skills" rows="3" placeholder="Describe your skills" required=""></textarea>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-xl-12 col-md-3 form-control-label">Browsers</label>
-                                <div class="col-xl-12 col-md-9">
-                                    <select class="form-control" id="browsers" name="browsers" title="Please select at least one browser" size="5" multiple="multiple"
-                                        required="">
-                                        <option value="chrome">Chrome / Safari</option>
-                                        <option value="ff">Firefox</option>
-                                        <option value="ie">Internet Explorer</option>
-                                        <option value="opera">Opera</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group col-xl-12 text-right padding-top-m">
-                            <button type="submit" class="btn btn-primary" id="validateButton1">Submit</button>
-                        </div>
-                    </div>
-            </div>
-        </div>
-<!-- /內文編輯區 -->
-      </form>
-
-        <!-- Panel Constraints -->
+        <!-- 內文編輯區 -->
         <div class="panel">
           <div class="panel-heading">
-            <h3 class="panel-title">Constraints</h3>
+            <h3 class="panel-title">內文編輯區
+              <span class="panel-desc">訊息及公告發布編輯區塊</span>
+            </h3>
           </div>
           <div class="panel-body">
             <div class="row row-lg">
-              <div class="col-lg-6">
-                <!-- Example Basic Constraints -->
-                <div class="example-wrap m-md-0">
-                  <h4 class="example-title">Basic Constraints</h4>
-                  <div class="example">
-                    <form class="form-horizontal" id="exampleConstraintsForm" autocomplete="off">
-                      <div class="form-group row">
-                        <label class="col-md-3 form-control-label">Required</label>
-                        <div class="col-md-9">
-                          <input type="text" class="form-control" name="requiredInput" data-fv-notempty="true"
-                            data-fv-notempty-message="This is required">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <div class="offset-md-3 col-md-9">
-                          <select class="form-control" name="requiredSelect" data-fv-notempty="true">
-                            <option value="">Please choose</option>
-                            <option value="foo">Foo</option>
-                            <option value="bar">Bar</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <div class="offset-md-3 col-md-9">
-                          <div class="input-group">
-                            <div class="checkbox-custom checkbox-primary">
-                              <input type="checkbox" id="requiredCheckbox" name="requiredCheckbox" data-fv-notempty="true"
-                                data-fv-notempty-message="This is required">
-                              <label for="requiredCheckbox">Agree to the policy</label>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label class="col-md-3 form-control-label">Min Length</label>
-                        <div class="col-md-9">
-                          <input type="text" class="form-control" name="vMinLength" data-fv-stringlength="true"
-                            data-fv-stringlength-min="8" data-fv-notempty-message="This is required"
-                            data-fv-stringlength-message="please enter more than 8 length"
-                            placeholder="minlength = 8" />
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label class="col-md-3 form-control-label">Max Length</label>
-                        <div class="col-md-9">
-                          <input type="text" class="form-control" name="vMaxLength" data-fv-stringlength="true"
-                            data-fv-stringlength-max="3" data-fv-stringlength-message="please enter less than 3 length"
-                            placeholder="maxlength = 3" />
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label class="col-md-3 form-control-label">Range Length</label>
-                        <div class="col-md-9">
-                          <input type="text" class="form-control" name="vBetweenLength" data-fv-stringlength="true"
-                            data-fv-stringlength-max="10" data-fv-stringlength-min="5"
-                            data-fv-stringlength-message="please enter between 5 to 10 length"
-                            placeholder="data-rangelength = [5,10]">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label class="col-md-3 form-control-label">Min</label>
-                        <div class="col-md-9">
-                          <input type="text" class="form-control" name="vMin" data-fv-greaterthan="true"
-                            data-fv-greaterthan-value="6" data-fv-greaterthan-message="please enter more than 6"
-                            placeholder="min = 6">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label class="col-md-3 form-control-label">Max</label>
-                        <div class="col-md-9">
-                          <input type="text" class="form-control" name="vMax" data-fv-lessthan="true" data-fv-lessthan-value="50"
-                            data-fv-greaterthan-message="please enter less than 50"
-                            placeholder="max = 50">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label class="col-md-3 form-control-label">Range</label>
-                        <div class="col-md-9">
-                          <input type="text" class="form-control" name="vRange" data-fv-between="true" data-fv-between-min="6"
-                            data-fv-between-max="50" data-fv-between-message="please enter between[6,50]"
-                            placeholder="range = [6, 50]">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label class="col-md-3 form-control-label">RegExp</label>
-                        <div class="col-md-9">
-                          <input type="text" class="form-control" name="vRegExp" data-fv-regexp="true" data-fv-regexp-regexp="#[A-Fa-f0-9]{6}"
-                            data-fv-regexp-message="please enter hexa color code"
-                            placeholder="hexa color code">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label class="col-md-3 form-control-label">Equal To (confirm)</label>
-                        <div class="col-md-9">
-                          <div class="row">
-                            <div class="col-md-6">
-                              <input type="text" class="form-control" name="foo_one" data-fv-notempty="true"
-                                data-fv-notempty-message="The content is required and cannot be empty"
-                                data-fv-identical="true" data-fv-identical-field="foo_two"
-                                data-fv-identical-message="The content and its confirm are not the same"
-                              />
-                            </div>
-                            <div class="col-md-6">
-                              <input type="text" class="form-control" name="foo_two" data-fv-notempty="true"
-                                data-fv-notempty-message="The confirm content is required and cannot be empty"
-                                data-fv-identical="true" data-fv-identical-field="foo_one"
-                                data-fv-identical-message="The content and its confirm are not the same"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </form>
+              <div class="col-xl-5 form-horizontal">                
+
+                <div class="form-group row">
+                  <div class="col-xl-6 col-md-9">
+                    <label class="form-control-label row" for="author">新聞類別
+                      <span class="required">*</span>
+                    </label>
+                    <select class="show-tick" data-plugin="selectpicker" id="author" name="author" required="">
+                      <option value="">請選擇訊息類別</option>
+                      <option>地價</option>
+                      <option>測量</option>
+                      <option>登記</option>
+                      <option>黨管</option>
+                      <option>政風</option>
+                      <option>會計</option>
+                      <option>政風</option>
+                      <option>人事</option>
+                      <option>研考</option>
+                      <option>總務</option>
+                      <option>資訊</option>
+                      <option>其他</option>
+                    </select>
+                  </div>
+
+                  <div class="col-xl-6 col-md-9">
+                    <label class="form-control-label row">發布單位 
+                      <span class="required">*</span>
+                    </label>
+                    <div class="input-group">
+                      <select class="show-tick" data-plugin="selectpicker" id="office" name="office" required="">
+                        <option value="">請選擇發布單位</option>
+                        <option>研考</option>
+                        <option>地價</option>
+                      </select>
+                    </div>
                   </div>
                 </div>
-                <!-- End Example Basic Constraints -->
+
+                <div class="form-group row">
+                  <div class="col-xl-6 col-md-9">
+                    <label class="form-control-label row">連絡人
+                      <span class="required">*</span>
+                    </label>
+                    <input type="text" class="form-control" name="owner" placeholder="訊息聯絡人姓名" required="">
+                  </div>
+
+                  <div class="col-xl-6 col-md-9">
+                    <label class="form-control-label row">連絡人電話
+                      <span class="required">*</span>
+                    </label>
+                    <input type="text" class="form-control" name="ownerPhone" placeholder="訊息聯絡人電話" required="">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-xl-6 col-md-9">
+                    <label class="form-control-label row">發布日期 
+                      <span class="required">*</span>
+                    </label>
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <i class="icon wb-calendar" aria-hidden="true"></i>
+                      </span>
+                      <input type="text" name="postdate" class="form-control" placeholder="YYYY/MM/DD" data-fv-notempty="true" data-fv-notempty-message="請輸入發布日期，格式範例：2018/10/05"
+                        required="">
+                    </div>
+                  </div>
+
+                  <div class="col-xl-6 col-md-9">
+                    <label class="form-control-label row">公告期限 ※ 若無下架期限，本欄請空白
+                    </label>
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <i class="icon wb-calendar" aria-hidden="true"></i>
+                      </span>
+                      <input type="text" class="form-control" name="enddate" placeholder="YYYY/MM/DD">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label class="col-xl-12 col-md-3 form-control-label">檔案上傳
+                    <br>※ 如果有上傳檔案，檔案說明必填
+                  </label>
+                  <div class="col-xl-12 col-md-9">
+                    <div class="input-group input-group-file" data-plugin="inputGroupFile">
+                      <input type="text" class="form-control" readonly="">
+                      <span class="input-group-btn">
+                        <span class="btn btn-success btn-file">
+                          <i class="icon wb-upload" aria-hidden="true"></i>
+                          <input type="file" name="" multiple="">
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class=" col-xl-12 col-md-9" style="padding-top:5px;">
+                    <input type="text" class="form-control" name="file1_memo" placeholder="請輸入檔案說明">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-xl-12 col-md-9">
+                    <span class="input-group-btn">
+                      <button class="btn btn-outline btn-primary" type="button">+ 新增一組檔案上傳</button>
+                    </span>
+                  </div>
+                </div>
+
               </div>
 
-              <div class="col-lg-6">
-                <!-- Example Type -->
-                <div class="example-wrap">
-                  <h4 class="example-title">Type</h4>
-                  <div class="example">
-                    <form class="form-horizontal" id="exampleConstraintsFormTypes" autocomplete="off">
-                      <div class="form-group row">
-                        <label class="col-md-3 form-control-label">Email</label>
-                        <div class="col-md-9">
-                          <input type="text" class="form-control" name="type_email" placeholder="email">
-                        </div>
+              <div class="col-xl-7 form-horizontal">
+                <div class="form-group row">
+                  <label class="form-control-label">首頁置頂</label>
+                  <div>
+                    <div class="d-flex flex-column">
+                      <div class="checkbox-custom checkbox-primary">
+                        <input type="checkbox" id="inputForProject" value="project">
+                        <label for="inputForProject">如在首頁要放在單元頂層，請打勾</label>
                       </div>
-                      <div class="form-group row">
-                        <label class="col-md-3 form-control-label">Url</label>
-                        <div class="col-md-9">
-                          <input type="text" class="form-control" name="type_url" placeholder="url">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label class="col-md-3 form-control-label">Digits</label>
-                        <div class="col-md-9">
-                          <input type="text" class="form-control" name="type_digits" placeholder="digits">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label class="col-md-3 form-control-label">Number</label>
-                        <div class="col-md-9">
-                          <input type="text" class="form-control" name="type_numberic" placeholder="number">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label class="col-md-3 form-control-label">Color</label>
-                        <div class="col-md-9">
-                          <input type="text" class="form-control" name="type_color" placeholder="color">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label class="col-md-3 form-control-label">Date</label>
-                        <div class="col-md-9">
-                          <input type="text" class="form-control" name="type_date" placeholder="YYYY-MM-DD">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label class="col-md-3 form-control-label">Phone</label>
-                        <div class="col-md-9">
-                          <input type="text" class="form-control" name="type_phone" placeholder="(XXX) XXXX XXX">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label class="col-md-3 form-control-label">Credit Card</label>
-                        <div class="col-md-9">
-                          <input type="text" class="form-control" name="type_credit_card" placeholder="creditCard">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label class="col-md-3 form-control-label">IP</label>
-                        <div class="col-md-9">
-                          <input type="text" class="form-control" name="type_ip" placeholder="ip">
-                        </div>
-                      </div>
-                    </form>
+                    </div>
                   </div>
                 </div>
-                <!-- End Example Type -->
+
+                <div class="form-group row">
+                  <label class="col-xl-12 col-md-3 form-control-label">主標題
+                    <span class="required">*</span>
+                  </label>
+                  <div class=" col-xl-12 col-md-9">
+                    <input type="text" class="form-control" name="subject" placeholder="請輸入主標題" required="">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label class="col-xl-12 col-md-3 form-control-label">內文
+                    <span class="required">*</span>
+                  </label>
+                  <div class="col-xl-12 col-md-9">
+                    <textarea class="form-control" name="skills" rows="10" placeholder="編輯內文看要一段一段加還是一次加一整篇。如果一段一段加，邏輯就是按下面新增段落" required=""></textarea>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-xl-12 col-md-9">
+                    <span class="input-group-btn">
+                      <button class="btn btn-outline btn-primary" type="button">+ 新增段落</button>
+                    </span>
+                  </div>
+                </div>
+
+              </div>
+              <div class="form-group col-xl-12 text-right padding-top-m">
+                <button type="submit" class="btn btn-primary" id="validateButton1">確認</button>
               </div>
             </div>
           </div>
         </div>
-        <!-- End Panel Constraints -->
+        <!-- /內文編輯區 -->
+      </form>
+
       </div>
     </div>
     <!-- End Page -->
@@ -1719,10 +1505,7 @@
 
     <!-- Footer -->
     <footer class="site-footer">
-      <div class="site-footer-legal">© 2018 <a href="http://themeforest.net/item/remark-responsive-bootstrap-admin-template/11989202">Remark</a></div>
-      <div class="site-footer-right">
-        Crafted with <i class="red-600 wb wb-heart"></i> by <a href="https://themeforest.net/user/creation-studio">Creation Studio</a>
-      </div>
+      <div class="site-footer-right">© 2018 基隆市安樂地政事務所</a></div>
     </footer>
     <!-- Core  -->
     <script src="global/vendor/babel-external-helpers/babel-external-helpers.js"></script>
