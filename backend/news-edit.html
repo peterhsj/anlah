@@ -341,7 +341,7 @@
     <!-- Page -->
     <div class="page">
       <div class="page-header">
-        <h1 class="page-title">最新消息</h1>
+        <h1 class="page-title">最新消息 - 編輯</h1>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
           <li class="breadcrumb-item active">最新消息</li>
@@ -349,190 +349,246 @@
         <div class="page-header-actions"></div>
       </div>
 
-      <div class="page-content container-fluid">
-              
+      <div class="page-content container-fluid">              
       <form id="exampleFullForm" autocomplete="off">
-        <!-- 內文編輯區 -->
-        <div class="panel panel-bordered">          
+                <!-- 分類檢索設定 -->
+        <div class="panel panel-bordered">
+          <div class="panel-heading">
+            <h3 class="panel-title">分類檢索設定
+            </h3>
+          </div>
           <div class="panel-body">
-            <div class="row">
-              <div class="form-group col-xl-9">
-                <a href="news-edit.html" class="btn btn-md btn-primary">
-                  <i class="icon wb-plus" aria-hidden="true"></i> 新增訊息</a>
+            <div class="row row-lg">
+              <div class="col-md-4 form-horizontal">
+                <!-- 主題分類 -->
+                <div class="form-group row">
+                  <label class="col-xl-12 col-md-3" for="Theme">主題分類
+                    <span class="required">*</span>
+                  </label>
+                  <div class=" col-xl-12 col-md-9">
+                    <select class="show-tick" data-plugin="selectpicker" id="Theme" name="Theme" required="">
+                      <option value="">請選擇主題分類代碼</option>
+                      <option>140 - 地政</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- /主題分類 -->
               </div>
-              <div class="form-group col-xl-3">
-                <div class="input-search input-search-dark">
-                  <i class="input-search-icon wb-search" aria-hidden="true"></i>
-                  <input type="text" class="form-control" name="" placeholder="Search...">
-                  <button type="button" class="input-search-close icon wb-close" aria-label="Close"></button>
-                </div>            
+              <div class="col-md-4 form-horizontal">
+                <!-- 施政分類 -->
+                <div class="form-group row">
+                    <label class="col-xl-12 col-md-3" for="Cake">施政分類
+                    <span class="required">*</span>
+                  </label>
+                  <div class=" col-xl-12 col-md-9">
+                    <select class="show-tick" data-plugin="selectpicker" id="Cake" name="Cake" required="">
+                      <option value="">請選擇施政分類代碼</option>
+                      <option>CK1-土地測量</option>
+                      <option>CKA-</option>
+                      <option>CKA-</option>
+                      <option>CKA-地政資訊系統</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- /施政分類 -->
+              </div>
+              <div class="col-md-4 form-horizontal">
+                <!-- 服務分類 -->
+                <div class="form-group row">
+                  <label class="col-xl-12 col-md-3" for="Service">服務分類
+                    <span class="required">*</span>
+                  </label>
+                  <div class=" col-xl-12 col-md-9">
+                    <select class="show-tick" data-plugin="selectpicker" id="Service" name="Service" required="">
+                      <option value="">請選擇服務分類代碼</option>
+                      <option>C11-土地建物登記</option>
+                      <option>C12-土地建物移轉登記</option>
+                      <option>C13-法拍移轉登記</option>
+                      <option>C14-房屋稅</option>
+                      <option>C15-地價稅</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- /服務分類 -->
               </div>
             </div>
-            <div class="table-responsive">
-              <table class="table table-bordered table-striped table-hover">
-                <thead>
-                  <tr>
-                    <th class="text-center">#</th>
-                    <th>標題</th>
-                    <th>時間</th>
-                    <th>單位</th>
-                    <th>編輯者</th>
-                    <th>操作</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="text-center">1</td>
-                    <td><a href="news-view.html">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></td>
-                    <td>2018/03/21</td>
-                    <td>研考</td>
-                    <td>Prohaska</td>
-                    <td class="text-nowrap">
-                      <a href="news-edit.html" class="btn btn-pure btn-primary">
-                        <span class="icon wb-edit" data-toggle="tooltip" data-original-title="編輯"></span>
-                      </a>
-                      <a href="#" class="btn btn-pure btn-warning" data-target="#delItem" data-toggle="modal">
-                        <span class="icon wb-trash" data-toggle="tooltip" data-original-title="刪除"></span>
-                      </a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">2</td>
-                    <td><a href="news-view.html">Quo odit, laboriosam aliquam ratione officiis, impedit, cum, at incidunt quasi!</a></td>
-                    <td>2018/03/19</td>
-                    <td>資訊</td>
-                    <td>Gaylord</td>
-                    <td class="text-nowrap">
-                      <a href="news-edit.html" class="btn btn-pure btn-primary">
-                        <span class="icon wb-edit" data-toggle="tooltip" data-original-title="編輯"></span>
-                      </a>
-                      <a href="#" class="btn btn-pure btn-warning" data-target="#delItem" data-toggle="modal">
-                        <span class="icon wb-trash" data-toggle="tooltip" data-original-title="刪除"></span>
-                      </a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">3</td>
-                    <td><a href="news-view.html">At voluptas cupiditate placeat vero atque!</a></td>
-                    <td>2018/02/20</td>
-                    <td>地價</td>
-                    <td>Gusikowski</td>
-                    <td class="text-nowrap">
-                      <a href="news-edit.html" class="btn btn-pure btn-primary">
-                        <span class="icon wb-edit" data-toggle="tooltip" data-original-title="編輯"></span>
-                      </a>
-                      <a href="#" class="btn btn-pure btn-warning" data-target="#delItem" data-toggle="modal">
-                        <span class="icon wb-trash" data-toggle="tooltip" data-original-title="刪除"></span>
-                      </a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">4</td>
-                    <td><a href="news-view.html">Quo odit, laboriosam aliquam ratione officiis, impedit, cum, at incidunt quasi!</a></td>
-                    <td>2018/02/19</td>
-                    <td>研考</td>
-                    <td>Rogahn</td>
-                    <td class="text-nowrap">
-                      <a href="news-edit.html" class="btn btn-pure btn-primary">
-                        <span class="icon wb-edit" data-toggle="tooltip" data-original-title="編輯"></span>
-                      </a>
-                      <a href="#" class="btn btn-pure btn-warning" data-target="#delItem" data-toggle="modal">
-                        <span class="icon wb-trash" data-toggle="tooltip" data-original-title="刪除"></span>
-                      </a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">5</td>
-                    <td><a href="news-view.html">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></td>
-                    <td>2018/02/15</td>
-                    <td>研考</td>
-                    <td>Hickle</td>
-                    <td class="text-nowrap">
-                      <a href="news-edit.html" class="btn btn-pure btn-primary">
-                        <span class="icon wb-edit" data-toggle="tooltip" data-original-title="編輯"></span>
-                      </a>
-                      <a href="#" class="btn btn-pure btn-warning" data-target="#delItem" data-toggle="modal">
-                        <span class="icon wb-trash" data-toggle="tooltip" data-original-title="刪除"></span>
-                      </a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">6</td>
-                    <td><a href="news-view.html">At voluptas cupiditate placeat vero atque!</a></td>
-                    <td>2018/02/10</td>
-                    <td>登記</td>
-                    <td>Eichmann</td>
-                    <td class="text-nowrap">
-                      <a href="news-edit.html" class="btn btn-pure btn-primary">
-                        <span class="icon wb-edit" data-toggle="tooltip" data-original-title="編輯"></span>
-                      </a>
-                      <a href="#" class="btn btn-pure btn-warning" data-target="#delItem" data-toggle="modal">
-                        <span class="icon wb-trash" data-toggle="tooltip" data-original-title="刪除"></span>
-                      </a>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+          </div>
+        </div>
+        <!-- /分類檢索設定 -->
 
+        <!-- 內文編輯區 -->
+        <div class="panel panel-bordered">
+          <div class="panel-heading">
+            <h3 class="panel-title">內文編輯區</h3>
+          </div>
+          <div class="panel-body">
+            <div class="row row-lg">
+              <div class="col-xl-5 form-horizontal">
+                <div class="form-group row">
+                  <div class="col-xl-6 col-md-9">
+                    <label class="form-control-label row" for="author">新聞類別
+                      <span class="required">*</span>
+                    </label>
+                    <select class="show-tick" data-plugin="selectpicker" id="author" name="author" required="">
+                      <option value="">請選擇訊息類別</option>
+                      <option>地價</option>
+                      <option>測量</option>
+                      <option>登記</option>
+                      <option>黨管</option>
+                      <option>政風</option>
+                      <option>會計</option>
+                      <option>政風</option>
+                      <option>人事</option>
+                      <option>研考</option>
+                      <option>總務</option>
+                      <option>資訊</option>
+                      <option>其他</option>
+                    </select>
+                  </div>
+
+                  <div class="col-xl-6 col-md-9">
+                    <label class="form-control-label row">發布單位 
+                      <span class="required">*</span>
+                    </label>
+                    <div class="input-group">
+                      <select class="show-tick" data-plugin="selectpicker" id="office" name="office" required="">
+                        <option value="">請選擇發布單位</option>
+                        <option>研考</option>
+                        <option>地價</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-xl-6 col-md-9">
+                    <label class="form-control-label row">連絡人
+                      <span class="required">*</span>
+                    </label>
+                    <input type="text" class="form-control" name="owner" placeholder="訊息聯絡人姓名" required="">
+                  </div>
+
+                  <div class="col-xl-6 col-md-9">
+                    <label class="form-control-label row">連絡人電話
+                      <span class="required">*</span>
+                    </label>
+                    <input type="text" class="form-control" name="ownerPhone" placeholder="訊息聯絡人電話" required="">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-xl-6 col-md-9">
+                    <div class="row">
+                      <label class="form-control-label">
+                        發布日期 
+                        <span class="required">*</span>
+                      </label>
+                    </div>
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <i class="icon wb-calendar" aria-hidden="true"></i>
+                      </span>
+                      <input type="text" name="postdate" class="form-control" placeholder="YYYY/MM/DD" data-fv-notempty="true" data-fv-notempty-message="請輸入發布日期，格式範例：2018/10/05"
+                        required="">
+                    </div>
+                  </div>
+
+                  <div class="col-xl-6 col-md-9">
+                    <div class="row">
+                      <label class="form-control-label">
+                        公告期限
+                        <span class="panel-desc">※ 若無期限請空白</span>
+                      </label>
+                    </div>
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <i class="icon wb-calendar" aria-hidden="true"></i>
+                      </span>
+                      <input type="text" class="form-control" name="enddate" placeholder="YYYY/MM/DD">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label class="col-xl-12 col-md-3 form-control-label">檔案上傳
+                    <span class="panel-desc">※ 如果有上傳檔案，檔案說明必填</span>
+                  </label>
+                  <div class="col-xl-12 col-md-9">
+                    <div class="input-group input-group-file" data-plugin="inputGroupFile">
+                      <input type="text" class="form-control" readonly="">
+                      <span class="input-group-btn">
+                        <span class="btn btn-success btn-file">
+                          <i class="icon wb-upload" aria-hidden="true"></i>
+                          <input type="file" name="" multiple="">
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class=" col-xl-12 col-md-9" style="padding-top:5px;">
+                    <input type="text" class="form-control" name="file1_memo" placeholder="請輸入檔案說明">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-xl-12 col-md-9">
+                    <span class="input-group-btn">
+                      <button class="btn btn-success" type="button">+ 新增一組檔案上傳</button>
+                    </span>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="col-xl-7 form-horizontal">
+                <div class="form-group row">
+                  <label class="form-control-label">首頁置頂</label>
+                  <div>
+                    <div class="d-flex flex-column">
+                      <div class="checkbox-custom checkbox-primary">
+                        <input type="checkbox" id="inputForProject" value="project">
+                        <label for="inputForProject"><span class="panel-desc">如在首頁要放在單元頂層，請打勾</span></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label class="col-xl-12 col-md-3 form-control-label">主標題
+                    <span class="required">*</span>
+                  </label>
+                  <div class=" col-xl-12 col-md-9">
+                    <input type="text" class="form-control" name="subject" placeholder="請輸入主標題" required="">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label class="col-xl-12 col-md-3 form-control-label">內文
+                    <span class="required">*</span>
+                  </label>
+                  <div class="col-xl-12 col-md-9">
+                    <textarea class="form-control" name="skills" rows="10" placeholder="編輯內文看要一段一段加還是一次加一整篇。如果一段一段加，邏輯就是按下面新增段落" required=""></textarea>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-xl-12 col-md-9">
+                    <span class="input-group-btn">
+                      <button class="btn btn-success" type="button">+ 新增段落</button>
+                    </span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
           </div>
           <div class="panel-footer">
-            <div class="form-group col-xl-12">
-              <nav>
-                <ul data-plugin="paginator" data-total="50" data-skin="pagination-no-border" class="pagination pagination-no-border">
-                  <li class="pagination-prev page-item disabled">
-                    <a class="page-link" href="javascript:void(0)" aria-label="Prev">
-                      <span class="icon wb-chevron-left-mini"></span>
-                    </a>
-                  </li>
-                  <li class="pagination-items page-item active" data-value="1">
-                    <a class="page-link" href="javascript:void(0)">1</a>
-                  </li>
-                  <li class="pagination-items page-item" data-value="2">
-                    <a class="page-link" href="javascript:void(0)">2</a>
-                  </li>
-                  <li class="pagination-items page-item" data-value="3">
-                    <a class="page-link" href="javascript:void(0)">3</a>
-                  </li>
-                  <li class="pagination-items page-item" data-value="4">
-                    <a class="page-link" href="javascript:void(0)">4</a>
-                  </li>
-                  <li class="pagination-items page-item" data-value="5">
-                    <a class="page-link" href="javascript:void(0)">5</a>
-                  </li>
-                  <li class="pagination-next page-item">
-                    <a class="page-link" href="javascript:void(0)" aria-label="Next">
-                      <span class="icon wb-chevron-right-mini"></span>
-                    </a>
-                  </li>
-                </ul>
-              </nav>
+            <div class="form-group col-xl-12 text-right padding-top-m">
+              <a href="news-main.html" class="btn btn-default" id="validateButton1">取消</a>
+              <button type="submit" class="btn btn-primary" id="validateButton1">確認</button>
             </div>
           </div>
         </div>
-        <!-- model -->
-        <div class="modal fade" id="delItem" aria-labelledby="delItem" role="dialog" tabindex="-1" style="display: none;"
-          aria-hidden="true">
-          <div class="modal-dialog modal-simple modal-center">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">×</span>
-                </button>
-                <h4 class="modal-title">作業訊息</h4>
-              </div>
-              <div class="modal-body">
-                <p>確定刪除這篇訊息？</p>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                <button type="button" class="btn btn-primary">確定</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- /model -->
-        <!-- /內文編輯區 -->        
+        <!-- /內文編輯區 -->
       </form>
 
       </div>
