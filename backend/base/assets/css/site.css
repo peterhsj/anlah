@@ -881,6 +881,12 @@ body.site-gridmenu-active {
 
 .page-copyright-inverse {
   color: #fff;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+.page-copyright-inverse p{
+  margin-bottom: 0.2rem;
 }
 
 .page-copyright-inverse .social .icon {
