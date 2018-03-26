@@ -33,11 +33,7 @@
         username: {
           validators: {
             notEmpty: {
-              message: 'The username is required'
-            },
-            stringLength: {
-              min: 6,
-              max: 30
+              message: '請輸入使用者名稱'
             },
             regexp: {
               regexp: /^[a-zA-Z0-9]+$/
