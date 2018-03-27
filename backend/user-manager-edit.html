@@ -44,9 +44,9 @@
     <link rel="stylesheet" href="global/vendor/bootstrap-datepicker/bootstrap-datepicker.css">
     <link rel="stylesheet" href="global/vendor/bootstrap-maxlength/bootstrap-maxlength.css">
     <link rel="stylesheet" href="global/vendor/timepicker/jquery-timepicker.css">
-    <link rel="stylesheet" href="global/vendor/jquery-strength/jquery-strength.css">
+    <link rel="stylesheet" href="global/vendor/jquery-strength/jquery-strength.css">-->
     <link rel="stylesheet" href="global/vendor/multi-select/multi-select.css">
-    <link rel="stylesheet" href="global/vendor/typeahead-js/typeahead.css"> -->
+    <!--<link rel="stylesheet" href="global/vendor/typeahead-js/typeahead.css"> -->
     <link rel="stylesheet" href="base/assets/examples/css/forms/advanced.css">
     
     
@@ -321,7 +321,7 @@
 
       <div class="page-content container-fluid">              
       <form id="exampleFullForm" autocomplete="off">
-                <!-- 分類檢索設定 -->
+        <!-- 內文編輯區 -->
         <div class="panel panel-bordered">
           <div class="panel-heading">
             <h3 class="panel-title">人員帳號
@@ -330,7 +330,7 @@
           <div class="panel-body">
             <div class="row row-lg">
               <div class="col-md-4 form-horizontal">
-                <!-- 姓名姓名 -->
+                <!-- 姓名 -->
                 <div class="form-group row">
                     <label class="col-xl-12 col-md-3 form-control-label">姓名
                         <span class="required">*</span>
@@ -340,64 +340,84 @@
                     </div>
                 </div>
                 <!-- /姓名 -->
-              </div>
-              <div class="col-md-4 form-horizontal">
                 <!-- 帳號 -->
                 <div class="form-group row">
-                    <label class="col-xl-12 col-md-3 form-control-label">帳號
-                        <span class="required">*</span>
-                    </label>
-                    <div class=" col-xl-12 col-md-9">
-                        <input type="text" class="form-control" name="usercount" placeholder="請輸入帳號" required="">
-                    </div>
+                  <label class="col-xl-12 col-md-3 form-control-label">帳號
+                    <span class="required">*</span>
+                  </label>
+                  <div class=" col-xl-12 col-md-9">
+                    <input type="text" class="form-control" name="usercount" placeholder="請輸入帳號" required="">
+                  </div>
                 </div>
                 <!-- /帳號 -->
-              </div>
-            </div>
-            <div class="row row-lg">
-                <div class="col-md-4 form-horizontal">
-                    <!-- 姓名姓名 -->
-                    <div class="form-group row">
-                        <label class="col-xl-12 col-md-3 form-control-label">密碼
-                            <span class="required">*</span>
-                        </label>
-                        <div class=" col-xl-12 col-md-9">
-                            <input type="text" class="form-control" name="password" placeholder="請輸入密碼" required="">
-                        </div>
-                    </div>
-                    <!-- /姓名 -->
+                <!-- Email -->
+                <div class="form-group row">
+                  <label class="col-xl-12 col-md-3 form-control-label">Email
+                    <span class="required">*</span>
+                  </label>
+                  <div class=" col-xl-12 col-md-9">
+                    <input type="email" class="form-control" name="email" placeholder="請輸入公務電子郵件信箱" required="">
+                  </div>
                 </div>
-                <div class="col-md-4 form-horizontal">
-                    <!-- 帳號 -->
-                    <div class="form-group row">
-                        <label class="col-xl-12 col-md-3 form-control-label">確認密碼
-                            <span class="required">*</span>
-                        </label>
-                        <div class=" col-xl-12 col-md-9">
-                            <input type="text" class="form-control" name="password" placeholder="請再次輸入密碼" required="">
-                        </div>
-                    </div>
-                    <!-- /帳號 -->
+                <!-- /Email -->
+                <!-- 密碼 -->
+                <div class="form-group row">
+                  <label class="col-xl-12 col-md-3 form-control-label">密碼
+                    <span class="required">*</span>
+                  </label>
+                  <div class=" col-xl-12 col-md-9">
+                    <input type="password" class="form-control" name="password" placeholder="請輸入密碼" required="">
+                  </div>
                 </div>
-               
-            </div>
-          </div>
-        </div>
-        <!-- /分類檢索設定 -->
-
-        <!-- 內文編輯區 -->
-        <div class="panel panel-bordered">
-          <div class="panel-heading">
-            <h3 class="panel-title">人員權限</h3>
-          </div>
-          <div class="panel-body">
-            <div class="row row-lg">
-              <div class="col-xl-5 form-horizontal">
-                
-
+                <!-- /密碼 -->
+                <!-- 確認密碼 -->
+                <div class="form-group row">
+                  <label class="col-xl-12 col-md-3 form-control-label">確認密碼
+                    <span class="required">*</span>
+                  </label>
+                  <div class=" col-xl-12 col-md-9">
+                    <input type="password" class="form-control" name="passwordcheck" placeholder="請再次輸入密碼" required="">
+                  </div>
+                </div>
+                <!-- /確認密碼 -->
               </div>
-
-              
+              <div class="col-md-8 form-horizontal">
+                <!-- 人員權限 -->
+                <div class="form-group row">
+                  <label class="col-xl-12 col-md-3 form-control-label">人員權限
+                    <span class="required">*</span>
+                  </label>
+                  <div class=" col-xl-12 col-md-9">
+                    <select class="form-control" data-plugin="multiSelect">
+                      <optgroup label="單元項目">
+                        <option value="AK">最新消息</option>
+                        <option value="HI">行政規章專區</option>
+                        <option value="HI">地政答客問</option>
+                        <option value="HI">主任信箱</option>
+                        <option value="HI">問卷調查</option>
+                        <option value="HI">法令新訊</option>
+                      </optgroup>
+                      <optgroup label="員工專區">
+                        <option value="CA">公布欄</option>
+                        <option value="NV">會議記錄</option>
+                        <option value="OR">表單下載</option>
+                      </optgroup>
+                      <optgroup label="網路申辦">
+                        <option value="AZ">線上預約服務</option>
+                        <option value="CO">網路申請謄本</option>
+                        <option value="ID">檔案閱覽抄錄複製</option>
+                        <option value="MT">公告地價資料</option>
+                      </optgroup>
+                      <optgroup label="網站設定">
+                        <option value="AL">人員權限管理</option>
+                        <option value="AR">Email顯示設定</option>
+                        <option value="IL">瀏覽人數統計</option>
+                      </optgroup>
+                    </select>
+                  </div>
+                </div>
+                <!-- /人員權限 -->
+              </div>
             </div>
           </div>
           <div class="panel-footer">
@@ -407,7 +427,7 @@
             </div>
           </div>
         </div>
-        <!-- /內文編輯區 -->
+        <!-- /內文編輯區 -->        
       </form>
 
       </div>
@@ -462,9 +482,9 @@
         <script src="global/vendor/datepair/datepair.min.js"></script>
         <script src="global/vendor/datepair/jquery.datepair.min.js"></script>
         <script src="global/vendor/jquery-strength/password_strength.js"></script>
-        <script src="global/vendor/jquery-strength/jquery-strength.min.js"></script>
+        <script src="global/vendor/jquery-strength/jquery-strength.min.js"></script> -->
         <script src="global/vendor/multi-select/jquery.multi-select.js"></script>
-        <script src="global/vendor/typeahead-js/bloodhound.min.js"></script>
+        <!-- <script src="global/vendor/typeahead-js/bloodhound.min.js"></script>
         <script src="global/vendor/typeahead-js/typeahead.jquery.min.js"></script>
         <script src="global/vendor/jquery-placeholder/jquery.placeholder.js"></script> -->
     
@@ -510,8 +530,8 @@
     <script src="global/js/Plugin/bootstrap-datepicker.js"></script>
     <script src="global/js/Plugin/jt-timepicker.js"></script>
     <script src="global/js/Plugin/datepair.js"></script>
-    <script src="global/js/Plugin/jquery-strength.js"></script>
-    <script src="global/js/Plugin/multi-select.js"></script> -->
+    <script src="global/js/Plugin/jquery-strength.js"></script> -->
+    <script src="global/js/Plugin/multi-select.js"></script>
     <script src="global/js/Plugin/jquery-placeholder.js"></script>
     <script src="global/js/Plugin/input-group-file.js"></script>
     

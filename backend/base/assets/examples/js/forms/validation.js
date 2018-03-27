@@ -40,23 +40,42 @@
             }
           }
         },
+        usercount: {
+          validators: {
+            notEmpty: {
+              message: '請輸入帳號'
+            }
+          }
+        },
         email: {
           validators: {
             notEmpty: {
-              message: 'The username is required'
+              message: '請輸入公務電子郵件信箱'
             },
             emailAddress: {
-              message: 'The email address is not valid'
+              message: '請輸入正確的電子郵件信箱'
             }
           }
         },
         password: {
           validators: {
             notEmpty: {
-              message: 'The password is required'
+              message: '請輸入密碼'
             },
             stringLength: {
-              min: 8
+              min: 8,
+              message: '密碼不能少於8位數'
+            }
+          }
+        },
+        passwordcheck: {
+          validators: {
+            notEmpty: {
+              message: '請再次輸入密碼'
+            },
+            stringLength: {
+              min: 8,
+              message: '密碼不能少於8位數'
             }
           }
         },
@@ -297,150 +316,150 @@
 
   // Example Validataion Standard Mode
   // ---------------------------------
-  (function () {
-    (0, _jquery2.default)('#exampleStandardForm').formValidation({
-      framework: "bootstrap4",
-      button: {
-        selector: '#validateButton2',
-        disabled: 'disabled'
-      },
-      icon: null,
-      fields: {
-        standard_fullName: {
-          validators: {
-            notEmpty: {
-              message: 'The full name is required and cannot be empty'
-            }
-          }
-        },
-        standard_email: {
-          validators: {
-            notEmpty: {
-              message: 'The email address is required and cannot be empty'
-            },
-            emailAddress: {
-              message: 'The email address is not valid'
-            }
-          }
-        },
-        standard_content: {
-          validators: {
-            notEmpty: {
-              message: 'The content is required and cannot be empty'
-            },
-            stringLength: {
-              max: 500,
-              message: 'The content must be less than 500 characters long'
-            }
-          }
-        }
-      },
-      err: {
-        clazz: 'invalid-feedback'
-      },
-      control: {
-        // The CSS class for valid control
-        valid: 'is-valid',
+  // (function () {
+  //   (0, _jquery2.default)('#exampleStandardForm').formValidation({
+  //     framework: "bootstrap4",
+  //     button: {
+  //       selector: '#validateButton2',
+  //       disabled: 'disabled'
+  //     },
+  //     icon: null,
+  //     fields: {
+  //       standard_fullName: {
+  //         validators: {
+  //           notEmpty: {
+  //             message: 'The full name is required and cannot be empty'
+  //           }
+  //         }
+  //       },
+  //       standard_email: {
+  //         validators: {
+  //           notEmpty: {
+  //             message: 'The email address is required and cannot be empty'
+  //           },
+  //           emailAddress: {
+  //             message: 'The email address is not valid'
+  //           }
+  //         }
+  //       },
+  //       standard_content: {
+  //         validators: {
+  //           notEmpty: {
+  //             message: 'The content is required and cannot be empty'
+  //           },
+  //           stringLength: {
+  //             max: 500,
+  //             message: 'The content must be less than 500 characters long'
+  //           }
+  //         }
+  //       }
+  //     },
+  //     err: {
+  //       clazz: 'invalid-feedback'
+  //     },
+  //     control: {
+  //       // The CSS class for valid control
+  //       valid: 'is-valid',
 
-        // The CSS class for invalid control
-        invalid: 'is-invalid'
-      },
-      row: {
-        invalid: 'has-danger'
-      }
-    });
-  })();
+  //       // The CSS class for invalid control
+  //       invalid: 'is-invalid'
+  //     },
+  //     row: {
+  //       invalid: 'has-danger'
+  //     }
+  //   });
+  // })();
 
   // Example Validataion Summary Mode
   // -------------------------------
-  (function () {
-    (0, _jquery2.default)('.summary-errors').hide();
+  // (function () {
+  //   (0, _jquery2.default)('.summary-errors').hide();
 
-    (0, _jquery2.default)('#exampleSummaryForm').formValidation({
-      framework: "bootstrap4",
-      button: {
-        selector: '#validateButton3',
-        disabled: 'disabled'
-      },
-      icon: null,
-      fields: {
-        summary_fullName: {
-          validators: {
-            notEmpty: {
-              message: 'The full name is required and cannot be empty'
-            }
-          }
-        },
-        summary_email: {
-          validators: {
-            notEmpty: {
-              message: 'The email address is required and cannot be empty'
-            },
-            emailAddress: {
-              message: 'The email address is not valid'
-            }
-          }
-        },
-        summary_content: {
-          validators: {
-            notEmpty: {
-              message: 'The content is required and cannot be empty'
-            },
-            stringLength: {
-              max: 500,
-              message: 'The content must be less than 500 characters long'
-            }
-          }
-        }
-      },
-      err: {
-        clazz: 'invalid-feedback'
-      },
-      control: {
-        // The CSS class for valid control
-        valid: 'is-valid',
+  //   (0, _jquery2.default)('#exampleSummaryForm').formValidation({
+  //     framework: "bootstrap4",
+  //     button: {
+  //       selector: '#validateButton3',
+  //       disabled: 'disabled'
+  //     },
+  //     icon: null,
+  //     fields: {
+  //       summary_fullName: {
+  //         validators: {
+  //           notEmpty: {
+  //             message: 'The full name is required and cannot be empty'
+  //           }
+  //         }
+  //       },
+  //       summary_email: {
+  //         validators: {
+  //           notEmpty: {
+  //             message: 'The email address is required and cannot be empty'
+  //           },
+  //           emailAddress: {
+  //             message: 'The email address is not valid'
+  //           }
+  //         }
+  //       },
+  //       summary_content: {
+  //         validators: {
+  //           notEmpty: {
+  //             message: 'The content is required and cannot be empty'
+  //           },
+  //           stringLength: {
+  //             max: 500,
+  //             message: 'The content must be less than 500 characters long'
+  //           }
+  //         }
+  //       }
+  //     },
+  //     err: {
+  //       clazz: 'invalid-feedback'
+  //     },
+  //     control: {
+  //       // The CSS class for valid control
+  //       valid: 'is-valid',
 
-        // The CSS class for invalid control
-        invalid: 'is-invalid'
-      },
-      row: {
-        invalid: 'has-danger'
-      }
-    }).on('success.form.fv', function (e) {
-      // Reset the message element when the form is valid
-      (0, _jquery2.default)('.summary-errors').html('');
-    }).on('err.field.fv', function (e, data) {
-      // data.fv     --> The FormValidation instance
-      // data.field  --> The field name
-      // data.element --> The field element
-      (0, _jquery2.default)('.summary-errors').show();
+  //       // The CSS class for invalid control
+  //       invalid: 'is-invalid'
+  //     },
+  //     row: {
+  //       invalid: 'has-danger'
+  //     }
+  //   }).on('success.form.fv', function (e) {
+  //     // Reset the message element when the form is valid
+  //     (0, _jquery2.default)('.summary-errors').html('');
+  //   }).on('err.field.fv', function (e, data) {
+  //     // data.fv     --> The FormValidation instance
+  //     // data.field  --> The field name
+  //     // data.element --> The field element
+  //     (0, _jquery2.default)('.summary-errors').show();
 
-      // Get the messages of field
-      var messages = data.fv.getMessages(data.element);
+  //     // Get the messages of field
+  //     var messages = data.fv.getMessages(data.element);
 
-      // Remove the field messages if they're already available
-      (0, _jquery2.default)('.summary-errors').find('li[data-field="' + data.field + '"]').remove();
+  //     // Remove the field messages if they're already available
+  //     (0, _jquery2.default)('.summary-errors').find('li[data-field="' + data.field + '"]').remove();
 
-      // Loop over the messages
-      for (var i in messages) {
-        // Create new 'li' element to show the message
-        (0, _jquery2.default)('<li/>').attr('data-field', data.field).wrapInner((0, _jquery2.default)('<a/>').attr('href', 'javascript: void(0);')
-        // .addClass('alert alert-danger alert-dismissible')
-        .html(messages[i]).on('click', function (e) {
-          // Focus on the invalid field
-          data.element.focus();
-        })).appendTo('.summary-errors > ul');
-      }
+  //     // Loop over the messages
+  //     for (var i in messages) {
+  //       // Create new 'li' element to show the message
+  //       (0, _jquery2.default)('<li/>').attr('data-field', data.field).wrapInner((0, _jquery2.default)('<a/>').attr('href', 'javascript: void(0);')
+  //       // .addClass('alert alert-danger alert-dismissible')
+  //       .html(messages[i]).on('click', function (e) {
+  //         // Focus on the invalid field
+  //         data.element.focus();
+  //       })).appendTo('.summary-errors > ul');
+  //     }
 
-      // Hide the default message
-      // $field.data('fv.messages') returns the default element containing the messages
-      data.element.data('fv.messages').find('.invalid-feedback[data-fv-for="' + data.field + '"]').hide();
-    }).on('success.field.fv', function (e, data) {
-      // Remove the field messages
-      (0, _jquery2.default)('.summary-errors > ul').find('li[data-field="' + data.field + '"]').remove();
-      if ((0, _jquery2.default)('#exampleSummaryForm').data('formValidation').isValid()) {
-        (0, _jquery2.default)('.summary-errors').hide();
-      }
-    });
-  })();
+  //     // Hide the default message
+  //     // $field.data('fv.messages') returns the default element containing the messages
+  //     data.element.data('fv.messages').find('.invalid-feedback[data-fv-for="' + data.field + '"]').hide();
+  //   }).on('success.field.fv', function (e, data) {
+  //     // Remove the field messages
+  //     (0, _jquery2.default)('.summary-errors > ul').find('li[data-field="' + data.field + '"]').remove();
+  //     if ((0, _jquery2.default)('#exampleSummaryForm').data('formValidation').isValid()) {
+  //       (0, _jquery2.default)('.summary-errors').hide();
+  //     }
+  //   });
+  // })();
 });
