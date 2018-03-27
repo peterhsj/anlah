@@ -79,6 +79,9 @@ label {
   list-style: none;
 }
 
+.tooltip {
+  left: 12px !important;
+}
 
 @media (min-width: 768px) {
   .site-navbar .navbar-header {
