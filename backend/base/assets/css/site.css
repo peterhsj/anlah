@@ -3324,7 +3324,7 @@ body.site-navbar-small {
 
 .form-material .form-control ~ .floating-label {
   top: .57142857rem;
-  font-size: 1rem;
+  font-size: 1.075rem;
 }
 
 .form-material .form-control:focus ~ .floating-label, .form-material .form-control.focus ~ .floating-label, .form-material .form-control:not(.empty) ~ .floating-label {
