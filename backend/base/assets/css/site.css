@@ -83,6 +83,14 @@ label {
   left: 12px !important;
 }
 
+.pagination-panel input {
+  display: inline-block;
+  width: 45px !important;
+  vertical-align: middle;
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
 @media (min-width: 768px) {
   .site-navbar .navbar-header {
     width: 260px;
