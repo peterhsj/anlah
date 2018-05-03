@@ -519,7 +519,7 @@
                   <div class="col-xl-12 col-md-9">
                     <span class="input-group-btn">
                       <button class="btn btn-success" type="button">+ 新增一組檔案上傳</button> 
-                    </span>(最多5組、重複會蓋檔)
+                    </span>(最多5組、重複名稱會蓋檔，看你要一次產生5組還是1組1組新增)
                   </div>
                 </div>
 
@@ -561,7 +561,7 @@
                     <span class="required">*</span>
                   </label>
                   <div class="col-xl-12 col-md-9">
-                    <textarea class="form-control" name="skills" rows="10" placeholder="編輯內文看要一段一段加還是一次加一整篇。如果一段一段加，邏輯就是按下面新增段落" required=""></textarea>
+                    <textarea class="form-control" name="skills" rows="10" placeholder="編輯內文請按「Enter」分段落" required=""></textarea>
                   </div>
                 </div>
               </div>
@@ -571,6 +571,7 @@
             <div class="form-group col-xl-12 text-right padding-top-m">
               <a href="news-main.html" class="btn btn-default" id="validateButton1">取消</a>
               <button type="submit" class="btn btn-primary" id="validateButton1">確認</button>
+              (欄位驗證在validation.js這個檔案裡，有些欄位必填)
             </div>
           </div>
         </div>
