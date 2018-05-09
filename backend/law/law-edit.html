@@ -10,28 +10,31 @@
     
     <title>基隆市安樂地政事務所-網站管理系統</title>
     
-    <link rel="apple-touch-icon" href="base/assets/images/apple-touch-icon.png">
-    <link rel="shortcut icon" href="base/assets/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="../base/assets/images/apple-touch-icon.png">
+    <link rel="shortcut icon" href="../base/assets/images/apple-touch-icon.png">
     
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="global/css/bootstrap.min.css">
-    <link rel="stylesheet" href="global/css/bootstrap-extend.min.css">
-    <link rel="stylesheet" href="base/assets/css/site.css">
+    <link rel="stylesheet" href="../global/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../global/css/bootstrap-extend.min.css">
+    <link rel="stylesheet" href="../base/assets/css/site.css">
     
     <!-- Plugins -->
-    <link rel="stylesheet" href="global/vendor/animsition/animsition.css">
-    <link rel="stylesheet" href="global/vendor/asscrollable/asScrollable.css">
-    <link rel="stylesheet" href="global/vendor/switchery/switchery.css">
-    <link rel="stylesheet" href="global/vendor/intro-js/introjs.css">
-    <link rel="stylesheet" href="global/vendor/slidepanel/slidePanel.css">
-    <link rel="stylesheet" href="global/vendor/flag-icon-css/flag-icon.css">
-    <link rel="stylesheet" href="assets/examples/css/structure/pagination.css">
-    <link rel="stylesheet" href="global/vendor/formvalidation/formValidation.css">
-    <link rel="stylesheet" href="base/assets/examples/css/forms/validation.css">
-    <link rel="stylesheet" href="global/vendor/select2/select2.css">
-    <link rel="stylesheet" href="global/vendor/bootstrap-tokenfield/bootstrap-tokenfield.css">
-    <link rel="stylesheet" href="global/vendor/bootstrap-tagsinput/bootstrap-tagsinput.css">
-    <link rel="stylesheet" href="global/vendor/bootstrap-select/bootstrap-select.css">
+    <link rel="stylesheet" href="../global/vendor/animsition/animsition.css">
+    <link rel="stylesheet" href="../global/vendor/asscrollable/asScrollable.css">
+    <link rel="stylesheet" href="../global/vendor/switchery/switchery.css">
+    <link rel="stylesheet" href="../global/vendor/intro-js/introjs.css">
+    <link rel="stylesheet" href="../global/vendor/slidepanel/slidePanel.css">
+    <link rel="stylesheet" href="../global/vendor/flag-icon-css/flag-icon.css">
+    <!-- <link rel="stylesheet" href="assets/examples/css/structure/pagination.css"> -->
+    <link rel="stylesheet" href="../global/vendor/formvalidation/formValidation.css">
+    <link rel="stylesheet" href="../base/assets/examples/css/forms/validation.css">
+    <link rel="stylesheet" href="../global/vendor/select2/select2.css">
+    <link rel="stylesheet" href="../global/vendor/bootstrap-tokenfield/bootstrap-tokenfield.css">
+    <link rel="stylesheet" href="../global/vendor/bootstrap-tagsinput/bootstrap-tagsinput.css">
+    <link rel="stylesheet" href="../global/vendor/bootstrap-select/bootstrap-select.css">
+
+    <!-- datepicker layouts -->
+    <link rel="stylesheet" href="../global/vendor/bootstrap-datepicker/bootstrap-datepicker.css">
     <!-- <link rel="stylesheet" href="global/vendor/icheck/icheck.css">
     <link rel="stylesheet" href="global/vendor/switchery/switchery.css">
     <link rel="stylesheet" href="global/vendor/asrange/asRange.css">
@@ -47,12 +50,12 @@
     <link rel="stylesheet" href="global/vendor/jquery-strength/jquery-strength.css">
     <link rel="stylesheet" href="global/vendor/multi-select/multi-select.css">
     <link rel="stylesheet" href="global/vendor/typeahead-js/typeahead.css"> -->
-    <link rel="stylesheet" href="base/assets/examples/css/forms/advanced.css">
+    <link rel="stylesheet" href="../base/assets/examples/css/forms/advanced.css">
     
     
-    <!-- Fonts --><link rel="stylesheet" href="global/fonts/font-awesome/font-awesome.css">
-    <link rel="stylesheet" href="global/fonts/web-icons/web-icons.min.css">
-    <link rel="stylesheet" href="global/fonts/brand-icons/brand-icons.min.css">
+    <!-- Fonts --><link rel="stylesheet" href="../global/fonts/font-awesome/font-awesome.css">
+    <link rel="stylesheet" href="../global/fonts/web-icons/web-icons.min.css">
+    <link rel="stylesheet" href="../global/fonts/brand-icons/brand-icons.min.css">
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
 
     <style>
@@ -68,7 +71,7 @@
     <![endif]-->
     
     <!-- Scripts -->
-    <script src="global/vendor/breakpoints/breakpoints.js"></script>
+    <script src="../global/vendor/breakpoints/breakpoints.js"></script>
     <script>
       Breakpoints();
     </script>
@@ -89,7 +92,7 @@
             <i class="icon wb-more-horizontal" aria-hidden="true"></i>
         </button>
         <div class="navbar-brand navbar-brand-center site-gridmenu-toggle">
-            <img class="navbar-brand-logo" src="base/assets/images/logo.png" title="Remark">
+            <img class="navbar-brand-logo" src="../base/assets/images/logo.png" title="Remark">
             <span class="navbar-brand-text hidden-xs-down"> 基隆市安樂地政事務所</span>
         </div>
         <button type="button" class="navbar-toggler collapsed" data-target="#site-navbar-search" data-toggle="collapse">
@@ -128,7 +131,7 @@
                         <a class="dropdown-item" href="javascript:void(0)" role="menuitem">
                             <i class="icon wb-settings" aria-hidden="true"></i> 個人設定</a>
                         <div class="dropdown-divider" role="presentation"></div>
-                        <a class="dropdown-item" href="login.html" role="menuitem">
+                        <a class="dropdown-item" href="../login.html" role="menuitem">
                             <i class="icon wb-power" aria-hidden="true"></i> 登出</a>
                     </div>
                 </li>
@@ -151,7 +154,8 @@
         </div>
         <!-- End Site Navbar Seach -->
     </div>
-    </nav><!-- 左選單 -->
+    </nav>
+    <!-- 左選單 -->
     <div class="site-menubar">
       <div class="site-menubar-body">
         <div>
@@ -165,51 +169,51 @@
                 </span>
               </a>
               <ul class="site-menu-sub">
-                <li class="site-menu-item active">
-                  <a href="news-main.html">
+                <li class="site-menu-item">
+                  <a href="../news/news-main.html">
                     <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
                     <span class="site-menu-title">最新消息</span>
                   </a>
                 </li>
-                <li class="site-menu-item">
-                  <a href="aaaa.html">
-                    <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
-                    <span class="site-menu-title">行政規章專區</span>
-                  </a>
-                </li>
-                <li class="site-menu-item">
-                  <a href="aaaa.html">
-                    <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
-                    <span class="site-menu-title">地政答客問</span>
-                  </a>
-                </li>
-                <li class="site-menu-item">
-                  <a href="aaaa.html">
-                    <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
-                    <span class="site-menu-title">主任信箱</span>
-                  </a>
-                </li>
-                <li class="site-menu-item">
-                  <a href="aaaa.html">
-                    <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
-                    <span class="site-menu-title">問卷調查</span>
-                  </a>
-                </li>
-                <li class="site-menu-item">
-                  <a href="aaaa.html">
+                <li class="site-menu-item active">
+                  <a href="law-main.html">
                     <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
                     <span class="site-menu-title">法令新訊</span>
                   </a>
                 </li>
                 <li class="site-menu-item">
-                  <a href="aaaa.html">
+                  <a href="../rule/rule-main.html">
                     <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
                     <span class="site-menu-title">行政規章專區</span>
                   </a>
                 </li>
+                <li class="site-menu-item">
+                  <a href="../email-main.html">
+                    <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
+                    <span class="site-menu-title">地政答客問</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a href="../directorEmail-main.html">
+                    <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
+                    <span class="site-menu-title">主任信箱</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a href="../question-main.html">
+                    <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
+                    <span class="site-menu-title">問卷調查</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a href="../qa-main.html">
+                    <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
+                    <span class="site-menu-title">Q & A</span>
+                  </a>
+                </li>
               </ul>
             </li>
-    
+
             <li class="site-menu-item has-sub active">
               <a href="javascript:void(0)">
                 <i class="site-menu-icon wb-bookmark" aria-hidden="true"></i>
@@ -219,63 +223,57 @@
               </a>
               <ul class="site-menu-sub">
                 <li class="site-menu-item">
-                  <a href="aaaa.html">
+                  <a href="../board-main.html">
                     <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
                     <span class="site-menu-title">公佈欄</span>
                   </a>
                 </li>
                 <li class="site-menu-item">
-                  <a href="aaaa.html">
+                  <a href="../meeting-main.html">
                     <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
                     <span class="site-menu-title">會議紀錄</span>
                   </a>
                 </li>
                 <li class="site-menu-item">
-                  <a href="aaaa.html">
+                  <a href="../document-main.html">
                     <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
                     <span class="site-menu-title">表單下載</span>
                   </a>
                 </li>
               </ul>
             </li>
-    
+
             <li class="site-menu-item has-sub active">
-              <a href="javascript:void(0)">
-                <i class="site-menu-icon wb-bookmark" aria-hidden="true"></i>
-                <span class="site-menu-title">網路申辦</span>
-                <span class="site-menu-arrow">
-                </span>
-              </a>
               <ul class="site-menu-sub">
                 <li class="site-menu-item has-sub">
-                  <a href="aaaa.html">
+                  <a href="../onlineReservation-main.html">
                     <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
                     <span class="site-menu-title">線上預約服務</span>
                   </a>
                 </li>
                 <li class="site-menu-item has-sub">
-                  <a href="aaaa.html">
+                  <a href="../webTranscript-main.html">
                     <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
                     <span class="site-menu-title">網路申請應謄本</span>
                   </a>
                 </li>
                 <li class="site-menu-item has-sub">
-                  <a href="aaaa.html">
+                  <a href="../copy-main.html">
                     <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
                     <span class="site-menu-title">檔案閱覽抄錄複製</span>
                   </a>
                 </li>
                 <li class="site-menu-item has-sub">
-                  <a href="aaaa.html">
+                  <a href="../landprice-main.html">
                     <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
                     <span class="site-menu-title">公告地價資料</span>
                   </a>
                 </li>
               </ul>
             </li>
-    
+
             <li class="site-menu-item has-sub active">
-              <a href="javascript:void(0)">
+              <a href="../webSetup-main.html">
                 <i class="site-menu-icon wb-bookmark" aria-hidden="true"></i>
                 <span class="site-menu-title">網站設定</span>
                 <span class="site-menu-arrow">
@@ -283,19 +281,19 @@
               </a>
               <ul class="site-menu-sub">
                 <li class="site-menu-item has-sub">
-                  <a href="user-manager-main.html">
+                  <a href="../user-manager-main.html">
                     <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
                     <span class="site-menu-title">人員權限管理</span>
                   </a>
                 </li>
                 <li class="site-menu-item has-sub">
-                  <a href="aaaa.html">
+                  <a href="../emailSetup-main.html">
                     <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
                     <span class="site-menu-title">Email 顯示設定</span>
                   </a>
                 </li>
                 <li class="site-menu-item has-sub">
-                  <a href="aaaa.html">
+                  <a href="../userAccount-main.html">
                     <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
                     <span class="site-menu-title">瀏覽人數統計</span>
                   </a>
@@ -311,10 +309,10 @@
     <!-- Page -->
     <div class="page">
       <div class="page-header">
-        <h1 class="page-title">最新消息 - 編輯</h1>
+        <h1 class="page-title">法令新訊 - 編輯 an_web.mdb</h1>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
-          <li class="breadcrumb-item active">最新消息</li>
+          <li class="breadcrumb-item"><a href="../index.html">首頁</a></li>
+          <li class="breadcrumb-item active">法令新訊</li>
         </ol>
         <div class="page-header-actions"></div>
       </div>
@@ -332,7 +330,7 @@
               <div class="col-md-4 form-horizontal">
                 <!-- 主題分類 -->
                 <div class="form-group row">
-                  <label class="col-xl-12 col-md-3" for="Theme">主題分類
+                  <label class="col-xl-12 col-md-3" for="Theme">主題分類(選單- an_web.mdb/Theme 欄位-Theme)
                     <span class="required">*</span>
                   </label>
                   <div class=" col-xl-12 col-md-9">
@@ -347,7 +345,7 @@
               <div class="col-md-4 form-horizontal">
                 <!-- 施政分類 -->
                 <div class="form-group row">
-                    <label class="col-xl-12 col-md-3" for="Cake">施政分類
+                    <label class="col-xl-12 col-md-3" for="Cake">施政分類(選單- an_web.mdb/cake 欄位-Cake)
                     <span class="required">*</span>
                   </label>
                   <div class=" col-xl-12 col-md-9">
@@ -365,7 +363,7 @@
               <div class="col-md-4 form-horizontal">
                 <!-- 服務分類 -->
                 <div class="form-group row">
-                  <label class="col-xl-12 col-md-3" for="Service">服務分類
+                  <label class="col-xl-12 col-md-3" for="Service">服務分類(選單- an_web.mdb/service 欄位-Service)
                     <span class="required">*</span>
                   </label>
                   <div class=" col-xl-12 col-md-9">
@@ -396,7 +394,7 @@
               <div class="col-xl-5 form-horizontal">
                 <div class="form-group row">
                   <div class="col-xl-6 col-md-9">
-                    <label class="form-control-label row" for="author">新聞類別
+                    <label class="form-control-label row" for="author">法令類別 (選單- an_web.mdb/lawclass 欄位-Classfy)
                       <span class="required">*</span>
                     </label>
                     <select class="show-tick" data-plugin="selectpicker" id="author" name="author" required="">
@@ -404,20 +402,11 @@
                       <option>地價</option>
                       <option>測量</option>
                       <option>登記</option>
-                      <option>黨管</option>
-                      <option>政風</option>
-                      <option>會計</option>
-                      <option>政風</option>
-                      <option>人事</option>
-                      <option>研考</option>
-                      <option>總務</option>
-                      <option>資訊</option>
-                      <option>其他</option>
                     </select>
                   </div>
 
                   <div class="col-xl-6 col-md-9">
-                    <label class="form-control-label row">發布單位 
+                    <label class="form-control-label row">發布單位 (新增欄位)
                       <span class="required">*</span>
                     </label>
                     <div class="input-group">
@@ -432,14 +421,14 @@
 
                 <div class="form-group row">
                   <div class="col-xl-6 col-md-9">
-                    <label class="form-control-label row">連絡人
+                    <label class="form-control-label row">連絡人 (新增欄位)
                       <span class="required">*</span>
                     </label>
                     <input type="text" class="form-control" name="owner" placeholder="訊息聯絡人姓名" required="">
                   </div>
 
                   <div class="col-xl-6 col-md-9">
-                    <label class="form-control-label row">連絡人電話
+                    <label class="form-control-label row">連絡人電話 (新增欄位)
                       <span class="required">*</span>
                     </label>
                     <input type="text" class="form-control" name="ownerPhone" placeholder="訊息聯絡人電話" required="">
@@ -450,7 +439,7 @@
                   <div class="col-xl-6 col-md-9">
                     <div class="row">
                       <label class="form-control-label">
-                        發布日期 
+                        發布日期 (IDate)
                         <span class="required">*</span>
                       </label>
                     </div>
@@ -458,32 +447,16 @@
                       <span class="input-group-addon">
                         <i class="icon wb-calendar" aria-hidden="true"></i>
                       </span>
-                      <input type="text" name="postdate" class="form-control" placeholder="YYYY/MM/DD" data-fv-notempty="true" data-fv-notempty-message="請輸入發布日期，格式範例：2018/10/05"
-                        required="">
-                    </div>
-                  </div>
-
-                  <div class="col-xl-6 col-md-9">
-                    <div class="row">
-                      <label class="form-control-label">
-                        公告期限
-                        <span class="panel-desc">※ 若無期限請空白</span>
-                      </label>
-                    </div>
-                    <div class="input-group">
-                      <span class="input-group-addon">
-                        <i class="icon wb-calendar" aria-hidden="true"></i>
-                      </span>
-                      <input type="text" class="form-control" name="enddate" placeholder="YYYY/MM/DD">
+                      <input type="text" class="form-control" data-plugin="datepicker" data-Format="yyyy/mm/dd" data-language="zh-TW" name="postdate" placeholder="YYYY/MM/DD" data-fv-notempty="true" data-fv-notempty-message="請輸入發布日期，格式範例：2018/10/05" required="">
                     </div>
                   </div>
                 </div>
 
                 <div class="form-group row">
-                  <label class="col-xl-12 col-md-3 form-control-label">檔案上傳
+                  <label class="col-xl-12 col-md-3 form-control-label">檔案上傳-1
                     <span class="panel-desc">※ 如果有上傳檔案，檔案說明必填</span>
                   </label>
-                  <div class="col-xl-12 col-md-9">
+                  <div class="col-xl-12 col-md-9">(欄位- homepage2 ~ 6)
                     <div class="input-group input-group-file" data-plugin="inputGroupFile">
                       <input type="text" class="form-control" readonly="">
                       <span class="input-group-btn">
@@ -494,7 +467,7 @@
                       </span>
                     </div>
                   </div>
-                  <div class=" col-xl-12 col-md-9" style="padding-top:5px;">
+                  <div class=" col-xl-12 col-md-9" style="padding-top:5px;">(欄位- file1_momo ~ file5_momo)
                     <input type="text" class="form-control" name="file1_memo" placeholder="請輸入檔案說明">
                   </div>
                 </div>
@@ -502,28 +475,25 @@
                 <div class="form-group row">
                   <div class="col-xl-12 col-md-9">
                     <span class="input-group-btn">
-                      <button class="btn btn-success" type="button">+ 新增一組檔案上傳</button>
-                    </span>
+                      <button class="btn btn-success" type="button">+ 新增一組檔案上傳</button> 
+                    </span>(最多5組、重複名稱會蓋檔，看你要一次產生5組還是1組1組新增。上傳附件預存之資料夾路徑:an_db/rule)
                   </div>
                 </div>
 
               </div>
 
               <div class="col-xl-7 form-horizontal">
+                
                 <div class="form-group row">
-                  <label class="form-control-label">首頁置頂</label>
-                  <div>
-                    <div class="d-flex flex-column">
-                      <div class="checkbox-custom checkbox-primary">
-                        <input type="checkbox" id="inputForProject" value="project">
-                        <label for="inputForProject"><span class="panel-desc">如在首頁要放在單元頂層，請打勾</span></label>
-                      </div>
+                    <label class="col-xl-12 col-md-3 form-control-label">函文字號 (INumber)
+                        <span class="required">*</span></label>
+                    <div class=" col-xl-12 col-md-9" style="padding-top:5px;">
+                        <input type="text" class="form-control" name="INumber" placeholder="請輸入函文字號">
                     </div>
-                  </div>
                 </div>
 
                 <div class="form-group row">
-                  <label class="col-xl-12 col-md-3 form-control-label">主標題
+                  <label class="col-xl-12 col-md-3 form-control-label">主標題 (subject)
                     <span class="required">*</span>
                   </label>
                   <div class=" col-xl-12 col-md-9">
@@ -532,29 +502,21 @@
                 </div>
 
                 <div class="form-group row">
-                  <label class="col-xl-12 col-md-3 form-control-label">內文
+                  <label class="col-xl-12 col-md-3 form-control-label">內文 (Content)
                     <span class="required">*</span>
                   </label>
                   <div class="col-xl-12 col-md-9">
-                    <textarea class="form-control" name="skills" rows="10" placeholder="編輯內文看要一段一段加還是一次加一整篇。如果一段一段加，邏輯就是按下面新增段落" required=""></textarea>
+                    <textarea class="form-control" name="skills" rows="10" placeholder="編輯內文請按「Enter」分段落" required=""></textarea>
                   </div>
                 </div>
-
-                <div class="form-group row">
-                  <div class="col-xl-12 col-md-9">
-                    <span class="input-group-btn">
-                      <button class="btn btn-success" type="button">+ 新增段落</button>
-                    </span>
-                  </div>
-                </div>
-
               </div>
             </div>
           </div>
           <div class="panel-footer">
             <div class="form-group col-xl-12 text-right padding-top-m">
-              <a href="news-main.html" class="btn btn-default" id="validateButton1">取消</a>
+              <a href="law-main.html" class="btn btn-default" id="validateButton1">取消</a>
               <button type="submit" class="btn btn-primary" id="validateButton1">確認</button>
+              (欄位驗證在validation.js這個檔案裡，有些欄位必填)
             </div>
           </div>
         </div>
@@ -571,30 +533,30 @@
       <div class="site-footer-right">© 2018 基隆市安樂地政事務所</a></div>
     </footer>
     <!-- Core  -->
-    <script src="global/vendor/babel-external-helpers/babel-external-helpers.js"></script>
-    <script src="global/vendor/jquery/jquery.js"></script>
-    <script src="global/vendor/popper-js/umd/popper.min.js"></script>
-    <script src="global/vendor/bootstrap/bootstrap.js"></script>
-    <script src="global/vendor/animsition/animsition.js"></script>
-    <script src="global/vendor/mousewheel/jquery.mousewheel.js"></script>
-    <script src="global/vendor/asscrollbar/jquery-asScrollbar.js"></script>
-    <script src="global/vendor/asscrollable/jquery-asScrollable.js"></script>
-    <script src="global/vendor/ashoverscroll/jquery-asHoverScroll.js"></script>
+    <script src="../global/vendor/babel-external-helpers/babel-external-helpers.js"></script>
+    <script src="../global/vendor/jquery/jquery.js"></script>
+    <script src="../global/vendor/popper-js/umd/popper.min.js"></script>
+    <script src="../global/vendor/bootstrap/bootstrap.js"></script>
+    <script src="../global/vendor/animsition/animsition.js"></script>
+    <script src="../global/vendor/mousewheel/jquery.mousewheel.js"></script>
+    <script src="../global/vendor/asscrollbar/jquery-asScrollbar.js"></script>
+    <script src="../global/vendor/asscrollable/jquery-asScrollable.js"></script>
+    <script src="../global/vendor/ashoverscroll/jquery-asHoverScroll.js"></script>
     
     <!-- Plugins -->
-    <script src="global/vendor/switchery/switchery.js"></script>
-    <script src="global/vendor/intro-js/intro.js"></script>
-    <script src="global/vendor/screenfull/screenfull.js"></script>
-    <script src="global/vendor/slidepanel/jquery-slidePanel.js"></script>
-        <script src="global/vendor/formvalidation/formValidation.min.js"></script>
-        <script src="global/vendor/formvalidation/framework/bootstrap4.min.js"></script>
-        <script src="global/vendor/select2/select2.full.min.js"></script>
+    <script src="../global/vendor/switchery/switchery.js"></script>
+    <script src="../global/vendor/intro-js/intro.js"></script>
+    <script src="../global/vendor/screenfull/screenfull.js"></script>
+    <script src="../global/vendor/slidepanel/jquery-slidePanel.js"></script>
+        <script src="../global/vendor/formvalidation/formValidation.min.js"></script>
+        <script src="../global/vendor/formvalidation/framework/bootstrap4.min.js"></script>
+        <script src="../global/vendor/select2/select2.full.min.js"></script>
         <!-- <script src="global/vendor/bootstrap-tokenfield/bootstrap-tokenfield.min.js"></script>
         <script src="global/vendor/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>-->
 
-        <script src="global/vendor/bootstrap-select/bootstrap-select.js"></script>
+        <script src="../global/vendor/bootstrap-select/bootstrap-select.js"></script>
 
-        <script src="global/vendor/aspaginator/jquery-asPaginator.min.js"></script>
+        <script src="../global/vendor/aspaginator/jquery-asPaginator.min.js"></script>
         <!-- <script src="global/vendor/icheck/icheck.min.js"></script>
         <script src="global/vendor/switchery/switchery.js"></script>
         <script src="global/vendor/asrange/jquery-asRange.min.js"></script>
@@ -620,32 +582,37 @@
         <script src="global/vendor/jquery-placeholder/jquery.placeholder.js"></script> -->
     
     <!-- Scripts -->
-    <script src="global/js/Component.js"></script>
-    <script src="global/js/Plugin.js"></script>
-    <script src="global/js/Base.js"></script>
-    <script src="global/js/Config.js"></script>
+    <script src="../global/js/Component.js"></script>
+    <script src="../global/js/Plugin.js"></script>
+    <script src="../global/js/Base.js"></script>
+    <script src="../global/js/Config.js"></script>
     
-    <script src="base/assets/js/Section/Menubar.js"></script>
-    <script src="base/assets/js/Section/GridMenu.js"></script>
-    <script src="base/assets/js/Section/Sidebar.js"></script>
-    <script src="base/assets/js/Section/PageAside.js"></script>
-    <script src="base/assets/js/Plugin/menu.js"></script>
+    <script src="../base/assets/js/Section/Menubar.js"></script>
+    <script src="../base/assets/js/Section/GridMenu.js"></script>
+    <script src="../base/assets/js/Section/Sidebar.js"></script>
+    <script src="../base/assets/js/Section/PageAside.js"></script>
+    <script src="../base/assets/js/Plugin/menu.js"></script>
     
-    <script src="global/js/config/colors.js"></script>
-    <script src="base/assets/js/config/tour.js"></script>
+    <script src="../global/js/config/colors.js"></script>
+    <script src="../base/assets/js/config/tour.js"></script>
     <script>Config.set('assets', 'base/assets');</script>
     
     <!-- Page -->
-    <script src="base/assets/js/Site.js"></script>
-    <script src="global/js/Plugin/asscrollable.js"></script>
-    <script src="global/js/Plugin/slidepanel.js"></script>
-    <script src="global/js/Plugin/switchery.js"></script>
-    <script src="global/js/Plugin/select2.js"></script>
-    <script src="global/js/Plugin/bootstrap-tokenfield.js"></script>
-    <script src="global/js/Plugin/bootstrap-tagsinput.js"></script>
-    <script src="global/js/Plugin/bootstrap-select.js"></script>
+    <script src="../base/assets/js/Site.js"></script>
+    <script src="../global/js/Plugin/asscrollable.js"></script>
+    <script src="../global/js/Plugin/slidepanel.js"></script>
+    <script src="../global/js/Plugin/switchery.js"></script>
+    <script src="../global/js/Plugin/select2.js"></script>
+    <script src="../global/js/Plugin/bootstrap-tokenfield.js"></script>
+    <script src="../global/js/Plugin/bootstrap-tagsinput.js"></script>
+    <script src="../global/js/Plugin/bootstrap-select.js"></script>
 
-        <script src="global/js/Plugin/aspaginator.js"></script>
+        <script src="../global/js/Plugin/aspaginator.js"></script>
+
+        <!-- datepicker layouts-->
+        <script src="../global/vendor/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+        <script src="../global/vendor/bootstrap-datepicker/bootstrap-datepicker.zh-TW.min.js"></script>
+
     <!-- <script src="global/js/Plugin/icheck.js"></script>
     <script src="global/js/Plugin/switchery.js"></script>
     <script src="global/js/Plugin/asrange.js"></script>
@@ -663,11 +630,11 @@
     <script src="global/js/Plugin/datepair.js"></script>
     <script src="global/js/Plugin/jquery-strength.js"></script>
     <script src="global/js/Plugin/multi-select.js"></script> -->
-    <script src="global/js/Plugin/jquery-placeholder.js"></script>
-    <script src="global/js/Plugin/input-group-file.js"></script>
+    <script src="../global/js/Plugin/jquery-placeholder.js"></script>
+    <script src="../global/js/Plugin/input-group-file.js"></script>
     
-    <script src="base/assets/examples/js/forms/advanced.js"></script>
+    <script src="../base/assets/examples/js/forms/advanced.js"></script>
     
-        <script src="base/assets/examples/js/forms/validation.js"></script>
+        <script src="../base/assets/examples/js/forms/validation.js"></script>
   </body>
 </html>
