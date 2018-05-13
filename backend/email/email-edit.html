@@ -181,13 +181,13 @@
                     <span class="site-menu-title">法令新訊</span>
                   </a>
                 </li>
-                <li class="site-menu-item active">
+                <li class="site-menu-item">
                   <a href="rule-main.html">
                     <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
                     <span class="site-menu-title">行政規章專區</span>
                   </a>
                 </li>
-                <li class="site-menu-item">
+                <li class="site-menu-item active">
                   <a href="../email/email-main.html">
                     <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
                     <span class="site-menu-title">地政答客問</span>
@@ -315,96 +315,104 @@
     <!-- Page -->
     <div class="page">
       <div class="page-header">
-        <h1 class="page-title">行政規章專區 - 編輯 an_web.mdb/intro10</h1>
+        <h1 class="page-title">地政答客問 - 編輯 an_web.mdb/email</h1>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="../index.html">首頁</a></li>
-          <li class="breadcrumb-item active">行政規章專區</li>
+          <li class="breadcrumb-item active">地政答客問</li>
         </ol>
         <div class="page-header-actions"></div>
       </div>
 
       <div class="page-content container-fluid">              
       <form id="exampleFullForm" autocomplete="off">
-                <!-- 分類檢索設定 -->
-        <div class="panel panel-bordered">
-          <div class="panel-heading">
-            <h3 class="panel-title">分類檢索設定
-            </h3>
-          </div>
-          <div class="panel-body">
-            <div class="row row-lg">
-              <div class="col-md-4 form-horizontal">
-                <!-- 主題分類 -->
-                <div class="form-group row">
-                  <label class="col-xl-12 col-md-3" for="Theme">主題分類(選單- an_web.mdb/Theme 欄位-Theme)
-                    <span class="required">*</span>
-                  </label>
-                  <div class=" col-xl-12 col-md-9">
-                    <select class="show-tick" data-plugin="selectpicker" id="Theme" name="Theme" required="">
-                      <option value="">請選擇主題分類代碼</option>
-                      <option>140 - 地政</option>
-                    </select>
-                  </div>
-                </div>
-                <!-- /主題分類 -->
-              </div>
-              <div class="col-md-4 form-horizontal">
-                <!-- 施政分類 -->
-                <div class="form-group row">
-                    <label class="col-xl-12 col-md-3" for="Cake">施政分類(選單- an_web.mdb/cake 欄位-Cake)
-                    <span class="required">*</span>
-                  </label>
-                  <div class=" col-xl-12 col-md-9">
-                    <select class="show-tick" data-plugin="selectpicker" id="Cake" name="Cake" required="">
-                      <option value="">請選擇施政分類代碼</option>
-                      <option>CK1-土地測量</option>
-                      <option>CKA-</option>
-                      <option>CKA-</option>
-                      <option>CKA-地政資訊系統</option>
-                    </select>
-                  </div>
-                </div>
-                <!-- /施政分類 -->
-              </div>
-              <div class="col-md-4 form-horizontal">
-                <!-- 服務分類 -->
-                <div class="form-group row">
-                  <label class="col-xl-12 col-md-3" for="Service">服務分類(選單- an_web.mdb/service 欄位-Service)
-                    <span class="required">*</span>
-                  </label>
-                  <div class=" col-xl-12 col-md-9">
-                    <select class="show-tick" data-plugin="selectpicker" id="Service" name="Service" required="">
-                      <option value="">請選擇服務分類代碼</option>
-                      <option>C11-土地建物登記</option>
-                      <option>C12-土地建物移轉登記</option>
-                      <option>C13-法拍移轉登記</option>
-                      <option>C14-房屋稅</option>
-                      <option>C15-地價稅</option>
-                    </select>
-                  </div>
-                </div>
-                <!-- /服務分類 -->
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- /分類檢索設定 -->
 
         <!-- 內文編輯區 -->
         <div class="panel panel-bordered">
+            <div class="panel-heading">
+              <h3 class="panel-title">網站 email 留言訊息</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row row-lg">
+                <div class="col-xl-5 form-horizontal">    
+                  <div class="form-group row">
+                    <div class="col-xl-6 col-md-9">
+                      <label class="form-control-label row">留言者 (msg_name)
+                      </label>
+                      <input type="text" class="form-control" name="owner" placeholder="" required="">
+                    </div>
+  
+                    <div class="col-xl-6 col-md-9">
+                      <label class="form-control-label row">留言者電話 (msg_tel)
+                      </label>
+                      <input type="text" class="form-control" name="ownerPhone" placeholder="" required="">
+                    </div>
+                  </div>
+  
+                  <div class="form-group row">
+                    <div class="col-xl-6 col-md-9">
+                      <div class="row">
+                        <label class="form-control-label">
+                            留言者email(msg_email)
+                        </label>
+                      </div>
+                      <input type="text" class="form-control" name="ownerPhone" placeholder="" required="">
+                    </div>
+  
+                    <div class="col-xl-6 col-md-9">
+                        <div class="row">
+                            <label class="form-control-label">
+                                留言日期 (msg_date)
+                            </label>
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="icon wb-calendar" aria-hidden="true"></i>
+                            </span>
+                            <input type="text" class="form-control" data-plugin="datepicker" data-Format="yyyy/mm/dd" data-language="zh-TW" name="postdate"
+                                placeholder="YYYY/MM/DD" data-fv-notempty="true" data-fv-notempty-message="請輸入發布日期，格式範例：2018/10/05" required="">
+                        </div>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="col-xl-7 form-horizontal">
+  
+                  <div class="form-group row">
+                    <label class="col-xl-12 col-md-3 form-control-label">主標題 (mag_subject)
+                    </label>
+                    <div class=" col-xl-12 col-md-9">
+                      <input type="text" class="form-control" name="subject" placeholder="請輸入主標題" required="">
+                    </div>
+                  </div>
+  
+                  <div class="form-group row">
+                    <label class="col-xl-12 col-md-3 form-control-label">內文 (msg_content)
+                    </label>
+                    <div class="col-xl-12 col-md-9">
+                      <textarea class="form-control" name="skills" rows="10" placeholder="編輯內文請按「Enter」分段落" required=""></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- /內文編輯區 -->
+          <!-- 內文編輯區 -->
+        <div class="panel panel-bordered">
           <div class="panel-heading">
-            <h3 class="panel-title">內文編輯區</h3>
+            <h3 class="panel-title">網站 email 回覆訊息</h3>
           </div>
           <div class="panel-body">
             <div class="row row-lg">
               <div class="col-xl-5 form-horizontal">
                 <div class="form-group row">
                   <div class="col-xl-6 col-md-9">
-                    <label class="form-control-label row" for="author">規章類別 (選單- an_web.mdb/post_group 欄位-author)
+                    <label class="form-control-label row" for="author">回覆單位 (選單- an_web.mdb/post_group 欄位-author)
                       <span class="required">*</span>
                     </label>
                     <select class="show-tick" data-plugin="selectpicker" id="author" name="author" required="">
-                      <option value="">請選擇訊息類別</option>
+                      <option value="">請選擇回覆單位</option>
                       <option>地價</option>
                       <option>測量</option>
                       <option>登記</option>
@@ -413,56 +421,9 @@
                   </div>
 
                   <div class="col-xl-6 col-md-9">
-                    <label class="form-control-label row">發布單位 (新增欄位)
-                      <span class="required">*</span>
-                    </label>
-                    <div class="input-group">
-                      <select class="show-tick" data-plugin="selectpicker" id="office" name="office" required="">
-                        <option value="">請選擇發布單位</option>
-                        <option>研考</option>
-                        <option>地價</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="form-group row">
-                  <div class="col-xl-6 col-md-9">
-                    <label class="form-control-label row">連絡人 (新增欄位)
-                      <span class="required">*</span>
-                    </label>
-                    <input type="text" class="form-control" name="owner" placeholder="訊息聯絡人姓名" required="">
-                  </div>
-
-                  <div class="col-xl-6 col-md-9">
-                    <label class="form-control-label row">連絡人電話 (新增欄位)
-                      <span class="required">*</span>
-                    </label>
-                    <input type="text" class="form-control" name="ownerPhone" placeholder="訊息聯絡人電話" required="">
-                  </div>
-                </div>
-
-                <div class="form-group row">
-                  <div class="col-xl-6 col-md-9">
                     <div class="row">
                       <label class="form-control-label">
-                        發布日期 (postdate)
-                        <span class="required">*</span>
-                      </label>
-                    </div>
-                    <div class="input-group">
-                      <span class="input-group-addon">
-                        <i class="icon wb-calendar" aria-hidden="true"></i>
-                      </span>
-                      <input type="text" class="form-control" data-plugin="datepicker" data-Format="yyyy/mm/dd" data-language="zh-TW" name="postdate" placeholder="YYYY/MM/DD" data-fv-notempty="true" data-fv-notempty-message="請輸入發布日期，格式範例：2018/10/05" required="">
-                    </div>
-                  </div>
-
-                  <div class="col-xl-6 col-md-9">
-                    <div class="row">
-                      <label class="form-control-label">
-                        公告期限 (end_date)
-                        <span class="panel-desc">※ 若無期限請空白</span>
+                        回覆日期 (end_date)
                       </label>
                     </div>
                     <div class="input-group">
@@ -475,48 +436,30 @@
                 </div>
 
                 <div class="form-group row">
-                  <label class="col-xl-12 col-md-3 form-control-label">檔案上傳-1
-                    <span class="panel-desc">※ 如果有上傳檔案，檔案說明必填</span>
-                  </label>
-                  <div class="col-xl-12 col-md-9">(欄位- homepage2 ~ 6)
-                    <div class="input-group input-group-file" data-plugin="inputGroupFile">
-                      <input type="text" class="form-control" readonly="">
-                      <span class="input-group-btn">
-                        <span class="btn btn-success btn-file">
-                          <i class="icon wb-upload" aria-hidden="true"></i>
-                          <input type="file" name="" multiple="">
-                        </span>
-                      </span>
-                    </div>
+                  <div class="col-xl-6 col-md-9">
+                    <label class="form-control-label row">回覆者
+                    </label>
+                    <input type="text" class="form-control" name="owner" placeholder="回覆者姓名" required="">
                   </div>
-                  <div class=" col-xl-12 col-md-9" style="padding-top:5px;">(欄位- file1_momo ~ file5_momo)
-                    <input type="text" class="form-control" name="file1_memo" placeholder="請輸入檔案說明">
+
+                  <div class="col-xl-6 col-md-9">
+                    <label class="form-control-label row">回覆者電話
+                    </label>
+                    <input type="text" class="form-control" name="ownerPhone" placeholder="回覆者電話" required="">
                   </div>
                 </div>
 
-                <div class="form-group row">
-                  <div class="col-xl-12 col-md-9">
-                    <span class="input-group-btn">
-                      <button class="btn btn-success" type="button">+ 新增一組檔案上傳</button> 
-                    </span>(最多5組、重複名稱會蓋檔，看你要一次產生5組還是1組1組新增。上傳附件預存之資料夾路徑:an_db/news)
-                  </div>
-                </div>
+               
+
+                
+
+                
 
               </div>
 
               <div class="col-xl-7 form-horizontal">
-
                 <div class="form-group row">
-                  <label class="col-xl-12 col-md-3 form-control-label">主標題 (subject)
-                    <span class="required">*</span>
-                  </label>
-                  <div class=" col-xl-12 col-md-9">
-                    <input type="text" class="form-control" name="subject" placeholder="請輸入主標題" required="">
-                  </div>
-                </div>
-
-                <div class="form-group row">
-                  <label class="col-xl-12 col-md-3 form-control-label">內文 (Body)
+                  <label class="col-xl-12 col-md-3 form-control-label">回覆內文 (Body)
                     <span class="required">*</span>
                   </label>
                   <div class="col-xl-12 col-md-9">
