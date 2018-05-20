@@ -161,7 +161,7 @@
         <div>
           <ul class="site-menu" data-plugin="menu">
             <li class="site-menu-category">網站管理項目</li>
-            <li class="site-menu-item has-sub active open">
+            <li class="site-menu-item has-sub active">
               <a href="javascript:void(0)">
                 <i class="site-menu-icon wb-bookmark" aria-hidden="true"></i>
                 <span class="site-menu-title">單元項目</span>
@@ -214,7 +214,7 @@
               </ul>
             </li>
 
-            <li class="site-menu-item has-sub active">
+            <li class="site-menu-item has-sub active open">
               <a href="javascript:void(0)">
                 <i class="site-menu-icon wb-bookmark" aria-hidden="true"></i>
                 <span class="site-menu-title">員工專區</span>
@@ -315,7 +315,7 @@
     <!-- Page -->
     <div class="page">
       <div class="page-header">
-        <h1 class="page-title">公佈欄 - 編輯 an_web.mdb/an_news</h1>
+        <h1 class="page-title">公佈欄 - 編輯 an_web/board 不是在an_web.mdb裡面 </h1>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="../index.html">首頁</a></li>
           <li class="breadcrumb-item active">公佈欄</li>
@@ -325,70 +325,6 @@
 
       <div class="page-content container-fluid">              
       <form id="exampleFullForm" autocomplete="off">
-                <!-- 分類檢索設定 -->
-        <div class="panel panel-bordered">
-          <div class="panel-heading">
-            <h3 class="panel-title">分類檢索設定
-            </h3>
-          </div>
-          <div class="panel-body">
-            <div class="row row-lg">
-              <div class="col-md-4 form-horizontal">
-                <!-- 主題分類 -->
-                <div class="form-group row">
-                  <label class="col-xl-12 col-md-3" for="Theme">主題分類(選單- an_web.mdb/Theme 欄位-Theme)
-                    <span class="required">*</span>
-                  </label>
-                  <div class=" col-xl-12 col-md-9">
-                    <select class="show-tick" data-plugin="selectpicker" id="Theme" name="Theme" required="">
-                      <option value="">請選擇主題分類代碼</option>
-                      <option>140 - 地政</option>
-                    </select>
-                  </div>
-                </div>
-                <!-- /主題分類 -->
-              </div>
-              <div class="col-md-4 form-horizontal">
-                <!-- 施政分類 -->
-                <div class="form-group row">
-                    <label class="col-xl-12 col-md-3" for="Cake">施政分類(選單- an_web.mdb/cake 欄位-Cake)
-                    <span class="required">*</span>
-                  </label>
-                  <div class=" col-xl-12 col-md-9">
-                    <select class="show-tick" data-plugin="selectpicker" id="Cake" name="Cake" required="">
-                      <option value="">請選擇施政分類代碼</option>
-                      <option>CK1-土地測量</option>
-                      <option>CKA-</option>
-                      <option>CKA-</option>
-                      <option>CKA-地政資訊系統</option>
-                    </select>
-                  </div>
-                </div>
-                <!-- /施政分類 -->
-              </div>
-              <div class="col-md-4 form-horizontal">
-                <!-- 服務分類 -->
-                <div class="form-group row">
-                  <label class="col-xl-12 col-md-3" for="Service">服務分類(選單- an_web.mdb/service 欄位-Service)
-                    <span class="required">*</span>
-                  </label>
-                  <div class=" col-xl-12 col-md-9">
-                    <select class="show-tick" data-plugin="selectpicker" id="Service" name="Service" required="">
-                      <option value="">請選擇服務分類代碼</option>
-                      <option>C11-土地建物登記</option>
-                      <option>C12-土地建物移轉登記</option>
-                      <option>C13-法拍移轉登記</option>
-                      <option>C14-房屋稅</option>
-                      <option>C15-地價稅</option>
-                    </select>
-                  </div>
-                </div>
-                <!-- /服務分類 -->
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- /分類檢索設定 -->
 
         <!-- 內文編輯區 -->
         <div class="panel panel-bordered">
@@ -400,7 +336,7 @@
               <div class="col-xl-5 form-horizontal">
                 <div class="form-group row">
                   <div class="col-xl-6 col-md-9">
-                    <label class="form-control-label row" for="author">新聞類別 (選單- an_web.mdb/newsclass 欄位-author)
+                    <label class="form-control-label row" for="author">類別 (選單- an_web/board.mdb/boardclass 不是在an_web.mdb裡面 欄位-author)
                       <span class="required">*</span>
                     </label>
                     <select class="show-tick" data-plugin="selectpicker" id="author" name="author" required="">
@@ -418,37 +354,8 @@
                       <option>資訊</option>
                       <option>其他</option>
                     </select>
-                  </div>
-
-                  <div class="col-xl-6 col-md-9">
-                    <label class="form-control-label row">發布單位 (新增欄位)
-                      <span class="required">*</span>
-                    </label>
-                    <div class="input-group">
-                      <select class="show-tick" data-plugin="selectpicker" id="office" name="office" required="">
-                        <option value="">請選擇發布單位</option>
-                        <option>研考</option>
-                        <option>地價</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="form-group row">
-                  <div class="col-xl-6 col-md-9">
-                    <label class="form-control-label row">連絡人 (新增欄位)
-                      <span class="required">*</span>
-                    </label>
-                    <input type="text" class="form-control" name="owner" placeholder="訊息聯絡人姓名" required="">
-                  </div>
-
-                  <div class="col-xl-6 col-md-9">
-                    <label class="form-control-label row">連絡人電話 (新增欄位)
-                      <span class="required">*</span>
-                    </label>
-                    <input type="text" class="form-control" name="ownerPhone" placeholder="訊息聯絡人電話" required="">
-                  </div>
-                </div>
+                  </div>                  
+                </div>                
 
                 <div class="form-group row">
                   <div class="col-xl-6 col-md-9">
@@ -483,20 +390,6 @@
                 </div>
 
                 <div class="form-group row">
-                    <label class="col-xl-12 col-md-3 form-control-label">相關網址：
-                    </label>
-                    <div class="col-xl-12 col-md-9">(欄位- homepage1)
-                        <input type="text" class="form-control" name="homepage1" placeholder="請輸入網址">
-                    </div>
-                    <label class="col-xl-12 col-md-3 form-control-label">相關網址文字說明：
-                        <span class="panel-desc">※ 如果有設定網址，說明必填</span>
-                    </label>
-                    <div class=" col-xl-12 col-md-9" style="padding-top:5px;">(欄位- homepage_momo)
-                        <input type="text" class="form-control" name="homepage_momo" placeholder="請輸入說明">
-                    </div>
-                </div>
-
-                <div class="form-group row">
                   <label class="col-xl-12 col-md-3 form-control-label">檔案上傳-1
                     <span class="panel-desc">※ 如果有上傳檔案，檔案說明必填</span>
                   </label>
@@ -526,27 +419,7 @@
 
               </div>
 
-              <div class="col-xl-7 form-horizontal">
-                <div class="form-group row">
-                  <label class="form-control-label">首頁置頂(post_out)</label>
-                  <div>
-                    <div class="d-flex flex-column">
-                      <div class="checkbox-custom checkbox-primary">
-                        <input type="checkbox" id="inputForProject" value="project">
-                        <label for="inputForProject"><span class="panel-desc">如在首頁要放在單元頂層，請打勾</span></label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-                <div class="form-group row">
-                    <label class="col-xl-12 col-md-3 form-control-label">置頂於入口首頁的說明：
-                        <span class="panel-desc">※ 如果有設定置頂，說明必填</span>
-                    </label>
-                    <div class=" col-xl-12 col-md-9" style="padding-top:5px;">(欄位- post_out_txt)
-                        <input type="text" class="form-control" name="post_out_txt" placeholder="請輸入說明">
-                    </div>
-                </div>
+              <div class="col-xl-7 form-horizontal">               
 
                 <div class="form-group row">
                   <label class="col-xl-12 col-md-3 form-control-label">主標題 (subject)
@@ -570,7 +443,7 @@
           </div>
           <div class="panel-footer">
             <div class="form-group col-xl-12 text-right padding-top-m">
-              <a href="news-main.html" class="btn btn-default" id="validateButton1">取消</a>
+              <a href="board-main.html" class="btn btn-default" id="validateButton1">取消</a>
               <button type="submit" class="btn btn-primary" id="validateButton1">確認</button>
               (欄位驗證在validation.js這個檔案裡，有些欄位必填)
             </div>
