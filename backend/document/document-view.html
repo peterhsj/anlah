@@ -25,16 +25,13 @@
     <link rel="stylesheet" href="../global/vendor/intro-js/introjs.css">
     <link rel="stylesheet" href="../global/vendor/slidepanel/slidePanel.css">
     <link rel="stylesheet" href="../global/vendor/flag-icon-css/flag-icon.css">
-    <!-- <link rel="stylesheet" href="assets/examples/css/structure/pagination.css"> -->
+    <link rel="stylesheet" href="../assets/examples/css/structure/pagination.css">
     <link rel="stylesheet" href="../global/vendor/formvalidation/formValidation.css">
     <link rel="stylesheet" href="../base/assets/examples/css/forms/validation.css">
     <link rel="stylesheet" href="../global/vendor/select2/select2.css">
     <link rel="stylesheet" href="../global/vendor/bootstrap-tokenfield/bootstrap-tokenfield.css">
     <link rel="stylesheet" href="../global/vendor/bootstrap-tagsinput/bootstrap-tagsinput.css">
     <link rel="stylesheet" href="../global/vendor/bootstrap-select/bootstrap-select.css">
-
-    <!-- datepicker layouts -->
-    <link rel="stylesheet" href="../global/vendor/bootstrap-datepicker/bootstrap-datepicker.css">
     <!-- <link rel="stylesheet" href="global/vendor/icheck/icheck.css">
     <link rel="stylesheet" href="global/vendor/switchery/switchery.css">
     <link rel="stylesheet" href="global/vendor/asrange/asRange.css">
@@ -121,19 +118,19 @@
             <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right">
     
                 <li class="nav-item dropdown">
-                    <a class="nav-link navbar-avatar" data-toggle="dropdown" href="#" aria-expanded="false" data-animation="scale-up" role="button">
-                        您好：林大華 先生/小姐
-                        <span class="avatar avatar-online">
-                            <span class="icon wb-user" style="margin-left:10px;font-size:22px"></span>
-                        </span>
-                    </a>
-                    <div class="dropdown-menu" role="menu">
-                        <a class="dropdown-item" href="javascript:void(0)" role="menuitem">
-                            <i class="icon wb-settings" aria-hidden="true"></i> 個人設定</a>
-                        <div class="dropdown-divider" role="presentation"></div>
-                        <a class="dropdown-item" href="../login.html" role="menuitem">
-                            <i class="icon wb-power" aria-hidden="true"></i> 登出</a>
-                    </div>
+                  <a class="nav-link navbar-avatar" data-toggle="dropdown" href="#" aria-expanded="false" data-animation="scale-up" role="button">
+                    您好：林大華 先生/小姐
+                    <span class="avatar avatar-online">
+                      <span class="icon wb-user" style="margin-left:10px;font-size:22px"></span>
+                    </span>
+                  </a>
+                  <div class="dropdown-menu" role="menu">
+                    <a class="dropdown-item" href="javascript:void(0)" role="menuitem">
+                      <i class="icon wb-settings" aria-hidden="true"></i> 個人設定</a>
+                    <div class="dropdown-divider" role="presentation"></div>
+                    <a class="dropdown-item" href="../login.html" role="menuitem">
+                      <i class="icon wb-power" aria-hidden="true"></i> 登出</a>
+                  </div>
                 </li>
             </ul>
             <!-- End Navbar Toolbar Right -->
@@ -222,8 +219,8 @@
                 </span>
               </a>
               <ul class="site-menu-sub">
-                <li class="site-menu-item active">
-                  <a href="board-main.html">
+                <li class="site-menu-item">
+                  <a href="../board/board-main.html">
                     <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
                     <span class="site-menu-title">公佈欄</span>
                   </a>
@@ -234,8 +231,8 @@
                     <span class="site-menu-title">會議紀錄</span>
                   </a>
                 </li>
-                <li class="site-menu-item">
-                  <a href="../document/document-main.html">
+                <li class="site-menu-item active">
+                  <a href="document-main.html">
                     <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
                     <span class="site-menu-title">表單下載</span>
                   </a>
@@ -315,142 +312,62 @@
     <!-- Page -->
     <div class="page">
       <div class="page-header">
-        <h1 class="page-title">公佈欄 - 編輯 an_web/board 不是在an_web.mdb裡面 </h1>
+        <h1 class="page-title">表單下載 an_web/document.mdb/document 不是在an_web.mdb裡面</h1>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="../index.html">首頁</a></li>
-          <li class="breadcrumb-item active">公佈欄</li>
+          <li class="breadcrumb-item active">表單下載</li>
         </ol>
         <div class="page-header-actions"></div>
       </div>
 
-      <div class="page-content container-fluid">              
-      <form id="exampleFullForm" autocomplete="off">
-
-        <!-- 內文編輯區 -->
-        <div class="panel panel-bordered">
-          <div class="panel-heading">
-            <h3 class="panel-title">內文編輯區</h3>
-          </div>
-          <div class="panel-body">
-            <div class="row row-lg">
-              <div class="col-xl-5 form-horizontal">
-                <div class="form-group row">
-                  <div class="col-xl-6 col-md-9">
-                    <label class="form-control-label row" for="author">類別 (選單- an_web/board.mdb/boardclass 不是在an_web.mdb裡面 欄位-author)
-                      <span class="required">*</span>
-                    </label>
-                    <select class="show-tick" data-plugin="selectpicker" id="author" name="author" required="">
-                      <option value="">請選擇訊息類別</option>
-                      <option>地價</option>
-                      <option>測量</option>
-                      <option>登記</option>
-                      <option>黨管</option>
-                      <option>政風</option>
-                      <option>會計</option>
-                      <option>政風</option>
-                      <option>人事</option>
-                      <option>研考</option>
-                      <option>總務</option>
-                      <option>資訊</option>
-                      <option>其他</option>
-                    </select>
-                  </div>                  
-                </div>                
-
-                <div class="form-group row">
-                  <div class="col-xl-6 col-md-9">
-                    <div class="row">
-                      <label class="form-control-label">
-                        發布日期 (postdate)
-                        <span class="required">*</span>
-                      </label>
-                    </div>
-                    <div class="input-group">
-                      <span class="input-group-addon">
-                        <i class="icon wb-calendar" aria-hidden="true"></i>
-                      </span>
-                      <input type="text" class="form-control" data-plugin="datepicker" data-Format="yyyy/mm/dd" data-language="zh-TW" name="postdate" placeholder="YYYY/MM/DD" data-fv-notempty="true" data-fv-notempty-message="請輸入發布日期，格式範例：2018/10/05" required="">
-                    </div>
-                  </div>
-
-                  <div class="col-xl-6 col-md-9">
-                    <div class="row">
-                      <label class="form-control-label">
-                        公告期限 (end_date)
-                        <span class="panel-desc">※ 若無期限請空白</span>
-                      </label>
-                    </div>
-                    <div class="input-group">
-                      <span class="input-group-addon">
-                        <i class="icon wb-calendar" aria-hidden="true"></i>
-                      </span>
-                      <input type="text" class="form-control" data-plugin="datepicker" data-Format="yyyy/mm/dd" data-language="zh-TW" name="enddate" placeholder="YYYY/MM/DD">
-                    </div>
-                  </div>
-                </div>
-
-                <div class="form-group row">
-                  <label class="col-xl-12 col-md-3 form-control-label">檔案上傳-1
-                    <span class="panel-desc">※ 如果有上傳檔案，檔案說明必填</span>
-                  </label>
-                  <div class="col-xl-12 col-md-9">(欄位- homepage2 ~ 6)
-                    <div class="input-group input-group-file" data-plugin="inputGroupFile">
-                      <input type="text" class="form-control" readonly="">
-                      <span class="input-group-btn">
-                        <span class="btn btn-success btn-file">
-                          <i class="icon wb-upload" aria-hidden="true"></i>
-                          <input type="file" name="" multiple="">
-                        </span>
-                      </span>
-                    </div>
-                  </div>
-                  <div class=" col-xl-12 col-md-9" style="padding-top:5px;">(欄位- file1_momo ~ file5_momo)
-                    <input type="text" class="form-control" name="file1_memo" placeholder="請輸入檔案說明">
-                  </div>
-                </div>
-
-                <div class="form-group row">
-                  <div class="col-xl-12 col-md-9">
-                    <span class="input-group-btn">
-                      <button class="btn btn-success" type="button">+ 新增一組檔案上傳</button> 
-                    </span>(最多5組、重複名稱會蓋檔，看你要一次產生5組還是1組1組新增。上傳附件預存之資料夾路徑:an_db/board)
-                  </div>
-                </div>
-
-              </div>
-
-              <div class="col-xl-7 form-horizontal">               
-
-                <div class="form-group row">
-                  <label class="col-xl-12 col-md-3 form-control-label">主標題 (subject)
-                    <span class="required">*</span>
-                  </label>
-                  <div class=" col-xl-12 col-md-9">
-                    <input type="text" class="form-control" name="subject" placeholder="請輸入主標題" required="">
-                  </div>
-                </div>
-
-                <div class="form-group row">
-                  <label class="col-xl-12 col-md-3 form-control-label">內文 (Body)
-                    <span class="required">*</span>
-                  </label>
-                  <div class="col-xl-12 col-md-9">
-                    <textarea class="form-control" name="skills" rows="10" placeholder="編輯內文請按「Enter」分段落" required=""></textarea>
-                  </div>
-                </div>
-              </div>
+      <div class="page-content container-fluid">
+              
+    <div class="panel">
+        <div class="panel-heading">
+            <h3 class="panel-title">107年2月七堵區、暖暖區、中山區及安樂區不動產買賣交易量統計(不含拍賣) (subject)</h3>
+        </div>
+        <div class="panel-body">
+            <p><span class="min_title"><i class="icon wb-small-point" aria-hidden="true"></i> 發佈日期：</span>2018/03/24 (postdate)</p>
+            <p><span class="min_title"><i class="icon wb-small-point" aria-hidden="true"></i> 公告期限：</span>2018/03/24 (end_date)</p>    
+            <p><span class="min_title"><i class="icon wb-small-point" aria-hidden="true"></i> 公告類別：</span>人事 (author)</p>
+            
+            <div class="alert alert-success alert-dismissible" role="alert">
+              <h4>附件：</h4>
+              <ul>
+                <li>
+                  <i class="icon wb-bookmark" aria-hidden="true"></i> 107年2月交易量統計 (標題欄位-file2_momo)(URL欄位- homepage3)
+                  <a href="#" target="_blank" title="(標題欄位-file2_momo)下載">
+                    <i class="icon wb-file" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <li>
+                  <i class="icon wb-bookmark" aria-hidden="true"></i> 107年2月交易量統計 (標題欄位-file3_momo)(URL欄位- homepage4)
+                  <a href="#" target="_blank" title="(標題欄位-file3_momo)下載">
+                    <i class="icon wb-file" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <li>
+                  <i class="icon wb-bookmark" aria-hidden="true"></i> 107年2月交易量統計 (標題欄位-file4_momo)(URL欄位- homepage5)
+                  <a href="#" target="_blank" title="(標題欄位-file4_momo)下載">
+                    <i class="icon wb-file" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <li>
+                  <i class="icon wb-bookmark" aria-hidden="true"></i> 107年2月交易量統計 (標題欄位-file5_momo)(URL欄位- homepage6)
+                  <a href="#" target="_blank" title="(標題欄位-file5_momo)下載">
+                    <i class="icon wb-file" aria-hidden="true"></i>
+                  </a>
+                </li>
+              </ul>
             </div>
-          </div>
-          <div class="panel-footer">
-            <div class="form-group col-xl-12 text-right padding-top-m">
-              <a href="board-main.html" class="btn btn-default" id="validateButton1">取消</a>
-              <button type="submit" class="btn btn-primary" id="validateButton1">確認</button>
-              (欄位驗證在validation.js這個檔案裡，有些欄位必填)
-            </div>
+
+        </div>
+        <div class="panel-footer">
+          <div class="form-group col-xl-12 text-right padding-top-m">
+            <a href="document-main.html" class="btn btn-primary" id="validateButton1">回上頁</a>
           </div>
         </div>
-        <!-- /內文編輯區 -->
-      </form>
+    </div>
 
       </div>
     </div>
@@ -537,11 +454,6 @@
     <script src="../global/js/Plugin/bootstrap-select.js"></script>
 
         <script src="../global/js/Plugin/aspaginator.js"></script>
-
-        <!-- datepicker layouts-->
-        <script src="../global/vendor/bootstrap-datepicker/bootstrap-datepicker.js"></script>
-        <script src="../global/vendor/bootstrap-datepicker/bootstrap-datepicker.zh-TW.min.js"></script>
-
     <!-- <script src="global/js/Plugin/icheck.js"></script>
     <script src="global/js/Plugin/switchery.js"></script>
     <script src="global/js/Plugin/asrange.js"></script>

@@ -222,8 +222,8 @@
                 </span>
               </a>
               <ul class="site-menu-sub">
-                <li class="site-menu-item active">
-                  <a href="board-main.html">
+                <li class="site-menu-item">
+                  <a href="../board/board-main.html">
                     <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
                     <span class="site-menu-title">公佈欄</span>
                   </a>
@@ -234,8 +234,8 @@
                     <span class="site-menu-title">會議紀錄</span>
                   </a>
                 </li>
-                <li class="site-menu-item">
-                  <a href="../document/document-main.html">
+                <li class="site-menu-item active">
+                  <a href="document-main.html">
                     <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
                     <span class="site-menu-title">表單下載</span>
                   </a>
@@ -315,10 +315,10 @@
     <!-- Page -->
     <div class="page">
       <div class="page-header">
-        <h1 class="page-title">公佈欄 - 編輯 an_web/board 不是在an_web.mdb裡面 </h1>
+        <h1 class="page-title">表單下載 - 編輯 an_web/document.mdb/document 不是在an_web.mdb裡面 </h1>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="../index.html">首頁</a></li>
-          <li class="breadcrumb-item active">公佈欄</li>
+          <li class="breadcrumb-item active">表單下載</li>
         </ol>
         <div class="page-header-actions"></div>
       </div>
@@ -336,7 +336,7 @@
               <div class="col-xl-5 form-horizontal">
                 <div class="form-group row">
                   <div class="col-xl-6 col-md-9">
-                    <label class="form-control-label row" for="author">類別 (選單- an_web/board.mdb/boardclass 不是在an_web.mdb裡面 欄位-author)
+                    <label class="form-control-label row" for="author">類別 (選單- an_web/document.mdb/documentclass 不是在an_web.mdb裡面 欄位-author)
                       <span class="required">*</span>
                     </label>
                     <select class="show-tick" data-plugin="selectpicker" id="author" name="author" required="">
@@ -413,7 +413,7 @@
                   <div class="col-xl-12 col-md-9">
                     <span class="input-group-btn">
                       <button class="btn btn-success" type="button">+ 新增一組檔案上傳</button> 
-                    </span>(最多5組、重複名稱會蓋檔，看你要一次產生5組還是1組1組新增。上傳附件預存之資料夾路徑:an_db/board)
+                    </span>(最多5組、重複名稱會蓋檔，看你要一次產生5組還是1組1組新增。上傳附件預存之資料夾路徑:an_db/document)
                   </div>
                 </div>
 
@@ -430,20 +430,13 @@
                   </div>
                 </div>
 
-                <div class="form-group row">
-                  <label class="col-xl-12 col-md-3 form-control-label">內文 (Body)
-                    <span class="required">*</span>
-                  </label>
-                  <div class="col-xl-12 col-md-9">
-                    <textarea class="form-control" name="skills" rows="10" placeholder="編輯內文請按「Enter」分段落" required=""></textarea>
-                  </div>
-                </div>
+                
               </div>
             </div>
           </div>
           <div class="panel-footer">
             <div class="form-group col-xl-12 text-right padding-top-m">
-              <a href="board-main.html" class="btn btn-default" id="validateButton1">取消</a>
+              <a href="document-main.html" class="btn btn-default" id="validateButton1">取消</a>
               <button type="submit" class="btn btn-primary" id="validateButton1">確認</button>
               (欄位驗證在validation.js這個檔案裡，有些欄位必填)
             </div>
