@@ -289,6 +289,12 @@
                     <span class="site-menu-title">人員權限管理</span>
                   </a>
                 </li>
+								<li class="site-menu-item has-sub">
+                  <a href="typeSetup-main.html">
+                    <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
+                    <span class="site-menu-title">發佈類別設定</span>
+                  </a>
+                </li>
                 <li class="site-menu-item has-sub">
                   <a href="emailSetup-main.html">
                     <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
@@ -312,7 +318,7 @@
     <!-- Page -->
     <div class="page">
       <div class="page-header">
-        <h1 class="page-title">人員權限管理</h1>
+				<h1 class="page-title">人員權限管理 an_web.mdb/admin</h1>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="../index.html">首頁</a></li>
           <li class="breadcrumb-item active">人員權限管理</li>
@@ -340,7 +346,7 @@
               <table class="table table-bordered table-striped table-hover">
                 <thead>
                   <tr>
-                    <th class="text-center">人員代號</th>
+                    <th class="text-center">人員帳號</th>
                     <th class="text-center">人員姓名</th>
                     <th>操作</th>
                   </tr>
@@ -350,15 +356,26 @@
                     <td class="text-center">123456</td>
                     <td class="text-center">林志玲</td>
                     <td class="text-nowrap">
-                        <a href="user-manager-edit.html" class="btn btn-pure btn-default p-5 btn-primary">
-                            <span class="icon wb-pencil" data-toggle="tooltip" data-placement="top" data-original-title="編輯"></span>
-                        </a>
-                        <a href="#" class="btn btn-pure btn-default p-5 btn-warning" data-target="#delItem" data-toggle="modal">
-                            <span class=" icon wb-trash" data-toggle="tooltip" data-placement="top" data-original-title="刪除"></span>
-                        </a>
+                      <a href="user-manager-edit.html" class="btn btn-pure btn-default p-5 btn-primary">
+                        <span class="icon wb-pencil" data-toggle="tooltip" data-placement="top" data-original-title="編輯"></span>
+                      </a>
+                      <a href="#" class="btn btn-pure btn-default p-5 btn-warning" data-target="#delItem" data-toggle="modal">
+                        <span class=" icon wb-trash" data-toggle="tooltip" data-placement="top" data-original-title="刪除"></span>
+                      </a>
                     </td>
                   </tr>
-                  
+                  <tr>
+                    <td class="text-center">username</td>
+                    <td class="text-center">name</td>
+                    <td class="text-nowrap">
+                      <a href="user-manager-edit.html" class="btn btn-pure btn-default p-5 btn-primary">
+                        <span class="icon wb-pencil" data-toggle="tooltip" data-placement="top" data-original-title="編輯"></span>
+                      </a>
+                      <a href="#" class="btn btn-pure btn-default p-5 btn-warning" data-target="#delItem" data-toggle="modal">
+                        <span class=" icon wb-trash" data-toggle="tooltip" data-placement="top" data-original-title="刪除"></span>
+                      </a>
+                    </td>
+                  </tr>                  
                 </tbody>
               </table>
             </div>

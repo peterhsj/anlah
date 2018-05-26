@@ -289,6 +289,18 @@
                     <span class="site-menu-title">人員權限管理</span>
                   </a>
                 </li>
+								<li class="site-menu-item has-sub">
+                  <a href="typeSetup-main.html">
+                    <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
+                    <span class="site-menu-title">發佈類別設定</span>
+                  </a>
+                </li>
+                <li class="site-menu-item has-sub">
+                  <a href="../user/emailSetup-main.html">
+                    <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
+                    <span class="site-menu-title">Email 顯示設定</span>
+                  </a>
+                </li>
                 <li class="site-menu-item has-sub">
                   <a href="emailSetup-main.html">
                     <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
@@ -312,7 +324,7 @@
     <!-- Page -->
     <div class="page">
       <div class="page-header">
-        <h1 class="page-title">人員權限管理 - 編輯</h1>
+        <h1 class="page-title">人員權限管理 - 編輯 an_web.mdb/admin</h1>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="../index.html">首頁</a></li>
           <li class="breadcrumb-item active">人員權限管理</li>
@@ -333,7 +345,7 @@
               <div class="col-md-4 form-horizontal">
                 <!-- 姓名 -->
                 <div class="form-group row">
-                    <label class="col-xl-12 col-md-3 form-control-label">姓名
+                    <label class="col-xl-12 col-md-3 form-control-label">姓名 (name)
                         <span class="required">*</span>
                     </label>
                     <div class=" col-xl-12 col-md-9">
@@ -343,7 +355,7 @@
                 <!-- /姓名 -->
                 <!-- 帳號 -->
                 <div class="form-group row">
-                  <label class="col-xl-12 col-md-3 form-control-label">帳號
+                  <label class="col-xl-12 col-md-3 form-control-label">帳號 (username)
                     <span class="required">*</span>
                   </label>
                   <div class=" col-xl-12 col-md-9">
@@ -351,19 +363,9 @@
                   </div>
                 </div>
                 <!-- /帳號 -->
-                <!-- Email -->
-                <div class="form-group row">
-                  <label class="col-xl-12 col-md-3 form-control-label">Email
-                    <span class="required">*</span>
-                  </label>
-                  <div class=" col-xl-12 col-md-9">
-                    <input type="email" class="form-control" name="email" placeholder="請輸入公務電子郵件信箱" required="">
-                  </div>
-                </div>
-                <!-- /Email -->
                 <!-- 密碼 -->
                 <div class="form-group row">
-                  <label class="col-xl-12 col-md-3 form-control-label">密碼
+                  <label class="col-xl-12 col-md-3 form-control-label">密碼 (passwd)
                     <span class="required">*</span>
                   </label>
                   <div class=" col-xl-12 col-md-9">
@@ -373,7 +375,7 @@
                 <!-- /密碼 -->
                 <!-- 確認密碼 -->
                 <div class="form-group row">
-                  <label class="col-xl-12 col-md-3 form-control-label">確認密碼
+                  <label class="col-xl-12 col-md-3 form-control-label">確認密碼 (passwd)
                     <span class="required">*</span>
                   </label>
                   <div class=" col-xl-12 col-md-9">
@@ -385,7 +387,7 @@
               <div class="col-md-8 form-horizontal">
                 <!-- 人員權限 -->
                 <div class="form-group row">
-                  <label class="col-xl-12 col-md-3 form-control-label">人員權限
+                  <label class="col-xl-12 col-md-3 form-control-label">人員權限 (right)
                     <span class="required">*</span>
                   </label>
                   <div class=" col-xl-12 col-md-9">
