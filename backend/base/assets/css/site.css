@@ -11622,3 +11622,28 @@ h3.example-title {
     -ms-overflow-style: -ms-autohiding-scrollbar;
   }
 }
+table {
+  border-collapse: collapse !important;
+}
+table.table-bordered.dataTable {
+  border-collapse: collapse !important;
+}
+.table-bordered {
+  border: 1px solid #ccd5db !important;
+}
+.table-bordered td,
+.table-bordered th {
+  border: 1px solid #ccd5db !important;
+}
+table.dataTable thead td,
+table.dataTable thead th {
+  border-bottom: 2px solid #ccd5db !important;
+}
+.table-no-bordered {
+  border-width: 0 !important;
+}
+
+.table-no-bordered td,
+.table-no-bordered th {
+  border-width: 0 !important;
+}
