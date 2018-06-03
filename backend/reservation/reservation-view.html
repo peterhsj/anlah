@@ -103,507 +103,444 @@
         <!-- 內文編輯區 -->
         <div class="panel panel-bordered">
             <div class="panel-body">
-<form action="transact_07_01_save.asp" method="post" name="addForm">
-    <table width="800" border="0" cellspacing="0" cellpadding="5" style="margin:0 auto;">
-        <tr>
-            <td height="50" align="right">
-                <font size="5" face="標楷體">
-                    <strong>基隆市安樂地政事務所-線上預約服務</strong>
-                </font>
-            </td>
-            <td width="210" align="center">
-                <font size="4" face="標楷體">編號：</font>
-            </td>
-        </tr>
-    </table>
-    <font size="4" face="標楷體">
-        <table width="800" border="0" cellpadding="5" cellspacing="0" style="border:2px solid #000000;margin:0 auto;">
-            <tr>
-                <th width="15%" rowspan="3" style="border-bottom:1px solid #000000;border-right:1px solid #000000">申請人</th>
-                <td width="10%" align="center" style="border-bottom:1px solid #000000;border-right:1px solid #000000">姓名</td>
-                <td width="25%" style="border-bottom:1px solid #000000;border-right:1px solid #000000">
-                    <% =apply_name %>
-                        <input name="apply_name" type="hidden" value="<% =apply_name %>" />
-                </td>
-                <th width="15%" rowspan="3" style="border-bottom:1px solid #000000;border-right:1px solid #000000;">代理人</th>
-                <td width="10%" align="center" style="border-bottom:1px solid #000000;border-right:1px solid #000000">姓名</td>
-                <td style="border-bottom:1px solid #000000;">
-                    <% =agent_name %>
-                        <input name="agent_name" type="hidden" value="<% =agent_name %>" />
-                </td>
-            </tr>
-            <tr>
-                <td width="10%" align="center" style="border-bottom:1px solid #000000;border-right:1px solid #000000">出生日期</td>
-                <td width="25%" style="border-bottom:1px solid #000000;border-right:1px solid #000000">
-                    <% =apply_birth %>
-                        <input name="apply_birth" type="hidden" value="<% =apply_birth %>" />
-                </td>
-                <td width="10%" align="center" style="border-bottom:1px solid #000000;border-right:1px solid #000000">出生日期</td>
-                <td style="border-bottom:1px solid #000000;">
-                    <% =agent_birth %>
-                        <input name="agent_birth" type="hidden" value="<% =agent_birth %>" />
-                </td>
-            </tr>
-            <tr>
-                <td width="10%" align="center" style="border-bottom:1px solid #000000;border-right:1px solid #000000">統一編號</td>
-                <td width="25%" style="border-bottom:1px solid #000000;border-right:1px solid #000000">
-                    <% =apply_id %>
-                        <input name="apply_id" type="hidden" value="<% =apply_id %>" />
-                </td>
-                <td width="10%" align="center" style="border-bottom:1px solid #000000;border-right:1px solid #000000">統一編號</td>
-                <td style="border-bottom:1px solid #000000;">
-                    <% =agent_id %>
-                        <input name="agent_id" type="hidden" value="<% =agent_id %>" />
-                </td>
-            </tr>
-            <tr>
-                <th width="15%" height="90" valign="middle" bgcolor="#DDDDDD" style="border-bottom:1px solid #000000;border-right:1px solid #000000;">聯絡電話</th>
-                <td colspan="2" bgcolor="#DDDDDD" style="border-bottom:1px solid #000000;border-right:1px solid #000000;">
-                    <% =apply_tel %>
-                        <input name="apply_tel" type="hidden" value="<% =apply_tel %>" />
-                </td>
-                <th width="15%" height="90" valign="middle" bgcolor="#DDDDDD" style="border-bottom:1px solid #000000;border-right:1px solid #000000;">電子信箱</th>
-                <td colspan="2" bgcolor="#DDDDDD" style="border-bottom:1px solid #000000;">
-                    <% =apply_email %>
-                        <input name="apply_email" type="hidden" value="<% =apply_email %>" />
-                </td>
-            </tr>
-            <tr>
-                <th width="15%" height="60" nowrap style="border-right:1px solid #000000;">※ 委任關係</th>
-                <td colspan="5" nowrap="nowrap">
-                    <input name="agent_re" type="hidden" value="<% =agent_re %>" />
-                    <% If agent_re="1" then %>
-                        ■
-                        <% Else %>
-                            □
-                            <% End If %>
-                                本申請案，係受申請人之委託，如有虛偽不實，願負法律責任。</td>
-            </tr>
-        </table>
-    </font>
-    <font size="4" face="標楷體">
-        <table width="800" border="0" cellpadding="5" cellspacing="0" style="border-right:2px solid #000000;border-left:2px solid #000000;margin:0 auto;">
-            <tr>
-                <td height="80" bgcolor="#DDDDDD" style="border-bottom:1px solid #000;">
-                    <font size="4" face="標楷體">
-                        <table width="600" border="0" cellpadding="0" cellspacing="0">
-                            <tr>
-                                <td rowspan="3" nowrap="nowrap">申請項目：</td>
-                                <td height="25" nowrap="nowrap">
-                                    <input name="app_item_1" type="hidden" value="<% =app_item_1 %>" />
-                                    <% If app_item_1="1" then %>
-                                        ■
-                                        <% Else %>
-                                            □
-                                            <% End If %>
-                                                複印土地登記申請原案(收件字號：
-                                                <% =year_1 %>
-                                                    <input name="year_1" type="hidden" value="<% =year_1 %>" /> 年
-                                                    <% =docitem_1 %>
-                                                        <input name="docitem_1" type="hidden" value="<% =docitem_1 %>" /> 字第
-                                                        <% =no_1 %>
-                                                            <input name="no_1" type="hidden" value="<% =no_1 %>" /> 號)，份數
-                                                            <% =copy_1 %>
-                                                                <input name="copy_1" type="hidden" value="<% =copy_1 %>" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td height="25">
-                                    <input name="app_item_2" type="hidden" value="<% =app_item_2 %>" />
-                                    <% If app_item_2="1" then %>
-                                        ■
-                                        <% Else %>
-                                            □
-                                            <% End If %>
-                                                複印信託專簿(收件字號：
-                                                <% =year_2 %>
-                                                    <input name="year_2" type="hidden" value="<% =year_2 %>" /> 年
-                                                    <% =docitem_2 %>
-                                                        <input name="docitem_2" type="hidden" value="<% =docitem_2 %>" /> 字第
-                                                        <% =no_2 %>
-                                                            <input name="no_2" type="hidden" value="<% =no_2 %>" /> 號)，份數
-                                                            <% =copy_2 %>
-                                                                <input name="copy_2" type="hidden" value="<% =copy_2 %>" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td height="25">
-                                    <input name="app_item_3" type="hidden" value="<% =app_item_3 %>" />
-                                    <% If app_item_3="1" then %>
-                                        ■
-                                        <% Else %>
-                                            □
-                                            <% End If %>
-                                                下班領取登記案件(收件字號：
-                                                <% =year_3 %>
-                                                    <input name="year_3" type="hidden" value="<% =year_3 %>" /> 年
-                                                    <% =docitem_3 %>
-                                                        <input name="docitem_3" type="hidden" value="<% =docitem_3 %>" /> 字第
-                                                        <% =no_3 %>
-                                                            <input name="no_3" type="hidden" value="<% =no_3 %>" /> 號)
-                                </td>
-                            </tr>
-                        </table>
-                    </font>
-                </td>
-            </tr>
-            <tr>
-                <td height="80" bgcolor="#DDDDDD">
-                    <font size="4" face="標楷體">
-                        <table width="600" border="0" cellpadding="0" cellspacing="0">
-                            <tr>
-                                <td rowspan="2" valign="top" nowrap="nowrap">申請用途：</td>
-                                <td height="25" colspan="2" valign="top">
-                                    <input name="purpose_1" type="hidden" value="<% =purpose_1 %>" />
-                                    <% If purpose_1="1" then %>
-                                        ■
-                                        <% Else %>
-                                            □
-                                            <% End If %>
-                                                購屋、貸款使用
-                                                <input name="purpose_2" type="hidden" value="<% =purpose_2 %>" />
-                                                <% If purpose_2="1" then %>
-                                                    ■
-                                                    <% Else %>
-                                                        □
-                                                        <% End If %>
-                                                            處理訴訟案件
-                                                            <input name="purpose_3" type="hidden" value="<% =purpose_3 %>" />
-                                                            <% If purpose_3="1" then %>
-                                                                ■
-                                                                <% Else %>
-                                                                    □
-                                                                    <% End If %>
-                                                                        政府機關申請案
-                                                                        <input name="purpose_4" type="hidden" value="<% =purpose_4 %>" />
-                                                                        <% If purpose_4="1" then %>
-                                                                            ■
-                                                                            <% Else %>
-                                                                                □
-                                                                                <% End If %>
-                                                                                    自行參考 </td>
-                            </tr>
-                            <tr>
-                                <td height="30" nowrap="nowrap">
-                                    <% If purpose_5="1" then %>
-                                        ■
-                                        <% Else %>
-                                            □
-                                            <% End If %>
-                                                <input name="purpose_5" type="hidden" value="<% =purpose_6 %>" /> 其他：
-                                </td>
-                                <td width="100%" height="30">
-                                    <div style="border-bottom:1px solid #000000">
-                                        <% =purpose_note %>
-                                            <input name="purpose_note" type="hidden" value="<% =purpose_note %>" /> &nbsp;
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-                    </font>
-                </td>
-            </tr>
-        </table>
-        <table width="800" border="0" cellpadding="5" cellspacing="0" style="border:2px solid #000000;margin:0 auto;">
-            <tr>
-                <th width="15%" height="40" style="border-bottom:1px solid #000000;border-right:1px solid #000000">預約領件日期</th>
-                <td style="border-bottom:1px solid #000000;border-right:1px solid #000000">
-                    <% =get_appdate %>
-                        <input name="get_appdate" type="hidden" value="<% =get_appdate %>" />
-                </td>
-                <th width="15%" style="border-bottom:1px solid #000000;border-right:1px solid #000000;">時間</th>
-                <td style="border-bottom:1px solid #000000;border-right:1px solid #000000">
-                    <% =get_apptime %>
-                        <input name="get_apptime" type="hidden" value="<% =get_apptime %>" />
-                </td>
-            </tr>
-            <tr>
-                <th width="15%" height="90" valign="middle" bgcolor="#DDDDDD" style="border-bottom:1px solid #000000;border-right:1px solid #000000;">其他備註
-                    <br> 事項欄
-                </th>
-                <td height="90" colspan="3" bgcolor="#DDDDDD" style="border-bottom:1px solid #000000;border-right:1px solid #000000;">
-                    <% =other_note %>
-                        <input name="apply_tel2" type="hidden" value="<% =other_note %>" />
-                </td>
-            </tr>
-            <tr>
-                <th height="90" valign="middle" style="border-bottom:1px solid #000000;border-right:1px solid #000000;">注意事項</th>
-                <td height="90" colspan="3" style="border-bottom:1px solid #000000;border-right:1px solid #000000;">
-                    <ol>
-                        <li>本申請案如委託代理人代為申請，應填明代理人姓名、出生日期及身分證字號，並於委任關係欄勾選切結「本申請案，係受申請人之委託，如有虛偽不實，願負法律責任」。</li>
-                        <li> 如非申請複印全案，請於其他備註事項欄個別敘明欲申請複印之文件名稱。</li>
-                        <li> 填寫時如有任何問題請洽(02)24324001分機124 </li>
-                    </ol>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="4">
-                    <font size="5" face="標楷體">此致 基隆市安樂地政事務所</font>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="4">&nbsp;</td>
-            </tr>
-            <tr>
-                <td colspan="4">
-                    <font size="4" face="標楷體">
-                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                            <tr>
-                                <td width="14%" nowrap="nowrap">申請人簽章：</td>
-                                <td width="20%" style="border-bottom:1px solid #000000">&nbsp;</td>
-                                <td width="16%" nowrap="nowrap">※代理人簽章：</td>
-                                <td width="20%" style="border-bottom:1px solid #000000">&nbsp;</td>
-                                <td width="12%" nowrap="nowrap">申請日期：</td>
-                                <td style="border-bottom:1px solid #000000">&nbsp;</td>
-                            </tr>
-                        </table>
-                    </font>
-                </td>
-            </tr>
-        </table>
-    </font>
-    <font size="4" face="標楷體"> </font>
-    <P style='page-break-after:always'></P>
-    <font size="4" face="標楷體">
-        <table width="800" border="0" cellpadding="0" cellspacing="0" id="table06" summary="編排用表格" style="margin:0 auto;">
-            <caption>
-                線上預約服務網頁問卷
-            </caption>
-            <tr>
-                <th align="left" nowrap>1.請問您從何處得知本所「線上預約服務」？</th>
-            </tr>
-            <tr>
-                <td nowrap>
-                    <font size="4">
-                        <% If qa_1="1" then %>
-                            ■
-                            <% Else %>
-                                □
-                                <% End If %>
-                    </font> 傳播媒體
-                    <font size="4">
-                        <% If qa_1="2" then %>
-                            ■
-                            <% Else %>
-                                □
-                                <% End If %>
-                    </font> 報章雜誌
-                    <font size="4">
-                        <% If qa_1="3" then %>
-                            ■
-                            <% Else %>
-                                □
-                                <% End If %>
-                    </font> 本所宣導品
-                    <font size="4">
-                        <% If qa_1="4" then %>
-                            ■
-                            <% Else %>
-                                □
-                                <% End If %>
-                    </font> 親朋好友告知
-                    <font size="4">
-                        <% If qa_1="5" then %>
-                            ■
-                            <% Else %>
-                                □
-                                <% End If %>
-                    </font> 自己發現
-                    <font size="4">
-                        <% If qa_1="6" then %>
-                            ■
-                            <% Else %>
-                                □
-                                <% End If %>
-                    </font> 其他：
-                    <% =qa_note %>
-                        <input name="qa_note" type="hidden" value="<% =qa_note %>" /> &nbsp;
-                        <input name="qa_1" type="hidden" value="<% =qa_1 %>" />
-                </td>
-            </tr>
-            <tr>
-                <th align="left" nowrap>2.請問您對於本所「線上預約服務」網頁操作介面是否滿意？</th>
-            </tr>
-            <tr>
-                <td nowrap>
-                    <font size="4">
-                        <% If qa_2="1" then %>
-                            ■
-                            <% Else %>
-                                □
-                                <% End If %>
-                    </font> 非常滿意
-                    <font size="4">
-                        <% If qa_2="2" then %>
-                            ■
-                            <% Else %>
-                                □
-                                <% End If %>
-                    </font> 滿意
-                    <font size="4">
-                        <% If qa_2="3" then %>
-                            ■
-                            <% Else %>
-                                □
-                                <% End If %>
-                    </font> 普通
-                    <font size="4">
-                        <% If qa_2="4" then %>
-                            ■
-                            <% Else %>
-                                □
-                                <% End If %>
-                    </font> 不滿意
-                    <font size="4">
-                        <% If qa_2="5" then %>
-                            ■
-                            <% Else %>
-                                □
-                                <% End If %>
-                    </font> 非常不滿意
-                    <input name="qa_2" type="hidden" value="<% =qa_2 %>" />
-                </td>
-            </tr>
-            <tr>
-                <th align="left" nowrap>3.請問您認為「線上預約服務」此項服務，能節省您多少時間？</th>
-            </tr>
-            <tr>
-                <td nowrap>
-                    <font size="4">
-                        <% If qa_3="1" then %>
-                            ■
-                            <% Else %>
-                                □
-                                <% End If %>
-                    </font> 4小時以上
-                    <font size="4">
-                        <% If qa_3="2" then %>
-                            ■
-                            <% Else %>
-                                □
-                                <% End If %>
-                    </font> 3-4小時
-                    <font size="4">
-                        <% If qa_3="3" then %>
-                            ■
-                            <% Else %>
-                                □
-                                <% End If %>
-                    </font> 2-3小時
-                    <font size="4">
-                        <% If qa_3="4" then %>
-                            ■
-                            <% Else %>
-                                □
-                                <% End If %>
-                    </font> 1-2小時
-                    <font size="4">
-                        <% If qa_3="5" then %>
-                            ■
-                            <% Else %>
-                                □
-                                <% End If %>
-                    </font> 1小時以內
-                    <input name="qa_3" type="hidden" value="<% =qa_3 %>" />
-                </td>
-            </tr>
-            <tr>
-                <th align="left" nowrap>4.總體而言，請問您對於本所「線上預約服務」此項服務，是否滿意？</th>
-            </tr>
-            <tr>
-                <td>
-                    <font size="4">
-                        <% If qa_4="1" then %>
-                            ■
-                            <% Else %>
-                                □
-                                <% End If %>
-                    </font> 非常滿意
-                    <font size="4">
-                        <% If qa_4="2" then %>
-                            ■
-                            <% Else %>
-                                □
-                                <% End If %>
-                    </font> 滿意
-                    <font size="4">
-                        <% If qa_4="3" then %>
-                            ■
-                            <% Else %>
-                                □
-                                <% End If %>
-                    </font> 普通
-                    <font size="4">
-                        <% If qa_4="4" then %>
-                            ■
-                            <% Else %>
-                                □
-                                <% End If %>
-                    </font> 不滿意
-                    <font size="4">
-                        <% If qa_4="5" then %>
-                            ■
-                            <% Else %>
-                                □
-                                <% End If %>
-                    </font> 非常不滿意
-                    <input name="qa_4" type="hidden" value="<% =qa_4 %>" />
-                </td>
-            </tr>
-            <tr>
-                <th align="left" nowrap>5.請問您的職業是：</th>
-            </tr>
-            <tr>
-                <td>
-                    <font size="4">
-                        <% If qa_5="1" then %>
-                            ■
-                            <% Else %>
-                                □
-                                <% End If %>
-                    </font> 地政士或不動產相關行業
-                    <font size="4">
-                        <% If qa_5="2" then %>
-                            ■
-                            <% Else %>
-                                □
-                                <% End If %>
-                    </font> 銀行或金融業
-                    <font size="4">
-                        <% If qa_5="3" then %>
-                            ■
-                            <% Else %>
-                                □
-                                <% End If %>
-                    </font> 軍公教
-                    <font size="4">
-                        <% If qa_5="4" then %>
-                            ■
-                            <% Else %>
-                                □
-                                <% End If %>
-                    </font> 農漁商
-                    <font size="4">
-                        <% If qa_5="5" then %>
-                            ■
-                            <% Else %>
-                                □
-                                <% End If %>
-                    </font> 自由業或其他
-                    <input name="qa_5" type="hidden" value="<% =qa_5 %>" />
-                </td>
-            </tr>
-            <tr>
-                <th align="left" nowrap>填寫日期：
-                    <% =date()%>
-                        <input name="wdate" type="hidden" id="wdate" value="<% =date()%>">
-                </th>
-            </tr>
-        </table>
-    </font>
-    <input name="action1" type="submit" class="button" value="送出" /> &nbsp;
-    <input name="Submit2" type="button" class="button" value="回上頁修改" onClick="history.go(-1)" />
-</form>
+
+                <table class="table table-no-bordered" style="margin-bottom:0">
+                    <tr>
+                        <td class="text-center">
+                            <h3>基隆市安樂地政事務所-線上預約服務</h3>
+                        </td>
+                        <td class="text-left" style="width:20%">
+                            編號：
+                        </td>
+                    </tr>
+                </table>
+
+                <table class="table table-striped table-bordered" style="margin-bottom:0">
+                    <tr>
+                        <th width="15%" rowspan="3" class="text-center" style="vertical-align:middle">申請人</th>
+                        <td width="10%" class="text-center text-nowrap">姓名</td>
+                        <td width="25%">
+                            <% =apply_name %>
+                        </td>
+                        <th width="15%" rowspan="3" class="text-center" style="vertical-align:middle">代理人</th>
+                        <td width="10%" class="text-center text-nowrap">姓名</td>
+                        <td>
+                            <% =agent_name %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="10%" class="text-center text-nowrap">出生日期</td>
+                        <td width="25%">
+                            <% =apply_birth %>
+                        </td>
+                        <td width="10%" class="text-center text-nowrap">出生日期</td>
+                        <td>
+                            <% =agent_birth %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="10%" class="text-center text-nowrap">統一編號</td>
+                        <td width="25%">
+                            <% =apply_id %>
+                        </td>
+                        <td width="10%" class="text-center text-nowrap">統一編號</td>
+                        <td>
+                            <% =agent_id %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="15%" class="text-center" style="background-color:#DDD">聯絡電話</th>
+                        <td colspan="2" style="background-color:#DDD">
+                            <% =apply_tel %>
+                        </td>
+                        <th width="15%" class="text-center" style="background-color:#DDD">電子信箱</th>
+                        <td colspan="2" style="background-color:#DDD">
+                            <% =apply_email %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="text-center text-nowrap" width="15%">※ 委任關係</th>
+                        <td colspan="5">
+                            <% If agent_re="1" then %>
+                                <i class="icon fa-square" aria-hidden="true"></i>
+                                <% Else %>
+                                    <i class="icon fa-square-o" aria-hidden="true"></i>
+                                    <% End If %>
+                                        本申請案，係受申請人之委託，如有虛偽不實，願負法律責任。</td>
+                    </tr>
+                </table>
+
+
+                <table class="table table-striped table-bordered" style="margin-bottom:0">
+                    <tr>
+                        <td style="background-color:#DDD">
+
+                            <table class="table table-no-bordered" style="margin-bottom:0">
+                                <tr style="background-color:rgba(221,221,221,1)">
+                                    <td rowspan="3" class="text-nowrap">申請項目：</td>
+                                    <td>
+                                        <% If app_item_1="1" then %>
+                                            <i class="icon fa-square" aria-hidden="true"></i>
+                                            <% Else %>
+                                                <i class="icon fa-square-o" aria-hidden="true"></i>
+                                                <% End If %>
+                                                    複印土地登記申請原案(收件字號：
+                                                    year_1 年
+                                                        docitem_1 字第
+                                                            no_1 號)，份數
+                                                                copy_1
+                                    </td>
+                                </tr>
+                                <tr style="background-color:rgba(221,221,221,1)">
+                                    <td>
+                                        If app_item_2="1" then
+                                            <i class="icon fa-square" aria-hidden="true"></i>
+                                            <% Else %>
+                                                <i class="icon fa-square-o" aria-hidden="true"></i>
+                                                <% End If %>
+                                                    複印信託專簿(收件字號：
+                                                    year_2 年
+                                                        docitem_2 字第
+                                                            no_2 號)，份數
+                                                                copy_2
+                                    </td>
+                                </tr>
+                                <tr style="background-color:rgba(221,221,221,1)">
+                                    <td>
+                                        <% If app_item_3="1" then %>
+                                            <i class="icon fa-square" aria-hidden="true"></i>
+                                            <% Else %>
+                                                <i class="icon fa-square-o" aria-hidden="true"></i>
+                                                <% End If %>
+                                                    下班領取登記案件(收件字號：
+                                                    year_3 年
+                                                        docitem_3 字第
+                                                            no_3 號)
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#DDD">
+
+                            <table class="table table-no-bordered" style="margin-bottom:0">
+                                <tr style="background-color:rgba(221,221,221,1)">
+                                    <td rowspan="2" class="text-nowrap">申請用途：</td>
+                                    <td>
+                                        <% If purpose_1="1" then %>
+                                            <i class="icon fa-square" aria-hidden="true"></i>
+                                            <% Else %>
+                                                <i class="icon fa-square-o" aria-hidden="true"></i>
+                                                <% End If %>
+                                                    購屋、貸款使用
+                                                    <% If purpose_2="1" then %>
+                                                        <i class="icon fa-square" aria-hidden="true"></i>
+                                                        <% Else %>
+                                                            <i class="icon fa-square-o" aria-hidden="true"></i>
+                                                            <% End If %>
+                                                                處理訴訟案件
+                                                                <% If purpose_3="1" then %>
+                                                                    <i class="icon fa-square" aria-hidden="true"></i>
+                                                                    <% Else %>
+                                                                        <i class="icon fa-square-o" aria-hidden="true"></i>
+                                                                        <% End If %>
+                                                                            政府機關申請案
+                                                                            <% If purpose_4="1" then %>
+                                                                                <i class="icon fa-square" aria-hidden="true"></i>
+                                                                                <% Else %>
+                                                                                    <i class="icon fa-square-o" aria-hidden="true"></i>
+                                                                                    <% End If %>
+                                                                                        自行參考 </td>
+                                </tr>
+                                <tr style="background-color:rgba(221,221,221,1)">
+                                    <td>
+                                        <% If purpose_5="1" then %>
+                                            <i class="icon fa-square" aria-hidden="true"></i>
+                                            <% Else %>
+                                                <i class="icon fa-square-o" aria-hidden="true"></i>
+                                                <% End If %> 其他：
+                                                    <% =purpose_note %>
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </td>
+                    </tr>
+                </table>
+                <table class="table table-striped table-bordered" style="margin-bottom:0">
+                    <tr>
+                        <th class="text-center text-nowrap" width="15%">預約領件日期</th>
+                        <td>
+                            <% =get_appdate %>
+                        </td>
+                        <th width="15%">時間</th>
+                        <td>
+                            <% =get_apptime %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="text-center text-nowrap" width="15%" style="background-color:#DDD">其他備註事項欄</th>
+                        <td colspan="3" style="background-color:#DDD">
+                            <% =other_note %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="text-center text-nowrap">注意事項</th>
+                        <td colspan="3">
+                            <ol>
+                                <li>本申請案如委託代理人代為申請，應填明代理人姓名、出生日期及身分證字號，並於委任關係欄勾選切結「本申請案，係受申請人之委託，如有虛偽不實，願負法律責任」。</li>
+                                <li> 如非申請複印全案，請於其他備註事項欄個別敘明欲申請複印之文件名稱。</li>
+                                <li> 填寫時如有任何問題請洽(02)24324001分機124 </li>
+                            </ol>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="border-bottom-width: 0 !important">
+                            <h3>此致 基隆市安樂地政事務所</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="border-top-width: 0 !important">
+                            <table class="table table-no-bordered" style="margin-bottom:0">
+                                <tr>
+                                    <td class="text-nowrap" width="14%">申請人簽章：</td>
+                                    <td width="20%">&nbsp;</td>
+                                    <td class="text-nowrap" width="16%">※代理人簽章：</td>
+                                    <td width="20%">&nbsp;</td>
+                                    <td class="text-nowrap" width="12%">申請日期：</td>
+                                    <td> rs("wdate") </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <P style='page-break-after:always'></P>
+                <table class="table table-striped table-bordered" style="margin-bottom:0">
+                    <tr>
+                        <th class="text-left">1.請問您從何處得知本所「線上預約服務」？</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <% If qa_1="1" then %>
+                                <i class="icon fa-square" aria-hidden="true"></i>
+                                <% Else %>
+                                    <i class="icon fa-square-o" aria-hidden="true"></i>
+                                    <% End If %>
+                                        傳播媒體
+
+                                        <% If qa_1="2" then %>
+                                            <i class="icon fa-square" aria-hidden="true"></i>
+                                            <% Else %>
+                                                <i class="icon fa-square-o" aria-hidden="true"></i>
+                                                <% End If %>
+                                                    報章雜誌
+
+                                                    <% If qa_1="3" then %>
+                                                        <i class="icon fa-square" aria-hidden="true"></i>
+                                                        <% Else %>
+                                                            <i class="icon fa-square-o" aria-hidden="true"></i>
+                                                            <% End If %>
+                                                                本所宣導品
+
+                                                                <% If qa_1="4" then %>
+                                                                    <i class="icon fa-square" aria-hidden="true"></i>
+                                                                    <% Else %>
+                                                                        <i class="icon fa-square-o" aria-hidden="true"></i>
+                                                                        <% End If %>
+                                                                            親朋好友告知
+
+                                                                            <% If qa_1="5" then %>
+                                                                                <i class="icon fa-square" aria-hidden="true"></i>
+                                                                                <% Else %>
+                                                                                    <i class="icon fa-square-o" aria-hidden="true"></i>
+                                                                                    <% End If %>
+                                                                                        自己發現
+
+                                                                                        <% If qa_1="6" then %>
+                                                                                            <i class="icon fa-square" aria-hidden="true"></i>
+                                                                                            <% Else %>
+                                                                                                <i class="icon fa-square-o" aria-hidden="true"></i>
+                                                                                                <% End If %>
+                                                                                                    其他：
+                                                                                                    <% =qa_note %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="text-left">2.請問您對於本所「線上預約服務」網頁操作介面是否滿意？</th>
+                    </tr>
+                    <tr>
+                        <td>
+
+                            <% If qa_2="1" then %>
+                                <i class="icon fa-square" aria-hidden="true"></i>
+                                <% Else %>
+                                    <i class="icon fa-square-o" aria-hidden="true"></i>
+                                    <% End If %>
+                                        非常滿意
+
+                                        <% If qa_2="2" then %>
+                                            <i class="icon fa-square" aria-hidden="true"></i>
+                                            <% Else %>
+                                                <i class="icon fa-square-o" aria-hidden="true"></i>
+                                                <% End If %>
+                                                    滿意
+
+                                                    <% If qa_2="3" then %>
+                                                        <i class="icon fa-square" aria-hidden="true"></i>
+                                                        <% Else %>
+                                                            <i class="icon fa-square-o" aria-hidden="true"></i>
+                                                            <% End If %>
+                                                                普通
+
+                                                                <% If qa_2="4" then %>
+                                                                    <i class="icon fa-square" aria-hidden="true"></i>
+                                                                    <% Else %>
+                                                                        <i class="icon fa-square-o" aria-hidden="true"></i>
+                                                                        <% End If %>
+                                                                            不滿意
+
+                                                                            <% If qa_2="5" then %>
+                                                                                <i class="icon fa-square" aria-hidden="true"></i>
+                                                                                <% Else %>
+                                                                                    <i class="icon fa-square-o" aria-hidden="true"></i>
+                                                                                    <% End If %>
+                                                                                        非常不滿意
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="text-left">3.請問您認為「線上預約服務」此項服務，能節省您多少時間？</th>
+                    </tr>
+                    <tr>
+                        <td>
+
+                            <% If qa_3="1" then %>
+                                <i class="icon fa-square" aria-hidden="true"></i>
+                                <% Else %>
+                                    <i class="icon fa-square-o" aria-hidden="true"></i>
+                                    <% End If %>
+                                        4小時以上
+
+                                        <% If qa_3="2" then %>
+                                            <i class="icon fa-square" aria-hidden="true"></i>
+                                            <% Else %>
+                                                <i class="icon fa-square-o" aria-hidden="true"></i>
+                                                <% End If %>
+                                                    3-4小時
+
+                                                    <% If qa_3="3" then %>
+                                                        <i class="icon fa-square" aria-hidden="true"></i>
+                                                        <% Else %>
+                                                            <i class="icon fa-square-o" aria-hidden="true"></i>
+                                                            <% End If %>
+                                                                2-3小時
+
+                                                                <% If qa_3="4" then %>
+                                                                    <i class="icon fa-square" aria-hidden="true"></i>
+                                                                    <% Else %>
+                                                                        <i class="icon fa-square-o" aria-hidden="true"></i>
+                                                                        <% End If %>
+                                                                            1-2小時
+
+                                                                            <% If qa_3="5" then %>
+                                                                                <i class="icon fa-square" aria-hidden="true"></i>
+                                                                                <% Else %>
+                                                                                    <i class="icon fa-square-o" aria-hidden="true"></i>
+                                                                                    <% End If %>
+                                                                                        1小時以內
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="text-left">4.總體而言，請問您對於本所「線上預約服務」此項服務，是否滿意？</th>
+                    </tr>
+                    <tr>
+                        <td>
+
+                            <% If qa_4="1" then %>
+                                <i class="icon fa-square" aria-hidden="true"></i>
+                                <% Else %>
+                                    <i class="icon fa-square-o" aria-hidden="true"></i>
+                                    <% End If %>
+                                        非常滿意
+
+                                        <% If qa_4="2" then %>
+                                            <i class="icon fa-square" aria-hidden="true"></i>
+                                            <% Else %>
+                                                <i class="icon fa-square-o" aria-hidden="true"></i>
+                                                <% End If %>
+                                                    滿意
+
+                                                    <% If qa_4="3" then %>
+                                                        <i class="icon fa-square" aria-hidden="true"></i>
+                                                        <% Else %>
+                                                            <i class="icon fa-square-o" aria-hidden="true"></i>
+                                                            <% End If %>
+                                                                普通
+
+                                                                <% If qa_4="4" then %>
+                                                                    <i class="icon fa-square" aria-hidden="true"></i>
+                                                                    <% Else %>
+                                                                        <i class="icon fa-square-o" aria-hidden="true"></i>
+                                                                        <% End If %>
+                                                                            不滿意
+
+                                                                            <% If qa_4="5" then %>
+                                                                                <i class="icon fa-square" aria-hidden="true"></i>
+                                                                                <% Else %>
+                                                                                    <i class="icon fa-square-o" aria-hidden="true"></i>
+                                                                                    <% End If %>
+                                                                                        非常不滿意
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="text-left">5.請問您的職業是：</th>
+                    </tr>
+                    <tr>
+                        <td>
+
+                            <% If qa_5="1" then %>
+                                <i class="icon fa-square" aria-hidden="true"></i>
+                                <% Else %>
+                                    <i class="icon fa-square-o" aria-hidden="true"></i>
+                                    <% End If %>
+                                        地政士或不動產相關行業
+
+                                        <% If qa_5="2" then %>
+                                            <i class="icon fa-square" aria-hidden="true"></i>
+                                            <% Else %>
+                                                <i class="icon fa-square-o" aria-hidden="true"></i>
+                                                <% End If %>
+                                                    銀行或金融業
+
+                                                    <% If qa_5="3" then %>
+                                                        <i class="icon fa-square" aria-hidden="true"></i>
+                                                        <% Else %>
+                                                            <i class="icon fa-square-o" aria-hidden="true"></i>
+                                                            <% End If %>
+                                                                軍公教
+
+                                                                <% If qa_5="4" then %>
+                                                                    <i class="icon fa-square" aria-hidden="true"></i>
+                                                                    <% Else %>
+                                                                        <i class="icon fa-square-o" aria-hidden="true"></i>
+                                                                        <% End If %>
+                                                                            農漁商
+
+                                                                            <% If qa_5="5" then %>
+                                                                                <i class="icon fa-square" aria-hidden="true"></i>
+                                                                                <% Else %>
+                                                                                    <i class="icon fa-square-o" aria-hidden="true"></i>
+                                                                                    <% End If %>
+                                                                                        自由業或其他
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="text-left">填寫日期：
+                            <% =date()%>
+                        </th>
+                    </tr>
+                </table>
             </div>
         </div>
         <!-- /內文編輯區 -->
