@@ -15,56 +15,60 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="../global/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../global/css/bootstrap-extend.min.css">    
+    <link rel="stylesheet" href="../global/css/bootstrap-extend.min.css">
 
     <!-- Fonts -->
     <link rel="stylesheet" href="../global/fonts/font-awesome/font-awesome.css">
     <link rel="stylesheet" href="../base/assets/css/site.css">
 
     <style>
-    @page {
-        margin: 1cm; /*print邊界*/
-        size: A4 portrait; /*列印紙張大小*/
-    }
-        .print{
-            page-break-after:always; /*print分頁面*/
+        @page {
+            margin: 1cm;
+            size: A4 portrait;
         }
-    @media print{
-        body { 
-            color: #000; 
-            font-family: "標楷體"; 
-            padding: 0;
+        .print {
+            page-break-after: always;
+        }
+        @media print {
+            body {
+                color: #000;
+                font-family: "標楷體";
+                padding: 0;
+                margin: 0;
+            }
+            h1,h2,h3,h4,h5 {
+                color: #000;
+                font-family: "標楷體";
+            }
+            .printbtn {
+                display: none;
+            }
+            .table-bordered {
+                border: 1px solid #000000 !important;
+            }
+            .table-bordered td,
+            .table-bordered th {
+                border: 1px solid #000000 !important;
+            }
+            table.dataTable thead td,
+            table.dataTable thead th {
+                border-bottom: 2px solid #000000 !important;
+            }
+            .table-no-bordered {
+                border-width: 0 !important;
+            }
+
+            .table-no-bordered td,
+            .table-no-bordered th {
+                border-width: 0 !important;
+                padding:0;
+            }
+        }
+        body {
+            color: #000;
+            padding-top: 20px !important;
             margin: 0;
         }
-        h1,h2,h3,h4,h5 { 
-            color: #000; 
-            font-family: "標楷體"; 
-        }
-        .printbtn{
-            display: none;
-        }
-        /* .page {            
-            background: #FFFFFF;
-            min-height: 100%;
-            margin-left: 0 !important;
-            position: relative;
-        }
-        .imgs{
-             width: 100px;
-        } */
-    }
-    body { 
-            color: #000; 
-            padding: 0;
-            margin: 0;
-        }
-        /* .page {            
-            background: #FFFFFF;
-            min-height: 100%;
-            margin-left: 0 !important;
-            position: relative;
-        } */
-        
     </style>
 
     <!--[if lt IE 9]>
@@ -87,11 +91,11 @@
         <a href="javascript:print();" class="btn btn-primary">列印</a>
     </div>
 
-    <!-- Page -->        
-    <div class="page-content container-fluid">
+    <!-- Page -->
+    <div class="page-content container-fluid" style="padding: 10px 30px">
 
         <!-- 內文編輯區 -->
-        <div class="panel panel-bordered">
+        <div class="panel panel-bordered" style="box-shadow: none">
             <div class="panel-body">
                 <table class="table table-no-bordered" style="margin-bottom:0">
                     <tr>
@@ -119,7 +123,7 @@
                 </table>
                 <table class="table table-no-bordered" style="margin-bottom:0">
                     <tr>
-                        <td class="text-center">
+                        <td class="text-center" style="line-height: 3em;">
                             申請貴所所核發下列地段地號之「公告地價」資料
                         </td>
                     </tr>
@@ -213,7 +217,7 @@
                 </table>
                 <table class="table table-no-bordered" style="margin-bottom:0">
                     <tr>
-                        <td>說明：依據內政部89年9月4日台(89)內地字地8912764號函，上開地段號之公告地價資料將以公文書方式核發。 </td>
+                        <td style="line-height: 1.5;font-size:12px;padding:1em 0">說明：依據內政部89年9月4日台(89)內地字地8912764號函，上開地段號之公告地價資料將以公文書方式核發。 </td>
                     </tr>
                 </table>
                 <table class="table table-striped table-bordered" style="margin-bottom:0">
@@ -241,13 +245,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="text-center">中華民國
-                                year(rs("wdate"))-1911
-                                年
-                                    month(rs("wdate"))
-                                    月
-                                        day(rs("wdate"))
-                                        日</td>
+                        <td class="text-center">中華民國 year(rs("wdate"))-1911 年 month(rs("wdate")) 月 day(rs("wdate")) 日
+                        </td>
                     </tr>
                 </table>
                 <table class="table table-no-bordered" style="margin-bottom:0;margin-top:10px">
@@ -268,12 +267,16 @@
 
                             <table class="table table-no-bordered" style="margin-bottom:0">
                                 <tr>
-                                    <td style="width:1%"><i class="icon fa-square-o" aria-hidden="true"></i></td>
+                                    <td style="width:2%">
+                                        <i class="icon fa-square-o" aria-hidden="true"></i>
+                                    </td>
                                     <td>本申請案已於
                                         <u>&nbsp;&nbsp;&nbsp;年&nbsp;&nbsp;&nbsp;月&nbsp;&nbsp;&nbsp;日&nbsp;&nbsp;時&nbsp;&nbsp;&nbsp;分</u>，經承辦人電話確認無誤。准予辦理，將發函回覆申請人。</td>
                                 </tr>
                                 <tr>
-                                    <td><i class="icon fa-square-o" aria-hidden="true"></i></td>
+                                    <td>
+                                        <i class="icon fa-square-o" aria-hidden="true"></i>
+                                    </td>
                                     <td>本申請案因
                                         <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u>，不予受理。</td>
                                 </tr>
@@ -283,8 +286,7 @@
                     </tr>
                     <tr>
                         <td>
-
-                            <table class="table table-no-bordered" style="margin-top:0;margin-bottom:0">
+                            <table class="table table-no-bordered" style="margin-top:2em;margin-bottom:0">
                                 <tr>
                                     <td width="14%">承辦人：</td>
                                     <td width="20%"></td>
@@ -299,7 +301,7 @@
                     </tr>
                 </table>
 
-                <P style='page-break-after:always'></P>
+                <P class="print"></P>
                 <table class="table table-no-bordered" style="margin-bottom:0">
                     <tr>
                         <td class="text-center">
@@ -307,28 +309,36 @@
                         </td>
                     </tr>
                 </table>
-
                 <table class="table table-striped table-bordered" style="margin-bottom:0">
                     <tr>
                         <th class="text-left">1.請問您從何處得知本所「網路申請公告地價資料服務」？</th>
                     </tr>
                     <tr>
                         <td>
-                            <% If rs("qa_1")="1" then %><i class="icon fa-square" aria-hidden="true"></i>
-<% Else %>
-<i class="icon fa-square-o" aria-hidden="true"></i>
+                            <% If rs("qa_1")="1" then %>
+                                <i class="icon fa-square" aria-hidden="true"></i>
+                                <% Else %>
+                                    <i class="icon fa-square-o" aria-hidden="true"></i>
                                     <% End If %> 傳播媒體
-                                        <% If rs("qa_1")="2" then %><i class="icon fa-square" aria-hidden="true"></i>
-                                            <% Else %><i class="icon fa-square-o" aria-hidden="true"></i>
+                                        <% If rs("qa_1")="2" then %>
+                                            <i class="icon fa-square" aria-hidden="true"></i>
+                                            <% Else %>
+                                                <i class="icon fa-square-o" aria-hidden="true"></i>
                                                 <% End If %> 報章雜誌
-                                                    <% If rs("qa_1")="3" then %><i class="icon fa-square" aria-hidden="true"></i>
-                                                        <% Else %><i class="icon fa-square-o" aria-hidden="true"></i>
+                                                    <% If rs("qa_1")="3" then %>
+                                                        <i class="icon fa-square" aria-hidden="true"></i>
+                                                        <% Else %>
+                                                            <i class="icon fa-square-o" aria-hidden="true"></i>
                                                             <% End If %> 本所宣導品
-                                                                <% If rs("qa_1")="4" then %><i class="icon fa-square" aria-hidden="true"></i>
-                                                                    <% Else %><i class="icon fa-square-o" aria-hidden="true"></i>
+                                                                <% If rs("qa_1")="4" then %>
+                                                                    <i class="icon fa-square" aria-hidden="true"></i>
+                                                                    <% Else %>
+                                                                        <i class="icon fa-square-o" aria-hidden="true"></i>
                                                                         <% End If %> 親朋好友告知
-                                                                            <% If rs("qa_1")="5" then %><i class="icon fa-square" aria-hidden="true"></i>
-                                                                                <% Else %><i class="icon fa-square-o" aria-hidden="true"></i>
+                                                                            <% If rs("qa_1")="5" then %>
+                                                                                <i class="icon fa-square" aria-hidden="true"></i>
+                                                                                <% Else %>
+                                                                                    <i class="icon fa-square-o" aria-hidden="true"></i>
                                                                                     <% End If %> 自己發現
                         </td>
                     </tr>
@@ -338,20 +348,30 @@
 
                     <tr>
                         <td>
-                            <% If rs("qa_2")="1" then %><i class="icon fa-square" aria-hidden="true"></i>
-                                <% Else %><i class="icon fa-square-o" aria-hidden="true"></i>
+                            <% If rs("qa_2")="1" then %>
+                                <i class="icon fa-square" aria-hidden="true"></i>
+                                <% Else %>
+                                    <i class="icon fa-square-o" aria-hidden="true"></i>
                                     <% End If %> 非常滿意
-                                        <% If rs("qa_2")="2" then %><i class="icon fa-square" aria-hidden="true"></i>
-                                            <% Else %><i class="icon fa-square-o" aria-hidden="true"></i>
+                                        <% If rs("qa_2")="2" then %>
+                                            <i class="icon fa-square" aria-hidden="true"></i>
+                                            <% Else %>
+                                                <i class="icon fa-square-o" aria-hidden="true"></i>
                                                 <% End If %> 滿意
-                                                    <% If rs("qa_2")="3" then %><i class="icon fa-square" aria-hidden="true"></i>
-                                                        <% Else %><i class="icon fa-square-o" aria-hidden="true"></i>
+                                                    <% If rs("qa_2")="3" then %>
+                                                        <i class="icon fa-square" aria-hidden="true"></i>
+                                                        <% Else %>
+                                                            <i class="icon fa-square-o" aria-hidden="true"></i>
                                                             <% End If %> 普通
-                                                                <% If rs("qa_2")="4" then %><i class="icon fa-square" aria-hidden="true"></i>
-                                                                    <% Else %><i class="icon fa-square-o" aria-hidden="true"></i>
+                                                                <% If rs("qa_2")="4" then %>
+                                                                    <i class="icon fa-square" aria-hidden="true"></i>
+                                                                    <% Else %>
+                                                                        <i class="icon fa-square-o" aria-hidden="true"></i>
                                                                         <% End If %> 不滿意
-                                                                            <% If rs("qa_2")="5" then %><i class="icon fa-square" aria-hidden="true"></i>
-                                                                                <% Else %><i class="icon fa-square-o" aria-hidden="true"></i>
+                                                                            <% If rs("qa_2")="5" then %>
+                                                                                <i class="icon fa-square" aria-hidden="true"></i>
+                                                                                <% Else %>
+                                                                                    <i class="icon fa-square-o" aria-hidden="true"></i>
                                                                                     <% End If %> 非常不滿意
                         </td>
                     </tr>
@@ -361,20 +381,30 @@
                     </tr>
                     <tr>
                         <td>
-                            <% If rs("qa_3")="1" then %><i class="icon fa-square" aria-hidden="true"></i>
-                                <% Else %><i class="icon fa-square-o" aria-hidden="true"></i>
+                            <% If rs("qa_3")="1" then %>
+                                <i class="icon fa-square" aria-hidden="true"></i>
+                                <% Else %>
+                                    <i class="icon fa-square-o" aria-hidden="true"></i>
                                     <% End If %> 4小時以上
-                                        <% If rs("qa_3")="2" then %><i class="icon fa-square" aria-hidden="true"></i>
-                                            <% Else %><i class="icon fa-square-o" aria-hidden="true"></i>
+                                        <% If rs("qa_3")="2" then %>
+                                            <i class="icon fa-square" aria-hidden="true"></i>
+                                            <% Else %>
+                                                <i class="icon fa-square-o" aria-hidden="true"></i>
                                                 <% End If %> 3-4小時
-                                                    <% If rs("qa_3")="3" then %><i class="icon fa-square" aria-hidden="true"></i>
-                                                        <% Else %><i class="icon fa-square-o" aria-hidden="true"></i>
+                                                    <% If rs("qa_3")="3" then %>
+                                                        <i class="icon fa-square" aria-hidden="true"></i>
+                                                        <% Else %>
+                                                            <i class="icon fa-square-o" aria-hidden="true"></i>
                                                             <% End If %> 2-3小時
-                                                                <% If rs("qa_3")="4" then %><i class="icon fa-square" aria-hidden="true"></i>
-                                                                    <% Else %><i class="icon fa-square-o" aria-hidden="true"></i>
+                                                                <% If rs("qa_3")="4" then %>
+                                                                    <i class="icon fa-square" aria-hidden="true"></i>
+                                                                    <% Else %>
+                                                                        <i class="icon fa-square-o" aria-hidden="true"></i>
                                                                         <% End If %> 1-2小時
-                                                                            <% If rs("qa_3")="5" then %><i class="icon fa-square" aria-hidden="true"></i>
-                                                                                <% Else %><i class="icon fa-square-o" aria-hidden="true"></i>
+                                                                            <% If rs("qa_3")="5" then %>
+                                                                                <i class="icon fa-square" aria-hidden="true"></i>
+                                                                                <% Else %>
+                                                                                    <i class="icon fa-square-o" aria-hidden="true"></i>
                                                                                     <% End If %> 1小時以內
                         </td>
                     </tr>
@@ -383,20 +413,30 @@
                     </tr>
                     <tr>
                         <td>
-                            <% If rs("qa_4")="1" then %><i class="icon fa-square" aria-hidden="true"></i>
-                                <% Else %><i class="icon fa-square-o" aria-hidden="true"></i>
+                            <% If rs("qa_4")="1" then %>
+                                <i class="icon fa-square" aria-hidden="true"></i>
+                                <% Else %>
+                                    <i class="icon fa-square-o" aria-hidden="true"></i>
                                     <% End If %> 非常滿意
-                                        <% If rs("qa_4")="2" then %><i class="icon fa-square" aria-hidden="true"></i>
-                                            <% Else %><i class="icon fa-square-o" aria-hidden="true"></i>
+                                        <% If rs("qa_4")="2" then %>
+                                            <i class="icon fa-square" aria-hidden="true"></i>
+                                            <% Else %>
+                                                <i class="icon fa-square-o" aria-hidden="true"></i>
                                                 <% End If %> 滿意
-                                                    <% If rs("qa_4")="3" then %><i class="icon fa-square" aria-hidden="true"></i>
-                                                        <% Else %><i class="icon fa-square-o" aria-hidden="true"></i>
+                                                    <% If rs("qa_4")="3" then %>
+                                                        <i class="icon fa-square" aria-hidden="true"></i>
+                                                        <% Else %>
+                                                            <i class="icon fa-square-o" aria-hidden="true"></i>
                                                             <% End If %> 普通
-                                                                <% If rs("qa_4")="4" then %><i class="icon fa-square" aria-hidden="true"></i>
-                                                                    <% Else %><i class="icon fa-square-o" aria-hidden="true"></i>
+                                                                <% If rs("qa_4")="4" then %>
+                                                                    <i class="icon fa-square" aria-hidden="true"></i>
+                                                                    <% Else %>
+                                                                        <i class="icon fa-square-o" aria-hidden="true"></i>
                                                                         <% End If %> 不滿意
-                                                                            <% If rs("qa_4")="5" then %><i class="icon fa-square" aria-hidden="true"></i>
-                                                                                <% Else %><i class="icon fa-square-o" aria-hidden="true"></i>
+                                                                            <% If rs("qa_4")="5" then %>
+                                                                                <i class="icon fa-square" aria-hidden="true"></i>
+                                                                                <% Else %>
+                                                                                    <i class="icon fa-square-o" aria-hidden="true"></i>
                                                                                     <% End If %> 非常不滿意
                         </td>
                     </tr>
@@ -405,20 +445,30 @@
                     </tr>
                     <tr>
                         <td>
-                            <% If rs("qa_5")="1" then %><i class="icon fa-square" aria-hidden="true"></i>
-                                <% Else %><i class="icon fa-square-o" aria-hidden="true"></i>
+                            <% If rs("qa_5")="1" then %>
+                                <i class="icon fa-square" aria-hidden="true"></i>
+                                <% Else %>
+                                    <i class="icon fa-square-o" aria-hidden="true"></i>
                                     <% End If %> 地政士或不動產相關行業
-                                        <% If rs("qa_5")="2" then %><i class="icon fa-square" aria-hidden="true"></i>
-                                            <% Else %><i class="icon fa-square-o" aria-hidden="true"></i>
+                                        <% If rs("qa_5")="2" then %>
+                                            <i class="icon fa-square" aria-hidden="true"></i>
+                                            <% Else %>
+                                                <i class="icon fa-square-o" aria-hidden="true"></i>
                                                 <% End If %> 銀行或金融業
-                                                    <% If rs("qa_5")="3" then %><i class="icon fa-square" aria-hidden="true"></i>
-                                                        <% Else %><i class="icon fa-square-o" aria-hidden="true"></i>
+                                                    <% If rs("qa_5")="3" then %>
+                                                        <i class="icon fa-square" aria-hidden="true"></i>
+                                                        <% Else %>
+                                                            <i class="icon fa-square-o" aria-hidden="true"></i>
                                                             <% End If %> 軍公教
-                                                                <% If rs("qa_5")="4" then %><i class="icon fa-square" aria-hidden="true"></i>
-                                                                    <% Else %><i class="icon fa-square-o" aria-hidden="true"></i>
+                                                                <% If rs("qa_5")="4" then %>
+                                                                    <i class="icon fa-square" aria-hidden="true"></i>
+                                                                    <% Else %>
+                                                                        <i class="icon fa-square-o" aria-hidden="true"></i>
                                                                         <% End If %> 農漁商
-                                                                            <% If rs("qa_5")="5" then %><i class="icon fa-square" aria-hidden="true"></i>
-                                                                                <% Else %><i class="icon fa-square-o" aria-hidden="true"></i>
+                                                                            <% If rs("qa_5")="5" then %>
+                                                                                <i class="icon fa-square" aria-hidden="true"></i>
+                                                                                <% Else %>
+                                                                                    <i class="icon fa-square-o" aria-hidden="true"></i>
                                                                                     <% End If %> 自由業或其他
                         </td>
                     </tr>
@@ -434,7 +484,7 @@
 
     </div>
     <!-- End Page -->
-    
+
     <!-- Core  -->
     <script src="../global/vendor/jquery/jquery.js"></script>
     <script src="../global/vendor/bootstrap/bootstrap.js"></script>

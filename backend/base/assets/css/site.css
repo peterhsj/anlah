@@ -11622,6 +11622,10 @@ h3.example-title {
     -ms-overflow-style: -ms-autohiding-scrollbar;
   }
 }
+
+.printbtn {
+  padding: 0 60px;
+}
 table {
   border-collapse: collapse !important;
 }
@@ -11646,4 +11650,5 @@ table.dataTable thead th {
 .table-no-bordered td,
 .table-no-bordered th {
   border-width: 0 !important;
+  padding:0;
 }
