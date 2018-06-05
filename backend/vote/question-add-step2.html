@@ -320,7 +320,7 @@
     <!-- Page -->
     <div class="page">
         <div class="page-header">
-            <h1 class="page-title">問卷調查-新增問卷設定 an_web.mdb/suggest</h1>
+            <h1 class="page-title">問卷調查-新增問卷設定 an_web.mdb/suggest2</h1>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
                     <a href="../index.html">首頁</a>
@@ -331,144 +331,101 @@
         </div>
 
         <div class="page-content container-fluid">
-<form id="exampleFullForm" autocomplete="off" action="question-add-step2.html">
+            <form id="exampleFullForm" autocomplete="off" action="question-add-step3.html">
                 <!-- 內文編輯區 -->
                 <div class="panel panel-bordered">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">編寫 (question_name) 問卷題目</h3>
+                         ( suggest 儲存問卷名稱和基本資訊，關聯到 suggest2 儲存題目，在關連到 suggest3 儲存問卷回覆 )
+                    </div>
                     <div class="panel-body">
-                        <div class="row row-lg">
+                        <div class="row">
+                            <div class="col-md-6">
+                                問卷名稱： (question_name)
+                            </div>
+                            <div class="col-md-6">
+                                製作人： (owner)
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                有效時間： 自 (startday) 至 (stopday)
+                            </div>
+                            <div class="col-md-6">
+                                本問卷結果將 (is_open) 公開/不公開
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                問卷說明：(content)
+                            </div>
+                        </div>
+                        <div class="row row-lg" style="border-top:2px solid #ddd;padding-top: 5px;margin-top: 10px">
                             <div class="col-md-6 form-horizontal">
                                 <!-- 問卷名稱 -->
                                 <div class="form-group row">
-                                    <label class="col-xl-12 col-md-3 form-control-label">問卷名稱
-                                        <span class="required">*</span>
+                                    <label class="col-xl-12 col-md-3 form-control-label">選擇題
+                                        <%=i%> (選項不能空白)
                                     </label>
-                                    <div class=" col-xl-12 col-md-9">
-                                        <input type="text" class="form-control" name="question_name" placeholder="" required="" value="">
+                                    <div class="col-xl-12 col-md-9 form-inline" style="margin-bottom: 10px">
+                                        <div class="radio-custom radio-primary">
+                                            <input type="radio" id="inputRadios<%=i%>" name="multi<%=i%>">
+                                            <label for="inputRadios<%=i%>" checked>單選</label>
+                                        </div>
+                                        <div class="radio-custom radio-primary" style="margin-left: 15px">
+                                            <input type="radio" id="inputRadios<%=i%>" name="multi<%=i%>">
+                                            <label for="inputRadios<%=i%>">複選</label>
+                                        </div>
+                                    </div>
+                                    <label class="col-xl-2 col-md-3 form-control-label">題目：</label>
+                                    <div class=" col-xl-10 col-md-9">
+                                        <input type="text" class="form-control" name="select_question" placeholder="" required="" value="">
+                                    </div>
+                                    <label class="col-xl-2 col-md-3 form-control-label">選項
+                                        <%=x%> 1</label>
+                                    <div class=" col-xl-10 col-md-9">
+                                        <input type="text" class="form-control" name="options<%=x%>" placeholder="">
+                                    </div>
+                                    <label class="col-xl-2 col-md-3 form-control-label">選項
+                                        <%=x%> 2</label>
+                                    <div class=" col-xl-10 col-md-9">
+                                        <input type="text" class="form-control" name="options<%=x%>" placeholder="">
+                                    </div>
+                                    <label class="col-xl-2 col-md-3 form-control-label">選項
+                                        <%=x%> 3</label>
+                                    <div class=" col-xl-10 col-md-9">
+                                        <input type="text" class="form-control" name="options<%=x%>" placeholder="">
+                                    </div>
+                                    <label class="col-xl-2 col-md-3 form-control-label">選項
+                                        <%=x%> 4</label>
+                                    <div class=" col-xl-10 col-md-9">
+                                        <input type="text" class="form-control" name="options<%=x%>" placeholder="">
+                                    </div>
+                                    <label class="col-xl-2 col-md-3 form-control-label">選項
+                                        <%=x%> 5</label>
+                                    <div class=" col-xl-10 col-md-9">
+                                        <input type="text" class="form-control" name="options<%=x%>" placeholder="">
+                                    </div>
+                                    <label class="col-xl-2 col-md-3 form-control-label">選項
+                                        <%=x%> 6</label>
+                                    <div class=" col-xl-10 col-md-9">
+                                        <input type="text" class="form-control" name="options<%=x%>" placeholder="">
                                     </div>
                                 </div>
                                 <!-- /問卷名稱 -->
-                                <!-- 發起人 -->
-                                <div class="form-group row">
-                                    <label class="col-xl-12 col-md-3 form-control-label">發起人
-                                        <span class="required">*</span>
-                                    </label>
-                                    <div class=" col-xl-12 col-md-9">
-                                        <input type="text" class="form-control" name="owner" placeholder="" required="" value="">
-                                    </div>
-                                </div>
-                                <!-- /發起人 -->
-                                <!-- 起始時間 -->
-                                <div class="form-group row">
-                                    <label class="col-xl-12 col-md-3 form-control-label">起始時間 (預定為當日)
-                                        <span class="required">*</span>
-                                    </label>
-                                    <div class=" col-xl-12 col-md-9">
-                                        <input type="text" class="form-control" name="Startday" placeholder="" required="" value="<%=now%>">
-                                    </div>
-                                </div>
-                                <!-- /起始時間 -->
-                                <!-- 截止時間 -->
-                                <div class="form-group row">
-                                    <label class="col-xl-12 col-md-3 form-control-label">截止時間 (預定為30天)
-                                        <span class="required">*</span>
-                                    </label>
-                                    <div class=" col-xl-12 col-md-9">
-                                        <input type="text" class="form-control" name="Stopday" placeholder="" required="" value="<%=now+30%>">
-                                    </div>
-                                </div>
-                                <!-- /截止時間 -->
                             </div>
                             <div class="col-md-6 form-horizontal">
                                 <!-- 選擇題數量 -->
                                 <div class="form-group row">
-                                    <label class="col-xl-12 col-md-3 form-control-label">選擇題數量
-                                        <span class="required">*</span>
+                                    <label class="col-xl-12 col-md-3 form-control-label">問答題
+                                        <%=i%>
                                     </label>
-                                    <div class=" col-xl-12 col-md-9">
-                                        <select class="form-control" name="select_qty" size="1">
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                            <option value="6">6</option>
-                                            <option value="7">7</option>
-                                            <option value="8">8</option>
-                                            <option value="9">9</option>
-                                            <option value="10">10</option>
-                                            <option value="11">11</option>
-                                            <option value="12">12</option>
-                                            <option value="13">13</option>
-                                            <option value="14">14</option>
-                                            <option value="15">15</option>
-                                            <option value="16">16</option>
-                                            <option value="17">17</option>
-                                            <option value="18">18</option>
-                                            <option value="19">19</option>
-                                            <option value="20">20</option>
-                                            <option value="21">21</option>
-                                            <option value="22">22</option>
-                                            <option value="23">23</option>
-                                            <option value="24">24</option>
-                                            <option value="25">25</option>
-                                            <option value="26">26</option>
-                                            <option value="27">27</option>
-                                            <option value="28">28</option>
-                                            <option value="29">29</option>
-                                            <option value="30">30</option>
-                                        </select>
-                                        (預計數量 ，含單複選)
+                                    <label class="col-xl-2 col-md-3 form-control-label">題目:</label>
+                                    <div class=" col-xl-10 col-md-9">
+                                        <input type="text" class="form-control" name="answer_question<%=i%>" placeholder="" required="" value="">
                                     </div>
                                 </div>
                                 <!-- /選擇題數量 -->
-                                <!-- 問答題數量 -->
-                                <div class="form-group row">
-                                    <label class="col-xl-12 col-md-3 form-control-label">問答題數量
-                                        <span class="required">*</span>
-                                    </label>
-                                    <div class=" col-xl-12 col-md-9">
-                                        <select class="form-control" name="answer_qty" size="1">
-                                            <option value="0">0</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                            <option value="6">6</option>
-                                            <option value="7">7</option>
-                                            <option value="8">8</option>
-                                            <option value="9">9</option>
-                                            <option value="10">10</option>
-                                        </select>
-                                        (預計數量 )
-                                    </div>
-                                </div>
-                                <!-- /問答題數量 -->
-                                <!-- 問卷說明 -->
-                                <div class="form-group row">
-                                    <label class="col-xl-12 col-md-3 form-control-label">問卷說明 (可空白)
-                                        <span class="required">*</span>
-                                    </label>
-                                    <div class=" col-xl-12 col-md-9">
-                                        <textarea name="content" cols="60" rows="3" class="form-control" id="content"></textarea>
-                                    </div>
-                                </div>
-                                <!-- /問卷說明 -->
-                                <!-- 是否公開結果 -->
-                                <div class="form-group row">
-                                    <label class="col-xl-12 col-md-3 form-control-label">是否公開結果
-                                        <span class="required">*</span>
-                                    </label>
-                                    <div class=" col-xl-12 col-md-9">
-                                        <label>
-                                            <input type="radio" name="is_Open" value="True" size="50" checked> 是
-                                        </label>
-                                        <label>
-                                            <input type="radio" name="is_Open" value="False" size="50"> 否
-                                        </label>
-                                    </div>
-                                </div>
-                                <!-- /是否公開結果 -->
                             </div>
 
                         </div>
