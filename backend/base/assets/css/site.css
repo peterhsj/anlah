@@ -11652,3 +11652,14 @@ table.dataTable thead th {
   border-width: 0 !important;
   padding:0;
 }
+.foranswer th,
+.foranswer td {
+  padding: 0.5rem;
+}
+.progress {
+  margin-bottom: 0;
+}
+.td-answer {
+  padding-left: 20px !important;
+  width:55%;
+}

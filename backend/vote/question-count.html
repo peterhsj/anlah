@@ -320,7 +320,7 @@
     <!-- Page -->
     <div class="page">
         <div class="page-header">
-            <h1 class="page-title">問卷調查-新增問卷設定 an_web.mdb/suggest2</h1>
+            <h1 class="page-title">問卷調查-問卷分析 an_web.mdb/suggest suggest3</h1>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
                     <a href="../index.html">首頁</a>
@@ -331,118 +331,67 @@
         </div>
 
         <div class="page-content container-fluid">
-            <form id="exampleFullForm" autocomplete="off" action="question-add-step3.html">
+            <form id="exampleFullForm" autocomplete="off" action="question-main.html">
                 <!-- 內文編輯區 -->
                 <div class="panel panel-bordered">
                     <div class="panel-heading">
-                        <h3 class="panel-title">編寫 (question_name) 問卷題目</h3>
-                        ( suggest 儲存問卷名稱和基本資訊，關聯到 suggest2 儲存題目，在關連到 suggest3 儲存問卷回覆 )
+                        <h3 class="panel-title">「 (question_name) 」(回收 if select answer from suggest3 Where question_id 沒人寫 => 0 else 份)</h3>
                     </div>
                     <div class="panel-body">
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 問卷名稱： (question_name)
-                            </div>
-                            <div class="col-md-6">
-                                製作人： (owner)
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                有效時間： 自 (startday) 至 (stopday)
-                            </div>
-                            <div class="col-md-6">
-                                本問卷結果將 (is_open) 公開/不公開
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                問卷說明：(content)
+                                問卷說明：if content= "" then response.write ("無") else (content)
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                有效時間： 自 (startday) 至 (stopday)
                             </div>
                         </div>
                         <div class="row row-lg" style="border-top:2px solid #ddd;padding-top: 5px;margin-top: 10px">
-                            <div class="col-md-6 form-horizontal">
-                                <!-- 問卷名稱 -->
-                                <div class="form-group row">
-                                    <label class="col-xl-12 col-md-3 form-control-label">選擇題
-                                        <%=i%> (選項不能空白)
-                                    </label>
-                                    <div class="col-xl-12 col-md-9 form-inline" style="margin-bottom: 10px">
-                                        <ul class="list-unstyled list-inline">
-                                            <li class="list-inline-item">
-                                                <div class="radio-custom radio-primary">
-                                                    <input type="radio" name="multi<%=i%>" id="inputRadios<%=i%>" checked="checked">
-                                                    <label for="inputRadios<%=i%>">單選</label>
+                            <div class="col-md-12 bootstrap-table">
+                                <table class="table table-no-bordered foranswer">
+                                    <tbody>
+                                        <tr class="table-active">
+                                            <th colspan="3">(question_series)1. 題目: ("question")您是否知道您得依本所檔案應用申請？ (type1)(單選 / 複選)</th>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-answer">1.(option1)知道</td>
+                                            <td style="width:30%">
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-warning" style="width: 72%;" role="progressbar"></div>
                                                 </div>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <div class="radio-custom radio-primary">
-                                                    <input type="radio" name="multi<%=i%>" id="inputRadios<%=i%>">
-                                                    <label for="inputRadios<%=i%>">複選</label>
+                                            </td>
+                                            <td class="text-nowrap">
+                                                ( ans_tab(question_series-1,n),佔72.7% )
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-answer">2.(option2)不知道</td>
+                                            <td style="width:30%">
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-warning" style="width: 23%;" role="progressbar"></div>
                                                 </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-12">(單/複選每題最多可填6組答案,單選最少也要有2個答案)</div>
-                                    <div class="row">
-                                        <label class="col-xl-2 col-md-3 form-control-label">題目：</label>
-                                        <div class=" col-xl-10 col-md-9">
-                                            <input type="text" class="form-control" name="select_question" placeholder="" value="options<%=x%>" required="">
-                                        </div>
-                                        <label class="col-xl-2 col-md-3 form-control-label">選項
-                                            <%=x%> 1</label>
-                                        <div class=" col-xl-10 col-md-9">
-                                            <input type="text" class="form-control" name="options<%=x%>" value="options<%=x%>" placeholder="">
-                                        </div>
-                                        <label class="col-xl-2 col-md-3 form-control-label">選項
-                                            <%=x%> 2</label>
-                                        <div class=" col-xl-10 col-md-9">
-                                            <input type="text" class="form-control" name="options<%=x%>" value="options<%=x%>" placeholder="">
-                                        </div>
-                                        <label class="col-xl-2 col-md-3 form-control-label">選項
-                                            <%=x%> 3</label>
-                                        <div class=" col-xl-10 col-md-9">
-                                            <input type="text" class="form-control" name="options<%=x%>" value="options<%=x%>">
-                                        </div>
-                                        <label class="col-xl-2 col-md-3 form-control-label">選項
-                                            <%=x%> 4</label>
-                                        <div class=" col-xl-10 col-md-9">
-                                            <input type="text" class="form-control" name="options<%=x%>" value="options<%=x%>">
-                                        </div>
-                                        <label class="col-xl-2 col-md-3 form-control-label">選項
-                                            <%=x%> 5</label>
-                                        <div class=" col-xl-10 col-md-9">
-                                            <input type="text" class="form-control" name="options<%=x%>" value="options<%=x%>">
-                                        </div>
-                                        <label class="col-xl-2 col-md-3 form-control-label">選項
-                                            <%=x%> 6</label>
-                                        <div class=" col-xl-10 col-md-9">
-                                            <input type="text" class="form-control" name="options<%=x%>" value="options<%=x%>">
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /問卷名稱 -->
-                            </div>
-                            <div class="col-md-6 form-horizontal">
-                                <!-- 選擇題數量 -->
-                                <div class="form-group row">
-                                    <label class="col-xl-12 col-md-3 form-control-label">問答題
-                                        <%=i%>
-                                    </label>
-                                    <label class="col-xl-2 col-md-3 form-control-label">題目:</label>
-                                    <div class=" col-xl-10 col-md-9">
-                                        <input type="text" class="form-control" name="answer_question<%=i%>" placeholder="" required="" value="answer_question<%=i%>">
-                                    </div>
-                                </div>
-                                <!-- /選擇題數量 -->
-                            </div>
+                                            </td>
+                                            <td class="text-nowrap">
+                                                ( 3,佔27.2% )
+                                            </td>
+                                        </tr>
 
+                                    </tbody>
+                                </table>
+
+                            </div>
                         </div>
                     </div>
                     <div class="panel-footer">
                         <div class="form-group col-xl-12 text-right padding-top-m">
-                            <a href="question-add.html" class="btn btn-default" id="validateButton1">上一步</a>
-                            <button type="submit" class="btn btn-primary" id="validateButton1">下一步</button>
+                            <a href="question-main.html" class="btn btn-primary">回總覽頁</a>
                         </div>
                     </div>
                 </div>

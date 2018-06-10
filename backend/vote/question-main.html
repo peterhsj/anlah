@@ -356,7 +356,7 @@
                                 <thead>
                                     <tr>
                                         <th>編號</th>
-                                        <th>問卷名稱 (點選進入填寫問卷)</th>
+                                        <th>問卷名稱 ( 點選進入填寫問卷 )</th>
                                         <th colspan="2">問卷資訊</th>
                                         <th class="nosort">管理模式</th>
                                     </tr>
@@ -365,19 +365,16 @@
                                     <tr class="odd gradeX">
                                         <td>1</td>
                                         <td>
-                                            <a href="question-edit.html">檔案應用服務作業之使用情形</a>
+                                            <a href="question-view.html">檔案應用服務作業之使用情形</a>
                                         </td>
                                         <td>
-                                            if rs("startday") > now then 未開放 elseif rs("stopday")
+                                            if ("startday") > now then 未開放 elseif ("stopday")
                                             < now() then 已關閉 else [
-                                                <a href='answer_sheet.asp?question_id="&rs( "question_id")& "'>作答</a> ] end if
+                                                <a href='question-view.html?question_id="&rs( "question_id")& "'>作答</a> ] end if
                                         </td>
                                         <td>
-                                            [ rs("is_open")=true then
-                                            <a href="news-edit.html">看結果</a> else 不公開 ]
-                                            <a href="news-edit.html" class="btn btn-pure btn-default p-5 btn-primary">
-                                                設定
-                                            </a>
+                                             if("is_open")=true then
+                                           [ <a href="question-count.html">看結果</a> ] else 不公開
                                         </td>
                                         <td class="text-nowrap">
                                             <a href="question-edit.html" class="btn btn-pure btn-default p-5 btn-primary">

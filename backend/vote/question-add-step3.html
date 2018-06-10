@@ -368,76 +368,63 @@
                                         題號 ("question_number") 要先把選擇題題數和問答題題數加起來
                                     </div>
 
+                                    
+                            
                                     <label class="col-xl-2 col-md-3 form-control-label">
-                                        ("question_number") ("type1")
-                                        <br> 1複選
+                                        ("question_number") 1.("type1")單選 / 複選
                                     </label>
                                     <div class="col-xl-10 col-md-9">
-                                        題目：XXX rs1("question")
-                                        <br> if rs1("type1")= "單選"then
-                                        <input type="radio" name='options"&rs1("question_number")&"' value='"&n&"'> options(n)
-                                        <br> elseif rs1("type1")= "複選"then
-                                        <input type='checkbox' name='options"&rs1("question_number")&"' value='"&n&"'> options(n)
-                                        <br>
-                                        <code>
-                                            <pre>
-<%
-if rs1("type1")= "單選"then 
-    if not rs1("option1") ="" then
-        options=split( rs1("option1"),"||")
-        for n=0 to ubound(options)
-            response.write (n+1&". ")
-            response.write("<input type='radio' name='options"&rs1("question_number")&"' value='"&n&"'>")
-            response.write (options(n))
-            response.write ("<BR>")
-        next
-    end if
-elseif rs1("type1")= "複選"then 
-    if not rs1("option1") ="" then
-        options=split( rs1("option1"),"||")
-        for n=lbound(options) to ubound(options)
-            response.write (n+1&". ")
-            response.write("<input type='checkbox' name='options"&rs1("question_number")&"' value='"&n&"'>")
-            response.write (options(n))
-            response.write ("<BR>")
-        next
-    end if
-end if	  
-%>
-</pre>
-                                        </code>
+                                        <div class="row">
+                                            <label class="col-xl-2 col-md-3 form-control-label">
+                                                題目：
+                                            </label>
+                                            <div class="col-xl-10 col-md-9">
+                                                (question)
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <ul class="list-unstyled">
+                                                    <li class="list-item">
+                                                        <div class="radio-custom radio-primary">
+                                                            <input type="radio" name="options(" question_number ")" id="inputRadios<%=i%>" value "(n)">
+                                                            <label for="inputRadios<%=i%>">options(n) / type1= 單選</label>
+                                                        </div>
+                                                    </li>
+                                                    <li class="list-item">
+                                                        <div class="checkbox-custom checkbox-primary">
+                                                            <input type="checkbox" name="options(" question_number ")" id="inputCheckbox<%=i%>" value "(n)">
+                                                            <label for="inputRadios<%=i%>">options(n) / type1= 複選</label>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
+
+
                                 </div>
                                 <!-- /問卷名稱 -->
                             </div>
                             <div class="col-md-6 form-horizontal">
-                                <!-- 選擇題數量 -->
+                                <!--  -->
                                 <div class="form-group row">
                                     <label class="col-xl-2 col-md-3 form-control-label">
-                                        ("question_number") ("type1")
-                                        <br> ("type1")="問答"
-                                        <br> 10 問答
+                                        ("question_number")10. ("type1")問答
                                     </label>
                                     <div class=" col-xl-10 col-md-9">
                                         題目:("question_id") ("question")
                                         <br>question_id 不顯示 給你知道對應關係
                                     </div>
                                 </div>
-                                <div class="form-group row">
-                                    <label class="col-xl-2 col-md-3 form-control-label">
-                                        10 問答
-                                    </label>
-                                    <div class=" col-xl-10 col-md-9">
-                                        題目:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-                                    </div>
-                                </div>
-                                <!-- /選擇題數量 -->
+                                <!-- / -->
                             </div>
 
                         </div>
                     </div>
                     <div class="panel-footer">
-                        <div class="form-group col-xl-12 text-right padding-top-m">
+<div class="form-group col-xl-12 text-right padding-top-m">
+    <a href="question-add-step2.html" class="btn btn-default" id="validateButton1">上一步</a>
                             <button type="submit" class="btn btn-primary" id="validateButton1">完成</button>
                         </div>
                     </div>

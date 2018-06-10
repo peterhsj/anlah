@@ -320,7 +320,7 @@
     <!-- Page -->
     <div class="page">
         <div class="page-header">
-            <h1 class="page-title">問卷調查-新增問卷設定 an_web.mdb/suggest2</h1>
+            <h1 class="page-title">問卷調查-新增問卷 an_web.mdb/suggest suggest3</h1>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
                     <a href="../index.html">首頁</a>
@@ -331,33 +331,37 @@
         </div>
 
         <div class="page-content container-fluid">
-            <form id="exampleFullForm" autocomplete="off" action="question-add-step3.html">
+            <form id="exampleFullForm" autocomplete="off" action="question-main.html">
                 <!-- 內文編輯區 -->
                 <div class="panel panel-bordered">
                     <div class="panel-heading">
-                        <h3 class="panel-title">編寫 (question_name) 問卷題目</h3>
-                        ( suggest 儲存問卷名稱和基本資訊，關聯到 suggest2 儲存題目，在關連到 suggest3 儲存問卷回覆 )
+                        <h3 class="panel-title">問卷編號：question_id</h3>
+                        ( 進入本頁如果 if complete= true then 已作答則顯示已作答內容讓USER作答， else 如果還沒作答則開始作答 )
                     </div>
                     <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-6">
+ IP：(writer)
+                                (直接帶入USER IP)
+                            </div>
+                        </div>
                         <div class="row">
                             <div class="col-md-6">
                                 問卷名稱： (question_name)
                             </div>
                             <div class="col-md-6">
-                                製作人： (owner)
+                                本問卷結果：
+                                <%if not is_open then response.write "不"end if %> 公開 </font>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                問卷說明：if content= "" then response.write ("無") else (content)
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
                                 有效時間： 自 (startday) 至 (stopday)
-                            </div>
-                            <div class="col-md-6">
-                                本問卷結果將 (is_open) 公開/不公開
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                問卷說明：(content)
                             </div>
                         </div>
                         <div class="row row-lg" style="border-top:2px solid #ddd;padding-top: 5px;margin-top: 10px">
@@ -441,8 +445,8 @@
                     </div>
                     <div class="panel-footer">
                         <div class="form-group col-xl-12 text-right padding-top-m">
-                            <a href="question-add.html" class="btn btn-default" id="validateButton1">上一步</a>
-                            <button type="submit" class="btn btn-primary" id="validateButton1">下一步</button>
+                            <a href="question-main.html" class="btn btn-default" id="validateButton1">取消</a>
+                            <button type="submit" class="btn btn-primary" id="validateButton1">送出問卷</button>
                         </div>
                     </div>
                 </div>
