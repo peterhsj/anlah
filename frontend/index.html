@@ -69,7 +69,8 @@
     /* Popular Tool */
 
     .popularTool {
-      box-shadow: 0 0 5px 3px rgba(0, 0, 0, .2);
+      box-shadow: 0 0 10px 2px rgba(0, 0, 0, .175);
+      border: 1px solid #cdcece;
     }
 
     .popularTool ul {
@@ -108,6 +109,98 @@
       display: block;
       font-size: 2.2em;
       padding: 0.475em 0;
+    }
+
+    /* quickOption */
+
+    .quickOption {
+      box-shadow: 0 0 10px 2px rgba(0, 0, 0, .2);
+      border: 1px solid #a7a7a7;
+    }
+
+    .quickOption .card-header>span {
+      font-size: 2.25rem;
+      padding-top: 10px;
+    }
+
+    .quickOption .card-header h5 {
+      font-weight: bolder;
+      padding: 10px 0 0 0;
+    }
+
+    .quickOption .card-header.mainItem {
+      background-color: #f9c7a2;
+      color: #773706;
+    }
+
+    .quickOption .card-header.infoItem {
+      background-color: #baddfd;
+      color: #1c578c;
+    }
+
+    .quickOption .card-header.downloadItem {
+      background-color: #d5eaa1;
+      color: #55730c;
+    }
+
+    .quickOption .card-header.linkItem {
+      background-color: #e4c4f3;
+      color: #612280;
+    }
+
+    .quickOption .card-body {
+      padding: 0.5rem;
+    }
+
+    .quickOption .card-body .list-group li {
+      padding: .5rem 1rem;
+    }
+
+    .quickOption .card-body .list-group li a {
+      align-items: top;
+      color: #333333;
+      display: flex;
+      flex-wrap: nowrap;
+      font-size: .95rem;
+    }
+
+    .quickOption .card-body .list-group li a:hover {
+      color: #000000;
+    }
+
+    .quickOption .card-body .list-group li a>span {
+      padding-right: .5rem;
+      padding-top: 0.23rem;
+    }
+
+    /* Banner */
+
+    .banner {
+      box-shadow: 0 0 10px 2px rgba(0, 0, 0, .2);
+      border: 1px solid #a7a7a7;
+    }
+
+    .banner .card-body {
+      padding-bottom: 0;
+    }
+
+    .banner ul {
+      list-style-type: none;
+      padding: 0;
+      margin-bottom: 0;
+    }
+
+    .banner ul li {
+      margin-bottom: 1rem;
+    }
+
+    /* footer */
+
+    .footer p {
+      font-size: 0.85rem;
+      padding: 0.2rem 0;
+      margin: 0;
+      color: #333333;
     }
   </style>
 </head>
@@ -393,10 +486,10 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-3 col-md-6">
-          <div class="card h-100">
-            <div class="card-header text-center">
-              <span class="fas fa-caret-right"></span>
-              主題專區
+          <div class="card h-100 quickOption">
+            <div class="card-header text-center mainItem">
+              <span class="fas fa-box-check"></span>
+              <h5>主題專區</h5>
             </div>
             <div class="card-body">
               <ul class="list-group list-group-flush">
@@ -421,10 +514,10 @@
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
-          <div class="card h-100">
-            <div class="card-header text-center">
-              <span class="fas fa-caret-right"></span>
-              資訊查詢
+          <div class="card h-100 quickOption">
+            <div class="card-header text-center infoItem">
+              <span class="fa fa-tasks"></span>
+              <h5>資訊查詢</h5>
             </div>
             <div class="card-body">
               <ul class="list-group list-group-flush">
@@ -453,10 +546,10 @@
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
-          <div class="card h-100">
-            <div class="card-header text-center">
-              <span class="fas fa-caret-right"></span>
-              下載專區
+          <div class="card h-100 quickOption">
+            <div class="card-header text-center downloadItem">
+              <span class="fas fa-download"></span>
+              <h5>下載專區</h5>
             </div>
             <div class="card-body">
               <div class="row">
@@ -501,10 +594,10 @@
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
-          <div class="card h-100">
-            <div class="card-header text-center">
-              <span class="fas fa-caret-right"></span>
-              網網相連
+          <div class="card h-100 quickOption">
+            <div class="card-header text-center linkItem">
+              <span class="fas fa-cogs"></span>
+              <h5>網網相連</h5>
             </div>
             <div class="card-body">
               <ul class="list-group list-group-flush">
@@ -541,7 +634,7 @@
   <div class="container">
     <div class="row">
       <!-- <div class="col-sm-12"> -->
-      <div class="card m-3 mt-4 mb-4">
+      <div class="card m-3 mt-4 mb-4 banner">
         <div class="card-body">
           <ul class="d-flex flex-wrap justify-content-around">
             <li>
@@ -629,9 +722,19 @@
 
   <div class="jumbotron m-0 p-4">
     <div class="container">
-      <div class="row">
+      <div class="row footer">
         <div class="col-7">
-          <p>Footer</p>
+          <p>
+            <a href="#">網站安全政策</a> |
+            <a href="#">政府網站資料開放宣言</a> |
+            <a href="#">隱私權保護政策</a> |
+            <a href="#">首長信箱</a>
+          </p>
+          <p>© 基隆市安樂地政事務所 ‧ 版權所有</p>
+          <p> ‧ 地址：基隆市安樂路二段一百六十四號三樓 ‧ 地理位置：E 121°43'21" N 25°07'14"</p>
+          <p> ‧ 電話：(02)24324001 ‧ 傳真：(02)24323017</p>
+          <p> ‧ 最佳瀏覽解析度為1024x768以上，建議使用IE 10以上瀏覽以取得最佳瀏覽效果</p>
+          <p> ‧ 到訪人次：214938</p>
 
         </div>
         <div class="col">
