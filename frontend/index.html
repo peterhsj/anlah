@@ -18,6 +18,30 @@
       font-family: \5FAE\8EDF\6B63\9ED1\9AD4, \65B0\7D30\660E\9AD4;
     }
 
+    /* headerTool */
+
+    .headerTool {
+      background: url("images/index_bg.gif") repeat-x left top;
+      overflow: hidden;
+    }
+
+    .headerTool .container {
+      background: url("images/index_pic.jpg") no-repeat left top;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .headerTool .container .navbar-nav a.nav-link {
+      color: #15505c;
+      font-size: .95rem;
+      padding: .3rem 1rem;
+    }
+
+    .headerTool .container .navbar-nav a.nav-link:hover {
+      background-color: rgba(255, 255, 255, .4);
+      border-radius: 15px;
+    }
+
     /* Index Bulletim */
 
     .indexBulletim {
@@ -196,60 +220,76 @@
 
     /* footer */
 
+    .footerSet {
+      background-color: #5ea3b2
+    }
+
     .footer p {
       font-size: 0.85rem;
       padding: 0.2rem 0;
       margin: 0;
-      color: #333333;
+      color: #FFFFFF;
+    }
+
+    .footer a {
+      color: #ffeaac;
+      padding: 0 .2rem;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: #ffffff;
     }
   </style>
 </head>
 
 <body>
   <!-- 表頭 -->
-  <div class="container-fluid text-center" style="height:300px;background: #eee;overflow: hidden;">
+  <div class="container-fluid text-center headerTool">
     <div class="container">
-      <nav class="navbar navbar-expand-sm navbar-light bg-light justify-content-between">
+      <nav class="navbar navbar-expand-sm navbar-light justify-content-between">
         <a class="navbar-brand" href="#">
-          <img src="images/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt=""> Bootstrap
+          <img src="images/index_logo.png" class="d-inline-block align-top" alt="">
         </a>
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">網站導覽
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">常見問題</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">市政信箱</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">English</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">員工專區</a>
-          </li>
-        </ul>
-      </nav>
-      <nav class="navbar navbar-light bg-light justify-content-end">
-        <form class="form-inline">
-          <div class="input-group">
-            <label for="webSiteSearch">站內搜尋：</label>
-            <input class="form-control" type="search" placeholder="Search" aria-label="Search" id="webSiteSearch">
-            <div class="input-group-append">
-              <button class="btn btn-outline-success" type="button">Search</button>
-            </div>
+        <div>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">網站導覽
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">常見問題</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">市政信箱</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">English</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">員工專區</a>
+            </li>
+          </ul>
+          <div>
+            <form class="form-inline">
+              <div class="input-group">
+                <label for="webSiteSearch">站內搜尋：</label>
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search" id="webSiteSearch">
+                <div class="input-group-append">
+                  <button class="btn btn-warning" type="button">Search</button>
+                </div>
+              </div>
+            </form>
           </div>
-        </form>
+        </div>
       </nav>
     </div>
   </div>
   <!-- /表頭 -->
 
   <!-- 主選單 -->
-  <div class="container-fluid" style="background-color:#343a40">
+  <div class="container-fluid mainMenu" style="background-color:#343a40">
     <div class="row">
       <div class="container">
         <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
@@ -720,7 +760,7 @@
   </div>
   <!-- /胖頁尾 -->
 
-  <div class="jumbotron m-0 p-4">
+  <div class="jumbotron footerSet m-0 p-4">
     <div class="container">
       <div class="row footer">
         <div class="col-7">
