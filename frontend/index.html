@@ -27,7 +27,7 @@
 
     .headerTool .container {
       background: url("images/index_pic.jpg") no-repeat left top;
-      height: 300px;
+      height: 320px;
       overflow: hidden;
     }
 
@@ -40,6 +40,73 @@
     .headerTool .container .navbar-nav a.nav-link:hover {
       background-color: rgba(255, 255, 255, .4);
       border-radius: 15px;
+    }
+
+    .headerTool .container .dropdown-menu {
+      border: 1px solid rgba(0, 0, 0, .3);
+      box-shadow: 0 0 3px 3px rgba(0, 0, 0, .1);
+      font-size: 0.95rem;
+    }
+
+    .headerTool .container .nav-item.show .nav-link,
+    .headerTool .container .nav-item.show .nav-link:hover {
+      background-color: rgba(255, 255, 255, .8);
+      border-radius: 15px;
+    }
+
+    .headerTool .container .dropdown-menu .dropdown-item:focus,
+    .headerTool .container .dropdown-menu .dropdown-item:hover {
+      color: #16181b;
+      text-decoration: none;
+      background-color: #bce5ec;
+    }
+
+    /* Main Menu */
+
+    .mainMenu {
+      background-color: #407c87;
+    }
+
+    .mainMenu .navbar {
+      padding: 0;
+    }
+
+    .mainMenu .navbar.navbar-dark .navbar-nav .nav-item .nav-link {
+      color: rgba(255, 255, 255, 1);
+      padding: .75rem .75rem;
+      border-right: 1px solid #7cb4c1;
+    }
+
+    .mainMenu .navbar .navbar-nav .nav-item .nav-link.dropdown-toggle::after {
+      border: 0;
+      margin: 0;
+    }
+
+    .mainMenu .navbar.navbar-dark .navbar-nav .nav-item .nav-link:hover {
+      background-color: #2c6873;
+    }
+
+    .mainMenu .navbar.navbar-dark .navbar-nav .nav-item.show .nav-link {
+      background-color: #26565f;
+    }
+
+    .mainMenu .navbar.navbar-dark .navbar-nav .nav-item.show .dropdown-menu {
+      border: 1px solid rgba(0, 0, 0, .3);
+      box-shadow: 0 0 4px 4px rgba(0, 0, 0, .2);
+      font-size: 0.95rem;
+    }
+
+    .mainMenu .navbar.navbar-dark .navbar-nav .nav-item.show .dropdown-menu .dropdown-header {
+      color: #407c87;
+      font-size: .95rem;
+      font-weight: 700;
+    }
+
+    .mainMenu .navbar.navbar-dark .navbar-nav .nav-item.show .dropdown-menu .dropdown-item:focus,
+    .mainMenu .navbar.navbar-dark .navbar-nav .nav-item.show .dropdown-menu .dropdown-item:hover {
+      color: #16181b;
+      text-decoration: none;
+      background-color: #bce5ec;
     }
 
     /* Index Bulletim */
@@ -258,8 +325,20 @@
                 <span class="sr-only">(current)</span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">常見問題</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuQuestion" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                常見問題
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuQuestion">
+                <a class="dropdown-item" href="#">登記類</a>
+                <a class="dropdown-item" href="#">測量類</a>
+                <a class="dropdown-item" href="#">地價類</a>
+                <a class="dropdown-item" href="#">地用類</a>
+                <a class="dropdown-item" href="#">謄本類</a>
+                <a class="dropdown-item" href="#">未辦繼承類</a>
+                <a class="dropdown-item" href="#">地籍清理類</a>
+                <a class="dropdown-item" href="#">實價登錄類</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">市政信箱</a>
@@ -267,13 +346,21 @@
             <li class="nav-item">
               <a class="nav-link" href="#">English</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">員工專區</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownOffice" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                員工專區
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownOffice">
+                <a class="dropdown-item" href="#">登入</a>
+                <a class="dropdown-item" href="#">公佈欄</a>
+                <a class="dropdown-item" href="#">會議記錄</a>
+                <a class="dropdown-item" href="#">表單下載</a>
+              </div>
             </li>
           </ul>
-          <div>
+          <div class="d-flex justify-content-end pt-1 pl-2s">
             <form class="form-inline">
-              <div class="input-group">
+              <div class="input-group input-group-sm">
                 <label for="webSiteSearch">站內搜尋：</label>
                 <input class="form-control" type="search" placeholder="Search" aria-label="Search" id="webSiteSearch">
                 <div class="input-group-append">
@@ -289,10 +376,10 @@
   <!-- /表頭 -->
 
   <!-- 主選單 -->
-  <div class="container-fluid mainMenu" style="background-color:#343a40">
+  <div class="container-fluid mainMenu">
     <div class="row">
       <div class="container">
-        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -326,33 +413,18 @@
                   線上查詢
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuSearch">
-                  <label for="">登記類</label>
-                  <a class="dropdown-item" href="#">區段代碼對照</a>
-                  <a class="dropdown-item" href="#">新舊地、建號查詢</a>
-                  <a class="dropdown-item" href="#">第一次登記公告</a>
-                  <a class="dropdown-item" href="#">書狀補給公告</a>
-                  <a class="dropdown-item" href="#">書狀補給公告</a>
-                  <a class="dropdown-item" href="#">逾期未辦繼承公告查詢</a>
-                  <a class="dropdown-item" href="#">未辦繼承列管土地資料</a>
+                  <h6 class="dropdown-header">登記類</h6>
+                  <a class="dropdown-item pl-5" href="http://landquery.klcg.gov.tw/query/r48.jsp" target="_blank" title="開啟新的導覽視窗">區段代碼對照</a>
+                  <a class="dropdown-item pl-5" href="http://163.29.218.196/query/oldnew.jsp" target="_blank" title="開啟新的導覽視窗">新舊地、建號查詢</a>
+                  <a class="dropdown-item pl-5" href="http://landquery.klcg.gov.tw/query/opendata1.jsp" target="_blank" title="開啟新的導覽視窗">第一次登記公告</a>
+                  <a class="dropdown-item pl-5" href="http://landquery.klcg.gov.tw/query/opendata2.jsp" target="_blank" title="開啟新的導覽視窗">書狀補給公告</a>
+                  <a class="dropdown-item pl-5" href="#">逾期未辦繼承公告查詢</a>
+                  <a class="dropdown-item pl-5" href="#">未辦繼承列管土地資料</a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="#">測量類</a>
                   <a class="dropdown-item" href="#">地價類</a>
                   <a class="dropdown-item" href="#">登記規費試算</a>
                   <a class="dropdown-item" href="#">測量規費試算</a>
-                </div>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuApp" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  線上申辦
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuApp">
-                  <a class="dropdown-item" href="#">網路申領電子謄本</a>
-                  <a class="dropdown-item" href="#">地政電傳資訊服務</a>
-                  <a class="dropdown-item" href="#">地政線上申辦系統</a>
-                  <a class="dropdown-item" href="#">檔案閱覽抄錄複製</a>
-                  <a class="dropdown-item" href="#">歷年公告地價資料</a>
-                  <a class="dropdown-item" href="#">英文不動產權利登記證明</a>
-                  <a class="dropdown-item" href="#">線上預約</a>
                 </div>
               </li>
               <li class="nav-item dropdown">
@@ -389,37 +461,35 @@
                   便民服務
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuService">
-                  <a class="dropdown-item" href="#">臨櫃服務</a>
-                  <a class="dropdown-item" href="#">通信服務</a>
-                  <a class="dropdown-item" href="#">網路服務</a>
-                  <a class="dropdown-item" href="#">自動化服務</a>
-                  <a class="dropdown-item" href="#">跨所跨縣市服務</a>
+                  <h6 class="dropdown-header">臨櫃服務</h6>
+                  <a class="dropdown-item pl-5" href="#">單一窗口服務</a>
+                  <a class="dropdown-item pl-5" href="#">服務台及志工服務</a>
+                  <a class="dropdown-item pl-5" href="#">謄本櫃檯雙向服務</a>
+                  <div class="dropdown-divider"></div>
+                  <h6 class="dropdown-header">通信服務</h6>
+                  <a class="dropdown-item pl-5" href="#">通信申請</a>
+                  <a class="dropdown-item pl-5" href="#">案件郵寄到家</a>
+                  <div class="dropdown-divider"></div>
+                  <h6 class="dropdown-header">網路服務</h6>
+                  <a class="dropdown-item pl-5" href="#">網路申領電子謄本</a>
+                  <a class="dropdown-item pl-5" href="#">地政電傳資訊服務</a>
+                  <a class="dropdown-item pl-5" href="#">地政線上申辦系統</a>
+                  <a class="dropdown-item pl-5" href="#">英文不動產權利登記證明</a>
+                  <a class="dropdown-item pl-5" href="#">線上預約</a>
+                  <a class="dropdown-item pl-5" href="#">網路ATM</a>
+                  <div class="dropdown-divider"></div>
+                  <h6 class="dropdown-header">自動化服務</h6>
+                  <a class="dropdown-item pl-5" href="#">電話語音查詢</a>
+                  <a class="dropdown-item pl-5" href="#">辦理情形自動回復</a>
+                  <div class="dropdown-divider"></div>
+                  <h6 class="dropdown-header">跨所跨縣市服務</h6>
+                  <a class="dropdown-item pl-5" href="#">跨縣市申領謄本</a>
+                  <a class="dropdown-item pl-5" href="#">跨所申辦登記案件</a>
+                  <a class="dropdown-item pl-5" href="#">跨所申請英文不動產權利登記證明</a>
+                  <a class="dropdown-item pl-5" href="#">跨縣市代收案件</a>
+                  <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="#">其他服務</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuMain" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  主題專區
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuMain">
-                  <a class="dropdown-item" href="#">未辦理繼承專區</a>
-                  <a class="dropdown-item" href="#">檔案應用專區</a>
-                  <a class="dropdown-item" href="#">外籍人士地權專區</a>
-                  <a class="dropdown-item" href="#">資訊公開專區</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuQuestion" data-toggle="dropdown" aria-haspopup="true"
-                  aria-expanded="false">
-                  常見問題
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuQuestion">
-                  <a class="dropdown-item" href="#">登記類</a>
-                  <a class="dropdown-item" href="#">測量類</a>
-                  <a class="dropdown-item" href="#">地價類</a>
-                  <a class="dropdown-item" href="#">地用類</a>
-                  <a class="dropdown-item" href="#">謄本類</a>
-                  <a class="dropdown-item" href="#">未辦繼承類</a>
-                  <a class="dropdown-item" href="#">地籍清理類</a>
-                  <a class="dropdown-item" href="#">實價登錄類</a>
+
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuSuggest" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -430,17 +500,6 @@
                   <a class="dropdown-item" href="#">主任信箱</a>
                   <a class="dropdown-item" href="#">網路投票</a>
                   <a class="dropdown-item" href="#">民眾參與創新提案</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  網網相連
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">全國地政單位</a>
-                  <a class="dropdown-item" href="#">地政服務資訊</a>
-                  <a class="dropdown-item" href="#">基隆市地政士公會</a>
-                  <a class="dropdown-item" href="#">中華民國地政士公會全國聯合會</a>
-                  <a class="dropdown-item" href="#">各地稅務機關</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
