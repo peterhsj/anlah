@@ -38,18 +38,17 @@
   <link href="base/icon-css/fontawesome-all.min.css" rel="stylesheet">
   <link href="base/css/base.min.css" rel="stylesheet">
   <style>
-
   </style>
 </head>
 
 <body>
   <!-- 表頭 -->
   <div class="container-fluid text-center headerTool">
-    <div class="container">
+    <div class="container d-none d-lg-block">
       <div class="headerBg">
         <nav class="navbar navbar-expand-sm navbar-light justify-content-between">
           <a class="navbar-brand" href="#">
-            <img src="images/index_logo.png" class="d-inline-block align-top" alt="">
+            <img src="images/index_logo.png" class="d-inline-block align-top" alt="基隆市安樂地政事務所全球資訊網">
           </a>
           <div>
             <ul class="navbar-nav">
@@ -106,775 +105,777 @@
         </nav>
         </div>
       </div>
+  </div>
+  <!-- /表頭 -->
+
+  <!-- 主選單 -->
+  <div class="container-fluid mainMenu">
+    <div class="row">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark">          
+          <a class="navbar-brand d-lg-none" href="#">
+            <img src="images/index_logo.png" height="45" alt="基隆市安樂地政事務所全球資訊網">
+          </a>          
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuIntro" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  機關簡介
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuIntro">
+                  <a class="dropdown-item" href="#">本所沿革</a>
+                  <a class="dropdown-item" href="#">轄區簡介</a>
+                  <a class="dropdown-item" href="#">組織職掌</a>
+                  <a class="dropdown-item" href="#">樓層平面圖</a>
+                  <a class="dropdown-item" href="#">聯絡資訊</a>
+                  <a class="dropdown-item" href="#">地理交通</a>
+                  <a class="dropdown-item" href="#">行政規章專區</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuInfo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  公告資訊
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuInfo">
+                  <a class="dropdown-item" href="#">最先消息</a>
+                  <a class="dropdown-item" href="#">法令新訊</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuSearch" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  線上查詢
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuSearch">
+                  <h6 class="dropdown-header">登記類</h6>
+                  <a class="dropdown-item pl-5" href="http://landquery.klcg.gov.tw/query/r48.jsp" target="_blank" title="開啟新的導覽視窗">區段代碼對照</a>
+                  <a class="dropdown-item pl-5" href="http://163.29.218.196/query/oldnew.jsp" target="_blank" title="開啟新的導覽視窗">新舊地、建號查詢</a>
+                  <a class="dropdown-item pl-5" href="http://landquery.klcg.gov.tw/query/opendata1.jsp" target="_blank" title="開啟新的導覽視窗">第一次登記公告</a>
+                  <a class="dropdown-item pl-5" href="http://landquery.klcg.gov.tw/query/opendata2.jsp" target="_blank" title="開啟新的導覽視窗">書狀補給公告</a>
+                  <a class="dropdown-item pl-5" href="#">逾期未辦繼承公告查詢</a>
+                  <a class="dropdown-item pl-5" href="#">未辦繼承列管土地資料</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">測量類</a>
+                  <a class="dropdown-item" href="#">地價類</a>
+                  <a class="dropdown-item" href="#">登記規費試算</a>
+                  <a class="dropdown-item" href="#">測量規費試算</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuApp" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  線上申辦
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuApp">
+                  <a class="dropdown-item" href="#">網路申領電子謄本</a>
+                  <a class="dropdown-item" href="#">地政電傳資訊服務</a>
+                  <a class="dropdown-item" href="#">地政線上申辦系統</a>
+                  <a class="dropdown-item" href="#">檔案閱覽抄錄複製</a>
+                  <a class="dropdown-item" href="#">歷年公告地價資料</a>
+                  <a class="dropdown-item" href="#">英文不動產權利登記證明</a>
+                  <a class="dropdown-item" href="#">線上預約</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuNote" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  申請須知
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuNote">
+                  <a class="dropdown-item" href="#">登記類</a>
+                  <a class="dropdown-item" href="#">測量類</a>
+                  <a class="dropdown-item" href="#">地價類</a>
+                  <a class="dropdown-item" href="#">謄本類</a>
+                  <a class="dropdown-item" href="#">土地基本資料庫</a>
+                  <a class="dropdown-item" href="#">地政便利包</a>
+                  <a class="dropdown-item" href="#">附繳證件來源機關</a>
+                  <a class="dropdown-item" href="#">常見補正事項</a>
+                  <a class="dropdown-item" href="#">下載專區</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuService" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  便民服務
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuService">
+                  <h6 class="dropdown-header">臨櫃服務</h6>
+                  <a class="dropdown-item pl-5" href="#">單一窗口服務</a>
+                  <a class="dropdown-item pl-5" href="#">服務台及志工服務</a>
+                  <a class="dropdown-item pl-5" href="#">謄本櫃檯雙向服務</a>
+                  <div class="dropdown-divider"></div>
+                  <h6 class="dropdown-header">通信服務</h6>
+                  <a class="dropdown-item pl-5" href="#">通信申請</a>
+                  <a class="dropdown-item pl-5" href="#">案件郵寄到家</a>
+                  <div class="dropdown-divider"></div>
+                  <h6 class="dropdown-header">網路服務</h6>
+                  <a class="dropdown-item pl-5" href="#">網路申領電子謄本</a>
+                  <a class="dropdown-item pl-5" href="#">地政電傳資訊服務</a>
+                  <a class="dropdown-item pl-5" href="#">地政線上申辦系統</a>
+                  <a class="dropdown-item pl-5" href="#">英文不動產權利登記證明</a>
+                  <a class="dropdown-item pl-5" href="#">線上預約</a>
+                  <a class="dropdown-item pl-5" href="#">網路ATM</a>
+                  <div class="dropdown-divider"></div>
+                  <h6 class="dropdown-header">自動化服務</h6>
+                  <a class="dropdown-item pl-5" href="#">電話語音查詢</a>
+                  <a class="dropdown-item pl-5" href="#">辦理情形自動回復</a>
+                  <div class="dropdown-divider"></div>
+                  <h6 class="dropdown-header">跨所跨縣市服務</h6>
+                  <a class="dropdown-item pl-5" href="#">跨縣市申領謄本</a>
+                  <a class="dropdown-item pl-5" href="#">跨所申辦登記案件</a>
+                  <a class="dropdown-item pl-5" href="#">跨所申請英文不動產權利登記證明</a>
+                  <a class="dropdown-item pl-5" href="#">跨縣市代收案件</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">其他服務</a>
+
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuSuggest" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  民意交流
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuSuggest">
+                  <a class="dropdown-item" href="#">地政答客問</a>
+                  <a class="dropdown-item" href="#">主任信箱</a>
+                  <a class="dropdown-item" href="#">網路投票</a>
+                  <a class="dropdown-item" href="#">民眾參與創新提案</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  分類檢索
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#">主題分類</a>
+                  <a class="dropdown-item" href="#">施政分類</a>
+                  <a class="dropdown-item" href="#">服務分類</a>
+              </li>
+            </ul>
+            </div>
+        </nav>
+        </div>
+        </div>
+  </div>
+  <!-- /主選單 -->
+
+  <!-- 公告區 -->
+  <div class="container">
+    <div class="row pb-4 pt-4">
+      <div class="col-lg-6 mh-100">
+        <div class="card indexBulletim h-100">
+          <div class="card-header pt-0">
+            <ul class="nav nav-pills card-header-pills" id="pills-tab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active font-weight-bold" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home"
+                  aria-selected="true">
+                  <span class="fas fa-bullhorn"></span> 最新消息</a>
+              </li>
+              <li class="nav-item ml-1">
+                <a class="nav-link font-weight-bold" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile"
+                  aria-selected="false">
+                  <span class="fas fa-balance-scale"></span> 法令新訊</a>
+              </li>
+            </ul>
+          </div>
+          <div class="card-body h-100">
+            <div class="tab-content" id="pills-tabContent">
+              <div class="tab-pane fade show active h-100" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                <!-- 最新消息-->
+                <ul class="list-group list-group-flush mb-3">
+                  <li class="list-group-item list-group-item-action border-0">
+                    <a href="#" class="card-link d-flex justify-content-between align-items-top">
+                      <span class="d-flex">
+                        <span class="fas fa-genderless align-items-top pt-1 pr-2"></span>
+                        歡迎多加利用「基隆市不動產糾紛調處委員會」為您解決不動產爭議
+                      </span>
+                      <span class="badge badge-date align-self-start ml-2 pb-1 pl-2 pt-1 pr-2">2018/04/20</span>
+                    </a>
+                  </li>
+                  <li class="list-group-item list-group-item-action border-0">
+                    <a href="#" class="card-link d-flex justify-content-between align-items-top">
+                      <span class="d-flex">
+                        <span class="fas fa-genderless align-items-top pt-1 pr-2"></span>
+                        107年5月七堵區、暖暖區、中山區及安樂區不動產買賣交易量統計(不含拍賣)
+                      </span>
+                      <span class="badge badge-date align-self-start ml-2 pb-1 pl-2 pt-1 pr-2">2018/04/20</span>
+                    </a>
+                  </li>
+                  <li class="list-group-item list-group-item-action border-0">
+                    <a href="#" class="card-link d-flex justify-content-between align-items-top">
+                      <span class="d-flex">
+                        <span class="fas fa-genderless align-items-top pt-1 pr-2"></span>
+                        107年6月4日(星期一)下午1:30~2:00萬安41號演習
+                      </span>
+                      <span class="badge badge-date align-self-start ml-2 pb-1 pl-2 pt-1 pr-2">2018/04/20</span>
+                    </a>
+                  </li>
+                  <li class="list-group-item list-group-item-action border-0">
+                    <a href="#" class="card-link d-flex justify-content-between align-items-top">
+                      <span class="d-flex">
+                        <span class="fas fa-genderless align-items-top pt-1 pr-2"></span>
+                        賀！本所替代役男施昱全榮獲107年上半年績優替代役男
+                      </span>
+                      <span class="badge badge-date align-self-start ml-2 pb-1 pl-2 pt-1 pr-2">2018/04/20</span>
+                    </a>
+                  </li>
+                  <li class="list-group-item list-group-item-action border-0">
+                    <a href="#" class="card-link d-flex justify-content-between align-items-top">
+                      <span class="d-flex">
+                        <span class="fas fa-genderless align-items-top pt-1 pr-2"></span>
+                        「全方位GIS系統」107年5月1日起發布服務，提升服務品質及方便民眾查找資訊
+                      </span>
+                      <span class="badge badge-date align-self-start ml-2 pb-1 pl-2 pt-1 pr-2">2018/04/20</span>
+                    </a>
+                  </li>
+                </ul>
+                <!-- 最新消息-->
+              </div>
+              <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <!-- 法令新訊-->
+                <ul class="list-group list-group-flush mb-3">
+                  <li class="list-group-item list-group-item-action border-0">
+                    <a href="#" class="card-link d-flex justify-content-between align-items-top">
+                      <span class="d-flex">
+                        <span class="fas fa-genderless align-items-top pt-1 pr-2"></span>
+                        自益信託之委託人於信託關係存續中死亡，得由部分繼承人會同受託人辦理受益人變更為全體繼承人公同共有解釋函
+                      </span>
+                      <span class="badge badge-date align-self-start ml-2 pb-1 pl-2 pt-1 pr-2">2018/04/20</span>
+                    </a>
+                  </li>
+                  <li class="list-group-item list-group-item-action border-0">
+                    <a href="#" class="card-link d-flex justify-content-between align-items-top">
+                      <span class="d-flex">
+                        <span class="fas fa-genderless align-items-top pt-1 pr-2"></span>
+                        內政部訂定「租賃住宅市場發展及管理條例施行細則」
+                      </span>
+                      <span class="badge badge-date align-self-start ml-2 pb-1 pl-2 pt-1 pr-2">2018/04/20</span>
+                    </a>
+                  </li>
+                  <li class="list-group-item list-group-item-action border-0">
+                    <a href="#" class="card-link d-flex justify-content-between align-items-top">
+                      <span class="d-flex">
+                        <span class="fas fa-genderless align-items-top pt-1 pr-2"></span>
+                        修正「土地基本資料庫電子資料流通作業要點」
+                      </span>
+                      <span class="badge badge-date align-self-start ml-2 pb-1 pl-2 pt-1 pr-2">2018/04/20</span>
+                    </a>
+                  </li>
+                  <li class="list-group-item list-group-item-action border-0">
+                    <a href="#" class="card-link d-flex justify-content-between align-items-top">
+                      <span class="d-flex">
+                        <span class="fas fa-genderless align-items-top pt-1 pr-2"></span>
+                        修正「大陸地區人民取得設定或移轉不動產物權申請書」、「大陸地區法人、團體或陸資公司取得設定或移轉不動產物權申請書」
+                      </span>
+                      <span class="badge badge-date align-self-start ml-2 pb-1 pl-2 pt-1 pr-2">2018/04/20</span>
+                    </a>
+                  </li>
+                  <li class="list-group-item list-group-item-action border-0">
+                    <a href="#" class="card-link d-flex justify-content-between align-items-top">
+                      <span class="d-flex">
+                        <span class="fas fa-genderless align-items-top pt-1 pr-2"></span>
+                        修正「直轄市(縣)市不動產糾紛調處委員會設置及調處辦法」部分條文
+                      </span>
+                      <span class="badge badge-date align-self-start ml-2 pb-1 pl-2 pt-1 pr-2">2018/04/20</span>
+                    </a>
+                  </li>
+                </ul>
+                <!-- 法令新訊-->
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card popularTool h-100">
+          <!-- 常用工具-->
+          <!-- <div class="d-flex flex-wrap justify-content-between popularTool"> -->
+          <ul class="d-flex flex-wrap justify-content-between h-100">
+            <li class="text-center">
+              <a href="#">
+                <span class="fas fa-building rounded"></span> 政府資訊公開</span>
+              </a>
+            </li>
+            <li class="text-center">
+              <a href="#">
+                <span class="far fa-chart-line rounded"></span> 公告現值地價</span>
+              </a>
+            </li>
+            <li class="text-center">
+              <a href="#">
+                <span class="fal fa-credit-card rounded"></span> 網路ATM</span>
+              </a>
+            </li>
+            <li class="text-center">
+              <a href="#">
+                <span class="far fa-spinner rounded"></span> 案件辦理情形查詢</span>
+              </a>
+            </li>
+            <li class="text-center">
+              <a href="#">
+                <span class="fal fa-barcode-read rounded"> </span> 實價登錄申報期限</span>
+              </a>
+            </li>
+            <!-- </li>
+  <li class="d-flex flex-wrap justify-content-between"> -->
+            <li class="text-center">
+              <a href="#">
+                <span class="fa fa-calendar-edit rounded"></span> 第一次登記公告</span>
+              </a>
+            </li>
+            <li class="text-center">
+              <a href="#">
+                <span class="fal fa-newspaper rounded"></span> 書狀補給公告資料</span>
+              </a>
+            </li>
+            <li class="text-center">
+              <a href="#">
+                <span class="fa fa-project-diagram rounded"></span> 未辦繼承列管資料</span>
+              </a>
+            </li>
+            <li class="text-center">
+              <a href="#">
+                <span class="fa fa-street-view rounded"></span> 外籍人士地權專區</span>
+              </a>
+            </li>
+            <li class="text-center">
+              <a href="#">
+                <span class="fal fa-smile-plus rounded"> </span> 便民服務投票區</span>
+              </a>
+            </li>
+          </ul>
+          <!-- </div> -->
+          <!-- 常用工具-->
+        </div>
+      </div>
     </div>
-    <!-- /表頭 -->
+  </div>
+  <!-- /公告區 -->
 
-    <!-- 主選單 -->
-    <div class="container-fluid mainMenu">
+  <!-- 專題區 -->
+  <div class="jumbotron jumbotron-fluid p-0 pt-4 m-0 project">
+    <div class="container">
       <div class="row">
-        <div class="container">
-          <nav class="navbar navbar-expand-lg navbar-dark">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul class="navbar-nav">
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuIntro" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    機關簡介
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuIntro">
-                    <a class="dropdown-item" href="#">本所沿革</a>
-                    <a class="dropdown-item" href="#">轄區簡介</a>
-                    <a class="dropdown-item" href="#">組織職掌</a>
-                    <a class="dropdown-item" href="#">樓層平面圖</a>
-                    <a class="dropdown-item" href="#">聯絡資訊</a>
-                    <a class="dropdown-item" href="#">地理交通</a>
-                    <a class="dropdown-item" href="#">行政規章專區</a>
-                  </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card h-100 quickOption">
+            <div class="card-header text-center mainItem">
+              <span class="fas fa-box-check"></span>
+              <h5>主題專區</h5>
+            </div>
+            <div class="card-body">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item list-group-item-action border-0">
+                  <a href="# " class="card-link">
+                    <span class="fas fa-caret-right"></span> 未辦理繼承專區</a>
                 </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuInfo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    公告資訊
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuInfo">
-                    <a class="dropdown-item" href="#">最先消息</a>
-                    <a class="dropdown-item" href="#">法令新訊</a>
-                  </div>
+                <li class="list-group-item list-group-item-action border-0">
+                  <a href="# " class="card-link">
+                    <span class="fas fa-caret-right"></span> 檔案應用專區</a>
                 </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuSearch" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    線上查詢
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuSearch">
-                    <h6 class="dropdown-header">登記類</h6>
-                    <a class="dropdown-item pl-5" href="http://landquery.klcg.gov.tw/query/r48.jsp" target="_blank" title="開啟新的導覽視窗">區段代碼對照</a>
-                    <a class="dropdown-item pl-5" href="http://163.29.218.196/query/oldnew.jsp" target="_blank" title="開啟新的導覽視窗">新舊地、建號查詢</a>
-                    <a class="dropdown-item pl-5" href="http://landquery.klcg.gov.tw/query/opendata1.jsp" target="_blank" title="開啟新的導覽視窗">第一次登記公告</a>
-                    <a class="dropdown-item pl-5" href="http://landquery.klcg.gov.tw/query/opendata2.jsp" target="_blank" title="開啟新的導覽視窗">書狀補給公告</a>
-                    <a class="dropdown-item pl-5" href="#">逾期未辦繼承公告查詢</a>
-                    <a class="dropdown-item pl-5" href="#">未辦繼承列管土地資料</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">測量類</a>
-                    <a class="dropdown-item" href="#">地價類</a>
-                    <a class="dropdown-item" href="#">登記規費試算</a>
-                    <a class="dropdown-item" href="#">測量規費試算</a>
-                  </div>
+                <li class="list-group-item list-group-item-action border-0">
+                  <a href="# " class="card-link">
+                    <span class="fas fa-caret-right"></span> 外籍人士專區</a>
                 </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuApp" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    線上申辦
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuApp">
-                    <a class="dropdown-item" href="#">網路申領電子謄本</a>
-                    <a class="dropdown-item" href="#">地政電傳資訊服務</a>
-                    <a class="dropdown-item" href="#">地政線上申辦系統</a>
-                    <a class="dropdown-item" href="#">檔案閱覽抄錄複製</a>
-                    <a class="dropdown-item" href="#">歷年公告地價資料</a>
-                    <a class="dropdown-item" href="#">英文不動產權利登記證明</a>
-                    <a class="dropdown-item" href="#">線上預約</a>
-                  </div>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuNote" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    申請須知
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuNote">
-                    <a class="dropdown-item" href="#">登記類</a>
-                    <a class="dropdown-item" href="#">測量類</a>
-                    <a class="dropdown-item" href="#">地價類</a>
-                    <a class="dropdown-item" href="#">謄本類</a>
-                    <a class="dropdown-item" href="#">土地基本資料庫</a>
-                    <a class="dropdown-item" href="#">地政便利包</a>
-                    <a class="dropdown-item" href="#">附繳證件來源機關</a>
-                    <a class="dropdown-item" href="#">常見補正事項</a>
-                    <a class="dropdown-item" href="#">下載專區</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuService" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    便民服務
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuService">
-                    <h6 class="dropdown-header">臨櫃服務</h6>
-                    <a class="dropdown-item pl-5" href="#">單一窗口服務</a>
-                    <a class="dropdown-item pl-5" href="#">服務台及志工服務</a>
-                    <a class="dropdown-item pl-5" href="#">謄本櫃檯雙向服務</a>
-                    <div class="dropdown-divider"></div>
-                    <h6 class="dropdown-header">通信服務</h6>
-                    <a class="dropdown-item pl-5" href="#">通信申請</a>
-                    <a class="dropdown-item pl-5" href="#">案件郵寄到家</a>
-                    <div class="dropdown-divider"></div>
-                    <h6 class="dropdown-header">網路服務</h6>
-                    <a class="dropdown-item pl-5" href="#">網路申領電子謄本</a>
-                    <a class="dropdown-item pl-5" href="#">地政電傳資訊服務</a>
-                    <a class="dropdown-item pl-5" href="#">地政線上申辦系統</a>
-                    <a class="dropdown-item pl-5" href="#">英文不動產權利登記證明</a>
-                    <a class="dropdown-item pl-5" href="#">線上預約</a>
-                    <a class="dropdown-item pl-5" href="#">網路ATM</a>
-                    <div class="dropdown-divider"></div>
-                    <h6 class="dropdown-header">自動化服務</h6>
-                    <a class="dropdown-item pl-5" href="#">電話語音查詢</a>
-                    <a class="dropdown-item pl-5" href="#">辦理情形自動回復</a>
-                    <div class="dropdown-divider"></div>
-                    <h6 class="dropdown-header">跨所跨縣市服務</h6>
-                    <a class="dropdown-item pl-5" href="#">跨縣市申領謄本</a>
-                    <a class="dropdown-item pl-5" href="#">跨所申辦登記案件</a>
-                    <a class="dropdown-item pl-5" href="#">跨所申請英文不動產權利登記證明</a>
-                    <a class="dropdown-item pl-5" href="#">跨縣市代收案件</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">其他服務</a>
-
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuSuggest" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    民意交流
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuSuggest">
-                    <a class="dropdown-item" href="#">地政答客問</a>
-                    <a class="dropdown-item" href="#">主任信箱</a>
-                    <a class="dropdown-item" href="#">網路投票</a>
-                    <a class="dropdown-item" href="#">民眾參與創新提案</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    分類檢索
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">主題分類</a>
-                    <a class="dropdown-item" href="#">施政分類</a>
-                    <a class="dropdown-item" href="#">服務分類</a>
+                <li class="list-group-item list-group-item-action border-0">
+                  <a href="# " class="card-link">
+                    <span class="fas fa-caret-right"></span> 資訊公開專區</a>
                 </li>
               </ul>
-              </div>
-          </nav>
-          </div>
-          </div>
-          </div>
-          <!-- /主選單 -->
-
-          <!-- 公告區 -->
-          <div class="container">
-            <div class="row pb-4 pt-4">
-              <div class="col-lg-6 mh-100">
-                <div class="card indexBulletim h-100">
-                  <div class="card-header pt-0">
-                    <ul class="nav nav-pills card-header-pills" id="pills-tab" role="tablist">
-                      <li class="nav-item">
-                        <a class="nav-link active font-weight-bold" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home"
-                          aria-selected="true">
-                          <span class="fas fa-bullhorn"></span> 最新消息</a>
-                      </li>
-                      <li class="nav-item ml-1">
-                        <a class="nav-link font-weight-bold" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile"
-                          aria-selected="false">
-                          <span class="fas fa-balance-scale"></span> 法令新訊</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="card-body h-100">
-                    <div class="tab-content" id="pills-tabContent">
-                      <div class="tab-pane fade show active h-100" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                        <!-- 最新消息-->
-                        <ul class="list-group list-group-flush">
-                          <li class="list-group-item list-group-item-action border-0">
-                            <a href="#" class="card-link d-flex justify-content-between align-items-top">
-                              <span class="d-flex">
-                                <span class="fas fa-genderless align-items-top pt-1 pr-2"></span>
-                                歡迎多加利用「基隆市不動產糾紛調處委員會」為您解決不動產爭議
-                              </span>
-                              <span class="badge badge-date align-self-start ml-2 pb-1 pl-2 pt-1 pr-2">2018/04/20</span>
-                            </a>
-                          </li>
-                          <li class="list-group-item list-group-item-action border-0">
-                            <a href="#" class="card-link d-flex justify-content-between align-items-top">
-                              <span class="d-flex">
-                                <span class="fas fa-genderless align-items-top pt-1 pr-2"></span>
-                                107年5月七堵區、暖暖區、中山區及安樂區不動產買賣交易量統計(不含拍賣)
-                              </span>
-                              <span class="badge badge-date align-self-start ml-2 pb-1 pl-2 pt-1 pr-2">2018/04/20</span>
-                            </a>
-                          </li>
-                          <li class="list-group-item list-group-item-action border-0">
-                            <a href="#" class="card-link d-flex justify-content-between align-items-top">
-                              <span class="d-flex">
-                                <span class="fas fa-genderless align-items-top pt-1 pr-2"></span>
-                                107年6月4日(星期一)下午1:30~2:00萬安41號演習
-                              </span>
-                              <span class="badge badge-date align-self-start ml-2 pb-1 pl-2 pt-1 pr-2">2018/04/20</span>
-                            </a>
-                          </li>
-                          <li class="list-group-item list-group-item-action border-0">
-                            <a href="#" class="card-link d-flex justify-content-between align-items-top">
-                              <span class="d-flex">
-                                <span class="fas fa-genderless align-items-top pt-1 pr-2"></span>
-                                賀！本所替代役男施昱全榮獲107年上半年績優替代役男
-                              </span>
-                              <span class="badge badge-date align-self-start ml-2 pb-1 pl-2 pt-1 pr-2">2018/04/20</span>
-                            </a>
-                          </li>
-                          <li class="list-group-item list-group-item-action border-0">
-                            <a href="#" class="card-link d-flex justify-content-between align-items-top">
-                              <span class="d-flex">
-                                <span class="fas fa-genderless align-items-top pt-1 pr-2"></span>
-                                「全方位GIS系統」107年5月1日起發布服務，提升服務品質及方便民眾查找資訊
-                              </span>
-                              <span class="badge badge-date align-self-start ml-2 pb-1 pl-2 pt-1 pr-2">2018/04/20</span>
-                            </a>
-                          </li>
-                        </ul>
-                        <!-- 最新消息-->
-                      </div>
-                      <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                        <!-- 法令新訊-->
-                        <ul class="list-group list-group-flush">
-                          <li class="list-group-item list-group-item-action border-0">
-                            <a href="#" class="card-link d-flex justify-content-between align-items-top">
-                              <span class="d-flex">
-                                <span class="fas fa-genderless align-items-top pt-1 pr-2"></span>
-                                自益信託之委託人於信託關係存續中死亡，得由部分繼承人會同受託人辦理受益人變更為全體繼承人公同共有解釋函
-                              </span>
-                              <span class="badge badge-date align-self-start ml-2 pb-1 pl-2 pt-1 pr-2">2018/04/20</span>
-                            </a>
-                          </li>
-                          <li class="list-group-item list-group-item-action border-0">
-                            <a href="#" class="card-link d-flex justify-content-between align-items-top">
-                              <span class="d-flex">
-                                <span class="fas fa-genderless align-items-top pt-1 pr-2"></span>
-                                內政部訂定「租賃住宅市場發展及管理條例施行細則」
-                              </span>
-                              <span class="badge badge-date align-self-start ml-2 pb-1 pl-2 pt-1 pr-2">2018/04/20</span>
-                            </a>
-                          </li>
-                          <li class="list-group-item list-group-item-action border-0">
-                            <a href="#" class="card-link d-flex justify-content-between align-items-top">
-                              <span class="d-flex">
-                                <span class="fas fa-genderless align-items-top pt-1 pr-2"></span>
-                                修正「土地基本資料庫電子資料流通作業要點」
-                              </span>
-                              <span class="badge badge-date align-self-start ml-2 pb-1 pl-2 pt-1 pr-2">2018/04/20</span>
-                            </a>
-                          </li>
-                          <li class="list-group-item list-group-item-action border-0">
-                            <a href="#" class="card-link d-flex justify-content-between align-items-top">
-                              <span class="d-flex">
-                                <span class="fas fa-genderless align-items-top pt-1 pr-2"></span>
-                                修正「大陸地區人民取得設定或移轉不動產物權申請書」、「大陸地區法人、團體或陸資公司取得設定或移轉不動產物權申請書」
-                              </span>
-                              <span class="badge badge-date align-self-start ml-2 pb-1 pl-2 pt-1 pr-2">2018/04/20</span>
-                            </a>
-                          </li>
-                          <li class="list-group-item list-group-item-action border-0">
-                            <a href="#" class="card-link d-flex justify-content-between align-items-top">
-                              <span class="d-flex">
-                                <span class="fas fa-genderless align-items-top pt-1 pr-2"></span>
-                                修正「直轄市(縣)市不動產糾紛調處委員會設置及調處辦法」部分條文
-                              </span>
-                              <span class="badge badge-date align-self-start ml-2 pb-1 pl-2 pt-1 pr-2">2018/04/20</span>
-                            </a>
-                          </li>
-                        </ul>
-                        <!-- 法令新訊-->
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="card popularTool h-100">
-                  <!-- 常用工具-->
-                  <!-- <div class="d-flex flex-wrap justify-content-between popularTool"> -->
-                  <ul class="d-flex flex-wrap justify-content-between h-100">
-                    <li class="text-center">
-                      <a href="#">
-                        <span class="fas fa-building rounded"></span> 政府資訊公開</span>
-                      </a>
-                    </li>
-                    <li class="text-center">
-                      <a href="#">
-                        <span class="far fa-chart-line rounded"></span> 公告現值地價</span>
-                      </a>
-                    </li>
-                    <li class="text-center">
-                      <a href="#">
-                        <span class="fal fa-credit-card rounded"></span> 網路ATM</span>
-                      </a>
-                    </li>
-                    <li class="text-center">
-                      <a href="#">
-                        <span class="far fa-spinner rounded"></span> 案件辦理情形查詢</span>
-                      </a>
-                    </li>
-                    <li class="text-center">
-                      <a href="#">
-                        <span class="fal fa-barcode-read rounded"> </span> 實價登錄申報期限</span>
-                      </a>
-                    </li>
-                    <!-- </li>
-          <li class="d-flex flex-wrap justify-content-between"> -->
-                    <li class="text-center">
-                      <a href="#">
-                        <span class="fa fa-calendar-edit rounded"></span> 第一次登記公告</span>
-                      </a>
-                    </li>
-                    <li class="text-center">
-                      <a href="#">
-                        <span class="fal fa-newspaper rounded"></span> 書狀補給公告資料</span>
-                      </a>
-                    </li>
-                    <li class="text-center">
-                      <a href="#">
-                        <span class="fa fa-project-diagram rounded"></span> 未辦繼承列管資料</span>
-                      </a>
-                    </li>
-                    <li class="text-center">
-                      <a href="#">
-                        <span class="fa fa-street-view rounded"></span> 外籍人士地權專區</span>
-                      </a>
-                    </li>
-                    <li class="text-center">
-                      <a href="#">
-                        <span class="fal fa-smile-plus rounded"> </span> 便民服務投票區</span>
-                      </a>
-                    </li>
-                  </ul>
-                  <!-- </div> -->
-                  <!-- 常用工具-->
-                </div>
-              </div>
             </div>
           </div>
-          <!-- /公告區 -->
-
-          <!-- 專題區 -->
-          <div class="jumbotron jumbotron-fluid p-4 m-0 project">
-            <div class="container">
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card h-100 quickOption">
+            <div class="card-header text-center infoItem">
+              <span class="fa fa-tasks"></span>
+              <h5>資訊查詢</h5>
+            </div>
+            <div class="card-body">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item list-group-item-action border-0">
+                  <a href="# " class="card-link">
+                    <span class="fas fa-caret-right"></span> 案件辦理情形</a>
+                </li>
+                <li class="list-group-item list-group-item-action border-0">
+                  <a href="# " class="card-link">
+                    <span class="fas fa-caret-right"></span> 第一次登記公告</a>
+                </li>
+                <li class="list-group-item list-group-item-action border-0">
+                  <a href="# " class="card-link">
+                    <span class="fas fa-caret-right"></span> 書狀補給公告</a>
+                </li>
+                <li class="list-group-item list-group-item-action border-0">
+                  <a href="# " class="card-link">
+                    <span class="fas fa-caret-right"></span> 實價登錄申報期限查詢</a>
+                </li>
+                <li class="list-group-item list-group-item-action border-0">
+                  <a href="# " class="card-link">
+                    <span class="fas fa-caret-right"></span> 公告現值地價</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card h-100 quickOption">
+            <div class="card-header text-center downloadItem">
+              <span class="fas fa-download"></span>
+              <h5>下載專區</h5>
+            </div>
+            <div class="card-body">
               <div class="row">
-                <div class="col-lg-3 col-md-6">
-                  <div class="card h-100 quickOption">
-                    <div class="card-header text-center mainItem">
-                      <span class="fas fa-box-check"></span>
-                      <h5>主題專區</h5>
-                    </div>
-                    <div class="card-body">
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item list-group-item-action border-0">
-                          <a href="# " class="card-link">
-                            <span class="fas fa-caret-right"></span> 未辦理繼承專區</a>
-                        </li>
-                        <li class="list-group-item list-group-item-action border-0">
-                          <a href="# " class="card-link">
-                            <span class="fas fa-caret-right"></span> 檔案應用專區</a>
-                        </li>
-                        <li class="list-group-item list-group-item-action border-0">
-                          <a href="# " class="card-link">
-                            <span class="fas fa-caret-right"></span> 外籍人士專區</a>
-                        </li>
-                        <li class="list-group-item list-group-item-action border-0">
-                          <a href="# " class="card-link">
-                            <span class="fas fa-caret-right"></span> 資訊公開專區</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
+                <div class="col">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item list-group-item-action border-0">
+                      <a href="# " class="card-link">
+                        <span class="fas fa-caret-right"></span> 登記類</a>
+                    </li>
+                    <li class="list-group-item list-group-item-action border-0">
+                      <a href="# " class="card-link">
+                        <span class="fas fa-caret-right"></span> 測量類</a>
+                    </li>
+                    <li class="list-group-item list-group-item-action border-0">
+                      <a href="# " class="card-link">
+                        <span class="fas fa-caret-right"></span> 地價類</a>
+                    </li>
+                    <li class="list-group-item list-group-item-action border-0">
+                      <a href="# " class="card-link">
+                        <span class="fas fa-caret-right"></span> 謄本類</a>
+                    </li>
+                  </ul>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                  <div class="card h-100 quickOption">
-                    <div class="card-header text-center infoItem">
-                      <span class="fa fa-tasks"></span>
-                      <h5>資訊查詢</h5>
-                    </div>
-                    <div class="card-body">
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item list-group-item-action border-0">
-                          <a href="# " class="card-link">
-                            <span class="fas fa-caret-right"></span> 案件辦理情形</a>
-                        </li>
-                        <li class="list-group-item list-group-item-action border-0">
-                          <a href="# " class="card-link">
-                            <span class="fas fa-caret-right"></span> 第一次登記公告</a>
-                        </li>
-                        <li class="list-group-item list-group-item-action border-0">
-                          <a href="# " class="card-link">
-                            <span class="fas fa-caret-right"></span> 書狀補給公告</a>
-                        </li>
-                        <li class="list-group-item list-group-item-action border-0">
-                          <a href="# " class="card-link">
-                            <span class="fas fa-caret-right"></span> 實價登錄申報期限查詢</a>
-                        </li>
-                        <li class="list-group-item list-group-item-action border-0">
-                          <a href="# " class="card-link">
-                            <span class="fas fa-caret-right"></span> 公告現值地價</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                  <div class="card h-100 quickOption">
-                    <div class="card-header text-center downloadItem">
-                      <span class="fas fa-download"></span>
-                      <h5>下載專區</h5>
-                    </div>
-                    <div class="card-body">
-                      <div class="row">
-                        <div class="col">
-                          <ul class="list-group list-group-flush">
-                            <li class="list-group-item list-group-item-action border-0">
-                              <a href="# " class="card-link">
-                                <span class="fas fa-caret-right"></span> 登記類</a>
-                            </li>
-                            <li class="list-group-item list-group-item-action border-0">
-                              <a href="# " class="card-link">
-                                <span class="fas fa-caret-right"></span> 測量類</a>
-                            </li>
-                            <li class="list-group-item list-group-item-action border-0">
-                              <a href="# " class="card-link">
-                                <span class="fas fa-caret-right"></span> 地價類</a>
-                            </li>
-                            <li class="list-group-item list-group-item-action border-0">
-                              <a href="# " class="card-link">
-                                <span class="fas fa-caret-right"></span> 謄本類</a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="col">
-                          <ul class="list-group list-group-flush">
-                            <li class="list-group-item list-group-item-action border-0">
-                              <a href="# " class="card-link">
-                                <span class="fas fa-caret-right"></span> 資訊類</a>
-                            </li>
-                            <li class="list-group-item list-group-item-action border-0">
-                              <a href="# " class="card-link">
-                                <span class="fas fa-caret-right"></span> 地用類</a>
-                            </li>
-                            <li class="list-group-item list-group-item-action border-0">
-                              <a href="# " class="card-link">
-                                <span class="fas fa-caret-right"></span> 其他類</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                  <div class="card h-100 quickOption">
-                    <div class="card-header text-center linkItem">
-                      <span class="fas fa-cogs"></span>
-                      <h5>網網相連</h5>
-                    </div>
-                    <div class="card-body">
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item list-group-item-action border-0">
-                          <a href="# " class="card-link">
-                            <span class="fas fa-caret-right"></span> 全國地政單位</a>
-                        </li>
-                        <li class="list-group-item list-group-item-action border-0">
-                          <a href="# " class="card-link">
-                            <span class="fas fa-caret-right"></span> 地政服務資訊</a>
-                        </li>
-                        <li class="list-group-item list-group-item-action border-0">
-                          <a href="# " class="card-link">
-                            <span class="fas fa-caret-right"></span> 基隆市地政士公會</a>
-                        </li>
-                        <li class="list-group-item list-group-item-action border-0">
-                          <a href="# " class="card-link">
-                            <span class="fas fa-caret-right"></span> 中華民國地政士公會全國聯合會</a>
-                        </li>
-                        <li class="list-group-item list-group-item-action border-0">
-                          <a href="# " class="card-link">
-                            <span class="fas fa-caret-right"></span> 各地稅務機關</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- /專題區 -->
-
-          <!-- Banner -->
-          <div class="container">
-            <div class="row">
-              <!-- <div class="col-sm-12"> -->
-              <div class="card m-3 mt-4 mb-4 banner">
-                <div class="card-body">
-                  <ul class="d-flex flex-wrap justify-content-around">
-                    <li>
+                <div class="col">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item list-group-item-action border-0">
                       <a href="# " class="card-link">
-                        <img src="https://api.fnkr.net/testimg/150x60/00CED1/FFF/?text=150x60 " alt="AAA " class="img-thumbnail">
-                      </a>
+                        <span class="fas fa-caret-right"></span> 資訊類</a>
                     </li>
-                    <li>
+                    <li class="list-group-item list-group-item-action border-0">
                       <a href="# " class="card-link">
-                        <img src="https://api.fnkr.net/testimg/150x60/00CED1/FFF/?text=150x60 " alt="AAA " class="img-thumbnail">
-                      </a>
+                        <span class="fas fa-caret-right"></span> 地用類</a>
                     </li>
-                    <li>
+                    <li class="list-group-item list-group-item-action border-0">
                       <a href="# " class="card-link">
-                        <img src="https://api.fnkr.net/testimg/150x60/00CED1/FFF/?text=150x60 " alt="AAA " class="img-thumbnail">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="# " class="card-link">
-                        <img src="https://api.fnkr.net/testimg/150x60/00CED1/FFF/?text=150x60 " alt="AAA " class="img-thumbnail">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="# " class="card-link">
-                        <img src="https://api.fnkr.net/testimg/150x60/00CED1/FFF/?text=150x60 " alt="AAA " class="img-thumbnail">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="# " class="card-link">
-                        <img src="https://api.fnkr.net/testimg/150x60/00CED1/FFF/?text=150x60 " alt="AAA " class="img-thumbnail">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="# " class="card-link">
-                        <img src="https://api.fnkr.net/testimg/150x60/00CED1/FFF/?text=150x60 " alt="AAA " class="img-thumbnail">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="# " class="card-link">
-                        <img src="https://api.fnkr.net/testimg/150x60/00CED1/FFF/?text=150x60 " alt="AAA " class="img-thumbnail">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="# " class="card-link">
-                        <img src="https://api.fnkr.net/testimg/150x60/00CED1/FFF/?text=150x60 " alt="AAA " class="img-thumbnail">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="# " class="card-link">
-                        <img src="https://api.fnkr.net/testimg/150x60/00CED1/FFF/?text=150x60 " alt="AAA " class="img-thumbnail">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="# " class="card-link">
-                        <img src="https://api.fnkr.net/testimg/150x60/00CED1/FFF/?text=150x60 " alt="AAA " class="img-thumbnail">
-                      </a>
+                        <span class="fas fa-caret-right"></span> 其他類</a>
                     </li>
                   </ul>
                 </div>
               </div>
-              <!-- </div> -->
             </div>
           </div>
-          <!-- /Banner -->
-
-          <!-- 胖頁尾 -->
-          <div class="jumbotron jumbotron-fluid p-0 m-0 footerMenu">
-            <div class="container">
-              <div class="row pl-3 pb-3">
-                <div class="col text-center">
-                  <a class="btn btn-brown tr-0" data-toggle="collapse" href="#collapsefooterMenu" role="button" aria-expanded="false" aria-controls="collapsefooterMenu">
-                    收合
-                  </a>
-                </div>
-                <div class="pt-4 w-100 collapse show" id="collapsefooterMenu">
-                  <div class="card flex-row">
-                    <ul class="list-group">
-                      <li class="list-group-title">機關簡介</li>
-                      <li class="list-group-item list-group-item-action">
-                        <a href="#" class="">本所沿革</a>
-                      </li>
-                      <li class="list-group-item list-group-item-action">
-                        <a href="#" class="">轄區簡介</a>
-                      </li>
-                      <li class="list-group-item list-group-item-action">
-                        <a href="#" class="">組織職掌</a>
-                      </li>
-                      <li class="list-group-item list-group-item-action">
-                        <a href="#" class="">樓層平面圖</a>
-                      </li>
-                      <li class="list-group-item list-group-item-action">
-                        <a href="#" class="">聯絡資訊</a>
-                      </li>
-                      <li class="list-group-item list-group-item-action">
-                        <a href="#" class="">地理交通</a>
-                      </li>
-                      <li class="list-group-item list-group-item-action">
-                        <a href="#" class="">行政規章專區</a>
-                      </li>
-                    </ul>
-                    <ul class="list-group">
-                      <li class="list-group-title">公告資訊</li>
-                      <li class="list-group-item list-group-item-action">
-                        <a href="#">最新消息</a>
-                      </li>
-                      <li class="list-group-item list-group-item-action">
-                        <a href="#">法令新訊</a>
-                      </li>
-                    </ul>
-                    <ul class="list-group">
-                      <li class="list-group-title">線上查詢</li>
-                      <li class="list-group-item list-group-item-action">
-                        <a href="#">登記類</a>
-                      </li>
-                      <li class="list-group-item list-group-item-action">
-                        <a href="#">測量類</a>
-                      </li>
-                      <li class="list-group-item list-group-item-action">
-                        <a href="#">地價類</a>
-                      </li>
-                      <li class="list-group-item list-group-item-action">
-                        <a href="#">登記規費試算</a>
-                      </li>
-                      <li class="list-group-item list-group-item-action">
-                        <a href="#">測量規費試算</a>
-                      </li>
-                    </ul>
-                    <ul class="list-group">
-                      <li class="list-group-title">線上申辦</li>
-                      <li class="list-group-item list-group-item-action">
-                        <a href="#">網路申領電子謄本</a>
-                      </li>
-                      <li class="list-group-item list-group-item-action">
-                        <a href="#">地政電傳資訊服務</a>
-                      </li>
-                      <li class="list-group-item list-group-item-action">
-                        <a href="#">地政線上申辦系統</a>
-                      </li>
-                      <li class="list-group-item list-group-item-action">
-                        <a href="#">檔案閱覽抄錄複製</a>
-                      </li>
-                      <li class="list-group-item list-group-item-action">
-                        <a href="#">歷年公告地價資料</a>
-                      </li>
-                      <li class="list-group-item list-group-item-action">
-                        <a href="#">英文不動產權利登記證明</a>
-                      </li>
-                      <li class="list-group-item list-group-item-action">
-                        <a href="#">線上預約</a>
-                      </li>
-                    </ul>
-                    <ul class="list-group">
-                      <li class="list-group-title">申請須知</li>
-                      <li class="list-group-item list-group-item-action">
-                        <a href="#">登記類</a>
-                      </li>
-                      <li class="list-group-item list-group-item-action">
-                        <a href="#">測量類</a>
-                      </li>
-                      <li class="list-group-item list-group-item-action">
-                        <a href="#">地價類</a>
-                      </li>
-                      <li class="list-group-item list-group-item-action">
-                        <a href="#">謄本類</a>
-                      </li>
-                      <li class="list-group-item list-group-item-action">
-                        <a href="#">土地基本資料庫</a>
-                      </li>
-                      <li class="list-group-item list-group-item-action">
-                        <a href="#">地政便利包</a>
-                      </li>
-                      <li class="list-group-item list-group-item-action">
-                        <a href="#">附繳證件來源機關</a>
-                      </li>
-                      <li class="list-group-item list-group-item-action">
-                        <a href="#">常見補正事項</a>
-                      </li>
-                      <li class="list-group-item list-group-item-action">
-                        <a href="#">下載專區</a>
-                      </li>
-
-                    </ul>
-                    <ul class="list-group">
-                      <li class="list-group-title">便民服務</li>
-                      <li class="list-group-item list-group-item-action">
-                        <a href="#">臨櫃服務</a>
-                      </li>
-                      <li class="list-group-item list-group-item-action">
-                        <a href="#">通信服務</a>
-                      </li>
-                      <li class="list-group-item list-group-item-action">
-                        <a href="#">網路服務</a>
-                      </li>
-                      <li class="list-group-item list-group-item-action">
-                        <a href="#">自動化服務</a>
-                      </li>
-                      <li class="list-group-item list-group-item-action">
-                        <a href="#">跨所跨縣市服務</a>
-                      </li>
-                      <li class="list-group-item list-group-item-action">
-                        <a href="#">其他服務</a>
-                      </li>
-                    </ul>
-                    <ul class="list-group">
-                      <li class="list-group-title">民意交流</li>
-                      <li class="list-group-item list-group-item-action">
-                        <a href="#">地政答客問</a>
-                      </li>
-                      <li class="list-group-item list-group-item-action">
-                        <a href="#">主任信箱</a>
-                      </li>
-                      <li class="list-group-item list-group-item-action">
-                        <a href="#">網路投票</a>
-                      </li>
-                      <li class="list-group-item list-group-item-action">
-                        <a href="#">民眾參與創新提案</a>
-                      </li>
-                    </ul>
-                    <ul class="list-group">
-                      <li class="list-group-title">分類檢索</li>
-                      <li class="list-group-item list-group-item-action">
-                        <a href="#">主題分類</a>
-                      </li>
-                      <li class="list-group-item list-group-item-action">
-                        <a href="#">施政分類</a>
-                      </li>
-                      <li class="list-group-item list-group-item-action">
-                        <a href="#">服務分類</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card h-100 quickOption">
+            <div class="card-header text-center linkItem">
+              <span class="fas fa-cogs"></span>
+              <h5>網網相連</h5>
             </div>
-          </div>
-          <!-- /胖頁尾 -->
-
-          <div class="jumbotron footerSet m-0 p-4">
-            <div class="container">
-              <div class="row footer">
-                <div class="col-7">
-                  <p>
-                    <a href="#">網站安全政策</a> |
-                    <a href="#">政府網站資料開放宣言</a> |
-                    <a href="#">隱私權保護政策</a> |
-                    <a href="#">首長信箱</a>
-                  </p>
-                  <p>© 基隆市安樂地政事務所 ‧ 版權所有</p>
-                  <p> ‧ 地址：基隆市安樂路二段一百六十四號三樓 ‧ 地理位置：E 121°43'21" N 25°07'14"</p>
-                  <p> ‧ 電話：(02)24324001 ‧ 傳真：(02)24323017</p>
-                  <p> ‧ 最佳瀏覽解析度為1024x768以上，建議使用IE 10以上瀏覽以取得最佳瀏覽效果</p>
-                  <p> ‧ 到訪人次：214938</p>
-
-                </div>
-                <div class="col">
+            <div class="card-body">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item list-group-item-action border-0">
                   <a href="# " class="card-link">
-                    <img src="https://api.fnkr.net/testimg/150x60/00CED1/FFF/?text=150x60 " alt="AAA " class="img-thumbnail">
-                  </a>
-                </div>
-                <div class="col">
+                    <span class="fas fa-caret-right"></span> 全國地政單位</a>
+                </li>
+                <li class="list-group-item list-group-item-action border-0">
                   <a href="# " class="card-link">
-                    <img src="https://api.fnkr.net/testimg/150x60/00CED1/FFF/?text=150x60 " alt="AAA " class="img-thumbnail">
-                  </a>
-                </div>
-              </div>
+                    <span class="fas fa-caret-right"></span> 地政服務資訊</a>
+                </li>
+                <li class="list-group-item list-group-item-action border-0">
+                  <a href="# " class="card-link">
+                    <span class="fas fa-caret-right"></span> 基隆市地政士公會</a>
+                </li>
+                <li class="list-group-item list-group-item-action border-0">
+                  <a href="# " class="card-link">
+                    <span class="fas fa-caret-right"></span> 中華民國地政士公會全國聯合會</a>
+                </li>
+                <li class="list-group-item list-group-item-action border-0">
+                  <a href="# " class="card-link">
+                    <span class="fas fa-caret-right"></span> 各地稅務機關</a>
+                </li>
+              </ul>
             </div>
           </div>
-          <!-- Optional JavaScript -->
-          <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-          <script src="base/js/jquery.min.js"></script>
-          <script src="base/js/popper.min.js"></script>
-          <script src="base/js/bootstrap.min.js"></script>
-          <script>
-            $(document).ready(function () {});
-          </script>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /專題區 -->
+
+  <!-- Banner -->
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-sm-12"> -->
+      <div class="card m-3 mt-4 mb-4 banner">
+        <div class="card-body">
+          <ul class="d-flex flex-wrap justify-content-around">
+            <li>
+              <a href="# " class="card-link">
+                <img src="https://api.fnkr.net/testimg/150x60/00CED1/FFF/?text=150x60 " alt="AAA " class="img-thumbnail">
+              </a>
+            </li>
+            <li>
+              <a href="# " class="card-link">
+                <img src="https://api.fnkr.net/testimg/150x60/00CED1/FFF/?text=150x60 " alt="AAA " class="img-thumbnail">
+              </a>
+            </li>
+            <li>
+              <a href="# " class="card-link">
+                <img src="https://api.fnkr.net/testimg/150x60/00CED1/FFF/?text=150x60 " alt="AAA " class="img-thumbnail">
+              </a>
+            </li>
+            <li>
+              <a href="# " class="card-link">
+                <img src="https://api.fnkr.net/testimg/150x60/00CED1/FFF/?text=150x60 " alt="AAA " class="img-thumbnail">
+              </a>
+            </li>
+            <li>
+              <a href="# " class="card-link">
+                <img src="https://api.fnkr.net/testimg/150x60/00CED1/FFF/?text=150x60 " alt="AAA " class="img-thumbnail">
+              </a>
+            </li>
+            <li>
+              <a href="# " class="card-link">
+                <img src="https://api.fnkr.net/testimg/150x60/00CED1/FFF/?text=150x60 " alt="AAA " class="img-thumbnail">
+              </a>
+            </li>
+            <li>
+              <a href="# " class="card-link">
+                <img src="https://api.fnkr.net/testimg/150x60/00CED1/FFF/?text=150x60 " alt="AAA " class="img-thumbnail">
+              </a>
+            </li>
+            <li>
+              <a href="# " class="card-link">
+                <img src="https://api.fnkr.net/testimg/150x60/00CED1/FFF/?text=150x60 " alt="AAA " class="img-thumbnail">
+              </a>
+            </li>
+            <li>
+              <a href="# " class="card-link">
+                <img src="https://api.fnkr.net/testimg/150x60/00CED1/FFF/?text=150x60 " alt="AAA " class="img-thumbnail">
+              </a>
+            </li>
+            <li>
+              <a href="# " class="card-link">
+                <img src="https://api.fnkr.net/testimg/150x60/00CED1/FFF/?text=150x60 " alt="AAA " class="img-thumbnail">
+              </a>
+            </li>
+            <li>
+              <a href="# " class="card-link">
+                <img src="https://api.fnkr.net/testimg/150x60/00CED1/FFF/?text=150x60 " alt="AAA " class="img-thumbnail">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- </div> -->
+    </div>
+  </div>
+  <!-- /Banner -->
+
+  <!-- 胖頁尾 -->
+  <div class="jumbotron jumbotron-fluid p-0 m-0 footerMenu">
+    <div class="container">
+      <div class="row pl-3 pb-3">
+        <div class="col text-center">
+          <a class="btn btn-brown tr-0" data-toggle="collapse" href="#collapsefooterMenu" role="button" aria-expanded="false" aria-controls="collapsefooterMenu">
+            收合
+          </a>
+        </div>
+        <div class="pt-4 w-100 collapse show" id="collapsefooterMenu">
+          <div class="card flex-row">
+            <ul class="list-group mb-3">
+              <li class="list-group-title">機關簡介</li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#" class="">本所沿革</a>
+              </li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#" class="">轄區簡介</a>
+              </li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#" class="">組織職掌</a>
+              </li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#" class="">樓層平面圖</a>
+              </li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#" class="">聯絡資訊</a>
+              </li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#" class="">地理交通</a>
+              </li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#" class="">行政規章專區</a>
+              </li>
+            </ul>
+            <ul class="list-group mb-3">
+              <li class="list-group-title">公告資訊</li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#">最新消息</a>
+              </li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#">法令新訊</a>
+              </li>
+            </ul>
+            <ul class="list-group mb-3">
+              <li class="list-group-title">線上查詢</li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#">登記類</a>
+              </li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#">測量類</a>
+              </li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#">地價類</a>
+              </li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#">登記規費試算</a>
+              </li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#">測量規費試算</a>
+              </li>
+            </ul>
+            <ul class="list-group mb-3">
+              <li class="list-group-title">線上申辦</li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#">網路申領電子謄本</a>
+              </li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#">地政電傳資訊服務</a>
+              </li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#">地政線上申辦系統</a>
+              </li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#">檔案閱覽抄錄複製</a>
+              </li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#">歷年公告地價資料</a>
+              </li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#">英文不動產權利登記證明</a>
+              </li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#">線上預約</a>
+              </li>
+            </ul>
+            <ul class="list-group mb-3">
+              <li class="list-group-title">申請須知</li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#">登記類</a>
+              </li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#">測量類</a>
+              </li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#">地價類</a>
+              </li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#">謄本類</a>
+              </li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#">土地基本資料庫</a>
+              </li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#">地政便利包</a>
+              </li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#">附繳證件來源機關</a>
+              </li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#">常見補正事項</a>
+              </li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#">下載專區</a>
+              </li>
+
+            </ul>
+            <ul class="list-group mb-3">
+              <li class="list-group-title">便民服務</li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#">臨櫃服務</a>
+              </li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#">通信服務</a>
+              </li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#">網路服務</a>
+              </li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#">自動化服務</a>
+              </li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#">跨所跨縣市服務</a>
+              </li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#">其他服務</a>
+              </li>
+            </ul>
+            <ul class="list-group mb-3">
+              <li class="list-group-title">民意交流</li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#">地政答客問</a>
+              </li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#">主任信箱</a>
+              </li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#">網路投票</a>
+              </li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#">民眾參與創新提案</a>
+              </li>
+            </ul>
+            <ul class="list-group mb-3">
+              <li class="list-group-title">分類檢索</li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#">主題分類</a>
+              </li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#">施政分類</a>
+              </li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#">服務分類</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /胖頁尾 -->
+
+  <div class="jumbotron footerSet m-0 p-4">
+    <div class="container">
+      <div class="row footer">
+        <div class="col-lg-7 mb-3">
+          <p>
+            <a href="#">網站安全政策</a> |
+            <a href="#">政府網站資料開放宣言</a> |
+            <a href="#">隱私權保護政策</a> |
+            <a href="#">首長信箱</a>
+          </p>
+          <p>© 基隆市安樂地政事務所 ‧ 版權所有</p>
+          <p> ‧ 地址：基隆市安樂路二段一百六十四號三樓 ‧ 地理位置：E 121°43'21" N 25°07'14"</p>
+          <p> ‧ 電話：(02)24324001 ‧ 傳真：(02)24323017</p>
+          <p> ‧ 最佳瀏覽解析度為1024x768以上，建議使用IE 10以上瀏覽以取得最佳瀏覽效果</p>
+          <p> ‧ 到訪人次：214938</p>
+        </div>
+        <div class="col-lg-2 mb-3">
+          <a href="# " class="card-link">
+            <img src="https://api.fnkr.net/testimg/150x60/00CED1/FFF/?text=150x60 " alt="AAA " class="img-thumbnail">
+          </a>
+        </div>
+        <div class="col-lg-2 mb-3">
+          <a href="# " class="card-link">
+            <img src="https://api.fnkr.net/testimg/150x60/00CED1/FFF/?text=150x60 " alt="AAA " class="img-thumbnail">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="base/js/jquery.min.js"></script>
+  <script src="base/js/popper.min.js"></script>
+  <script src="base/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function () {});
+  </script>
 </body>
 
 </html>

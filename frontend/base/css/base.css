@@ -167,6 +167,12 @@
   font-size: 0.95em;
 }
 
+@media (max-width: 991.98px) {
+  .popularTool ul li {
+    width: 33% !important;
+  }
+}
+
 .popularTool ul li a {
   border-radius: 4px;
   color: #333;
@@ -321,6 +327,13 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (max-width: 991.98px) {
+  .footerMenu .card {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 .footerMenu .card .list-group {
