@@ -485,6 +485,7 @@
 /* footer */
 .footerSet {
   background-color: #5ea3b2;
+  border-radius: 0;
 }
 
 .footerSet p {
@@ -502,6 +503,10 @@
 
 .footerSet p a:hover {
   color: #ffffff;
+}
+
+.footerSet .img-thumbnail {
+  padding: .12rem;
 }
 
 /* Access Key */
@@ -575,6 +580,12 @@
 }
 
 /* btn-toolbar */
+@media (max-width: 991.98px) {
+  .btn-toolbar {
+    margin-top: 10px !important;
+  }
+}
+
 .btn-fb {
   font-size: 1.8rem;
   padding: 0;

@@ -422,6 +422,7 @@
 /* footer */
 .footerSet {
     background-color: #5ea3b2;
+    border-radius: 0;
     p {
         font-size: 0.85rem;
         padding: 0.2rem 0;
@@ -435,6 +436,9 @@
                 color: #ffffff;
             }
         }        
+    }
+    .img-thumbnail {
+        padding: .12rem;
     }
 }
 
@@ -502,6 +506,11 @@
 }
 
 /* btn-toolbar */
+.btn-toolbar {
+    @media (max-width: 991.98px) {
+        margin-top: 10px !important;
+    }
+}
 .btn-fb {
     font-size: 1.8rem;
     padding: 0;
