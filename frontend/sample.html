@@ -120,6 +120,7 @@
           </p>
           <p>聯絡人：聯絡人</p>
           <p>聯絡電話：02-2111111</p>
+          <p>更新日期：02-2111111</p>
         </div>
       </div>
       <div class="col-lg-12 d-flex mt-3 justify-content-end align-items-center d-print-none">
@@ -142,49 +143,26 @@
   <script src="base/js/jquery.min.js"></script>
   <script src="base/js/popper.min.js"></script>
   <script src="base/js/bootstrap.min.js"></script>
+  <script src="base/js/base.js"></script>
   <script>
     $(document).ready(function () {
-      //引入各元件
-      $('#headerTxt').load('header.html');
-      $('#mainMenuTxt').load('mainMenu.html');
-      $('#fatFooterTxt').load('fatFooter.html');
-      $('#footerTxt').load('footer.html');
 
-      // 字體放大
-      $('.font-large').on('click', function (event) {
-        /* Act on the event */
-        event.preventDefault();
-        if ($('.subContent').hasClass('smallFont')) {
-          $('.subContent').removeClass('smallFont').addClass('largeFont');
-        } else {
-          $('.subContent').addClass('largeFont');
-        }
-
-        //  $('.subContent').css('font-size', '1.176rem');
-      });
-      // 字體放中
-      $('.font-default').click(function (event) {
-        /* Act on the event */
-        event.preventDefault();
-        if ($('.subContent').hasClass('smallFont')) {
-          $('.subContent').removeClass('smallFont');
-        }
-        if ($('.subContent').hasClass('largeFont')) {
-          $('.subContent').removeClass('largeFont');
-        }
-      });
-      // 字體放小
-      $('.font-small').click(function (event) {
-        /* Act on the event */
-        event.preventDefault();
-        if ($('.subContent').hasClass('largeFont')) {
-          $('.subContent').removeClass('largeFont').addClass('smallFont');
-        } else {
-          $('.subContent').addClass('smallFont');
-        }
-      });
     });
   </script>
+  <noscript>
+    <div class="container">
+      <div class="row">
+        <div class="card m-3 banner">
+          <div class="card-body p-3">
+            您的瀏覽器不支援javascript，但不影響網頁內容陳述，如開啟JavaScript，可得到視覺與特效的最佳瀏覽
+            <br />列印功能：請按下ctrl+P開啟列印視窗,或由工具列中選擇列印功能
+            <br />如需要選擇字級大小，IE6請利用鍵盤按住ALT鍵+ V → X → (G)最大(L)較大(M)中(S)較小(A)小，來選擇適合您的文字大小， 而IE7或Firefox瀏覽器則可利用鍵盤 Ctrl + (+)放大(-)縮小來改變字型大小，如需要回到上一頁可使用瀏覽器提供的
+            Alt+左方向鍵(←)
+          </div>
+        </div>
+      </div>
+    </div>
+  </noscript>
 </body>
 
 </html>
