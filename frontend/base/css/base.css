@@ -417,6 +417,15 @@
   color: #333333;
   font-size: 1.5rem;
   font-weight: 700;
+  margin-bottom: 1rem;
+  padding-left: 40px;
+}
+
+.subContent h3 {
+  color: #ca6315;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
   padding-left: 40px;
 }
 
@@ -437,49 +446,37 @@
 }
 
 .subContent.smallFont h2 {
-  color: #333333;
   font-size: 1.2rem;
-  font-weight: 700;
-  padding-left: 40px;
+}
+
+.subContent.smallFont h3 {
+  font-size: 1rem;
 }
 
 .subContent.smallFont p {
   font-size: 0.9rem;
-  padding-left: 40px;
 }
 
 .subContent.smallFont .content-info {
-  color: #0068b7;
   font-size: 0.85rem;
-  margin-top: 1rem;
-  text-align: right;
-}
-
-.subContent.smallFont .content-info span:last-child {
-  margin-left: 15px;
 }
 
 .subContent.largeFont h2 {
-  color: #333333;
   font-size: 1.8rem;
-  font-weight: 700;
+}
+
+.subContent.largeFont h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
   padding-left: 40px;
 }
 
 .subContent.largeFont p {
   font-size: 1.2rem;
-  padding-left: 40px;
 }
 
 .subContent.largeFont .content-info {
-  color: #0068b7;
   font-size: 1.2rem;
-  margin-top: 1rem;
-  text-align: right;
-}
-
-.subContent.largeFont .content-info span:last-child {
-  margin-left: 15px;
 }
 
 /* footer */
