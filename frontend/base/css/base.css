@@ -479,6 +479,11 @@
   font-size: 1.2rem;
 }
 
+.bg-brown {
+  color: #fff;
+  background-color: #ab8348;
+}
+
 /* footer */
 .footerSet {
   background-color: #5ea3b2;
