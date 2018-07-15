@@ -355,6 +355,47 @@
             }
         }
     }
+    .selectItem {
+        color: #333333;
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        padding-left: 40px;
+        select {
+            font-size: 0.95rem;
+        }
+    }
+    .list-group {
+        &.tableList {
+            li {
+                font-size: 1rem;
+                margin: -1px 0 0 0;
+                padding: .55rem;
+                a {
+                    border-bottom: 1px solid transparent;
+                }
+                a:hover {
+                    border-bottom: 1px solid;
+                    color: #0056b3;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    table {
+        tr {
+            th,
+            td {
+                font-size: 1rem;
+                padding: .55rem;
+                a:hover {
+                    border-bottom: 1px solid;
+                    color: #0056b3;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
     h2 {
         color: #333333;
         font-size: 1.5rem;
@@ -368,11 +409,6 @@
         font-weight: 500;
         margin-bottom: 1rem;
         padding-left: 40px;
-        // &:before {
-        //     content: "\f02e";
-        //     font-family: "Font Awesome 5 Pro";
-        //     margin-right: 10px;
-        // }
     }
     p {
         font-size: 1rem;
@@ -388,6 +424,27 @@
         }
     }
     &.smallFont {
+        .selectItem {
+            font-size: 0.95rem;
+            select {
+                font-size: 0.85rem;
+            }
+        }
+        .list-group {
+            &.tableList {
+                li {
+                    font-size: 0.95rem;
+                }
+            }
+        }
+        table {
+            tr {
+                th,
+                td {
+                    font-size: 0.9rem;
+                }
+            }
+        }
         h2 {
             font-size: 1.2rem;
         }
@@ -402,6 +459,27 @@
         }
     }
     &.largeFont {
+        .selectItem {
+            font-size: 1.2rem;
+            select {
+                font-size: 1.2rem;
+            }
+        }
+        .list-group {
+            &.tableList {
+                li {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+        table {
+            tr {
+                th,
+                td {
+                    font-size: 1.2rem;
+                }
+            }
+        }
         h2 {
             font-size: 1.8rem;
         }

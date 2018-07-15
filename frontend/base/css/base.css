@@ -413,6 +413,47 @@
   margin-bottom: 1rem;
 }
 
+.subContent .selectItem {
+  color: #333333;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  padding-left: 40px;
+}
+
+.subContent .selectItem select {
+  font-size: 0.95rem;
+}
+
+.subContent .list-group.tableList li {
+  font-size: 1rem;
+  margin: -1px 0 0 0;
+  padding: .55rem;
+}
+
+.subContent .list-group.tableList li a {
+  border-bottom: 1px solid transparent;
+}
+
+.subContent .list-group.tableList li a:hover {
+  border-bottom: 1px solid;
+  color: #0056b3;
+  text-decoration: none;
+}
+
+.subContent table tr th,
+.subContent table tr td {
+  font-size: 1rem;
+  padding: .55rem;
+}
+
+.subContent table tr th a:hover,
+.subContent table tr td a:hover {
+  border-bottom: 1px solid;
+  color: #0056b3;
+  text-decoration: none;
+}
+
 .subContent h2 {
   color: #333333;
   font-size: 1.5rem;
@@ -445,6 +486,23 @@
   margin-left: 15px;
 }
 
+.subContent.smallFont .selectItem {
+  font-size: 0.95rem;
+}
+
+.subContent.smallFont .selectItem select {
+  font-size: 0.85rem;
+}
+
+.subContent.smallFont .list-group.tableList li {
+  font-size: 0.95rem;
+}
+
+.subContent.smallFont table tr th,
+.subContent.smallFont table tr td {
+  font-size: 0.9rem;
+}
+
 .subContent.smallFont h2 {
   font-size: 1.2rem;
 }
@@ -459,6 +517,23 @@
 
 .subContent.smallFont .content-info {
   font-size: 0.85rem;
+}
+
+.subContent.largeFont .selectItem {
+  font-size: 1.2rem;
+}
+
+.subContent.largeFont .selectItem select {
+  font-size: 1.2rem;
+}
+
+.subContent.largeFont .list-group.tableList li {
+  font-size: 1.2rem;
+}
+
+.subContent.largeFont table tr th,
+.subContent.largeFont table tr td {
+  font-size: 1.2rem;
 }
 
 .subContent.largeFont h2 {
