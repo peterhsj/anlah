@@ -425,6 +425,10 @@
   font-size: 0.95rem;
 }
 
+.subContent .list-group.tableList {
+  margin-bottom: 15px;
+}
+
 .subContent .list-group.tableList li {
   font-size: 1rem;
   margin: -1px 0 0 0;
