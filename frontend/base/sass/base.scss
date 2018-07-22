@@ -355,6 +355,22 @@
             }
         }
     }
+    .nav-pills {
+        .nav-item {
+            .nav-link {
+                border: 1px solid rgba(0, 123, 255, .25);
+                border-radius: 21px;
+                font-size: 1rem;
+                font-weight: 700;
+                margin: 0.5rem 0.5rem;
+                &:hover {
+                    background-color: #007bff;
+                    border: 1px solid rgba(0, 123, 255, .25);
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
     .selectItem {
         color: #333333;
         font-size: 1rem;
@@ -424,7 +440,24 @@
             margin-left: 15px;
         }
     }
+    .textUl {
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: disc !important;
+        li {
+            margin: 0 0 0.5rem 2.6rem !important;
+            width: 180px;
+            white-space: normal;
+        }
+    }
     &.smallFont {
+        .nav-pills {
+            .nav-item {
+                .nav-link {
+                    font-size: 0.95rem;
+                }
+            }
+        }
         .selectItem {
             font-size: 0.95rem;
             select {
@@ -460,6 +493,13 @@
         }
     }
     &.largeFont {
+        .nav-pills {
+            .nav-item {
+                .nav-link {
+                    font-size: 1.2rem;
+                }
+            }
+        }
         .selectItem {
             font-size: 1.2rem;
             select {

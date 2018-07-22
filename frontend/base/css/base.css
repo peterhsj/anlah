@@ -413,6 +413,20 @@
   margin-bottom: 1rem;
 }
 
+.subContent .nav-pills .nav-item .nav-link {
+  border: 1px solid rgba(0, 123, 255, 0.25);
+  border-radius: 21px;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0.5rem 0.5rem;
+}
+
+.subContent .nav-pills .nav-item .nav-link:hover {
+  background-color: #007bff;
+  border: 1px solid rgba(0, 123, 255, 0.25);
+  color: #FFFFFF;
+}
+
 .subContent .selectItem {
   color: #333333;
   font-size: 1rem;
@@ -490,6 +504,25 @@
   margin-left: 15px;
 }
 
+.subContent .textUl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style-type: disc !important;
+}
+
+.subContent .textUl li {
+  margin: 0 0 0.5rem 2.6rem !important;
+  width: 180px;
+  white-space: normal;
+}
+
+.subContent.smallFont .nav-pills .nav-item .nav-link {
+  font-size: 0.95rem;
+}
+
 .subContent.smallFont .selectItem {
   font-size: 0.95rem;
 }
@@ -521,6 +554,10 @@
 
 .subContent.smallFont .content-info {
   font-size: 0.85rem;
+}
+
+.subContent.largeFont .nav-pills .nav-item .nav-link {
+  font-size: 1.2rem;
 }
 
 .subContent.largeFont .selectItem {
