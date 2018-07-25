@@ -780,6 +780,11 @@
   padding-left: 10px;
 }
 
+.badge-pill {
+  padding: 0.35em .8em;
+  font-size: 85%;
+}
+
 /* Color */
 .darkblue {
   color: #0066CC;
