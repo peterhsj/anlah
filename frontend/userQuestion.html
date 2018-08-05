@@ -35,8 +35,13 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="base/css/bootstrap.min.css">
     <link href="base/icon-css/fontawesome-all.min.css" rel="stylesheet">
+    <link href="base/css/datatables.min.css" rel="stylesheet">
+    <link href="base/plugin/DataTables-1.10.18/css/dataTables.bootstrap4.min.css" rel="stylesheet">
     <link href="base/css/base.min.css" rel="stylesheet">
     <style>
+        .myTable {
+            width: 100%;
+        }
     </style>
 </head>
 
@@ -143,8 +148,8 @@
                             </select>
                         </div>
                     </form>
-                    <h2 class="pl-3">常見問題 - 登記類 an_web.mdb/qa</h2>
-                    <table class="table table-hover border-bottom rwd-table" summary="常見問題列表，為三直欄設計，第一直欄為編號，第二直欄為類別，第三直欄為標題。">
+                    <h2 class="pl-3">常見問題 - 登記類 an_web.mdb/qa</h2><!-- table table-hover border-bottom rwd-table -->
+                    <table id="myTable" class="table table-hover border-bottom rwd-table" summary="常見問題列表，為三直欄設計，第一直欄為編號，第二直欄為類別，第三直欄為標題。">
                         <caption class="sr-only">
                             會議紀錄列表
                         </caption>
@@ -176,7 +181,7 @@
 
                     </table>
 
-                    <div class="paginationGroup d-flex justify-content-between flex-wrap d-print-none">
+                    <!-- <div class="paginationGroup d-flex justify-content-between flex-wrap d-print-none">
                         <span>26 筆資料，顯示第 1 筆至第 10 筆，共計 3 頁。</span>
                         <nav aria-label="Page navigation">
                             <ul class="pagination">
@@ -221,7 +226,7 @@
                                 </li>
                             </ul>
                         </nav>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -238,10 +243,12 @@
     <script src="base/js/jquery.min.js"></script>
     <script src="base/js/popper.min.js"></script>
     <script src="base/js/bootstrap.min.js"></script>
+    <script src="base/js/datatables.min.js"></script>
+    <script src="base/plugin/DataTables-1.10.18/js/dataTables.bootstrap4.min.js"></script>
     <script src="base/js/base.js"></script>
     <script>
         $(document).ready(function () {
-
+            
         });
     </script>
     <noscript>
