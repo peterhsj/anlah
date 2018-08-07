@@ -35,6 +35,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="base/css/bootstrap.min.css">
     <link href="base/icon-css/fontawesome-all.min.css" rel="stylesheet">
+    <link href="base/css/datatables.min.css" rel="stylesheet">
+    <link href="base/plugin/DataTables-1.10.18/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="base/css/base.min.css" rel="stylesheet">
     <link href="base/css/base.min.css" rel="stylesheet">
     <style>
     </style>
@@ -107,69 +110,34 @@
                 <div class="card-body">
                     <div class="markTag"></div>
                     <h2>最新消息 an_web.mdb/an_news</h2>
-                    <ul class="list-group list-group-flush tableList ml-4">
-                        <li class="list-group-item list-group-item-action d-flex align-items-center justify-content-between">
-                            <span>
-                                <span class="fas fa-caret-right mr-1"></span>
-                                <a href="news_detail.html">本所徵才資訊-約僱人員（第三課課員職務代理人）</a>
-                            </span>
-                            <span class="badge badge-info badge-pill pull-right">2018/03/28</span>
-                        </li>
-                        <li class="list-group-item list-group-item-action d-flex align-items-center justify-content-between">
-                            <span>
-                                <span class="fas fa-caret-right mr-1"></span>
-                                <a href="news_detail.html">subject</a>
-                            </span>
-                            <span class="badge badge-info badge-pill pull-right">postdate</span>
-                        </li>
-                    </ul>
 
-                    <div class="paginationGroup d-flex justify-content-between flex-wrap ml-4 d-print-none">
-                        <span>26 筆資料，顯示第 1 筆至第 10 筆，共計 3 頁。</span>
-                        <nav aria-label="Page navigation">
-                            <ul class="pagination">
-                                <li class="page-item disabled">
-                                    <a class="page-link " href="# " aria-label="firstPage">
-                                        <span aria-hidden="true " class="fas fa-arrow-to-left "></span>
-                                        <span class="sr-only ">第一頁</span>
-                                    </a>
-                                </li>
-                                <li class="page-item disabled">
-                                    <a class="page-link " href="# " aria-label="Previous">
-                                        <span aria-hidden="true " class="far fa-angle-left "></span>
-                                        <span class="sr-only ">上一頁</span>
-                                    </a>
-                                </li>
-                                <li class="page-item active">
-                                    <a class="page-link " href="# ">1</a>
-                                </li>
-                                <li class="page-item ">
-                                    <a class="page-link " href="# ">2</a>
-                                </li>
-                                <li class="page-item ">
-                                    <a class="page-link " href="# ">3</a>
-                                </li>
-                                <li class="page-item ">
-                                    <a class="page-link " href="# ">4</a>
-                                </li>
-                                <li class="page-item ">
-                                    <a class="page-link " href="# ">5</a>
-                                </li>
-                                <li class="page-item ">
-                                    <a class="page-link " href="# " aria-label="NextPage">
-                                        <span aria-hidden="true " class="far fa-angle-right "></span>
-                                        <span class="sr-only ">下一頁</span>
-                                    </a>
-                                </li>
-                                <li class="page-item ">
-                                    <a class="page-link " href="# " aria-label="lastPage">
-                                        <span aria-hidden="true " class="fas fa-arrow-to-right"></span>
-                                        <span class="sr-only ">最後一頁</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
+                    <table id="myTable" class="table table-hover border-bottom rwd-table" summary="行政規章專區列表，為二直欄設計，第一直欄為標題，第二直欄為張公告日期。">
+                        <caption class="sr-only">
+                            行政規章專區列表
+                        </caption>
+                        <thead>
+                            <tr class="bg-brown ">
+                                <th scope="col">標題</th>
+                                <th scope="col">公告日期</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-th="標題">
+                                    <a href="news_detail.html">本所徵才資訊-約僱人員（第三課課員職務代理人）</a>
+                                </td>
+                                <td data-th="公告日期">2018/03/28</td>
+                            </tr>
+                            <tr>
+                                <td data-th="標題">
+                                    <a href="officeRule_detail.html?ID=1">subject</a>
+                                </td>
+                                <td data-th="公告日期">postdate</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
                 </div>
             </div>
         </div>
@@ -186,6 +154,8 @@
     <script src="base/js/jquery.min.js"></script>
     <script src="base/js/popper.min.js"></script>
     <script src="base/js/bootstrap.min.js"></script>
+    <script src="base/js/datatables.min.js"></script>
+    <script src="base/plugin/DataTables-1.10.18/js/dataTables.bootstrap4.min.js"></script>
     <script src="base/js/base.js"></script>
     <script>
         $(document).ready(function () {
