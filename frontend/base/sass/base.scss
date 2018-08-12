@@ -442,11 +442,24 @@
     }
     .textUl {
         display: flex;
+        font-size: 1rem;
         flex-wrap: wrap;
         list-style-type: disc !important;
         li {
             margin: 0 0 0.5rem 2.6rem !important;
             width: 180px;
+            white-space: normal;
+        }
+    }
+    .figure-caption {
+        font-size: 0.9rem;
+    }
+    .textUl-list {
+        font-size: 1rem;
+        list-style-type: square !important;
+        padding: 0 0 0 30px;
+        li {
+            margin: 0 0 0.5rem 4.5rem !important;
             white-space: normal;
         }
     }
@@ -487,6 +500,15 @@
         }
         p {
             font-size: 0.9rem;
+        }
+        .textUl {
+            font-size: 0.9rem;
+        }
+        .textUl-list {
+            font-size: 0.9rem;
+        }
+        .figure-caption {
+            font-size: 0.8rem;
         }
         .content-info {
             font-size: 0.85rem;
@@ -531,6 +553,15 @@
         }
         p {
             font-size: 1.2rem;
+        }
+        .textUl {
+            font-size: 1.2rem;
+        }
+        .textUl-list {
+            font-size: 1.2rem;
+        }
+        .figure-caption {
+            font-size: 1rem;
         }
         .content-info {
             font-size: 1.2rem;
