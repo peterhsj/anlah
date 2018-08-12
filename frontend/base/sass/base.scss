@@ -451,9 +451,6 @@
             white-space: normal;
         }
     }
-    .figure-caption {
-        font-size: 0.9rem;
-    }
     .textUl-list {
         font-size: 1rem;
         list-style-type: square !important;
@@ -462,6 +459,17 @@
             margin: 0 0 0.5rem 4.5rem !important;
             white-space: normal;
         }
+    }
+    .textOl-layout1 {
+        font-size: 1rem;
+        li {
+            line-height: 1.8;
+            margin: 0 0 0.6rem 2rem !important;
+            white-space: normal;
+        }
+    }
+    .figure-caption {
+        font-size: 0.9rem;
     }
     &.smallFont {
         .nav-pills {
@@ -505,6 +513,9 @@
             font-size: 0.9rem;
         }
         .textUl-list {
+            font-size: 0.9rem;
+        }
+        .textOl-layout1 {
             font-size: 0.9rem;
         }
         .figure-caption {
@@ -558,6 +569,9 @@
             font-size: 1.2rem;
         }
         .textUl-list {
+            font-size: 1.2rem;
+        }
+        .textOl-layout1 {
             font-size: 1.2rem;
         }
         .figure-caption {
@@ -738,6 +752,10 @@
 .darkblue {
     color: #0066CC;
 }
+
 .sienna {
     color: #A0522D;
+}
+.red {
+    color: rgb(255, 0, 0);
 }

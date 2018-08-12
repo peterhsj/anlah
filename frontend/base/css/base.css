@@ -520,10 +520,6 @@
   white-space: normal;
 }
 
-.subContent .figure-caption {
-  font-size: 0.9rem;
-}
-
 .subContent .textUl-list {
   font-size: 1rem;
   list-style-type: square !important;
@@ -533,6 +529,20 @@
 .subContent .textUl-list li {
   margin: 0 0 0.5rem 4.5rem !important;
   white-space: normal;
+}
+
+.subContent .textOl-layout1 {
+  font-size: 1rem;
+}
+
+.subContent .textOl-layout1 li {
+  line-height: 1.8;
+  margin: 0 0 0.6rem 2rem !important;
+  white-space: normal;
+}
+
+.subContent .figure-caption {
+  font-size: 0.9rem;
 }
 
 .subContent.smallFont .nav-pills .nav-item .nav-link {
@@ -573,6 +583,10 @@
 }
 
 .subContent.smallFont .textUl-list {
+  font-size: 0.9rem;
+}
+
+.subContent.smallFont .textOl-layout1 {
   font-size: 0.9rem;
 }
 
@@ -624,6 +638,10 @@
 }
 
 .subContent.largeFont .textUl-list {
+  font-size: 1.2rem;
+}
+
+.subContent.largeFont .textOl-layout1 {
   font-size: 1.2rem;
 }
 
@@ -832,5 +850,9 @@
 
 .sienna {
   color: #A0522D;
+}
+
+.red {
+  color: red;
 }
 /*# sourceMappingURL=base.css.map */
