@@ -653,6 +653,14 @@
   font-size: 1.2rem;
 }
 
+.alert {
+  margin-left: 40px;
+}
+
+.alert p {
+  padding-left: 5px;
+}
+
 .bg-brown {
   color: #fff;
   background-color: #ab8348;
