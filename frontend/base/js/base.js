@@ -63,7 +63,15 @@ $(document).ready(function () {
             }
         },
         "pagingType": "full_numbers",
-        "ordering": false
+        "ordering": false,
+        "searching": false
+    });
+
+    // $('#myTable_filter label').on('focus', function () {
+    //     this.setAttribute('id', 'tablefilter');
+    // });
+    $('#myTable_filter label input').on('focus', function () {
+        this.setAttribute('for', 'myTable_filter');
     });
 
 });
