@@ -508,6 +508,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-size: 1rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   list-style-type: disc !important;
@@ -517,6 +518,31 @@
   margin: 0 0 0.5rem 2.6rem !important;
   width: 180px;
   white-space: normal;
+}
+
+.subContent .textUl-list {
+  font-size: 1rem;
+  list-style-type: square !important;
+  padding: 0 0 0 30px;
+}
+
+.subContent .textUl-list li {
+  margin: 0 0 0.5rem 4.5rem !important;
+  white-space: normal;
+}
+
+.subContent .textOl-layout1 {
+  font-size: 1rem;
+}
+
+.subContent .textOl-layout1 li {
+  line-height: 1.8;
+  margin: 0 0 0.6rem 2rem !important;
+  white-space: normal;
+}
+
+.subContent .figure-caption {
+  font-size: 0.9rem;
 }
 
 .subContent.smallFont .nav-pills .nav-item .nav-link {
@@ -550,6 +576,22 @@
 
 .subContent.smallFont p {
   font-size: 0.9rem;
+}
+
+.subContent.smallFont .textUl {
+  font-size: 0.9rem;
+}
+
+.subContent.smallFont .textUl-list {
+  font-size: 0.9rem;
+}
+
+.subContent.smallFont .textOl-layout1 {
+  font-size: 0.9rem;
+}
+
+.subContent.smallFont .figure-caption {
+  font-size: 0.8rem;
 }
 
 .subContent.smallFont .content-info {
@@ -589,6 +631,22 @@
 
 .subContent.largeFont p {
   font-size: 1.2rem;
+}
+
+.subContent.largeFont .textUl {
+  font-size: 1.2rem;
+}
+
+.subContent.largeFont .textUl-list {
+  font-size: 1.2rem;
+}
+
+.subContent.largeFont .textOl-layout1 {
+  font-size: 1.2rem;
+}
+
+.subContent.largeFont .figure-caption {
+  font-size: 1rem;
 }
 
 .subContent.largeFont .content-info {
@@ -792,5 +850,13 @@
 
 .sienna {
   color: #A0522D;
+}
+
+.red {
+  color: red;
+}
+
+.bg-lightreay {
+  background-color: #f2f2f2;
 }
 /*# sourceMappingURL=base.css.map */
