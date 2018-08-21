@@ -18,6 +18,15 @@
   height: 100%;
 }
 
+.headerTool .container.forContent {
+  height: 270px;
+}
+
+.headerTool .container.forContent .headerBg {
+  background: url("../../images/index_pic_content.jpg") no-repeat left top;
+  height: 100%;
+}
+
 .headerTool .container .navbar-nav .nav-item.show .nav-link {
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 15px;

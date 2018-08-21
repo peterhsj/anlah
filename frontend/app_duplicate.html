@@ -46,7 +46,7 @@
 
 <body>
     <!-- 表頭 -->
-    <div id="headerTxt" class="d-print-none"></div>
+    <div id="headerContent" class="d-print-none"></div>
     <!-- /表頭 -->
 
     <!-- 主選單 -->
@@ -118,7 +118,8 @@
                                 流程說明：
                                 <ol>
                                     <li>申請人填寫「地籍謄本及相關資料閱覽申請書」。</li>
-                                    <li>申請各類謄本者：<br /> 經審核其資格及身分無誤後，產製列印相關謄本資料，計繳規費後，核發申請之謄本。
+                                    <li>申請各類謄本者：
+                                        <br /> 經審核其資格及身分無誤後，產製列印相關謄本資料，計繳規費後，核發申請之謄本。
                                         <br /> 若其資格不符者，退回其申請書。
                                     </li>
                                     <li>申請地籍圖及建物平面圖謄本者，產製列印相關謄本資料，計繳納規費，核發申請之謄本。</li>
@@ -148,75 +149,82 @@
                                         謄本類項目收費標準
                                     </caption>
                                     <thead>
-                                    <tr class="bg-brown">
-                                        <th width="40%" class="text-nowrap" scope="col">收費項目</th>
-                                        <th width="25%" class="text-nowrap" scope="col">收費標準</th>
-                                        <th scope="col" class="text-nowrap">備註</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td width="40%" data-th="收費項目">登記（簿）謄本或節本工本費</td>
-                                        <td width="25%" data-th="收費標準">人工影印：每張五元<br /> 電腦列印：每張二十元
-                                        </td>
-                                        <td rowspan="12" data-th="收費項目">依內政部103.3.17內授中辦地字第10366503253號令訂定之「土地或建築改良物權利書狀及申請應用地籍資料規費收費標準」。</td>
-                                    </tr>
-                                    <tr>
-                                        <td width="40%" data-th="收費項目">地籍圖謄本工本費</td>
-                                        <td width="25%" data-th="收費標準">人工影印：每張十五元<br /> 人工描繪：每筆四十元
-                                            <br /> 電腦列印：每張二十元
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td width="40%" data-th="收費項目">登記申(聲)請書及其附件影印工本費</td>
-                                        <td width="25%" data-th="收費標準">每張十元</td>
-                                    </tr>
-                                    <tr>
-                                        <td width="40%" data-th="收費項目">地籍圖之藍晒圖或複製圖閱覽費</td>
-                                        <td width="25%" data-th="收費標準">每幅十元<br /> 限時二十分鐘
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td width="40%" data-th="收費項目">電子處理之地籍資料（含土地資料及地籍圖）到所查詢閱覽費</td>
-                                        <td width="25%" data-th="收費標準">每筆（棟）二十元<br /> 限時五分鐘
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td width="40%" data-th="收費項目">電子處理之地籍資料電傳資訊閱覽費</td>
-                                        <td width="25%" data-th="收費標準">每人每筆(棟)十元</td>
-                                    </tr>
-                                    <tr>
-                                        <td width="40%" data-th="收費項目">歸戶查詢閱覽費</td>
-                                        <td width="25%" data-th="收費標準">每次四十五元、限時十分鐘</td>
-                                    </tr>
-                                    <tr>
-                                        <td width="40%" data-th="收費項目">土地建物異動清冊影印工本費</td>
-                                        <td width="25%" data-th="收費標準">每張五元</td>
-                                    </tr>
-                                    <tr>
-                                        <td width="40%" data-th="收費項目">地籍異動索引查詢閱覽費</td>
-                                        <td width="25%" data-th="收費標準">每筆（棟）十元<br /> 限時三分鐘
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td width="40%" data-th="收費項目">各項查詢畫面列印工本費</td>
-                                        <td width="25%" data-th="收費標準">每張二十元</td>
-                                    </tr>
-                                    <tr>
-                                        <td width="40%" data-th="收費項目">登記申(聲)請書及其附件閱覽、抄錄或攝影閱覽費</td>
-                                        <td width="25%" data-th="收費標準">每案七十五元<br /> 限時二十分鐘
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td width="40%" data-th="收費項目">各類登記專簿閱覽、抄錄或攝影閱覽費</td>
-                                        <td width="25%" data-th="收費標準">每案七十五元<br /> 限時二十分鐘
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td width="40%" data-th="收費項目">各類登記專簿影印工本費</td>
-                                        <td width="25%" data-th="收費標準">每張十元</td>
-                                    </tr>
-                                </tbody>
+                                        <tr class="bg-brown">
+                                            <th width="40%" class="text-nowrap" scope="col">收費項目</th>
+                                            <th width="25%" class="text-nowrap" scope="col">收費標準</th>
+                                            <th scope="col" class="text-nowrap">備註</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td width="40%" data-th="收費項目">登記（簿）謄本或節本工本費</td>
+                                            <td width="25%" data-th="收費標準">人工影印：每張五元
+                                                <br /> 電腦列印：每張二十元
+                                            </td>
+                                            <td rowspan="12" data-th="收費項目">依內政部103.3.17內授中辦地字第10366503253號令訂定之「土地或建築改良物權利書狀及申請應用地籍資料規費收費標準」。</td>
+                                        </tr>
+                                        <tr>
+                                            <td width="40%" data-th="收費項目">地籍圖謄本工本費</td>
+                                            <td width="25%" data-th="收費標準">人工影印：每張十五元
+                                                <br /> 人工描繪：每筆四十元
+                                                <br /> 電腦列印：每張二十元
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="40%" data-th="收費項目">登記申(聲)請書及其附件影印工本費</td>
+                                            <td width="25%" data-th="收費標準">每張十元</td>
+                                        </tr>
+                                        <tr>
+                                            <td width="40%" data-th="收費項目">地籍圖之藍晒圖或複製圖閱覽費</td>
+                                            <td width="25%" data-th="收費標準">每幅十元
+                                                <br /> 限時二十分鐘
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="40%" data-th="收費項目">電子處理之地籍資料（含土地資料及地籍圖）到所查詢閱覽費</td>
+                                            <td width="25%" data-th="收費標準">每筆（棟）二十元
+                                                <br /> 限時五分鐘
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="40%" data-th="收費項目">電子處理之地籍資料電傳資訊閱覽費</td>
+                                            <td width="25%" data-th="收費標準">每人每筆(棟)十元</td>
+                                        </tr>
+                                        <tr>
+                                            <td width="40%" data-th="收費項目">歸戶查詢閱覽費</td>
+                                            <td width="25%" data-th="收費標準">每次四十五元、限時十分鐘</td>
+                                        </tr>
+                                        <tr>
+                                            <td width="40%" data-th="收費項目">土地建物異動清冊影印工本費</td>
+                                            <td width="25%" data-th="收費標準">每張五元</td>
+                                        </tr>
+                                        <tr>
+                                            <td width="40%" data-th="收費項目">地籍異動索引查詢閱覽費</td>
+                                            <td width="25%" data-th="收費標準">每筆（棟）十元
+                                                <br /> 限時三分鐘
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="40%" data-th="收費項目">各項查詢畫面列印工本費</td>
+                                            <td width="25%" data-th="收費標準">每張二十元</td>
+                                        </tr>
+                                        <tr>
+                                            <td width="40%" data-th="收費項目">登記申(聲)請書及其附件閱覽、抄錄或攝影閱覽費</td>
+                                            <td width="25%" data-th="收費標準">每案七十五元
+                                                <br /> 限時二十分鐘
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="40%" data-th="收費項目">各類登記專簿閱覽、抄錄或攝影閱覽費</td>
+                                            <td width="25%" data-th="收費標準">每案七十五元
+                                                <br /> 限時二十分鐘
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="40%" data-th="收費項目">各類登記專簿影印工本費</td>
+                                            <td width="25%" data-th="收費標準">每張十元</td>
+                                        </tr>
+                                    </tbody>
                                 </table>
                             </div>
 
@@ -243,6 +251,8 @@
     <script src="base/js/jquery.min.js"></script>
     <script src="base/js/popper.min.js"></script>
     <script src="base/js/bootstrap.min.js"></script>
+    <script src="base/js/datatables.min.js"></script>
+    <script src="base/plugin/DataTables-1.10.18/js/dataTables.bootstrap4.min.js"></script>
     <script src="base/js/base.js"></script>
     <script>
         $(document).ready(function () {
@@ -256,8 +266,8 @@
                     <div class="card-body p-3">
                         您的瀏覽器不支援javascript，但不影響網頁內容陳述，如開啟JavaScript，可得到視覺與特效的最佳瀏覽
                         <br>列印功能：請按下ctrl+P開啟列印視窗,或由工具列中選擇列印功能
-                        <br>如需要選擇字級大小，IE6請利用鍵盤按住ALT鍵+ V → X → (G)最大(L)較大(M)中(S)較小(A)小，來選擇適合您的文字大小， 而IE7或Firefox瀏覽器則可利用鍵盤
-                        Ctrl + (+)放大(-)縮小來改變字型大小，如需要回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←)
+                        <br>如需要選擇字級大小，IE6請利用鍵盤按住ALT鍵+ V → X → (G)最大(L)較大(M)中(S)較小(A)小，來選擇適合您的文字大小， 而IE7或Firefox瀏覽器則可利用鍵盤 Ctrl
+                        + (+)放大(-)縮小來改變字型大小，如需要回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←)
                     </div>
                 </div>
             </div>

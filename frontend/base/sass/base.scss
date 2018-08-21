@@ -13,6 +13,13 @@
             background: url("../../images/index_pic.jpg") no-repeat left top;
             height: 100%;
         }
+        &.forContent {
+            height: 270px;
+            .headerBg {
+                background: url("../../images/index_pic_content.jpg") no-repeat left top;
+                height: 100%;
+            }
+        }
         .navbar-nav {
             .nav-item {
                 &.show {
