@@ -413,17 +413,37 @@
   margin-bottom: 1rem;
 }
 
+.subContent .card-body ul li.nav-item {
+  margin-bottom: 0;
+}
+
 .subContent .nav-pills .nav-item .nav-link {
   border: 1px solid rgba(0, 123, 255, 0.25);
-  border-radius: 21px;
+  border-radius: 15px;
   font-size: 1rem;
   font-weight: 700;
-  margin: 0.5rem 0.5rem;
+  margin: 0.5rem 0.2rem;
+  padding: .3rem 1rem;
 }
 
 .subContent .nav-pills .nav-item .nav-link:hover {
   background-color: #007bff;
   border: 1px solid rgba(0, 123, 255, 0.25);
+  color: #FFFFFF;
+}
+
+.subContent .nav-pills .nav-item .nav-link.link-success {
+  border: 1px solid #1e7e34;
+  color: #1e7e34;
+}
+
+.subContent .nav-pills .nav-item .nav-link.link-success:hover {
+  background-color: #28a745;
+  color: #FFFFFF;
+}
+
+.subContent .nav-pills .nav-item .nav-link.link-success.active {
+  background-color: #28a745;
   color: #FFFFFF;
 }
 
@@ -712,6 +732,9 @@
   .rwd-table td a:hover {
     border-width: 0 !important;
   }
+  .rwd-table.file-download td {
+    display: block;
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -874,5 +897,17 @@
 
 .bg-lightreay {
   background-color: #f2f2f2;
+}
+
+span.fa-file-pdf {
+  color: #ff8f00;
+}
+
+span.fa-file-word {
+  color: #0aa8c1;
+}
+
+span.fa-file {
+  color: #1aad3b;
 }
 /*# sourceMappingURL=base.css.map */

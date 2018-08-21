@@ -37,6 +37,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="base/css/bootstrap.min.css">
     <link href="base/icon-css/all.min.css" rel="stylesheet">
+    <link href="base/css/datatables.min.css" rel="stylesheet">
+    <link href="base/plugin/DataTables-1.10.18/css/dataTables.bootstrap4.min.css" rel="stylesheet">
     <link href="base/css/base.min.css" rel="stylesheet">
     <style>
     </style>
@@ -115,72 +117,620 @@
                                 <ul class="nav nav-pills justify-content-end" id="myTab" role="tablist">
                                     <li class="nav-item">
                                         <a class="nav-link" href="https://www.land.moi.gov.tw/chhtml/tabledown.asp?cid=52&qocid=1012" target="_blank" title="開啟新的導覽視窗">
-                                            <i class="fas fa-file-edit"></i> 登記類</a>
+                                            <span class="fas fa-file-edit"></span> 登記類</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link active" id="correct2-tab" data-toggle="tab" href="#correct2" role="tab" aria-controls="correct2" aria-selected="false">
-                                            <i class="fas fa-coins"></i> 地價類</a>
+                                        <a class="nav-link link-success active" id="correct2-tab" data-toggle="tab" href="#correct2" role="tab" aria-controls="correct2"
+                                            aria-selected="false">
+                                            <span class="fas fa-coins"></span> 地價類</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" id="correct3-tab" data-toggle="tab" href="#correct3" role="tab" aria-controls="correct3" aria-selected="false">
-                                            <i class="fas fa-prescription-bottle"></i> 測量類</a>
+                                        <a class="nav-link link-success" id="correct3-tab" data-toggle="tab" href="#correct3" role="tab" aria-controls="correct3"
+                                            aria-selected="false">
+                                            <span class="fas fa-prescription-bottle"></span> 測量類</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" id="correct4-tab" data-toggle="tab" href="#correct4" role="tab" aria-controls="correct4" aria-selected="false">
-                                            <i class="fas fa-copy"></i> 謄本類</a>
+                                        <a class="nav-link link-success" id="correct4-tab" data-toggle="tab" href="#correct4" role="tab" aria-controls="correct4"
+                                            aria-selected="false">
+                                            <span class="fas fa-copy"></span> 謄本類</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" id="correct5-tab" data-toggle="tab" href="#correct5" role="tab" aria-controls="correct5" aria-selected="false">
-                                            <i class="fas fa-broadcast-tower"></i> 資訊類</a>
+                                        <a class="nav-link link-success" id="correct5-tab" data-toggle="tab" href="#correct5" role="tab" aria-controls="correct5"
+                                            aria-selected="false">
+                                            <span class="fas fa-broadcast-tower"></span> 資訊類</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" id="correct6-tab" data-toggle="tab" href="#correct6" role="tab" aria-controls="correct6" aria-selected="false">
-                                            <i class="far fa-arrows"></i> 地用類</a>
+                                        <a class="nav-link link-success" id="correct6-tab" data-toggle="tab" href="#correct6" role="tab" aria-controls="correct6"
+                                            aria-selected="false">
+                                            <span class="far fa-arrows"></span> 地用類</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" id="correct7-tab" data-toggle="tab" href="#correct7" role="tab" aria-controls="correct7" aria-selected="false">
-                                            <i class="fas fa-cubes"></i> 其他類</a>
+                                        <a class="nav-link link-success" id="correct7-tab" data-toggle="tab" href="#correct7" role="tab" aria-controls="correct7"
+                                            aria-selected="false">
+                                            <span class="fas fa-cubes"></span> 其他類</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" id="correct8-tab" data-toggle="tab" href="#correct8" role="tab" aria-controls="correct8" aria-selected="false">
-                                            <i class="fas fa-archive"></i> 各年度地價資料檔</a>
+                                        <a class="nav-link link-success" id="correct8-tab" data-toggle="tab" href="#correct8" role="tab" aria-controls="correct8"
+                                            aria-selected="false">
+                                            <span class="fas fa-archive"></span> 各年度地價資料檔</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="http://www.land.moi.gov.tw/chhtml/tabledown.asp?cid=52" target="_blank" title="開啟新的導覽視窗">
-                                            <i class="fas fa-arrow-alt-from-top"></i> 地政司檔案下載</a>
+                                            <span class="fas fa-arrow-alt-from-top"></span> 地政司檔案下載</a>
                                     </li>
                                 </ul>
+                                <div class="alert alert-secondary bg-lightreay pb-0 ml-0" role="alert">
+                                    <p class="p-0">
+                                        <span class="red">注意：</span>本所提供之表單文件，皆有線上版閱覽器可供開啟檔案，若您需要單機版PDF閱覽器，請下載軟體：
+                                        <a href="https://get.adobe.com/tw/reader/" target="_blank" title="開啟新的導覽視窗">
+                                            <span class="fas fa-file-pdf"></span> Adobe Reader</a>
+                                    </p>
+                                </div>
                                 <div class="tab-content" id="myTabContent">
                                     <div class="tab-pane fade show active" id="correct2" role="tabpanel" aria-labelledby="correct2-tab">
                                         <h3 class="pl-0">
                                             <span class="fas fa-bookmark"></span> 地價類
                                         </h3>
-                                        <p class="view">
-                                            <span class="red">注意：</span>如無法正常閱讀以下文件，請下載閱讀軟體：
-                                            <br>
-                                            <a href="http://www.microsoft.com/zh-tw/download/details.aspx?id=4" target="_blank" title="Word Viewer[開啟新視窗]">
-                                                <i class="fas fa-file-word"></i> Word Viewer</a> |
-                                            <a href="https://get.adobe.com/tw/reader/" target="_blank" title="Adobe Reader[開啟新視窗]">
-                                                <i class="fas fa-file-pdf"></i> Adobe Reader</a>|
-                                            <a href="http://opendocumentfellowship.com/odfviewer" target="_blank" title="ODF Viewer[開啟新視窗]">
-                                                <i class="fas fa-file-alt"></i> ODF Viewer</a>
-                                        </p>
-
-
-
+                                        <table id="myTable" class="table table-striped table-hover border-bottom rwd-table file-download" summary="地價類表格，為4直欄設計，第1直欄為檔案說明，第2直欄為範例檔案下載，第3直欄為申請表格下載，第4直欄為填寫說明。">
+                                            <caption class="sr-only">
+                                                地價類-下載專區
+                                            </caption>
+                                            <thead>
+                                                <tr class="bg-brown">
+                                                    <th scope="col">檔案說明</th>
+                                                    <th scope="col">範例檔案</th>
+                                                    <th scope="col">申請表格</th>
+                                                    <th scope="col">填寫說明</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td data-th="檔案說明">重新規定地價地價申報書</td>
+                                                    <td data-th="範例檔案">
+                                                        <a href="files/d_03/d_0301_sample.pdf" target="_blank" title="範例檔案下載[開啟新視窗]">
+                                                            PDF
+                                                            <span class="fas fa-file-pdf"></span>
+                                                        </a> |
+                                                        <a href="files/d_03/d_0301_sample.doc" target="_blank" title="範例檔案下載[開啟新視窗]">
+                                                            Word
+                                                            <span class="fas fa-file-word"></span>
+                                                        </a>
+                                                    </td>
+                                                    <td data-th="申請表格">
+                                                        <a href="files/d_03/d_0301_app.pdf" target="_blank" title="申請表格下載[開啟新視窗]">
+                                                            PDF
+                                                            <span class="fas fa-file-pdf"></span>
+                                                        </a> |
+                                                        <a href="files/d_03/d_0301_app.doc" target="_blank" title="申請表格下載[開啟新視窗]">
+                                                            Word
+                                                            <span class="fas fa-file-word"></span>
+                                                        </a> |
+                                                        <a href="files/d_03/d_0301_app.odt" target="_blank" title="申請表格下載[開啟新視窗]">
+                                                            ODF
+                                                            <span class="fas fa-file"></span>
+                                                        </a>
+                                                    </td>
+                                                    <td data-th="填寫說明">
+                                                        <a href="files/d_03/d_0301_note.pdf" target="_blank" title="填寫說明下載[開啟新視窗]">
+                                                            PDF
+                                                            <span class="fas fa-file-pdf"></span>
+                                                        </a> |
+                                                        <a href="files/d_03/d_0301_note.doc" target="_blank" title="填寫說明下載[開啟新視窗]">
+                                                            PDF
+                                                            <span class="fas fa-file-word"></span>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-th="檔案說明">公告地價申請書</td>
+                                                    <td data-th="範例檔案">
+                                                        <a href="files/d_03/d_0302_sample.pdf" target="_blank" title="申請書範例下載[開啟新視窗]">
+                                                            PDF
+                                                            <span class="fas fa-file-pdf"></span>
+                                                        </a> |
+                                                        <a href="files/d_03/d_0302_sample.doc" target="_blank" title="申請書範例下載[開啟新視窗]">
+                                                            Word
+                                                            <span class="fas fa-file-word"></span>
+                                                        </a>
+                                                    </td>
+                                                    <td data-th="申請表格">
+                                                        <a href="files/d_03/d_0302_app.pdf" target="_blank" title="申請書表格下載[開啟新視窗]">
+                                                            PDF
+                                                            <span class="fas fa-file-pdf"></span>
+                                                        </a> |
+                                                        <a href="files/d_03/d_0302_app.doc" target="_blank" title="申請書表格下載[開啟新視窗]">
+                                                            Word
+                                                            <span class="fas fa-file-word"></span>
+                                                        </a> |
+                                                        <a href="files/d_03/d_0302_app.odt" target="_blank" title="申請書表格下載[開啟新視窗]">
+                                                            ODF
+                                                            <span class="fas fa-file"></span>
+                                                        </a>
+                                                    </td>
+                                                    <td data-th="填寫說明"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-th="檔案說明">地價謄本申請書</td>
+                                                    <td data-th="範例檔案">
+                                                        <a href="files/d_03/d_0303_sample.pdf" target="_blank" title="範例檔案下載[開啟新視窗]">
+                                                            PDF
+                                                            <span class="fas fa-file-pdf"></span>
+                                                        </a> |
+                                                        <a href="files/d_03/d_0303_sample.doc" target="_blank" title="範例檔案下載[開啟新視窗]">
+                                                            Word
+                                                            <span class="fas fa-file-word"></span>
+                                                        </a>
+                                                    </td>
+                                                    <td data-th="申請表格">
+                                                        <a href="files/d_03/d_0303_app.pdf" target="_blank" title="申請書表格下載[開啟新視窗]">
+                                                            PDF
+                                                            <span class="fas fa-file-pdf"></span>
+                                                        </a> |
+                                                        <a href="files/d_03/d_0303_app.doc" target="_blank" title="申請書表格下載[開啟新視窗]">
+                                                            Word
+                                                            <span class="fas fa-file-word"></span>
+                                                        </a>|
+                                                        <a href="files/d_03/d_0303_app.odt" target="_blank" title="申請書表格下載[開啟新視窗]">
+                                                            ODF
+                                                            <span class="fas fa-file"></span>
+                                                        </a>
+                                                    </td>
+                                                    <td data-th="填寫說明">
+                                                        <a href="files/d_03/d_0303_note.pdf" target="_blank" title="須知下載[開啟新視窗]">
+                                                            PDF
+                                                            <span class="fas fa-file-pdf"></span>
+                                                        </a> |
+                                                        <a href="files/d_03/d_0303_note.doc" target="_blank" title="須知下載[開啟新視窗]">
+                                                            Word
+                                                            <span class="fas fa-file-word"></span>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-th="檔案說明">查詢閱覽地價資料</td>
+                                                    <td data-th="範例檔案">
+                                                        <a href="files/d_03/d_0304_sample.pdf" target="_blank" title="申請書範例下載[開啟新視窗]">
+                                                            PDF
+                                                            <span class="fas fa-file-pdf"></span>
+                                                        </a> |
+                                                        <a href="files/d_03/d_0304_sample.doc" target="_blank" title="申請書範例下載[開啟新視窗]">
+                                                            Word
+                                                            <span class="fas fa-file-word"></span>
+                                                        </a>
+                                                    </td>
+                                                    <td data-th="申請表格">
+                                                        <a href="files/d_03/d_0303_app.pdf" target="_blank" title="申請書表格下載[開啟新視窗]">
+                                                            PDF
+                                                            <span class="fas fa-file-pdf"></span>
+                                                        </a> |
+                                                        <a href="files/d_03/d_0303_app.doc" target="_blank" title="申請書表格下載[開啟新視窗]">
+                                                            Word
+                                                            <span class="fas fa-file-word"></span>
+                                                        </a>
+                                                    </td>
+                                                    <td data-th="填寫說明">
+                                                        <a href="files/d_03/d_0304_note.pdf" target="_blank" title="須知下載[開啟新視窗]">
+                                                            PDF
+                                                            <span class="fas fa-file-pdf"></span>
+                                                        </a> |
+                                                        <a href="files/d_03/d_0304_note.doc" target="_blank" title="須知下載[開啟新視窗]">
+                                                            Word
+                                                            <span class="fas fa-file-word"></span>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-th="檔案說明">實價登錄申報書(買賣)</td>
+                                                    <td data-th="範例檔案">
+                                                        <a href="files/d_03/d_0305_sample.pdf" target="_blank" title="申請書範例下載[開啟新視窗]">
+                                                            PDF
+                                                            <span class="fas fa-file-pdf"></span>
+                                                    </td>
+                                                    <td data-th="申請表格">
+                                                        <a href="files/d_03/d_0305_app.pdf" target="_blank" title="申請書表格下載[開啟新視窗]">
+                                                            PDF
+                                                            <span class="fas fa-file-pdf"></span>
+                                                        </a> |
+                                                        <a href="files/d_03/d_0305_app.doc" target="_blank" title="申請書表格下載[開啟新視窗]">
+                                                            Word
+                                                            <span class="fas fa-file-word"></span>
+                                                        </a> |
+                                                        <a href="files/d_03/d_0305_app.odt" target="_blank" title="申請書表格下載[開啟新視窗]">
+                                                            ODF
+                                                            <span class="fas fa-file"></span>
+                                                        </a>
+                                                    </td>
+                                                    <td data-th="填寫說明">
+                                                        <a href="files/d_03/d_0305_note.pdf" target="_blank" title="須知下載[開啟新視窗]">
+                                                            PDF
+                                                            <span class="fas fa-file-pdf"></span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-th="檔案說明">實價登錄申報書(租賃)</td>
+                                                    <td data-th="範例檔案"></td>
+                                                    <td data-th="申請表格">
+                                                        <a href="files/d_03/d_0306_app.pdf" target="_blank" title="申請書表格下載[開啟新視窗]">
+                                                            PDF
+                                                            <span class="fas fa-file-pdf"></span>
+                                                        </a> |
+                                                        <a href="files/d_03/d_0306_app.doc" target="_blank" title="申請書表格下載[開啟新視窗]">
+                                                            Word
+                                                            <span class="fas fa-file-word"></span>
+                                                        </a>|
+                                                        <a href="files/d_03/d_0306_app.odt" target="_blank" title="申請書表格下載[開啟新視窗]">
+                                                            ODF
+                                                            <span class="fas fa-file"></span>
+                                                        </a>
+                                                    </td>
+                                                    <td data-th="填寫說明">
+                                                        <a href="files/d_03/d_0306_note.pdf" target="_blank" title="須知PDF檔下載[開啟新視窗]">
+                                                            PDF
+                                                            <span class="fas fa-file-pdf"></span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-th="檔案說明">實價登錄申報書(預售屋)</td>
+                                                    <td data-th="範例檔案"></td>
+                                                    <td data-th="申請表格">
+                                                        <a href="files/d_03/d_0307_app.pdf" target="_blank" title="申請書表格下載[開啟新視窗]">
+                                                            PDF
+                                                            <span class="fas fa-file-pdf"></span>
+                                                        </a> |
+                                                        <a href="files/d_03/d_0307_app.doc" target="_blank" title="申請書表格下載[開啟新視窗]">
+                                                            Word
+                                                            <span class="fas fa-file-word"></span>
+                                                        </a> |
+                                                        <a href="files/d_03/d_0307_app.odt" target="_blank" title="申請書表格下載[開啟新視窗]">
+                                                            ODF
+                                                            <span class="fas fa-file"></span>
+                                                        </a>
+                                                    </td>
+                                                    <td data-th="填寫說明">
+                                                        <a href="files/d_03/d_0307_note.pdf" target="_blank" title="須知下載[開啟新視窗]">
+                                                            PDF
+                                                            <span class="fas fa-file-pdf"></span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                     <div class="tab-pane fade" id="correct3" role="tabpanel" aria-labelledby="correct3-tab">
                                         <h3 class="pl-0">
                                             <span class="fas fa-bookmark"></span> 測量類
                                         </h3>
-
-
+                                        <table id="myTable2" class="table table-striped table-hover border-bottom rwd-table file-download" summary="測量類表格，為4直欄設計，第1直欄為檔案說明，第2直欄為範例檔案下載，第3直欄為申請表格下載，第4直欄為填寫說明。">
+                                            <caption class="sr-only">
+                                                測量類-下載專區
+                                            </caption>
+                                            <thead>
+                                                <tr class="bg-brown">
+                                                    <th scope="col">檔案說明</th>
+                                                    <th class="text-nowrap" scope="col">範例檔案</th>
+                                                    <th class="text-nowrap" scope="col">申請表格</th>
+                                                    <th class="text-nowrap" scope="col">填寫說明</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td data-th="檔案說明">安樂地政轄區地段圖</td>
+                                                    <td class="text-nowrap" data-th="範例檔案">&nbsp;</td>
+                                                    <td data-th="申請表格">地段圖：
+                                                        <a href="files/d_04/本所轄區地段圖.pdf" target="_blank" title="地段圖PDF檔下載[開啟新視窗]">PDF
+                                                            <span class="fas fa-file-pdf"></span>
+                                                    </td>
+                                                    <td data-th="檔案說明">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-th="檔案說明">土地複丈申請書</td>
+                                                    <td class="text-nowrap" data-th="範例檔案">&nbsp;</td>
+                                                    <td data-th="申請表格">
+                                                        <a href="files/d_04/d_0401_app.pdf" target="_blank" title="申請表格PDF檔下載[開啟新視窗]">PDF
+                                                            <span class="fas fa-file-pdf"></span>
+                                                        </a> |
+                                                        <a href="files/d_04/d_0401_app.doc" target="_blank" title="申請表格Word檔下載[開啟新視窗]">Word
+                                                            <span class="fas fa-file-word"></span> |
+                                                            <a href="files/d_04/d_0401_app.odt" target="_blank" title="申請表格ODF檔下載[開啟新視窗]">ODF
+                                                                <span class="fas fa-file"></span>
+                                                    </td>
+                                                    <td data-th="填寫說明">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-th="檔案說明">建物測量申請書</td>
+                                                    <td class="text-nowrap" data-th="範例檔案">&nbsp;</td>
+                                                    <td data-th="申請表格">
+                                                        <a href="files/d_04/d_0402_app.pdf" target="_blank" title="申請表格PDF檔下載[開啟新視窗]">PDF
+                                                            <span class="fas fa-file-pdf"></span>
+                                                        </a> |
+                                                        <a href="files/d_04/d_0402_app.doc" target="_blank" title="申請表格Word檔下載[開啟新視窗]">Word
+                                                            <span class="fas fa-file-word"></span> |
+                                                            <a href="files/d_04/d_0402_app.odt" target="_blank" title="申請表格ODF檔下載[開啟新視窗]">ODF
+                                                                <span class="fas fa-file"></span>
+                                                    </td>
+                                                    <td data-th="填寫說明">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-th="檔案說明">建物測量申請書附表</td>
+                                                    <td class="text-nowrap" data-th="範例檔案">&nbsp;</td>
+                                                    <td data-th="申請表格">
+                                                        <a href="files/d_04/d_04022_app.pdf" target="_blank" title="申請表格PDF檔下載[開啟新視窗]">PDF
+                                                            <span class="fas fa-file-pdf"></span>
+                                                        </a> |
+                                                        <a href="files/d_04/d_04022_app.doc" target="_blank" title="申請表格Word檔下載[開啟新視窗]">Word
+                                                            <span class="fas fa-file-word"></span> |
+                                                            <a href="files/d_04/d_04022_app.odt" target="_blank" title="申請表格ODF檔下載[開啟新視窗]">ODF
+                                                                <span class="fas fa-file"></span>
+                                                    </td>
+                                                    <td data-th="填寫說明">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-th="檔案說明">界址調整</td>
+                                                    <td class="text-nowrap" data-th="範例檔案">
+                                                        <a href="files/d_04/d_0416_sample.pdf" target="_blank" title="範例檔案PDF檔下載[開啟新視窗]">PDF
+                                                            <span class="fas fa-file-pdf"></span>
+                                                        </a> |
+                                                        <a href="files/d_04/d_0416_sample.doc" target="_blank" title="範例檔案Word檔下載[開啟新視窗]">Word
+                                                            <span class="fas fa-file-word"></span>
+                                                        </a>
+                                                    </td>
+                                                    <td data-th="申請表格">&nbsp;</td>
+                                                    <td data-th="填寫說明">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-th="檔案說明">土地複丈及標示變更登記申請書</td>
+                                                    <td class="text-nowrap" data-th="範例檔案">&nbsp;</td>
+                                                    <td data-th="申請表格">
+                                                        <a href="files/d_04/d_04011_app.pdf" target="_blank" title="申請表格PDF檔下載[開啟新視窗]">PDF
+                                                            <span class="fas fa-file-pdf"></span>
+                                                        </a> |
+                                                        <a href="files/d_04/d_04011_app.doc" target="_blank" title="申請表格Word檔下載[開啟新視窗]">Word
+                                                            <span class="fas fa-file-word"></span> |
+                                                            <a href="files/d_04/d_04011_app.odt" target="_blank" title="申請表格ODF檔下載[開啟新視窗]">ODF
+                                                                <span class="fas fa-file"></span>
+                                                    </td>
+                                                    <td data-th="填寫說明">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-th="檔案說明">建物測量及標示變更登記申請書</td>
+                                                    <td class="text-nowrap" data-th="範例檔案">&nbsp;</td>
+                                                    <td data-th="申請表格">
+                                                        <a href="files/d_04/d_04021_app.pdf" target="_blank" title="申請表格PDF檔下載[開啟新視窗]">PDF
+                                                            <span class="fas fa-file-pdf"></span>
+                                                        </a> |
+                                                        <a href="files/d_04/d_04021_app.doc" target="_blank" title="申請表格Word檔下載[開啟新視窗]">Word
+                                                            <span class="fas fa-file-word"></span> |
+                                                            <a href="files/d_04/d_04021_app.odt" target="_blank" title="申請表格ODF檔下載[開啟新視窗]">ODF
+                                                                <span class="fas fa-file"></span>
+                                                    </td>
+                                                    <td data-th="填寫說明">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-th="檔案說明">土地界址鑑界</td>
+                                                    <td class="text-nowrap" data-th="範例檔案">
+                                                        <a href="files/d_04/d_0403_sample.pdf" target="_blank" title="範例檔案PDF檔下載[開啟新視窗]">PDF
+                                                            <span class="fas fa-file-pdf"></span>
+                                                        </a> |
+                                                        <a href="files/d_04/d_0403_sample.doc" target="_blank" title="範例檔案Word檔下載[開啟新視窗]">Word
+                                                            <span class="fas fa-file-word"></span>
+                                                    </td>
+                                                    <td data-th="申請表格">&nbsp;</td>
+                                                    <td data-th="填寫說明">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-th="檔案說明">建物第一次測量</td>
+                                                    <td class="text-nowrap" data-th="範例檔案">
+                                                        <a href="files/d_04/d_0404_sample.pdf" target="_blank" title="範例檔案PDF檔下載[開啟新視窗]">PDF
+                                                            <span class="fas fa-file-pdf"></span>
+                                                        </a> |
+                                                        <a href="files/d_04/d_0404_sample.doc" target="_blank" title="範例檔案Word檔下載[開啟新視窗]">Word
+                                                            <span class="fas fa-file-word"></span>
+                                                    </td>
+                                                    <td data-th="申請表格">
+                                                        <a href="files/d_04/d_0404_app.pdf" target="_blank" title="申請表格PDF檔下載[開啟新視窗]">PDF
+                                                            <span class="fas fa-file-pdf"></span>
+                                                        </a> |
+                                                        <a href="files/d_04/d_0404_app.doc" target="_blank" title="申請表格Word檔下載[開啟新視窗]">Word
+                                                            <span class="fas fa-file-word"></span> |
+                                                            <a href="files/d_04/d_0404_app.odt" target="_blank" title="申請表格ODF檔下載[開啟新視窗]">ODF
+                                                                <span class="fas fa-file"></span>
+                                                    </td>
+                                                    <td data-th="填寫說明">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-th="檔案說明">土地分割</td>
+                                                    <td class="text-nowrap" data-th="範例檔案">
+                                                        <a href="files/d_04/d_0405_sample.pdf" target="_blank" title="範例檔案PDF檔下載[開啟新視窗]">PDF
+                                                            <span class="fas fa-file-pdf"></span>
+                                                        </a> |
+                                                        <a href="files/d_04/d_0405_sample.doc" target="_blank" title="範例檔案Word檔下載[開啟新視窗]">Word
+                                                            <span class="fas fa-file-word"></span>
+                                                    </td>
+                                                    <td data-th="申請表格">&nbsp;</td>
+                                                    <td data-th="填寫說明">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-th="檔案說明">建築改良物分割複丈</td>
+                                                    <td class="text-nowrap" data-th="範例檔案">
+                                                        <a href="files/d_04/d_0406_sample.pdf" target="_blank" title="範例檔案PDF檔下載[開啟新視窗]">PDF
+                                                            <span class="fas fa-file-pdf"></span>
+                                                        </a> |
+                                                        <a href="files/d_04/d_0406_sample.doc" target="_blank" title="範例檔案Word檔下載[開啟新視窗]">Word
+                                                            <span class="fas fa-file-word"></span>
+                                                    </td>
+                                                    <td data-th="申請表格">&nbsp;</td>
+                                                    <td data-th="填寫說明">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-th="檔案說明">土地合併</td>
+                                                    <td class="text-nowrap" data-th="範例檔案">
+                                                        <a href="files/d_04/d_0407_sample.pdf" target="_blank" title="範例檔案PDF檔下載[開啟新視窗]">PDF
+                                                            <span class="fas fa-file-pdf"></span>
+                                                        </a> |
+                                                        <a href="files/d_04/d_0407_sample.doc" target="_blank" title="範例檔案Word檔下載[開啟新視窗]">Word
+                                                            <span class="fas fa-file-word"></span>
+                                                    </td>
+                                                    <td data-th="申請表格">&nbsp;</td>
+                                                    <td data-th="填寫說明">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-th="檔案說明">建築改良物合併複丈</td>
+                                                    <td class="text-nowrap" data-th="範例檔案">
+                                                        <a href="files/d_04/d_0408_sample.pdf" target="_blank" title="範例檔案PDF檔下載[開啟新視窗]">PDF
+                                                            <span class="fas fa-file-pdf"></span>
+                                                        </a> |
+                                                        <a href="files/d_04/d_0408_sample.doc" target="_blank" title="範例檔案Word檔下載[開啟新視窗]">Word
+                                                            <span class="fas fa-file-word"></span>
+                                                    </td>
+                                                    <td data-th="申請表格">&nbsp;</td>
+                                                    <td data-th="填寫說明">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-th="檔案說明">建築改良物滅失勘測</td>
+                                                    <td class="text-nowrap" data-th="範例檔案">
+                                                        <a href="files/d_04/d_0409_sample.pdf" target="_blank" title="範例檔案PDF檔下載[開啟新視窗]">PDF
+                                                            <span class="fas fa-file-pdf"></span>
+                                                        </a> |
+                                                        <a href="files/d_04/d_0409_sample.doc" target="_blank" title="範例檔案Word檔下載[開啟新視窗]">Word
+                                                            <span class="fas fa-file-word"></span>
+                                                        </a>
+                                                    </td>
+                                                    <td data-th="申請表格">&nbsp;</td>
+                                                    <td data-th="填寫說明">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-th="檔案說明">土地所有權利時效取得</td>
+                                                    <td class="text-nowrap" data-th="範例檔案">
+                                                        <a href="files/d_04/d_0410_sample.pdf" target="_blank" title="範例檔案PDF檔下載[開啟新視窗]">PDF
+                                                            <span class="fas fa-file-pdf"></span>
+                                                        </a> |
+                                                        <a href="files/d_04/d_0410_sample.doc" target="_blank" title="範例檔案Word檔下載[開啟新視窗]">Word
+                                                            <span class="fas fa-file-word"></span>
+                                                    </td>
+                                                    <td data-th="申請表格">&nbsp;</td>
+                                                    <td data-th="填寫說明">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-th="檔案說明">建築改良物代位滅失勘測</td>
+                                                    <td class="text-nowrap" data-th="範例檔案">
+                                                        <a href="files/d_04/d_0411_sample.pdf" target="_blank" title="範例檔案PDF檔下載[開啟新視窗]">PDF
+                                                            <span class="fas fa-file-pdf"></span>
+                                                        </a> |
+                                                        <a href="files/d_04/d_0411_sample.doc" target="_blank" title="範例檔案Word檔下載[開啟新視窗]">Word
+                                                            <span class="fas fa-file-word"></span>
+                                                    </td>
+                                                    <td data-th="申請表格">&nbsp;</td>
+                                                    <td data-th="填寫說明">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-th="檔案說明">建築改良物部分滅失勘測</td>
+                                                    <td class="text-nowrap" data-th="範例檔案">
+                                                        <a href="files/d_04/d_0412_sample.pdf" target="_blank" title="範例檔案PDF檔下載[開啟新視窗]">PDF
+                                                            <span class="fas fa-file-pdf"></span>
+                                                        </a> |
+                                                        <a href="files/d_04/d_0412_sample.doc" target="_blank" title="範例檔案Word檔下載[開啟新視窗]">Word
+                                                            <span class="fas fa-file-word"></span>
+                                                    </td>
+                                                    <td data-th="申請表格">&nbsp;</td>
+                                                    <td data-th="填寫說明">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-th="檔案說明">土地他項權利位置測量</td>
+                                                    <td class="text-nowrap" data-th="範例檔案">
+                                                        <a href="files/d_04/d_0413_sample.pdf" target="_blank" title="範例檔案PDF檔下載[開啟新視窗]">PDF
+                                                            <span class="fas fa-file-pdf"></span>
+                                                        </a> |
+                                                        <a href="files/d_04/d_0413_sample.doc" target="_blank" title="範例檔案Word檔下載[開啟新視窗]">Word
+                                                            <span class="fas fa-file-word"></span>
+                                                        </a>
+                                                    </td>
+                                                    <td data-th="申請表格">&nbsp;</td>
+                                                    <td data-th="填寫說明">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-th="檔案說明">建築改良物因納稅需要申請基地號勘查或勘測</td>
+                                                    <td class="text-nowrap" data-th="範例檔案">
+                                                        <a href="files/d_04/d_0414_sample.pdf" target="_blank" title="範例檔案PDF檔下載[開啟新視窗]">PDF
+                                                            <span class="fas fa-file-pdf"></span>
+                                                        </a> |
+                                                        <a href="files/d_04/d_0414_sample.doc" target="_blank" title="範例檔案Word檔下載[開啟新視窗]">Word
+                                                            <span class="fas fa-file-word"></span>
+                                                    </td>
+                                                    <td data-th="申請表格">&nbsp;</td>
+                                                    <td data-th="填寫說明">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-th="檔案說明">建築改良物基地號變更勘查</td>
+                                                    <td class="text-nowrap" data-th="範例檔案">
+                                                        <a href="files/d_04/d_0415_sample.pdf" target="_blank" title="範例檔案PDF檔下載[開啟新視窗]">PDF
+                                                            <span class="fas fa-file-pdf"></span>
+                                                        </a> |
+                                                        <a href="files/d_04/d_0415_sample.doc" target="_blank" title="範例檔案Word檔下載[開啟新視窗]">Word
+                                                            <span class="fas fa-file-word"></span>
+                                                    </td>
+                                                    <td data-th="申請表格">&nbsp;</td>
+                                                    <td data-th="填寫說明">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-th="檔案說明">地目變更</td>
+                                                    <td class="text-nowrap" data-th="範例檔案">
+                                                        <a href="files/d_04/d_0417_sample.pdf" target="_blank" title="範例檔案PDF檔下載[開啟新視窗]">PDF
+                                                            <span class="fas fa-file-pdf"></span>
+                                                        </a> |
+                                                        <a href="files/d_04/d_0417_sample.doc" target="_blank" title="範例檔案Word檔下載[開啟新視窗]">Word
+                                                            <span class="fas fa-file-word"></span>
+                                                    </td>
+                                                    <td data-th="申請表格">
+                                                        <a href="files/d_04/d_0417_app.odt" target="_blank" title="申請表格ODF檔下載[開啟新視窗]">ODF
+                                                            <span class="fas fa-file"></span>
+                                                    </td>
+                                                    <td data-th="填寫說明">&nbsp;</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                     <div class="tab-pane fade" id="correct4" role="tabpanel" aria-labelledby="correct4-tab">
                                         <h3 class="pl-0">
                                             <span class="fas fa-bookmark"></span> 謄本類
                                         </h3>
-
+                                        <table id="myTable3" class="table table-striped table-hover border-bottom rwd-table file-download" summary="謄本類表格，為5直欄設計，第1直欄為檔案說明，第2直欄為範例檔案下載，第3直欄為申請表格下載，第4直欄為填寫說明，第5直欄為下載檔案。">
+                                            <caption class="sr-only">
+                                                謄本類-下載專區
+                                            </caption>
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-nowrap" scope="col">檔案說明</th>
+                                                    <th class="text-nowrap" scope="col">範例檔案</th>
+                                                    <th class="text-nowrap" scope="col">申請表格</th>
+                                                    <th class="text-nowrap" scope="col">填寫說明</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td data-th="檔案說明">地籍謄本及相關資料申請書</td>
+                                                    <td class="text-nowrap" data-th="範例檔案"><a href="files/d_05/d_0501_sample.pdf" target="_blank" title="範例檔案下載[開啟新視窗]">PDF <span class="fas fa-file-pdf"></span></a> | <a href="files/d_05/d_0501_sample.doc" target="_blank" title="範例檔案下載[開啟新視窗]">Word <span class="fas fa-file-word"></span></a></td>
+                                                    <td class="text-nowrap" data-th="申請表格"><a href="files/d_05/d_0501_app.pdf" target="_blank" title="申請表格下載[開啟新視窗]">PDF <span class="fas fa-file-pdf"></span></a> | <a href="files/d_05/d_0501_app.doc" target="_blank" title="申請表格下載[開啟新視窗]">Word <span class="fas fa-file-word"></span></a> | <a href="files/d_05/d_0501_app.odt" target="_blank" title="申請表格下載[開啟新視窗]">ODF <span class="fas fa-file"></span></a></td>
+                                                    <td class="text-nowrap" data-th="填寫說明">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-th="檔案說明">第二類謄本(隱匿部分住址)申請書</td>
+                                                    <td class="text-nowrap" data-th="範例檔案"><a href="files/d_05/d_0505_sample.pdf" target="_blank" title="範例檔案下載[開啟新視窗]">PDF <span class="fas fa-file-pdf"></span></a> </td>
+                                                    <td class="text-nowrap" data-th="申請表格"><a href="files/d_05/d_0505_note.pdf" target="_blank" title="申請表格下載[開啟新視窗]">PDF <span class="fas fa-file-pdf"></span></a> | <a href="files/d_05/d_0505_note.doc" target="_blank" title="申請表格下載[開啟新視窗]">Word <span class="fas fa-file-word"></span></a> | <a href="files/d_05/d_0505_note.odt" target="_blank" title="申請表格下載[開啟新視窗]">ODF <span class="fas fa-file"></span></a></td>
+                                                    <td class="text-nowrap" data-th="填寫說明">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-th="檔案說明">地籍總歸戶</td>
+                                                    <td class="text-nowrap" data-th="範例檔案">&nbsp;</td>
+                                                    <td class="text-nowrap" data-th="申請表格"><a href="files/d_05/d_0502.pdf" target="_blank" title="地籍總歸戶下載[開啟新視窗]">PDF <span class="fas fa-file-pdf"></span></a> | <a href="files/d_05/d_0502.docx" target="_blank" title="地籍總歸戶下載[開啟新視窗]">Word <span class="fas fa-file-word"></span></a> | <a href="files/d_05/d_0502.odt" target="_blank" title="地籍總歸戶下載[開啟新視窗]">ODF <span class="fas fa-file"></span></a></td>
+                                                    <td class="text-nowrap" data-th="填寫說明">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-th="檔案說明">英文不動產權利登記證明申請書</td>
+                                                    <td class="text-nowrap" data-th="範例檔案">&nbsp;</td>
+                                                    <td class="text-nowrap" data-th="申請表格"><a href="files/d_05/d_0506_note.pdf" target="_blank" title="申請表格下載[開啟新視窗]">PDF <span class="fas fa-file-pdf"></span></a> | <a href="files/d_05/d_0506_note.docx" target="_blank" title="申請表格下載[開啟新視窗]">Word <span class="fas fa-file-word"></span></a> | <a href="files/d_05/d_0506_note.odt" target="_blank" title="申請表格下載[開啟新視窗]">ODF <span class="fas fa-file"></span></a></td>
+                                                    <td class="text-nowrap" data-th="填寫說明">&nbsp;</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
 
                                     </div>
                                     <div class="tab-pane fade" id="correct5" role="tabpanel" aria-labelledby="correct5-tab">
@@ -237,6 +787,8 @@
     <script src="base/js/jquery.min.js "></script>
     <script src="base/js/popper.min.js "></script>
     <script src="base/js/bootstrap.min.js "></script>
+    <script src="base/js/datatables.min.js"></script>
+    <script src="base/plugin/DataTables-1.10.18/js/dataTables.bootstrap4.min.js"></script>
     <script src="base/js/base.js "></script>
     <script>
         $(document).ready(function () {
