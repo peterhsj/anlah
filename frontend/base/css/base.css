@@ -578,6 +578,10 @@
   white-space: normal;
 }
 
+.subContent .textOl-layout1 ul {
+  list-style-type: square !important;
+}
+
 .subContent .figure-caption {
   font-size: 0.9rem;
 }
@@ -908,15 +912,35 @@
   background-color: #f2f2f2;
 }
 
+.orange {
+  background-color: #ff8f00;
+}
+
 span.fa-file-pdf {
   color: #ff8f00;
+}
+
+.light-blue {
+  background-color: #0aa8c1;
 }
 
 span.fa-file-word {
   color: #0aa8c1;
 }
 
+.light-green {
+  background-color: #1aad3b;
+}
+
 span.fa-file {
   color: #1aad3b;
+}
+
+.light-purple {
+  background-color: #a564e2;
+}
+
+span.fa-file-alt {
+  color: #a564e2;
 }
 /*# sourceMappingURL=base.css.map */
