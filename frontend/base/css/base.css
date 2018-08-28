@@ -943,4 +943,12 @@ span.fa-file {
 span.fa-file-alt {
   color: #a564e2;
 }
+
+.errortext {
+  display: none;
+}
+
+.errortext.active {
+  display: inline;
+}
 /*# sourceMappingURL=base.css.map */
