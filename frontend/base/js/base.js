@@ -246,3 +246,44 @@ $(document).ready(function () {
     // });
 
 });
+
+function validateSuggestForm() {
+    var subject = document.suggestForm.title.value;
+    var name = document.suggestForm.name.value;
+    var email = document.suggestForm.email.value;
+    var contents = document.suggestForm.content.value;
+    /*檢查是email格式是否正確*/
+    var regularExpression = /^[^\s]+@[^\s]+\.[^\s]{2,3}$/;
+    if (subject.trim() == "") {
+        document.getElementById('errorTitle').classList.add("active");
+        document.suggestForm.title.focus();
+        return false;
+    } else if (name.trim() == "") {
+        document.getElementById('errorName').classList.add("active");
+        document.suggestForm.name.focus();
+        return false;
+    } else if (email.trim() == "") {
+        document.getElementById('errorEmail').classList.add("active");
+        document.suggestForm.email.focus();
+        return false;
+    } else if (regularExpression.test(email) == false) {
+        document.getElementById('errorEmail').classList.add("active");
+        document.suggestForm.email.focus();
+        return false;
+    } else if (contents.trim() == "") {
+        document.getElementById('errorContent').classList.add("active");
+        document.suggestForm.content.focus();
+        return false;
+    } else {
+        /*注意：表單中不要有input name是submit的會出問題*/
+        document.suggestForm.submit();
+    }
+}
+/* 去掉字串兩端的空白字元 */
+String.prototype.trim = function () {
+    return this.replace(/(^\s+)|(\s+$)/g, "");
+}
+
+function hideError(formItem) {
+    document.getElementById(formItem).classList.remove("active");
+}
