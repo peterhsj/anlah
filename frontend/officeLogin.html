@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html class="no-js css-menubar" lang="zh-Hant-TW">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+  <meta name="description" content="bootstrap admin template">
+  <meta name="author" content="">
+  <title>基隆市安樂地政事務所-網站管理系統</title>
+  <link rel="apple-touch-icon" href="base/assets/images/apple-touch-icon.png">
+  <link rel="shortcut icon" href="base/assets/images/apple-touch-icon.png">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="base/global/css/bootstrap.min.css">
+  <link rel="stylesheet" href="base/global/css/bootstrap-extend.min.css">
+  <link rel="stylesheet" href="base/assets/css/site.min.css">
+
+  <!-- Plugins -->
+<link rel="stylesheet" href="base/global/vendor/animsition/animsition.min.css">
+  <link rel="stylesheet" href="base/assets/examples/css/pages/login-v3.css">
+  <!-- Fonts -->
+  <link rel="stylesheet" href="base/global/fonts/web-icons/web-icons.min.css">
+  <link rel="stylesheet" href="base/global/fonts/brand-icons/brand-icons.min.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic">
+  <link rel="stylesheet" href="base/assets/css/site.min.css">
+  <!--[if lt IE 9]>
+    <script src="global/vendor/html5shiv/html5shiv.min.js"></script>
+    <![endif]-->
+
+  <!--[if lt IE 10]>
+    <script src="global/vendor/media-match/media.match.min.js"></script>
+    <script src="global/vendor/respond/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="animsition page-login-v3 layout-full">
+  <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+
+  <!-- Page -->
+  <div class="page vertical-align text-center" data-animsition-in="fade-in" data-animsition-out="fade-out">>
+    <div class="page-content vertical-align-middle animation-slide-top animation-duration-1">
+      <div class="panel">
+        <div class="panel-body">
+          <div class="brand">
+            <img class="brand-img" src="base/assets/images/logo-colored@2x.png" alt="...">
+            <h2 class="brand-text font-size-24">基隆市安樂地政事務所<br>網站管理系統</h2>
+          </div>
+          <form method="post" action="#">
+            <div class="form-group form-material floating" data-plugin="formMaterial">
+              <input type="text" class="form-control" name="email" title="請輸入帳號" />
+              <label class="floating-label">帳號</label>
+            </div>
+            <div class="form-group form-material floating" data-plugin="formMaterial">
+              <input type="password" class="form-control" name="password" title="請輸入密碼" />
+              <label class="floating-label">密碼</label>
+            </div>
+            <button type="button" class="btn btn-primary btn-block btn-lg mt-40" onclick="location.href='index.html'">登入</button>
+          </form>
+        </div>
+      </div>
+
+      <footer class="page-copyright page-copyright-inverse">
+        <p>安樂地政事務所 版權所有</p>
+        <p>© 2018. All RIGHT RESERVED.</p>
+      </footer>
+    </div>
+  </div>
+  <!-- End Page -->
+  <!-- Core  -->
+  <script src="base/global/vendor/babel-external-helpers/babel-external-helpers.js"></script>
+  <script src="base/global/vendor/jquery/jquery.js"></script>
+  <script src="base/global/vendor/popper-js/umd/popper.min.js"></script>
+  <script src="base/global/vendor/bootstrap/bootstrap.js"></script>
+  <script src="base/global/vendor/animsition/animsition.js"></script>
+  <!-- Plugins -->
+  <script src="base/global/vendor/jquery-placeholder/jquery.placeholder.js"></script>
+  <!-- Scripts -->
+  <script src="base/global/js/Component.js"></script>
+  <script src="base/global/js/Plugin.js"></script>
+  <script src="base/global/js/Base.js"></script>
+  <script src="base/global/js/Config.js"></script>
+  <!-- Page -->
+  <script src="base/assets/js/Site.js"></script>
+  <script src="base/global/js/Plugin/jquery-placeholder.js"></script>
+  <script src="base/global/js/Plugin/material.js"></script>
+
+  <script>
+    (function (document, window, $) {
+      'use strict';
+
+      var Site = window.Site;
+      $(document).ready(function () {
+        Site.run();
+      });
+    })(document, window, jQuery);
+  </script>
+</body>
+
+</html>
