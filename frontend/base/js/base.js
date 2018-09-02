@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
     //引入各元件
     $('#headerTxt').load('header.html');
     $('#headerContent').load('header_content.html');
@@ -244,6 +244,48 @@ $(document).ready(function () {
     // $('#myTable_filter label input').on('focus', function () {
     //     this.setAttribute('for', 'myTable_filter');
     // });
+
+    $('#sendproposal').on('click', function() {
+        var subject = document.proposalForm.title.value;
+        var name = document.proposalForm.name.value;
+        var email = document.proposalForm.email.value;
+        var contents = document.proposalForm.content.value;
+        var benefit = document.proposalForm.benefit.value;
+        /*檢查是email格式是否正確*/
+        var regularExpression = /^[^\s]+@[^\s]+\.[^\s]{2,3}$/;
+        if (name.trim() == "") {
+            document.getElementById('errorName').classList.add("active");
+            document.proposalForm.name.focus();
+            return false;
+        } else if (email.trim() == "") {
+            document.getElementById('errorEmail').classList.add("active");
+            document.proposalForm.email.focus();
+            return false;
+        } else if (regularExpression.test(email) == false) {
+            document.getElementById('errorEmail').classList.add("active");
+            document.proposalForm.email.focus();
+            return false;
+        } else if (subject.trim() == "") {
+            document.getElementById('errorTitle').classList.add("active");
+            document.proposalForm.title.focus();
+            return false;
+        } else if (contents.trim() == "") {
+            document.getElementById('errorContent').classList.add("active");
+            document.proposalForm.content.focus();
+            return false;
+        } else if (benefit.trim() == "") {
+            document.getElementById('errorBenefit').classList.add("active");
+            document.proposalForm.benefit.focus();
+            return false;
+        } else {
+            /*注意：表單中不要有input name是submit的會出問題*/
+            statusinfo();
+            document.proposalForm.submit();
+        }
+    });
+    function statusinfo() {
+        $('#statusinfo').modal('show');
+    }
 
 });
 
