@@ -2776,7 +2776,7 @@ body.site-navbar-small {
   margin-left: -20px;
   content: "";
   background-color: #fff;
-  border: 1px solid #e4eaec;
+  border: 2px solid #607D8B;
   border-radius: .215rem;
   transition: all .3s ease-in-out 0s;
 }

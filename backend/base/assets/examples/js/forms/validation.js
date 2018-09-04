@@ -155,6 +155,20 @@
             }
           }
         },
+        keyword: {
+          validators: {
+            notEmpty: {
+              message: '請輸入主題和關鍵字'
+            }
+          }
+        },
+        url: {
+          validators: {
+            notEmpty: {
+              message: '請輸入連結網址'
+            }
+          }
+        },
         enddate: {
           validators: {
             date: {
