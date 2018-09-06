@@ -307,78 +307,74 @@ $(document).ready(function() {
             document.addForm.apply_name.focus();
             return false;
         } else if (apply_birth.trim() == "") {
-            alert("請填寫申請人出生年月日！");
-            document.getElementById('errorApplyname').classList.add("active");
+            document.getElementById('errorApplybirth').classList.add("active");
             document.addForm.apply_birth.focus();
             return false;
         } else if (apply_id.trim() == "") {
-            alert("請填寫申請人統一編號！");
-            document.getElementById('errorApplyname').classList.add("active");
+            document.getElementById('errorApplyid').classList.add("active");
             document.addForm.apply_id.focus();
             return false;
         } else if (apply_tel.trim() == "") {
-            alert("請填寫申請人電話！");
-            document.getElementById('errorApplyname').classList.add("active");
+            document.getElementById('errorApplytel').classList.add("active");
             document.addForm.apply_tel.focus();
             return false;
         } else if (apply_add.trim() == "") {
-            alert("請填寫申請人住址！");
-            document.getElementById('errorApplyname').classList.add("active");
+            document.getElementById('errorApplyadd').classList.add("active");
             document.addForm.apply_add.focus();
             return false;
         } else if (docno_1.trim() == "") {
-            alert("請填寫檔號或收發文字號 1！");
-            document.getElementById('errorApplyname').classList.add("active");
+            document.getElementById('errorDocno1').classList.add("active");
             document.addForm.docno_1.focus();
             return false;
         } else if (docname_1.trim() == "") {
-            alert("請填寫檔案名稱或內容要旨 1！");
-            document.getElementById('errorApplyname').classList.add("active");
+            document.getElementById('errorDocname1').classList.add("active");
             document.addForm.docname_1.focus();
             return false;
-        } else if (docitem_1.trim() == "") {
-            alert("請選擇申請項目 1！");
-            document.getElementById('errorApplyname').classList.add("active");
+        } else if (docitem_1.trim() == "-請選擇-") {
+            document.getElementById('errorDocitem1').classList.add("active");
             document.addForm.docitem_1.focus();
             return false;
         } else if (!document.addForm.elements["purpose_1"].checked && !document.addForm.elements["purpose_2"].checked &&
             !document.addForm.elements["purpose_3"].checked && !document.addForm.elements["purpose_4"].checked &&
             !document.addForm.elements["purpose_5"].checked && !document.addForm.elements["purpose_6"].checked) {
-            alert("請選擇申請目的！");
+            document.getElementById('errorPurpose').classList.add("active");
             return false;
         } else if (purpose_note == "" && document.addForm.elements["purpose_6"].checked) {
-            alert("請敘明目的！");
+            document.getElementById('errorPurposenote').classList.add("active");
             document.addForm.purpose_note.focus();
             return false;
         } else if (!document.addForm.elements["qa_11"].checked && !document.addForm.elements["qa_12"].checked &&
             !document.addForm.elements["qa_13"].checked && !document.addForm.elements["qa_14"].checked &&
             !document.addForm.elements["qa_15"].checked) {
-            alert("請填寫問卷第一題！");
+            document.getElementById('errorQa1').classList.add("active");
             return false;
         } else if (!document.addForm.elements["qa_21"].checked && !document.addForm.elements["qa_22"].checked &&
             !document.addForm.elements["qa_23"].checked && !document.addForm.elements["qa_24"].checked &&
             !document.addForm.elements["qa_25"].checked) {
-            alert("請填寫問卷第二題！");
+            document.getElementById('errorQa2').classList.add("active");
             return false;
         } else if (!document.addForm.elements["qa_31"].checked && !document.addForm.elements["qa_32"].checked &&
             !document.addForm.elements["qa_33"].checked && !document.addForm.elements["qa_34"].checked &&
             !document.addForm.elements["qa_35"].checked) {
-            alert("請填寫問卷第三題！");
+            document.getElementById('errorQa3').classList.add("active");
             return false;
         } else if (!document.addForm.elements["qa_41"].checked && !document.addForm.elements["qa_42"].checked &&
             !document.addForm.elements["qa_43"].checked && !document.addForm.elements["qa_44"].checked &&
             !document.addForm.elements["qa_45"].checked) {
-            alert("請填寫問卷第四題！");
+            document.getElementById('errorQa4').classList.add("active");
             return false;
         } else if (!document.addForm.elements["qa_51"].checked && !document.addForm.elements["qa_52"].checked &&
             !document.addForm.elements["qa_53"].checked && !document.addForm.elements["qa_54"].checked &&
             !document.addForm.elements["qa_55"].checked) {
-            alert("請填寫問卷第五題！");
+            document.getElementById('errorQa5').classList.add("active");
             return false;
         } else {
             /*注意：表單中不要有input name是submit的會出問題*/
             document.addForm.submit();
         }
+        // if ($('input[name="qa_1"]').is(":checked")) {
+        //     hideError('errorQa1');
+        // }
     });
 
 });
