@@ -67,7 +67,7 @@
                                         請填寫申請人姓名
                                     </div>
                                 </td>
-                                <th scope="row" class="text-nowrap table-primary"><label for="apply_birth">申請人﹝代表人﹞<br>出生年月日<span
+                                <th scope="row" class="text-nowrap table-primary"><label for="Datepicker1">申請人﹝代表人﹞<br>出生年月日<span
                                             class="red">＊</span></label></th>
                                 <td class="text-nowrap"><input name="apply_birth" type="text" class="form-control" id="Datepicker1"
                                         placeholder="請填寫出生年月日" title="請填寫申請人出生年月日" size="10">
@@ -93,7 +93,7 @@
                                         填寫範例：02-24324001分機 311
                                     </div>
                                 </td>
-                                <th scope="row" class="text-nowrap table-primary"><label for="apply_email">申請人住址<span
+                                <th scope="row" class="text-nowrap table-primary"><label for="apply_add">申請人住址<span
                                             class="red">＊</span></label></th>
                                 <td colspan="3" class="text-nowrap"><input name="apply_add" type="text" class="form-control"
                                         size="60" id="apply_add" placeholder="請填寫" title="請填寫申請人住址">
@@ -103,17 +103,17 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row" class="text-nowrap table-primary">申辦人 Email</th>
+                                <th scope="row" class="text-nowrap table-primary"><label for="apply_email">申辦人 Email</label></th>
                                 <td colspan="5" class="text-nowrap">
                                     <input name="apply_email" type="text" class="form-control" size="60" id="apply_email"
                                         placeholder="請填寫" title="請填寫申辦人 Email( 不限個人常用的E-mail )">
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row" class="text-nowrap table-primary"><label for="agent_re">代理人姓名</label></th>
+                                <th scope="row" class="text-nowrap table-primary"><label for="agent_name">代理人姓名</label></th>
                                 <td class="text-nowrap"><input name="agent_name" type="text" class="form-control" size="15"
                                         id="agent_name" placeholder="請填寫" title="請填寫代理人姓名"></td>
-                                <th scope="row" class="text-nowrap table-primary"><label for="agent_birth">代理人出生年月日</label></th>
+                                <th scope="row" class="text-nowrap table-primary"><label for="Datepicker2">代理人出生年月日</label></th>
                                 <td class="text-nowrap"><input name="agent_birth" type="text" class="form-control" id="Datepicker2"
                                         placeholder="請填寫" title="請填寫代理人出生年月日" size="10"></td>
                                 <th scope="row" class="text-nowrap table-primary"><label for="agent_id">代理人統一編號</label></th>
@@ -129,7 +129,7 @@
                                         size="60" id="agent_add" placeholder="請填寫" title="請填寫代理人住址"></td>
                             </tr>
                             <tr>
-                                <th scope="row" class="text-nowrap table-primary">代理人與申請人關係</th>
+                                <th scope="row" class="text-nowrap table-primary"><label for="agent_re">代理人與申請人關係</label></th>
                                 <td colspan="5" class="dline06"><input name="agent_re" type="text" class="form-control"
                                         size="15" id="agent_re" placeholder="請填寫" title="請填寫代理人與申請人關係"></td>
                             </tr>
@@ -143,21 +143,22 @@
                             </tr>
                             <tr>
                                 <th scope="row" class="text-nowrap table-primary">土地申請標的<span class="red">＊</span></th>
-                                <td class="text-nowrap">段小段
+                                <td class="text-nowrap"><label for="sarea_1">段小段</label>
                                     <input name="sarea_1" type="text" class="form-control" size="15" id="sarea_1"
                                         placeholder="請填寫" title="請填寫段小段">
                                     <div class="invalidfeedback red">
                                         請填寫段小段
                                     </div>
                                 </td>
-                                <th scope="row" class="text-nowrap table-primary">地號<span class="red">＊</span></th>
+                                <th scope="row" class="text-nowrap table-primary"><label for="areano_1">地號<span class="red">＊</span></label></th>
                                 <td class="text-nowrap"><input name="areano_1" type="text" class="form-control" size="20"
                                         id="areano_1" placeholder="請填寫" title="請填寫地號">
                                     <div class="invalidfeedback red">
                                         請填寫地號
                                     </div>
                                 </td>
-                                <th scope="row" class="text-nowrap table-primary">申請份數<span class="red">＊</span></th>
+                                <th scope="row" class="text-nowrap table-primary"><label for="docitem_1">申請份數<span
+                                            class="red">＊</span></label></th>
                                 <td class="text-nowrap">
                                     <input name="docitem_1" type="text" class="form-control" size="20" id="docitem_1"
                                         placeholder="請填寫" title="請填寫申請份數">
@@ -167,7 +168,8 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row" class="text-nowrap table-primary">建物申請標的<span class="red">＊</span></th>
+                                <th scope="row" class="text-nowrap table-primary"><label for="sarea_2">建物申請標的<span
+                                            class="red">＊</span></label></th>
                                 <td class="text-nowrap">段小段
                                     <input name="sarea_2" type="text" class="form-control" size="15" id="sarea_2"
                                         placeholder="請填寫" title="請填寫段小段">
@@ -175,14 +177,15 @@
                                         請填寫段小段
                                     </div>
                                 </td>
-                                <th scope="row" class="text-nowrap table-primary"><label for="docname_2">建號<span class="red">＊</span></label></th>
+                                <th scope="row" class="text-nowrap table-primary"><label for="areano_2">建號<span class="red">＊</span></label></th>
                                 <td class="text-nowrap"><input name="areano_2" type="text" class="form-control" size="20"
                                         id="areano_2" placeholder="請填寫" title="請填寫建號">
                                     <div class="invalidfeedback red">
                                         請填寫建號
                                     </div>
                                 </td>
-                                <th scope="row" class="text-nowrap table-primary">申請份數<span class="red">＊</span></th>
+                                <th scope="row" class="text-nowrap table-primary"><label for="docitem_2">申請份數<span
+                                            class="red">＊</span></label></th>
                                 <td class="text-nowrap">
                                     <input name="docitem_2" type="text" class="form-control" size="20" id="docitem_2"
                                         placeholder="請填寫" title="請填寫申請份數">
@@ -194,17 +197,18 @@
                             <tr>
                                 <th scope="row" class="text-nowrap table-primary">申請用途<span class="red">＊</span></th>
                                 <td colspan="5" class="dline06">
-                                    <input TYPE="checkbox" NAME="purpose_1" value="1" id="purpose_1">
+                                    <input TYPE="checkbox" NAME="purpose_1" value="1" id="purpose_1" title="購屋、貸款使用">
                                     <label for="purpose_1">購屋、貸款使用</label>
-                                    <input TYPE="checkbox" NAME="purpose_2" value="1" id="purpose_2">
+                                    <input TYPE="checkbox" NAME="purpose_2" value="1" id="purpose_2" title="處理訴訟案件">
                                     <label for="purpose_2">處理訴訟案件</label>
-                                    <input TYPE="checkbox" NAME="purpose_3" value="1" id="purpose_3">
+                                    <input TYPE="checkbox" NAME="purpose_3" value="1" id="purpose_3" title="政府機關申請案">
                                     <label for="purpose_3">政府機關申請案</label>
-                                    <input TYPE="checkbox" NAME="purpose_4" value="1" id="purpose_4">
+                                    <input TYPE="checkbox" NAME="purpose_4" value="1" id="purpose_4" title="自行參考">
                                     <label for="purpose_4">自行參考</label>
                                     <br>
-                                    <input TYPE="checkbox" NAME="purpose_5" value="1" id="purpose_5">
+                                    <input TYPE="checkbox" NAME="purpose_5" value="1" id="purpose_5" title="其他">
                                     <label for="purpose_5">其他：</label>
+                                    <label for="purpose_note" class="sr-only">申請目的</label>
                                     <input name="purpose_note" type="text" class="form-control" size="50" id="purpose_note"
                                         placeholder="請選擇申請目的" title="請選擇申請目的">
                                     <div class="invalidfeedback red">
@@ -242,15 +246,15 @@
                             </tr>
                             <tr>
                                 <td class="text-nowrap">
-                                    <input name="qa_1" id="qa_11" type="radio" value="1" required>
+                                    <input name="qa_1" id="qa_1" type="radio" value="1" title="傳播媒體">
                                     傳播媒體
-                                    <input name="qa_1" id="qa_12" type="radio" value="2" required>
+                                    <input name="qa_1" id="qa_1" type="radio" value="2" title="報章雜誌">
                                     報章雜誌
-                                    <input name="qa_1" id="qa_13" type="radio" value="3" required>
+                                    <input name="qa_1" id="qa_1" type="radio" value="3" title="本所宣導品">
                                     本所宣導品
-                                    <input name="qa_1" id="qa_14" type="radio" value="4" required>
+                                    <input name="qa_1" id="qa_1" type="radio" value="4" title="親朋好友告知">
                                     親朋好友告知
-                                    <input name="qa_1" id="qa_15" type="radio" value="5" required>
+                                    <input name="qa_1" id="qa_1" type="radio" value="5" title="自己發現">
                                     自己發現
                                     <span id="errorQa1" class="invalidfeedback red">
                                         請填寫
@@ -263,15 +267,15 @@
 
                             <tr>
                                 <td class="text-nowrap">
-                                    <input name="qa_2" id="qa_21" type="radio" value="1">
+                                    <input name="qa_2" id="qa_2" type="radio" value="1" title="非常滿意">
                                     非常滿意
-                                    <input name="qa_2" id="qa_22" type="radio" value="2">
+                                    <input name="qa_2" id="qa_2" type="radio" value="2" title="滿意">
                                     滿意
-                                    <input name="qa_2" id="qa_23" type="radio" value="3">
+                                    <input name="qa_2" id="qa_2" type="radio" value="3" title="普通">
                                     普通
-                                    <input name="qa_2" id="qa_24" type="radio" value="4">
+                                    <input name="qa_2" id="qa_2" type="radio" value="4" title="不滿意">
                                     不滿意
-                                    <input name="qa_2" id="qa_25" type="radio" value="5">
+                                    <input name="qa_2" id="qa_2" type="radio" value="5" title="非常不滿意">
                                     非常不滿意
                                     <span id="errorQa2" class="invalidfeedback red">
                                         請填寫
@@ -284,15 +288,15 @@
                             </tr>
                             <tr>
                                 <td class="text-nowrap">
-                                    <input name="qa_3" id="qa_31" type="radio" value="1">
+                                    <input name="qa_3" id="qa_3" type="radio" value="1" title="4小時以上">
                                     4小時以上
-                                    <input name="qa_3" id="qa_32" type="radio" value="2">
+                                    <input name="qa_3" id="qa_3" type="radio" value="2" title="3-4小時">
                                     3-4小時
-                                    <input name="qa_3" id="qa_33" type="radio" value="3">
+                                    <input name="qa_3" id="qa_3" type="radio" value="3" title="2-3小時">
                                     2-3小時
-                                    <input name="qa_3" id="qa_34" type="radio" value="4">
+                                    <input name="qa_3" id="qa_3" type="radio" value="4" title="1-2小時">
                                     1-2小時
-                                    <input name="qa_3" id="qa_35" type="radio" value="5">
+                                    <input name="qa_3" id="qa_3" type="radio" value="5" title="1小時以內">
                                     1小時以內
                                     <span id="errorQa3" class="invalidfeedback red">
                                         請填寫
@@ -304,15 +308,15 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <input name="qa_4" id="qa_41" type="radio" value="1">
-                                    非常滿意
-                                    <input name="qa_4" id="qa_42" type="radio" value="2">
+                                    <input name="qa_4" id="qa_4" type="radio" value="1" title="非常滿意滿意">
+                                    非常滿意滿意
+                                    <input name="qa_4" id="qa_4" type="radio" value="2" title="滿意">
                                     滿意
-                                    <input name="qa_4" id="qa_43" type="radio" value="3">
+                                    <input name="qa_4" id="qa_4" type="radio" value="3" title="普通">
                                     普通
-                                    <input name="qa_4" id="qa_44" type="radio" value="4">
+                                    <input name="qa_4" id="qa_4" type="radio" value="4" title="不滿意">
                                     不滿意
-                                    <input name="qa_4" id="qa_45" type="radio" value="5">
+                                    <input name="qa_4" id="qa_4" type="radio" value="5" title="非常不滿意">
                                     非常不滿意
                                     <span id="errorQa4" class="invalidfeedback red">
                                         請填寫
@@ -323,15 +327,15 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <input name="qa_5" id="qa_51" type="radio" value="1">
+                                    <input name="qa_5" id="qa_5" type="radio" value="1" title="地政士或不動產相關行業">
                                     地政士或不動產相關行業
-                                    <input name="qa_5" id="qa_52" type="radio" value="2">
+                                    <input name="qa_5" id="qa_5" type="radio" value="2" title="銀行或金融業">
                                     銀行或金融業
-                                    <input name="qa_5" id="qa_53" type="radio" value="3">
+                                    <input name="qa_5" id="qa_5" type="radio" value="3" title="軍公教">
                                     軍公教
-                                    <input name="qa_5" id="qa_54" type="radio" value="4">
+                                    <input name="qa_5" id="qa_5" type="radio" value="4" title="農漁商">
                                     農漁商
-                                    <input name="qa_5" id="qa_55" type="radio" value="5">
+                                    <input name="qa_5" id="qa_5" type="radio" value="5" title="自由業或其他">
                                     自由業或其他
                                     <span id="errorQa5" class="invalidfeedback red">
                                         請填寫
@@ -367,6 +371,15 @@
     <script>
         $(document).ready(function () {
             $('#Datepicker1').datepicker({
+                format: "yyyy-mm-dd",
+                autoclose: true,
+                startDate: "today",
+                clearBtn: true,
+                calendarWeeks: false,
+                todayHighlight: true,
+                language: 'zh-TW'
+            });
+            $('#Datepicker2').datepicker({
                 format: "yyyy-mm-dd",
                 autoclose: true,
                 startDate: "today",
