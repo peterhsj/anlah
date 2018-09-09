@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 分類檢索 Start -->
+    <link rel="govtwsimpledc.xsd" href="http://www.gov.tw/schema/dc/" title="Dublin Core" />
+    <meta name="DC.Title" content="基隆市安樂地政事務所全球資訊網 - 線上申辦 - 網路申領英文謄本" />
+    <meta name="DC.Creator" content="基隆市安樂地政事務所登記課" />
+    <meta name="DC.Subject" content="基隆市安樂地政事務所 - 線上申辦 - 網路申領英文謄本" />
+    <meta name="DC.Description" content="線上申辦 - 網路申領英文謄本" />
+    <meta name="DC.Contributor" content="基隆市安樂地政事務所" />
+    <meta name="DC.Type" content="文字" />
+    <meta name="DC.Format" content="text/html" />
+    <meta name="DC.Source" content="基隆市安樂地政事務所" />
+    <meta name="DC.Language" content="中文" />
+    <meta name="DC.Coverage.t.max" content="2015-04-26" />
+    <meta name="DC.Coverage.t.min" content="2010-04-26" />
+    <meta name="DC.Publisher" content="基隆市安樂地政事務所" />
+    <meta name="DC.Date" content="2010-04-26 10:00 " />
+    <meta name="DC.Identifier" content="376570600A" />
+    <meta name="DC.Relation" content="http://anleh-land.gov.tw/" />
+    <meta name="DC.Rights" content="基隆市安樂地政事務所" />
+    <meta name="Category.Theme" content="140" />
+    <meta name="Category.Cake" content="CKA" />
+    <meta name="Category.Service" content="C11" />
+    <!-- 主題分類:140地政/施政分類:CKA 地政資訊系統/服務分類:C11土地建物登記 -->
+    <meta name="Keywords" content="線上申辦, 網路申領英文謄本" />
+
+
+    <!-- 分類檢索 End -->
+    <meta name="Accessible_website" content="本網站通過通過AAA優先等級無障礙網頁檢測">
+    <title>基隆市安樂地政事務所全球資訊網 - 線上申辦-網路申領英文謄本</title>
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="base/css/bootstrap.min.css">
+    <link href="base/icon-css/all.min.css" rel="stylesheet">
+    <link href="base/plugin/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
+    <link href="base/css/base.min.css" rel="stylesheet">
+    <style>
+    </style>
+</head>
+
+<body>
+    <!-- 內文區 -->
+    <div class="mt-3">
+        <div class="row">
+            <form class="m-auto" method="post" name="addForm">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h4 class="text-info">網路申領英文謄本申請表 (有＊記號的欄位必須填寫)</h4>
+                    </div>
+                    <div class="card-body p-0">
+                        <table class="table table-hover border-bottom rwd-table m-0" summary="編排用表格">
+                            <caption class="sr-only">
+                                英文謄本申請表 (有＊記號的欄位必須填寫)
+                            </caption>
+                            <tr>
+                                <th scope="row" class="text-nowrap table-primary"><label for="apply_name">申請人﹝代表人﹞姓名<span
+                                            class="red">＊</span></label></th>
+                                <td class="text-nowrap"><input name="apply_name" type="text" class="form-control" size="15"
+                                        id="apply_name" placeholder="請填寫" title="請填寫申請人姓名">
+                                    <div class="invalidfeedback red">
+                                        請填寫申請人姓名
+                                    </div>
+                                </td>
+                                <th scope="row" class="text-nowrap table-primary"><label for="apply_birth">申請人﹝代表人﹞<br>出生年月日<span
+                                            class="red">＊</span></label></th>
+                                <td class="text-nowrap"><input name="apply_birth" type="text" class="form-control" id="Datepicker1"
+                                        placeholder="請填寫出生年月日" title="請填寫申請人出生年月日" size="10">
+                                    <div class="invalidfeedback red">
+                                        請填寫申請人出生年月日
+                                    </div>
+                                </td>
+                                <th scope="row" class="text-nowrap table-primary"><label for="apply_id">申請人統一編號<span
+                                            class="red">＊</span></label></th>
+                                <td class="text-nowrap"><input name="apply_id" type="text" class="form-control" size="15"
+                                        id="apply_id" placeholder="請填寫" title="請填寫申請人統一編號">
+                                    <div class="invalidfeedback red">
+                                        請填寫申請人統一編號
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="text-nowrap table-primary"><label for="apply_tel">申請人電話<span
+                                            class="red">＊</span></label></th>
+                                <td class="text-nowrap"><input name="apply_tel" type="text" class="form-control" size="23"
+                                        id="apply_tel" placeholder="請填寫" title="填寫範例：02-24324001分機 311">
+                                    <div class="invalidfeedback red">
+                                        填寫範例：02-24324001分機 311
+                                    </div>
+                                </td>
+                                <th scope="row" class="text-nowrap table-primary"><label for="apply_email">申請人住址<span
+                                            class="red">＊</span></label></th>
+                                <td colspan="3" class="text-nowrap"><input name="apply_add" type="text" class="form-control"
+                                        size="60" id="apply_add" placeholder="請填寫" title="請填寫申請人住址">
+                                    <div class="invalidfeedback red">
+                                        請填寫申請人住址
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="text-nowrap table-primary">申辦人 Email</th>
+                                <td colspan="5" class="text-nowrap">
+                                    <input name="apply_email" type="text" class="form-control" size="60" id="apply_email"
+                                        placeholder="請填寫" title="請填寫申辦人 Email( 不限個人常用的E-mail )">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="text-nowrap table-primary"><label for="agent_re">代理人姓名</label></th>
+                                <td class="text-nowrap"><input name="agent_name" type="text" class="form-control" size="15"
+                                        id="agent_name" placeholder="請填寫" title="請填寫代理人姓名"></td>
+                                <th scope="row" class="text-nowrap table-primary"><label for="agent_birth">代理人出生年月日</label></th>
+                                <td class="text-nowrap"><input name="agent_birth" type="text" class="form-control" id="Datepicker2"
+                                        placeholder="請填寫" title="請填寫代理人出生年月日" size="10"></td>
+                                <th scope="row" class="text-nowrap table-primary"><label for="agent_id">代理人統一編號</label></th>
+                                <td class="text-nowrap"><input name="agent_id" type="text" class="form-control" size="15"
+                                        id="agent_id" placeholder="請填寫" title="請填寫代理人統一編號"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="text-nowrap table-primary"><label for="agent_tel">代理人電話</label></th>
+                                <td class="text-nowrap"><input name="agent_tel" type="text" class="form-control" size="23"
+                                        id="agent_tel" placeholder="請填寫" title="填寫範例：02-226895412分機 104"></td>
+                                <th scope="row" class="text-nowrap table-primary"><label for="agent_add">代理人住址</label></th>
+                                <td colspan="3" class="dline06"><input name="agent_add" type="text" class="form-control"
+                                        size="60" id="agent_add" placeholder="請填寫" title="請填寫代理人住址"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="text-nowrap table-primary">代理人與申請人關係</th>
+                                <td colspan="5" class="dline06"><input name="agent_re" type="text" class="form-control"
+                                        size="15" id="agent_re" placeholder="請填寫" title="請填寫代理人與申請人關係"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="text-nowrap table-primary">法人、團體、事務所資料<br>﹝個人申請時免填﹞</th>
+                                <td colspan="5" class="text-nowrap"><label for="company_name">名稱：</label><input name="company_name"
+                                        type="text" class="form-control" size="20" id="company_name" placeholder="請填寫"
+                                        title="請填寫法人、團體、事務所名稱">
+                                    <label for="company_add">地址：</label><input name="company_add" type="text" class="form-control"
+                                        size="60" id="company_add" placeholder="請填寫" title="請填寫地址"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="text-nowrap table-primary">土地申請標的<span class="red">＊</span></th>
+                                <td class="text-nowrap">段小段
+                                    <input name="sarea_1" type="text" class="form-control" size="15" id="sarea_1"
+                                        placeholder="請填寫" title="請填寫段小段">
+                                    <div class="invalidfeedback red">
+                                        請填寫段小段
+                                    </div>
+                                </td>
+                                <th scope="row" class="text-nowrap table-primary">地號<span class="red">＊</span></th>
+                                <td class="text-nowrap"><input name="areano_1" type="text" class="form-control" size="20"
+                                        id="areano_1" placeholder="請填寫" title="請填寫地號">
+                                    <div class="invalidfeedback red">
+                                        請填寫地號
+                                    </div>
+                                </td>
+                                <th scope="row" class="text-nowrap table-primary">申請份數<span class="red">＊</span></th>
+                                <td class="text-nowrap">
+                                    <input name="docitem_1" type="text" class="form-control" size="20" id="docitem_1"
+                                        placeholder="請填寫" title="請填寫申請份數">
+                                    <div class="invalidfeedback red">
+                                        請填寫申請份數
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="text-nowrap table-primary">建物申請標的<span class="red">＊</span></th>
+                                <td class="text-nowrap">段小段
+                                    <input name="sarea_2" type="text" class="form-control" size="15" id="sarea_2"
+                                        placeholder="請填寫" title="請填寫段小段">
+                                    <div class="invalidfeedback red">
+                                        請填寫段小段
+                                    </div>
+                                </td>
+                                <th scope="row" class="text-nowrap table-primary"><label for="docname_2">建號<span class="red">＊</span></label></th>
+                                <td class="text-nowrap"><input name="areano_2" type="text" class="form-control" size="20"
+                                        id="areano_2" placeholder="請填寫" title="請填寫建號">
+                                    <div class="invalidfeedback red">
+                                        請填寫建號
+                                    </div>
+                                </td>
+                                <th scope="row" class="text-nowrap table-primary">申請份數<span class="red">＊</span></th>
+                                <td class="text-nowrap">
+                                    <input name="docitem_2" type="text" class="form-control" size="20" id="docitem_2"
+                                        placeholder="請填寫" title="請填寫申請份數">
+                                    <div class="invalidfeedback red">
+                                        請填寫申請份數
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="text-nowrap table-primary">申請用途<span class="red">＊</span></th>
+                                <td colspan="5" class="dline06">
+                                    <input TYPE="checkbox" NAME="purpose_1" value="1" id="purpose_1">
+                                    <label for="purpose_1">購屋、貸款使用</label>
+                                    <input TYPE="checkbox" NAME="purpose_2" value="1" id="purpose_2">
+                                    <label for="purpose_2">處理訴訟案件</label>
+                                    <input TYPE="checkbox" NAME="purpose_3" value="1" id="purpose_3">
+                                    <label for="purpose_3">政府機關申請案</label>
+                                    <input TYPE="checkbox" NAME="purpose_4" value="1" id="purpose_4">
+                                    <label for="purpose_4">自行參考</label>
+                                    <br>
+                                    <input TYPE="checkbox" NAME="purpose_5" value="1" id="purpose_5">
+                                    <label for="purpose_5">其他：</label>
+                                    <input name="purpose_note" type="text" class="form-control" size="50" id="purpose_note"
+                                        placeholder="請選擇申請目的" title="請選擇申請目的">
+                                    <div class="invalidfeedback red">
+                                        請選擇申請目的
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="text-nowrap table-primary">備註</th>
+                                <td colspan="5">
+                                    1.地號分別為地號母號、地號子號各4碼，一共為8碼。例：地號母子號427-13，格式應為0427-0013，以此類推<br>
+                                    2.建號分別為建號母號5碼、建號子號3碼，一共為8碼。例：建號母子號427-13，格式應為00427-013，以此類推<br>
+                                    3.本所接獲台端申請案後，將由專人立即連繫取件時間<br>
+                                    4.為確保申領資料無誤，各欄位資料請務必正確填載<br>
+                                    5.本英文謄本格式一律為 標示部 + 所有權部（個人），無他項權利部資料<br>
+                                    6.台端所填之個人資料，本所將依規保護<br>
+                                    7.填寫時，如有任何問題，請洽本所第一課 02-24324001 分機124
+                                </td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+                <h4 class="mt-4 text-info"><span class="fas fa-braille"></span> 網路申領英文謄本網頁問卷 (必須填寫)</h4>
+                <p class="mt-3 mb-3 h5">為提供民眾更好的服務，請您協助填寫以下問卷，非常謝謝您的協助。</p>
+                <div class="card">
+                    <div class="card-body p-0">
+                        <table class="table table-hover border-bottom rwd-table m-0" summary="編排用表格">
+                            <caption class="sr-only">
+                                網路申領英文謄本網頁問卷 (必須填寫)
+                            </caption>
+                            <tr>
+                                <th class="text-nowrap table-success"><label for="qa_1">1.請問您從何處得知本所「網路申領英文謄本」？<span
+                                            class="red">＊</span></label></th>
+                            </tr>
+                            <tr>
+                                <td class="text-nowrap">
+                                    <input name="qa_1" id="qa_11" type="radio" value="1" required>
+                                    傳播媒體
+                                    <input name="qa_1" id="qa_12" type="radio" value="2" required>
+                                    報章雜誌
+                                    <input name="qa_1" id="qa_13" type="radio" value="3" required>
+                                    本所宣導品
+                                    <input name="qa_1" id="qa_14" type="radio" value="4" required>
+                                    親朋好友告知
+                                    <input name="qa_1" id="qa_15" type="radio" value="5" required>
+                                    自己發現
+                                    <span id="errorQa1" class="invalidfeedback red">
+                                        請填寫
+                                    </span></td>
+                            </tr>
+                            <tr>
+                                <th class="text-nowrap table-success"><label for="qa_2">2.請問您對於本所「網路申領英文謄本」網頁操作介面是否滿意？<span
+                                            class="red">＊</span></label></th>
+                            </tr>
+
+                            <tr>
+                                <td class="text-nowrap">
+                                    <input name="qa_2" id="qa_21" type="radio" value="1">
+                                    非常滿意
+                                    <input name="qa_2" id="qa_22" type="radio" value="2">
+                                    滿意
+                                    <input name="qa_2" id="qa_23" type="radio" value="3">
+                                    普通
+                                    <input name="qa_2" id="qa_24" type="radio" value="4">
+                                    不滿意
+                                    <input name="qa_2" id="qa_25" type="radio" value="5">
+                                    非常不滿意
+                                    <span id="errorQa2" class="invalidfeedback red">
+                                        請填寫
+                                    </span></td>
+                            </tr>
+
+                            <tr>
+                                <th class="text-nowrap table-success"><label for="qa_3">3.請問您認為「網路申領英文謄本」此項服務，能節省您多少時間？<span
+                                            class="red">＊</span></label></th>
+                            </tr>
+                            <tr>
+                                <td class="text-nowrap">
+                                    <input name="qa_3" id="qa_31" type="radio" value="1">
+                                    4小時以上
+                                    <input name="qa_3" id="qa_32" type="radio" value="2">
+                                    3-4小時
+                                    <input name="qa_3" id="qa_33" type="radio" value="3">
+                                    2-3小時
+                                    <input name="qa_3" id="qa_34" type="radio" value="4">
+                                    1-2小時
+                                    <input name="qa_3" id="qa_35" type="radio" value="5">
+                                    1小時以內
+                                    <span id="errorQa3" class="invalidfeedback red">
+                                        請填寫
+                                    </span></td>
+                            </tr>
+                            <tr>
+                                <th class="text-nowrap table-success"><label for="qa_4">4.總體而言，請問您對於本所「網路申領英文謄本」此項服務，是否滿意？<span
+                                            class="red">＊</span></label></th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input name="qa_4" id="qa_41" type="radio" value="1">
+                                    非常滿意
+                                    <input name="qa_4" id="qa_42" type="radio" value="2">
+                                    滿意
+                                    <input name="qa_4" id="qa_43" type="radio" value="3">
+                                    普通
+                                    <input name="qa_4" id="qa_44" type="radio" value="4">
+                                    不滿意
+                                    <input name="qa_4" id="qa_45" type="radio" value="5">
+                                    非常不滿意
+                                    <span id="errorQa4" class="invalidfeedback red">
+                                        請填寫
+                                    </span></td>
+                            </tr>
+                            <tr>
+                                <th class="text-nowrap table-success"><label for="qa_5">5.請問您的職業是：<span class="red">＊</span></label></th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input name="qa_5" id="qa_51" type="radio" value="1">
+                                    地政士或不動產相關行業
+                                    <input name="qa_5" id="qa_52" type="radio" value="2">
+                                    銀行或金融業
+                                    <input name="qa_5" id="qa_53" type="radio" value="3">
+                                    軍公教
+                                    <input name="qa_5" id="qa_54" type="radio" value="4">
+                                    農漁商
+                                    <input name="qa_5" id="qa_55" type="radio" value="5">
+                                    自由業或其他
+                                    <span id="errorQa5" class="invalidfeedback red">
+                                        請填寫
+                                    </span></td>
+                            </tr>
+                            <tr>
+                                <th class="text-nowrap table-success">填寫日期：
+                                    <% =date()%>
+                                    <input name="wdate" type="hidden" id="wdate" value="<% =date()%>"></th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="mt-3 mb-3 text-right">
+                    <button name="Submit2" type="reset" class="btn btn-default">重填</button>
+                    <button name="action1" type="bottom" onClick="location.href='status.html'" class="btn btn-primary"><span
+                            class=""></span>送出表單 <span class="fab fa-telegram-plane"></span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- /內文區 -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="base/js/jquery.min.js"></script>
+    <script src="base/js/popper.min.js"></script>
+    <script src="base/js/bootstrap.min.js"></script>
+    <script src="base/plugin/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script src="base/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.zh-TW.min.js"></script>
+    <script src="base/js/base.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#Datepicker1').datepicker({
+                format: "yyyy-mm-dd",
+                autoclose: true,
+                startDate: "today",
+                clearBtn: true,
+                calendarWeeks: false,
+                todayHighlight: true,
+                language: 'zh-TW'
+            });
+
+        });
+    </script>
+    <noscript>
+        <div class="container">
+            <div class="row">
+                <div class="card m-3 banner">
+                    <div class="card-body p-3">
+                        您的瀏覽器不支援javascript，但不影響網頁內容陳述，如開啟JavaScript，可得到視覺與特效的最佳瀏覽
+                        <br>列印功能：請按下ctrl+P開啟列印視窗,或由工具列中選擇列印功能
+                        <br>如需要選擇字級大小，IE6請利用鍵盤按住ALT鍵+ V → X → (G)最大(L)較大(M)中(S)較小(A)小，來選擇適合您的文字大小，
+                        而IE7或Firefox瀏覽器則可利用鍵盤 Ctrl
+                        + (+)放大(-)縮小來改變字型大小，如需要回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </noscript>
+</body>
+
+</html>

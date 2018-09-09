@@ -68,7 +68,7 @@
                                     </div>
                                 </td>
                                 <th scope="row" class="text-nowrap table-primary"><span class="red">＊</span><label for="apply_birth">申請人﹝代表人﹞<br>出生年月日</label></th>
-                                <td class="text-nowrap"><input name="apply_birth" type="date" class="form-control" id="errorApplybirth"
+                                <td class="text-nowrap"><input name="apply_birth" type="text" class="form-control" id="errorApplybirth"
                                         placeholder="請填寫申請人出生年月日" title="請填寫申請人出生年月日" size="10" required>
                                     <div class="invalidfeedback red">
                                         請填寫申請人出生年月日
@@ -411,12 +411,12 @@
     <script src="base/js/base.js"></script>
     <script>
         $(document).ready(function () {
-            $('[type="date"]').datepicker({
+            $('#errorApplybirth').datepicker({
                 format: "yyyy-mm-dd",
                 autoclose: true,
                 startDate: "today",
                 clearBtn: true,
-                calendarWeeks: true,
+                calendarWeeks: false,
                 todayHighlight: true,
                 language: 'zh-TW'
             });
