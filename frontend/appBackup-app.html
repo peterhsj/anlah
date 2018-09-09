@@ -38,6 +38,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="base/css/bootstrap.min.css">
     <link href="base/icon-css/all.min.css" rel="stylesheet">
+    <link href="base/plugin/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
     <link href="base/css/base.min.css" rel="stylesheet">
     <style>
     </style>
@@ -47,7 +48,7 @@
     <!-- 內文區 -->
     <div class="mt-3">
         <div class="row">
-            <form class="m-auto needs-validation" novalidate method="post" name="addForm">
+            <form class="m-auto" method="post" name="addForm">
                 <div class="card">
                     <div class="card-header text-center">
                         <h4 class="text-info">網路申請檔案閱覽抄錄複製服務申請表 (有＊記號的欄位必須填寫)</h4>
@@ -62,22 +63,22 @@
                                 <td class="text-nowrap">
                                     <input name="apply_name" type="text" class="form-control" size="15" id="apply_name"
                                         placeholder="請填寫申請人姓名" title="請填寫申請人姓名" required>
-                                    <div class="invalid-feedback">
-                                        <span class="fas fa-arrow-alt-square-up"></span> 請填寫申請人姓名
+                                    <div class="invalidfeedback red">
+                                        請填寫申請人姓名
                                     </div>
                                 </td>
                                 <th scope="row" class="text-nowrap table-primary"><span class="red">＊</span><label for="apply_birth">申請人﹝代表人﹞<br>出生年月日</label></th>
-                                <td class="text-nowrap"><input name="apply_birth" type="text" class="form-control" id="errorApplybirth"
+                                <td class="text-nowrap"><input name="apply_birth" type="date" class="form-control" id="errorApplybirth"
                                         placeholder="請填寫申請人出生年月日" title="請填寫申請人出生年月日" size="10" required>
-                                    <div class="invalid-feedback">
-                                        <span class="fas fa-arrow-alt-square-up"></span> 請填寫申請人出生年月日
+                                    <div class="invalidfeedback red">
+                                        請填寫申請人出生年月日
                                     </div>
                                 </td>
                                 <th scope="row" class="text-nowrap table-primary"><span class="red">＊</span><label for="apply_id">申請人統一編號</label></th>
                                 <td class="text-nowrap"><input name="apply_id" type="text" class="form-control" size="15"
                                         id="apply_id" placeholder="請填寫申請人統一編號" title="請填寫申請人統一編號" required>
-                                    <div class="invalid-feedback">
-                                        <span class="fas fa-arrow-alt-square-up"></span> 請填寫申請人統一編號
+                                    <div class="invalidfeedback red">
+                                        請填寫申請人統一編號
                                     </div>
                                 </td>
                             </tr>
@@ -86,16 +87,16 @@
                                 <td class="text-nowrap"><input name="apply_tel" type="text" class="form-control" size="23"
                                         id="apply_tel" placeholder="請填寫申請人電話" title="請填寫申請人電話(例：02-24324001分機 311)"
                                         required>
-                                    <div class="invalid-feedback">
-                                        <span class="fas fa-arrow-alt-square-up"></span> 請填寫申請人電話(例：02-24324001分機 311)
+                                    <div class="invalidfeedback red">
+                                        請填寫申請人電話(例：02-24324001分機 311)
                                     </div>
                                 </td>
                                 <th scope="row" class="text-nowrap table-primary"><span class="red">＊</span><label for="apply_add">請填寫申請人住址</label>
                                 </th>
                                 <td colspan="3" class="text-nowrap"><input name="apply_add" type="text" class="form-control"
                                         size="60" id="apply_add" placeholder="請填寫申請人住址" title="請填寫申請人住址" required>
-                                    <div class="invalid-feedback">
-                                        <span class="fas fa-arrow-alt-square-up"></span> 請填寫申請人住址
+                                    <div class="invalidfeedback red">
+                                        請填寫申請人住址
                                     </div>
                                 </td>
                             </tr>
@@ -157,8 +158,8 @@
                                     [
                                     <a href="https://near.archives.gov.tw/" target="_blank" title="另外連結到全國檔案目錄查詢網">查詢</a>
                                     ]
-                                    <div class="invalid-feedback">
-                                        <span class="fas fa-arrow-alt-square-up"></span> 請填寫檔號或收發文字號
+                                    <div class="invalidfeedback red">
+                                        請填寫檔號或收發文字號
                                     </div>
                                 </td>
                                 <th scope="row" class="text-nowrap table-primary"><span class="red">＊</span><label for="docname_1">檔案名稱或內容要旨
@@ -166,8 +167,8 @@
                                 <td class="text-nowrap">
                                     <input name="docname_1" type="text" class="form-control" size="20" id="docname_1"
                                         placeholder="請填寫" title="請填寫檔案名稱或內容要旨" required>
-                                    <div class="invalid-feedback">
-                                        <span class="fas fa-arrow-alt-square-up"></span> 請填寫檔案名稱或內容要旨
+                                    <div class="invalidfeedback red">
+                                        請填寫檔案名稱或內容要旨
                                     </div>
                                 </td>
                                 <th scope="row" class="text-nowrap table-primary">
@@ -179,8 +180,8 @@
                                         <option value="複製" required>複製</option>
                                         <option value="全部" required>全部</option>
                                     </select>
-                                    <div class="invalid-feedback">
-                                        <span class="fas fa-arrow-alt-square-up"></span> 請填寫檔案名稱或內容要旨
+                                    <div class="invalidfeedback red">
+                                        請填寫檔案名稱或內容要旨
                                     </div>
                                 </td>
                             </tr>
@@ -259,8 +260,8 @@
                                     <label for="purpose_6">其他：</label>
                                     <input name="purpose_note" type="text" class="form-control" size="50" id="purpose_note"
                                         placeholder="請敘明目的" title="請敘明目的">
-                                    <div class="invalid-feedback">
-                                        <span class="fas fa-arrow-alt-square-up"></span> 請選擇申請目的
+                                    <div class="invalidfeedback red">
+                                        請選擇申請目的
                                     </div>
                                 </td>
                             </tr>
@@ -296,8 +297,8 @@
                                     親朋好友告知
                                     <input name="qa_1" id="qa_15" type="radio" value="5" required>
                                     自己發現
-                                    <span id="errorQa1" class="invalid-feedback">
-                                        <span class="fas fa-arrow-alt-square-up"></span> 請填寫
+                                    <span id="errorQa1" class="invalidfeedback red">
+                                        請填寫
                                     </span></td>
                             </tr>
                             <tr>
@@ -317,8 +318,8 @@
                                     不滿意
                                     <input name="qa_2" id="qa_25" type="radio" value="5">
                                     非常不滿意
-                                    <span id="errorQa2" class="invalid-feedback">
-                                        <span class="fas fa-arrow-alt-square-up"></span> 請填寫
+                                    <span id="errorQa2" class="invalidfeedback red">
+                                        請填寫
                                     </span></td>
                             </tr>
 
@@ -338,8 +339,8 @@
                                     1-2小時
                                     <input name="qa_3" id="qa_35" type="radio" value="5">
                                     1小時以內
-                                    <span id="errorQa3" class="invalid-feedback">
-                                        <span class="fas fa-arrow-alt-square-up"></span> 請填寫
+                                    <span id="errorQa3" class="invalidfeedback red">
+                                        請填寫
                                     </span></td>
                             </tr>
                             <tr>
@@ -358,8 +359,8 @@
                                     不滿意
                                     <input name="qa_4" id="qa_45" type="radio" value="5">
                                     非常不滿意
-                                    <span id="errorQa4" class="invalid-feedback">
-                                        <span class="fas fa-arrow-alt-square-up"></span> 請填寫
+                                    <span id="errorQa4" class="invalidfeedback red">
+                                        請填寫
                                     </span></td>
                             </tr>
                             <tr>
@@ -377,8 +378,8 @@
                                     農漁商
                                     <input name="qa_5" id="qa_55" type="radio" value="5">
                                     自由業或其他
-                                    <span id="errorQa5" class="invalid-feedback">
-                                        <span class="fas fa-arrow-alt-square-up"></span> 請填寫
+                                    <span id="errorQa5" class="invalidfeedback red">
+                                        請填寫
                                     </span></td>
                             </tr>
                             <tr>
@@ -391,40 +392,34 @@
                 </div>
                 <div class="mt-3 mb-3 text-right">
                     <button name="Submit2" type="reset" class="btn btn-default">重填</button>
-                    <button name="action1" type="bottom" onClick="location.href='status.html'" class="btn btn-primary"><span class=""></span>送出表單 <span class="fab fa-telegram-plane"></span>
-</button>
+                    <button name="action1" type="bottom" onClick="location.href='status.html'" class="btn btn-primary"><span
+                            class=""></span>送出表單 <span class="fab fa-telegram-plane"></span>
+                    </button>
                 </div>
             </form>
         </div>
     </div>
     <!-- /內文區 -->
 
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="base/js/jquery.min.js"></script>
     <script src="base/js/popper.min.js"></script>
     <script src="base/js/bootstrap.min.js"></script>
-    <script src="base/js/datatables.min.js"></script>
-    <script src="base/plugin/DataTables-1.10.18/js/dataTables.bootstrap4.min.js"></script>
+    <script src="base/plugin/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script src="base/plugin/bootstrap-datepicker/locales/bootstrap-datepicker.zh-TW.min.js"></script>
     <script src="base/js/base.js"></script>
     <script>
         $(document).ready(function () {
-            'use strict';
-            window.addEventListener('load', function () {
-                // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                var forms = document.getElementsByClassName('needs-validation');
-                // Loop over them and prevent submission
-                var validation = Array.prototype.filter.call(forms, function (form) {
-                    form.addEventListener('submit', function (event) {
-                        if (form.checkValidity() === false) {
-                            event.preventDefault();
-                            event.stopPropagation();
-                        }
-                        form.classList.add('was-validated');
-                    }, false);
-                });
-            }, false);
+            $('[type="date"]').datepicker({
+                format: "yyyy-mm-dd",
+                autoclose: true,
+                startDate: "today",
+                clearBtn: true,
+                calendarWeeks: true,
+                todayHighlight: true,
+                language: 'zh-TW'
+            });
 
         });
     </script>
