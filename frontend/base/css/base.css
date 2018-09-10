@@ -951,4 +951,20 @@ span.fa-file-alt {
 .errortext.active {
   display: inline;
 }
+
+.w-10 {
+  width: 10%;
+}
+
+.w-20 {
+  width: 20%;
+}
+
+.w-30 {
+  width: 30%;
+}
+
+.w-40 {
+  width: 40%;
+}
 /*# sourceMappingURL=base.css.map */
