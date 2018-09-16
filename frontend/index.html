@@ -26,8 +26,7 @@
   <meta name="Category.Theme" content="140">
   <meta name="Category.Cake" content="J40">
   <meta name="Category.Service" content="I61">
-  <meta name="Keywords" content="安樂地政,地政事務所,土地,建物,登記,測量,地價,登記公告,不動產,繼承列管,書狀補給,案件辦理查詢,視訊,諮詢,地政電傳,簡易案件,電子謄本,公告地價,法令,須知,簡介,最新消息,檔案管理,便民服務,查詢"
- >
+  <meta name="Keywords" content="安樂地政,地政事務所,土地,建物,登記,測量,地價,登記公告,不動產,繼承列管,書狀補給,案件辦理查詢,視訊,諮詢,地政電傳,簡易案件,電子謄本,公告地價,法令,須知,簡介,最新消息,檔案管理,便民服務,查詢">
   <!-- 分類檢索 End -->
   <meta name="Accessible_website" content="本網站通過通過AAA優先等級無障礙網頁檢測">
   <title>基隆市安樂地政事務所全球資訊網</title>
@@ -38,6 +37,8 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="base/css/bootstrap.min.css">
   <link href="base/icon-css/all.min.css" rel="stylesheet">
+  <link href="base/css/datatables.min.css" rel="stylesheet">
+  <link href="base/plugin/DataTables-1.10.18/css/dataTables.bootstrap4.min.css" rel="stylesheet">
   <link href="base/css/base.min.css" rel="stylesheet">
   <style>
   </style>
@@ -65,13 +66,13 @@
           <div class="card-header pt-0">
             <ul class="nav nav-pills card-header-pills" id="pills-tab" role="tablist">
               <li class="nav-item">
-                <a class="nav-link active font-weight-bold" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home"
-                  aria-selected="true">
+                <a class="nav-link active font-weight-bold" id="pills-home-tab" data-toggle="pill" href="#pills-home"
+                  role="tab" aria-controls="pills-home" aria-selected="true">
                   <span class="fas fa-bullhorn"></span> 最新消息</a>
               </li>
               <li class="nav-item ml-1">
-                <a class="nav-link font-weight-bold" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile"
-                  aria-selected="false">
+                <a class="nav-link font-weight-bold" id="pills-profile-tab" data-toggle="pill" href="#pills-profile"
+                  role="tab" aria-controls="pills-profile" aria-selected="false">
                   <span class="fas fa-balance-scale"></span> 法令新訊</a>
               </li>
             </ul>
@@ -190,7 +191,7 @@
           <!-- 常用工具-->
           <ul class="d-flex flex-wrap justify-content-between h-100">
             <li class="text-center">
-              <a href="#">
+              <a href="govService.html">
                 <span class="fas fa-building rounded"></span> 政府資訊公開</span>
               </a>
             </li>
@@ -200,7 +201,7 @@
               </a>
             </li>
             <li class="text-center">
-              <a href="#">
+              <a href="https://sap.bot.com.tw/sap/sap1030s?MID=S00002" target="_blank" title="開啟新的導覽視窗">
                 <span class="fal fa-credit-card rounded"></span> 網路ATM</span>
               </a>
             </li>
@@ -225,17 +226,17 @@
               </a>
             </li>
             <li class="text-center">
-              <a href="#" target="_blank" title="開啟新的導覽視窗">
+              <a href="inheritedLand.html" target="_blank" title="開啟新的導覽視窗">
                 <span class="fa fa-project-diagram rounded"></span> 未辦繼承列管資料</span>
               </a>
             </li>
             <li class="text-center">
-              <a href="#">
+              <a href="foreigner_land.html">
                 <span class="fa fa-street-view rounded"></span> 外籍人士地權專區</span>
               </a>
             </li>
             <li class="text-center">
-              <a href="#">
+              <a href="question.html">
                 <span class="fal fa-smile-plus rounded"> </span> 便民服務投票區</span>
               </a>
             </li>
@@ -260,7 +261,7 @@
             <div class="card-body">
               <ul class="list-group list-group-flush">
                 <li class="list-group-item list-group-item-action border-0">
-                  <a href="https://landquery.klcg.gov.tw/query/notinherit.jsp" class="card-link">
+                  <a href="https://landquery.klcg.gov.tw/query/notinherit.jsp" target="_blank" title="開啟新的導覽視窗" class="card-link">
                     <span class="fas fa-caret-right"></span> 未辦理繼承專區</a>
                 </li>
                 <li class="list-group-item list-group-item-action border-0">
@@ -268,11 +269,11 @@
                     <span class="fas fa-caret-right"></span> 檔案應用專區</a>
                 </li>
                 <li class="list-group-item list-group-item-action border-0">
-                  <a href="# " class="card-link">
+                  <a href="foreigner_land.html" class="card-link">
                     <span class="fas fa-caret-right"></span> 外籍人士專區</a>
                 </li>
                 <li class="list-group-item list-group-item-action border-0">
-                  <a href="# " class="card-link">
+                  <a href="govService.html" class="card-link">
                     <span class="fas fa-caret-right"></span> 資訊公開專區</a>
                 </li>
               </ul>
@@ -322,19 +323,20 @@
                 <div class="col">
                   <ul class="list-group list-group-flush">
                     <li class="list-group-item list-group-item-action border-0">
-                      <a href="# " class="card-link">
+                      <a href="https://www.land.moi.gov.tw/chhtml/tabledown.asp?cid=52&qocid=1012" class="card-link"
+                        target="_blank" title="開啟新的導覽視窗">
                         <span class="fas fa-caret-right"></span> 登記類</a>
                     </li>
                     <li class="list-group-item list-group-item-action border-0">
-                      <a href="# " class="card-link">
-                        <span class="fas fa-caret-right"></span> 測量類</a>
-                    </li>
-                    <li class="list-group-item list-group-item-action border-0">
-                      <a href="# " class="card-link">
+                      <a href="app_download.html#correct2" class="card-link">
                         <span class="fas fa-caret-right"></span> 地價類</a>
                     </li>
                     <li class="list-group-item list-group-item-action border-0">
-                      <a href="# " class="card-link">
+                      <a href="app_download.html#correct3" class="card-link">
+                        <span class="fas fa-caret-right"></span> 測量類</a>
+                    </li>
+                    <li class="list-group-item list-group-item-action border-0">
+                      <a href="app_download.html#correct4" class="card-link">
                         <span class="fas fa-caret-right"></span> 謄本類</a>
                     </li>
                   </ul>
@@ -342,15 +344,15 @@
                 <div class="col">
                   <ul class="list-group list-group-flush">
                     <li class="list-group-item list-group-item-action border-0">
-                      <a href="# " class="card-link">
+                      <a href="app_download.html#correct5" class="card-link">
                         <span class="fas fa-caret-right"></span> 資訊類</a>
                     </li>
                     <li class="list-group-item list-group-item-action border-0">
-                      <a href="# " class="card-link">
+                      <a href="app_download.html#correct6" class="card-link">
                         <span class="fas fa-caret-right"></span> 地用類</a>
                     </li>
                     <li class="list-group-item list-group-item-action border-0">
-                      <a href="# " class="card-link">
+                      <a href="app_download.html#correct7" class="card-link">
                         <span class="fas fa-caret-right"></span> 其他類</a>
                     </li>
                   </ul>
@@ -368,23 +370,23 @@
             <div class="card-body">
               <ul class="list-group list-group-flush">
                 <li class="list-group-item list-group-item-action border-0">
-                  <a href="# " class="card-link">
+                  <a href="land_unit.html" class="card-link">
                     <span class="fas fa-caret-right"></span> 全國地政單位</a>
                 </li>
                 <li class="list-group-item list-group-item-action border-0">
-                  <a href="# " class="card-link">
+                  <a href="land_service.html" class="card-link">
                     <span class="fas fa-caret-right"></span> 地政服務資訊</a>
                 </li>
                 <li class="list-group-item list-group-item-action border-0">
-                  <a href="# " class="card-link">
+                  <a href="http://keelungland.org.tw" target="_blank" title="開啟新的導覽視窗" class="card-link">
                     <span class="fas fa-caret-right"></span> 基隆市地政士公會</a>
                 </li>
                 <li class="list-group-item list-group-item-action border-0">
-                  <a href="# " class="card-link">
+                  <a href="http://www.rocrea.org.tw/index_tw.php" target="_blank" title="開啟新的導覽視窗" class="card-link">
                     <span class="fas fa-caret-right"></span> 中華民國地政士公會全國聯合會</a>
                 </li>
                 <li class="list-group-item list-group-item-action border-0">
-                  <a href="# " class="card-link">
+                  <a href="tax_unit.html" class="card-link">
                     <span class="fas fa-caret-right"></span> 各地稅務機關</a>
                 </li>
               </ul>
@@ -475,6 +477,8 @@
   <script src="base/js/jquery.min.js"></script>
   <script src="base/js/popper.min.js"></script>
   <script src="base/js/bootstrap.min.js"></script>
+  <script src="base/js/datatables.min.js"></script>
+  <script src="base/plugin/DataTables-1.10.18/js/dataTables.bootstrap4.min.js"></script>
   <script src="base/js/base.js"></script>
   <noscript>
     <div class="container">
@@ -483,7 +487,8 @@
           <div class="card-body p-3">
             您的瀏覽器不支援javascript，但不影響網頁內容陳述，如開啟JavaScript，可得到視覺與特效的最佳瀏覽
             <br>列印功能：請按下ctrl+P開啟列印視窗,或由工具列中選擇列印功能
-            <br>如需要選擇字級大小，IE6請利用鍵盤按住ALT鍵+ V → X → (G)最大(L)較大(M)中(S)較小(A)小，來選擇適合您的文字大小， 而IE7或Firefox瀏覽器則可利用鍵盤 Ctrl + (+)放大(-)縮小來改變字型大小，如需要回到上一頁可使用瀏覽器提供的
+            <br>如需要選擇字級大小，IE6請利用鍵盤按住ALT鍵+ V → X → (G)最大(L)較大(M)中(S)較小(A)小，來選擇適合您的文字大小， 而IE7或Firefox瀏覽器則可利用鍵盤 Ctrl +
+            (+)放大(-)縮小來改變字型大小，如需要回到上一頁可使用瀏覽器提供的
             Alt+左方向鍵(←)
           </div>
         </div>

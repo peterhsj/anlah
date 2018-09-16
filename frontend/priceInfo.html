@@ -37,6 +37,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="base/css/bootstrap.min.css">
     <link href="base/icon-css/all.min.css" rel="stylesheet">
+    <link href="base/css/datatables.min.css" rel="stylesheet">
+    <link href="base/plugin/DataTables-1.10.18/css/dataTables.bootstrap4.min.css" rel="stylesheet">
     <link href="base/css/base.min.css" rel="stylesheet">
     <style>
     </style>
@@ -44,7 +46,7 @@
 
 <body>
     <!-- 表頭 -->
-    <div id="headerTxt" class="d-print-none"></div>
+    <div id="headerContent" class="d-print-none"></div>
     <!-- /表頭 -->
 
     <!-- 主選單 -->
@@ -110,12 +112,16 @@
                     <div class="markTag"></div>
                     <h2>網路申請公告地價資料服務</h2>
                     <p class="darkblue">為節省民眾臨櫃申請時間並達成電子化政府目標，利用網路傳輸技術，提供網路申請公告地價資料服務。</p>
-                    <p class="sienna">A.服務時間：</p>
+                    <h3>
+                        <span class="fas fa-bookmark"></span> 服務時間：
+                    </h3>
                     <ol class="textOl-layout1">
                         <li>網路受理申請時間：二十四小時。</li>
                         <li>服務窗口領件時間：週一至週五（不含例假日），8時至17時30分。</li>
                     </ol class="textOl-layout1">
-                    <p class="sienna">B.申請人注意事項：</p>
+                    <h3>
+                        <span class="fas fa-bookmark"></span> 申請人注意事項：
+                    </h3>
                     <ol class="textOl-layout1">
                         <li>本項作業服務範圍僅限於本所所屬轄區之資料。</li>
                         <li>本項作業係透過網路連線方式傳輸作業，如遇網路連線壅塞、中斷等不確定因素影響，致使資料無法順利送達本所之情形，尚請見諒。</li>
@@ -125,7 +131,9 @@
                         <li>如需查詢本所轄區地段名稱（段名及小段名）請至本所網站『資料查詢』之『
                             <a href="https://landquery.klcg.gov.tw/query/r48.jsp" title="開啟新的導覽視窗" target="_blank">區段代碼對照</a>』服務中查詢</li>
                     </ol>
-                    <p class="sienna">C.連絡電話：</p>
+                    <h3>
+                        <span class="fas fa-bookmark"></span> 連絡電話：
+                    </h3>
                     <ol class="textOl-layout1">
                         <li>七堵區地價業務承辦人：(02)24324001分機312</li>
                         <li>暖暖區地價業務承辦人：(02)24324001分機312</li>
@@ -147,7 +155,7 @@
                             </a>
                         </p>
                         <p class=" text-center">
-                            <a href="#" target="_blank" title="開啟新的導覽視窗" class="btn btn-primary btn-lg" role="button" aria-pressed="true">
+                            <a href="priceinfo-app.html" target="_blank" title="開啟新的導覽視窗" class="btn btn-primary btn-lg" role="button" aria-pressed="true">
                                 <span class="fas fa-file-signature"></span> 網路申請公告地價資料服務
                             </a>
                         </p>
@@ -173,6 +181,8 @@
     <script src="base/js/jquery.min.js"></script>
     <script src="base/js/popper.min.js"></script>
     <script src="base/js/bootstrap.min.js"></script>
+    <script src="base/js/datatables.min.js"></script>
+    <script src="base/plugin/DataTables-1.10.18/js/dataTables.bootstrap4.min.js"></script>
     <script src="base/js/base.js"></script>
     <script>
         $(document).ready(function () {

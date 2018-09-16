@@ -35,6 +35,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="base/css/bootstrap.min.css">
     <link href="base/icon-css/all.min.css" rel="stylesheet">
+    <link href="base/css/datatables.min.css" rel="stylesheet">
+    <link href="base/plugin/DataTables-1.10.18/css/dataTables.bootstrap4.min.css" rel="stylesheet">
     <link href="base/css/base.min.css" rel="stylesheet">
     <style>
     </style>
@@ -42,7 +44,7 @@
 
 <body>
     <!-- 表頭 -->
-    <div id="headerTxt" class="d-print-none"></div>
+    <div id="headerContent" class="d-print-none"></div>
     <!-- /表頭 -->
 
     <!-- 主選單 -->
@@ -116,12 +118,13 @@
                         <li>聯絡人：基隆市安樂地政事務所</li>
                         <li>聯絡電話：02-24324001</li>
                         <li>更新日期：2018/08/01</li>
+                        <li>瀏覽人數：hit</li>
                     </ul>
                 </div>
             </div>
             <div class="col-lg-12 d-flex mt-3 justify-content-end align-items-center d-print-none">
                 <a class="btn btn-primary btn-sm mr-3" role="button" href="userQuestion.html">
-                    <span class="fal fa-external-link-square"></span> 回導覽頁
+                    <span class="fal fa-external-link-square" aria-hidden="true"></span> 回導覽頁
                 </a>
             </div>
         </div>
@@ -139,6 +142,8 @@
     <script src="base/js/jquery.min.js"></script>
     <script src="base/js/popper.min.js"></script>
     <script src="base/js/bootstrap.min.js"></script>
+    <script src="base/js/datatables.min.js"></script>
+    <script src="base/plugin/DataTables-1.10.18/js/dataTables.bootstrap4.min.js"></script>
     <script src="base/js/base.js"></script>
     <script>
         $(document).ready(function () {

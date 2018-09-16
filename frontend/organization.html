@@ -37,6 +37,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="base/css/bootstrap.min.css">
     <link href="base/icon-css/all.min.css" rel="stylesheet">
+    <link href="base/css/datatables.min.css" rel="stylesheet">
+    <link href="base/plugin/DataTables-1.10.18/css/dataTables.bootstrap4.min.css" rel="stylesheet">
     <link href="base/css/base.min.css" rel="stylesheet">
     <style>
     </style>
@@ -44,7 +46,7 @@
 
 <body>
     <!-- 表頭 -->
-    <div id="headerTxt" class="d-print-none"></div>
+    <div id="headerContent" class="d-print-none"></div>
     <!-- /表頭 -->
 
     <!-- 主選單 -->
@@ -76,7 +78,8 @@
             </div>
             <div class="col-lg-6 d-flex justify-content-end align-items-center">
                 <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
-                    <a class="btn btn-fb btn-sm" role="button" role="button" title="網站分享至facebook(另開視窗)" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://anleh-land.gov.tw/">
+                    <a class="btn btn-fb btn-sm" role="button" role="button" title="網站分享至facebook(另開視窗)" target="_blank"
+                        href="https://www.facebook.com/sharer/sharer.php?u=http://anleh-land.gov.tw/">
                         <span class="fab fa-facebook-square"></span>
                     </a>
                     <a class="btn btn-print btn-sm" role="button" title="列印(另開視窗)" target="_blank" href="javascript:print()">
@@ -112,7 +115,8 @@
                     <div class="col-lg-9 mx-auto d-block text-center">
                         <figure class="figure">
                             <img src="images/organization.gif" class="col-lg-12 figure-img img-fluid" alt="基隆市安樂地政事務所組織系統圖">
-                            <figcaption class="figure-caption text-left">本所設第一課、第二課、第三課、人事管理員及會計員共 5 個單位。 並置主任 1 人、課長3人、人事管理員 1 人、會計員 1 人、課員 18 人、測量員 6 人及書記 1 人，合計 31
+                            <figcaption class="figure-caption text-left">本所設第一課、第二課、第三課、人事管理員及會計員共 5 個單位。 並置主任 1
+                                人、課長3人、人事管理員 1 人、會計員 1 人、課員 18 人、測量員 6 人及書記 1 人，合計 31
                                 人。
                             </figcaption>
                         </figure>
@@ -197,14 +201,14 @@
                                     <li>監印</li>
                                 </ul>
                             </div>
-                            <div class="col-lg-12">
+                            <div class="col-lg-12" id="org04">
                                 <h3 class="pl-0">
                                     <span class="fas fa-bookmark"></span>
                                     人事管理員
                                 </h3>
                                 <p class="pl-3">辦理人員任免調遷、訓練進修及退休撫卹、福利待遇等業務。</p>
                             </div>
-                            <div class="col-lg-12">
+                            <div class="col-lg-12" id="org05">
                                 <h3 class="pl-0">
                                     <span class="fas fa-bookmark"></span>
                                     會計員
@@ -234,6 +238,8 @@
     <script src="base/js/jquery.min.js"></script>
     <script src="base/js/popper.min.js"></script>
     <script src="base/js/bootstrap.min.js"></script>
+    <script src="base/js/datatables.min.js"></script>
+    <script src="base/plugin/DataTables-1.10.18/js/dataTables.bootstrap4.min.js"></script>
     <script src="base/js/base.js"></script>
     <script>
         $(document).ready(function () {
@@ -247,7 +253,8 @@
                     <div class="card-body p-3">
                         您的瀏覽器不支援javascript，但不影響網頁內容陳述，如開啟JavaScript，可得到視覺與特效的最佳瀏覽
                         <br>列印功能：請按下ctrl+P開啟列印視窗,或由工具列中選擇列印功能
-                        <br>如需要選擇字級大小，IE6請利用鍵盤按住ALT鍵+ V → X → (G)最大(L)較大(M)中(S)較小(A)小，來選擇適合您的文字大小， 而IE7或Firefox瀏覽器則可利用鍵盤 Ctrl
+                        <br>如需要選擇字級大小，IE6請利用鍵盤按住ALT鍵+ V → X → (G)最大(L)較大(M)中(S)較小(A)小，來選擇適合您的文字大小，
+                        而IE7或Firefox瀏覽器則可利用鍵盤 Ctrl
                         + (+)放大(-)縮小來改變字型大小，如需要回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←)
                     </div>
                 </div>
