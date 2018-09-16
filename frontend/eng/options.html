@@ -7,10 +7,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- Index Start -->
 <link rel="govtwsimpledc.xsd" href="http://www.gov.tw/schema/dc/" title="Dublin Core" />
-<meta name="DC.Title" content="Anle Land Office, Keelung City - About Us" />
+<meta name="DC.Title" content="Anle Land Office, Keelung City - Opinions" />
 <meta name="DC.Creator" content="Anle Land Office, Keelung City" />
-<meta name="DC.Subject" content="Anle Land Office, Keelung City - About Us" />
-<meta name="DC.Description" content="Anle Land Office, Keelung City - About Us" />
+<meta name="DC.Subject" content="Anle Land Office, Keelung City - Opinions" />
+<meta name="DC.Description" content="Anle Land Office, Keelung City - Opinions" />
 <meta name="DC.Contributor" content="Anle Land Office, Keelung City" />
 <meta name="DC.Type" content="text" />
 <meta name="DC.Format" content="text/html" />
@@ -31,7 +31,7 @@
 <!-- Index End -->
 <meta name="Accessible_website" content="Level Triple-A conformance Website,Web Content Accessibility">
 
-<title>Anle Land Office, Keelung City - About Us</title>
+<title>Anle Land Office, Keelung City - Opinions</title>
 
 
 <!-- Bootstrap CSS -->
@@ -68,7 +68,7 @@
                         <li class="breadcrumb-item">
                             <a href="intro.html">Home</a>
                         </li>
-                        <li class="breadcrumb-item active" aria-current="page">About Us</li>
+                        <li class="breadcrumb-item active" aria-current="page">Opinions</li>
                     </ol>
                 </nav>
             </div>
@@ -107,18 +107,85 @@
             <div class="card ml-3 mr-3 mt-3 subContent">
                 <div class="card-body">
                     <div class="markTag"></div>
-                    <h2>About Us</h2>
-                    <figure class="col-lg-3 col-sm-5 figure float-right ml-2">
-                        <img src="images/intro_01_pic.jpg" class="figure-img img-fluid w-100" alt="Anle Land Office photo">
-                    </figure>
+                    <h2>Opinions</h2>
+                    <p>Should you have any suggestions or comments, please do not hesitate to tell us. It is our pleasure to serve you.</p>
 
-                    <p>Divided into branch offices in July 1st, 1996,"Land Office, Keelung City", founded in April,
-                        1952, altered its name
-                        to "Anle Land Office, Keelung City", administering the land administrative affairs of Qidu,
-                        NuanNuan, Jhongshan and
-                        Anle districts in Keelung City. Until August 31st, 2014, the number the office in charge has
-                        totaled 78,817 lands
-                        and 94,812 structures, amounting to 10440 hectares in entire area.</p>
+                        <div class="col-md-12pl-0">
+                            <form name="suggestForm" method="post">
+                                <table class="table table-hover border-bottom rwd-table" summary="民意信箱填送表格，為6橫欄設計，第1橫欄為主題，第2橫欄為真實姓名，第3橫欄為電話，第4橫欄為E-MAIL，第5橫欄為問題類型，第6橫欄為內容。">
+                                    <caption class="sr-only">
+                                        民眾意見填送
+                                    </caption>
+                                    <tbody><tr>
+                                        <th width="20%" scope="row" class="bg-brown text-nowrap text-center">
+                                            <label for="topic">Subject</label> (mag_subject)
+                                        </th>
+                                        <td data-th="Subject">
+                                            <input name="title" type="text" class="form-control" id="topic" placeholder="Subject" title="Please input the subject of this message" onkeypress="hideError('errorTitle')">
+                                            <span id="errorTitle" class="red errortext">
+                                                <span class="fas fa-arrow-alt-square-up"></span> Please input the subject of this message
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th width="20%" scope="row" class="bg-brown text-nowrap text-center">
+                                            <label for="name">Name</label> (msg_name)
+                                        </th>
+                                        <td data-th="Name">
+                                            <input name="name" type="text" class="form-control" size="15" id="name" placeholder="Name" title="Please input your name" onkeypress="hideError('errorName')">
+                                            <span id="errorName" class="red errortext">
+                                                <span class="fas fa-arrow-alt-square-up"></span> Please input your name
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th width="20%" scope="row" class="bg-brown text-nowrap text-center">
+                                            <label for="tel">Tel</label> (msg_tel)
+                                        </th>
+                                        <td data-th="Tel">
+                                            <input name="tel" type="text" class="form-control" size="15" id="tel" placeholder="Tel" title="Please input your phone number">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th width="20%" scope="row" class="bg-brown text-nowrap text-center">
+                                            <label for="email">E-MAIL</label> (msg_email)
+                                        </th>
+                                        <td data-th="E-MAIL">
+                                            <input name="email" type="text" class="form-control" size="40" id="email" placeholder="E-MAIL" title="Please input your email" onkeypress="hideError('errorEmail')">
+                                            <span id="errorEmail" class="red errortext">
+                                                <span class="fas fa-arrow-alt-square-up"></span> Wrong format！
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th width="20%" scope="row" class="bg-brown text-nowrap text-center">
+                                            <label for="contents">Content</label> (mag_subject)
+                                        </th>
+                                        <td data-th="Content">
+                                            <textarea name="content" cols="60" rows="6" class="form-control" id="contents" placeholder="Message" title="Please input your message" onkeypress="hideError('errorContent')"></textarea>
+                                            <span id="errorContent" class="red errortext">
+                                                <span class="fas fa-arrow-alt-square-up"></span> Please input your message！
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" class="text-nowrap text-right" scope="row">
+                                            <button type="reset" class="btn btn-default">Reset</button>
+                                            <button type="submit" class="btn btn-primary">
+                                                Send
+                                                <span class="fab fa-telegram-plane"></span>
+                                            </button>
+                                            <br>(an_web.mdb/director)
+                                            <br>隱藏欄位紀錄留言日期(msg_date)
+                                            <br>送出後發信給系統和對方，存入DB後回到本頁並 <button type="button" class="btn btn-primary"
+                                                                data-toggle="modal" data-target="#statusinfo">彈出POP視窗</button>
+
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                            </form>
+
+                        </div>
 
                     <p class="text-primary">
                         Laste Update：2018/09/01
@@ -127,6 +194,26 @@
             </div>
         </div>
     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="statusinfo" tabindex="-1" role="dialog" aria-labelledby="statusinfoLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="statusinfoLabel">訊息</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>您的提案已經送出，感謝您的熱心參與。</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- /container -->
 
     <div id="footerTxt" class="d-print-none"></div>
