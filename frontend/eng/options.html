@@ -104,26 +104,30 @@
     <!-- container -->
     <div class="container">
         <div class="row">
-            <div class="card ml-3 mr-3 mt-3 subContent">
+<div class="card mb-5 ml-3 mr-3 mt-3 subContent">
                 <div class="card-body">
                     <div class="markTag"></div>
                     <h2>Opinions</h2>
-                    <p>Should you have any suggestions or comments, please do not hesitate to tell us. It is our pleasure to serve you.</p>
+                    <p>Should you have any suggestions or comments, please do not hesitate to tell us. It is our
+                        pleasure to serve you.</p>
 
-                        <div class="col-md-12pl-0">
-                            <form name="suggestForm" method="post">
-                                <table class="table table-hover border-bottom rwd-table" summary="This is a Mail table, 4 rows design, first row is Name, second row is Email, third row is Subject,fourth row is Content.">
-                                    <caption class="sr-only">
-                                        Suggestions and Comments
-                                    </caption>
-                                    <tbody><tr>
+                    <div class="col-md-12pl-0">
+                        <form name="suggestForm" method="post">
+                            <table class="table table-hover border-bottom rwd-table" summary="This is a Mail table, 4 rows design, first row is Name, second row is Email, third row is Subject,fourth row is Content.">
+                                <caption class="sr-only">
+                                    Suggestions and Comments
+                                </caption>
+                                <tbody>
+                                    <tr>
                                         <th width="20%" scope="row" class="bg-brown text-nowrap text-center">
                                             <label for="topic">Subject</label> (mag_subject)
                                         </th>
                                         <td data-th="Subject">
-                                            <input name="title" type="text" class="form-control" id="topic" placeholder="Subject" title="Please input the subject of this message" onkeypress="hideError('errorTitle')">
+                                            <input name="title" type="text" class="form-control" id="topic" placeholder="Subject"
+                                                title="Please input the subject of this message" onkeypress="hideError('errorTitle')">
                                             <span id="errorTitle" class="red errortext">
-                                                <span class="fas fa-arrow-alt-square-up"></span> Please input the subject of this message
+                                                <span class="fas fa-arrow-alt-square-up"></span> Please input the
+                                                subject of this message
                                             </span>
                                         </td>
                                     </tr>
@@ -132,7 +136,8 @@
                                             <label for="name">Name</label> (msg_name)
                                         </th>
                                         <td data-th="Name">
-                                            <input name="name" type="text" class="form-control" size="15" id="name" placeholder="Name" title="Please input your name" onkeypress="hideError('errorName')">
+                                            <input name="name" type="text" class="form-control" size="15" id="name"
+                                                placeholder="Name" title="Please input your name" onkeypress="hideError('errorName')">
                                             <span id="errorName" class="red errortext">
                                                 <span class="fas fa-arrow-alt-square-up"></span> Please input your name
                                             </span>
@@ -143,7 +148,8 @@
                                             <label for="tel">Tel</label> (msg_tel)
                                         </th>
                                         <td data-th="Tel">
-                                            <input name="tel" type="text" class="form-control" size="15" id="tel" placeholder="Tel" title="Please input your phone number">
+                                            <input name="tel" type="text" class="form-control" size="15" id="tel"
+                                                placeholder="Tel" title="Please input your phone number">
                                         </td>
                                     </tr>
                                     <tr>
@@ -151,7 +157,8 @@
                                             <label for="email">E-MAIL</label> (msg_email)
                                         </th>
                                         <td data-th="E-MAIL">
-                                            <input name="email" type="text" class="form-control" size="40" id="email" placeholder="E-MAIL" title="Please input your email" onkeypress="hideError('errorEmail')">
+                                            <input name="email" type="text" class="form-control" size="40" id="email"
+                                                placeholder="E-MAIL" title="Please input your email" onkeypress="hideError('errorEmail')">
                                             <span id="errorEmail" class="red errortext">
                                                 <span class="fas fa-arrow-alt-square-up"></span> Wrong format！
                                             </span>
@@ -162,9 +169,11 @@
                                             <label for="contents">Content</label> (mag_subject)
                                         </th>
                                         <td data-th="Content">
-                                            <textarea name="content" cols="60" rows="6" class="form-control" id="contents" placeholder="Message" title="Please input your message" onkeypress="hideError('errorContent')"></textarea>
+                                            <textarea name="content" cols="60" rows="6" class="form-control" id="contents"
+                                                placeholder="Message" title="Please input your message" onkeypress="hideError('errorContent')"></textarea>
                                             <span id="errorContent" class="red errortext">
-                                                <span class="fas fa-arrow-alt-square-up"></span> Please input your message！
+                                                <span class="fas fa-arrow-alt-square-up"></span> Please input your
+                                                message！
                                             </span>
                                         </td>
                                     </tr>
@@ -178,14 +187,15 @@
                                             <br>(an_web.mdb/director)
                                             <br>隱藏欄位紀錄留言日期(msg_date)
                                             <br>送出後發信給系統和對方，存入DB後回到本頁並 <button type="button" class="btn btn-primary"
-                                                                data-toggle="modal" data-target="#statusinfo">彈出POP視窗</button>
+                                                data-toggle="modal" data-target="#statusinfo">彈出POP視窗</button>
 
                                         </td>
                                     </tr>
-                                </tbody></table>
-                            </form>
+                                </tbody>
+                            </table>
+                        </form>
 
-                        </div>
+                    </div>
 
                     <p class="text-primary">
                         Laste Update：2018/09/01
@@ -199,13 +209,13 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="statusinfoLabel">訊息</h5>
+                    <h5 class="modal-title" id="statusinfoLabel">Information</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>您的提案已經送出，感謝您的熱心參與。</p>
+                    <p>Your proposal has been sent, thank you for your kind participation.</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
@@ -235,11 +245,17 @@
             <div class="row">
                 <div class="card m-3 banner">
                     <div class="card-body p-3">
-                        您的瀏覽器不支援javascript，但不影響網頁內容陳述，如開啟JavaScript，可得到視覺與特效的最佳瀏覽
-                        <br>列印功能：請按下ctrl+P開啟列印視窗,或由工具列中選擇列印功能
-                        <br>如需要選擇字級大小，IE6請利用鍵盤按住ALT鍵+ V → X → (G)最大(L)較大(M)中(S)較小(A)小，來選擇適合您的文字大小，
-                        而IE7或Firefox瀏覽器則可利用鍵盤 Ctrl
-                        + (+)放大(-)縮小來改變字型大小，如需要回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←)
+                        Your browser does not support javascript, but does not affect the content of the web page. If
+                        you enable JavaScript,
+                        you can get the best view of visual and special effects.
+                        <br>Printing function: press ctrl+P to open the printing window, or select the printing
+                        function from the toolbar.
+                        <br>If you need to select the font size, IE6 please use the keyboard to hold down the ALT key +
+                        V → X → (G) maximum (L)
+                        larger (M) medium (S) smaller (A) small, to choose the size of your text, IE7 or Firefox
+                        browser can use the keyboard
+                        Ctrl + (+) Zoom in (-) zoom out to change the font size. If you need to go back to the previous
+                        page, you can use the Alt+Left arrow key provided by the browser (←)
                     </div>
                 </div>
             </div>
