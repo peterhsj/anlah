@@ -541,6 +541,19 @@
                     font-size: 0.95rem;
                 }
             }
+            li {
+                &.list-group-title {
+                    font-size: 0.9rem;
+                }
+
+                &.list-group-subtitle {
+                    font-size: 0.9rem;
+                }
+
+                &.list-group-item {
+                    font-size: 0.85rem;
+                }
+            }
         }
         table {
             tr {
@@ -593,6 +606,20 @@
             &.tableList {
                 li {
                     font-size: 1.2rem;
+                }
+            }
+
+            li {
+                &.list-group-title {
+                    font-size: 1.2rem;
+                }
+
+                &.list-group-subtitle {
+                    font-size: 1.2rem;
+                }
+
+                &.list-group-item {
+                    font-size: 1rem;
                 }
             }
         }
@@ -878,11 +905,6 @@ span.fa-file-alt {
 
         .list-group-title {
             background-color: #337ab7;
-            // border-style: solid;
-            // border-width: 5px 5px 5px 40px;
-            // border-color: #337ab7 #337ab7 #337ab7 transparent;
-            // border-width: 0;
-            // border-bottom: 2px solid #ffffff;
             color: #FFFFFF;
             font-size: 1rem;
             font-weight: 900;
@@ -895,6 +917,7 @@ span.fa-file-alt {
             background-color: #f7c885;
             font-size: 0.95rem;
             list-style-type: none;
+            margin-bottom: 0.5rem;
             padding: .25rem 0.5rem;
         }
 
