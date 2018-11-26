@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html class="no-js css-menubar" lang="zh-Hant-TW">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+  <meta name="description" content="bootstrap admin template">
+  <meta name="author" content="">
+
+  <title>基隆市安樂地政事務所-網站管理系統</title>
+
+  <link rel="apple-touch-icon" href="../base/assets/images/apple-touch-icon.png">
+  <link rel="shortcut icon" href="../base/assets/images/apple-touch-icon.png">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../global/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../global/css/bootstrap-extend.min.css">
+
+  <!-- Plugins -->
+  <link rel="stylesheet" href="../global/vendor/animsition/animsition.css">
+  <link rel="stylesheet" href="../global/vendor/asscrollable/asScrollable.css">
+  <link rel="stylesheet" href="../global/vendor/switchery/switchery.css">
+  <link rel="stylesheet" href="../global/vendor/intro-js/introjs.css">
+  <link rel="stylesheet" href="../global/vendor/slidepanel/slidePanel.css">
+  <link rel="stylesheet" href="../global/vendor/flag-icon-css/flag-icon.css">
+  <link rel="stylesheet" href="../assets/examples/css/structure/pagination.css">
+  <link rel="stylesheet" href="../global/vendor/formvalidation/formValidation.css">
+  <link rel="stylesheet" href="../base/assets/examples/css/forms/validation.css">
+  <link rel="stylesheet" href="../global/vendor/select2/select2.css">
+  <link rel="stylesheet" href="../global/vendor/bootstrap-tokenfield/bootstrap-tokenfield.css">
+  <link rel="stylesheet" href="../global/vendor/bootstrap-tagsinput/bootstrap-tagsinput.css">
+  <link rel="stylesheet" href="../global/vendor/bootstrap-select/bootstrap-select.css">
+  <!-- <link rel="stylesheet" href="global/vendor/icheck/icheck.css">
+    <link rel="stylesheet" href="global/vendor/switchery/switchery.css">
+    <link rel="stylesheet" href="global/vendor/asrange/asRange.css">
+    <link rel="stylesheet" href="global/vendor/ionrangeslider/ionrangeslider.min.css">
+    <link rel="stylesheet" href="global/vendor/asspinner/asSpinner.css">
+    <link rel="stylesheet" href="global/vendor/clockpicker/clockpicker.css">
+    <link rel="stylesheet" href="global/vendor/ascolorpicker/asColorPicker.css">
+    <link rel="stylesheet" href="global/vendor/bootstrap-touchspin/bootstrap-touchspin.css">
+    <link rel="stylesheet" href="global/vendor/jquery-labelauty/jquery-labelauty.css">
+    <link rel="stylesheet" href="global/vendor/bootstrap-datepicker/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="global/vendor/bootstrap-maxlength/bootstrap-maxlength.css">
+    <link rel="stylesheet" href="global/vendor/timepicker/jquery-timepicker.css">
+    <link rel="stylesheet" href="global/vendor/jquery-strength/jquery-strength.css">-->
+  <link rel="stylesheet" href="../global/vendor/multi-select/multi-select.css">
+  <!--<link rel="stylesheet" href="global/vendor/typeahead-js/typeahead.css"> -->
+  <link rel="stylesheet" href="../base/assets/examples/css/forms/advanced.css">
+
+
+  <!-- Fonts -->
+  <link rel="stylesheet" href="../global/fonts/font-awesome/font-awesome.css">
+  <link rel="stylesheet" href="../global/fonts/web-icons/web-icons.min.css">
+  <link rel="stylesheet" href="../global/fonts/brand-icons/brand-icons.min.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic">
+    <link rel="stylesheet" href="../base/assets/css/site.css">
+
+  <style>
+  </style>
+
+  <!--[if lt IE 9]>
+    <script src="global/vendor/html5shiv/html5shiv.min.js"></script>
+    <![endif]-->
+
+  <!--[if lt IE 10]>
+    <script src="global/vendor/media-match/media.match.min.js"></script>
+    <script src="global/vendor/respond/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- Scripts -->
+  <script src="../global/vendor/breakpoints/breakpoints.js"></script>
+  <script>
+    Breakpoints();
+  </script>
+</head>
+
+<body class="animsition">
+  <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+  <nav class="site-navbar navbar navbar-default navbar-fixed-top navbar-mega" role="navigation">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggler hamburger hamburger-close navbar-toggler-left hided" data-toggle="menubar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="hamburger-bar"></span>
+      </button>
+      <button type="button" class="navbar-toggler collapsed" data-target="#site-navbar-collapse" data-toggle="collapse">
+        <i class="icon wb-more-horizontal" aria-hidden="true"></i>
+      </button>
+      <div class="navbar-brand navbar-brand-center site-gridmenu-toggle">
+        <img class="navbar-brand-logo" src="../base/assets/images/logo.png" title="Remark">
+        <span class="navbar-brand-text hidden-xs-down"> 基隆市安樂地政事務所</span>
+      </div>
+      <button type="button" class="navbar-toggler collapsed" data-target="#site-navbar-search" data-toggle="collapse">
+        <span class="sr-only">Toggle Search</span>
+        <i class="icon wb-search" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div class="navbar-container container-fluid">
+      <!-- Navbar Collapse -->
+      <div class="collapse navbar-collapse navbar-collapse-toolbar" id="site-navbar-collapse">
+        <!-- Navbar Toolbar -->
+        <ul class="nav navbar-toolbar">
+          <li class="nav-item hidden-float" id="toggleMenubar">
+            <a class="nav-link" data-toggle="menubar" href="#" role="button">
+              <i class="icon hamburger hamburger-arrow-left">
+                <span class="sr-only">Toggle menubar</span>
+                <span class="hamburger-bar"></span>
+              </i>
+            </a>
+          </li>
+        </ul>
+        <!-- End Navbar Toolbar -->
+
+        <!-- Navbar Toolbar Right -->
+        <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right">
+
+          <li class="nav-item dropdown">
+            <a class="nav-link navbar-avatar" data-toggle="dropdown" href="#" aria-expanded="false" data-animation="scale-up" role="button">
+              您好：林大華 先生/小姐
+              <span class="avatar avatar-online">
+                <span class="icon wb-user" style="margin-left:10px;font-size:22px"></span>
+              </span>
+            </a>
+            <div class="dropdown-menu" role="menu">
+              <a class="dropdown-item" href="javascript:void(0)" role="menuitem">
+                <i class="icon wb-settings" aria-hidden="true"></i> 個人設定</a>
+              <div class="dropdown-divider" role="presentation"></div>
+              <a class="dropdown-item" href="../login.html" role="menuitem">
+                <i class="icon wb-power" aria-hidden="true"></i> 登出</a>
+            </div>
+          </li>
+        </ul>
+        <!-- End Navbar Toolbar Right -->
+      </div>
+      <!-- End Navbar Collapse -->
+
+      <!-- Site Navbar Seach -->
+      <div class="collapse navbar-search-overlap" id="site-navbar-search">
+        <form role="search">
+          <div class="form-group">
+            <div class="input-search">
+              <i class="input-search-icon wb-search" aria-hidden="true"></i>
+              <input type="text" class="form-control" name="site-search" placeholder="Search...">
+              <button type="button" class="input-search-close icon wb-close" data-target="#site-navbar-search" data-toggle="collapse" aria-label="Close"></button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- End Site Navbar Seach -->
+    </div>
+  </nav>
+  <!-- 左選單 -->
+  <div class="site-menubar">
+    <div class="site-menubar-body">
+      <div>
+        <ul class="site-menu" data-plugin="menu">
+          <li class="site-menu-category">網站管理項目</li>
+          <li class="site-menu-item has-sub active">
+            <a href="javascript:void(0)">
+              <i class="site-menu-icon wb-bookmark" aria-hidden="true"></i>
+              <span class="site-menu-title">單元項目</span>
+              <span class="site-menu-arrow">
+              </span>
+            </a>
+            <ul class="site-menu-sub">
+              <li class="site-menu-item">
+                <a href="../news/news-main.html">
+                  <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
+                  <span class="site-menu-title">最新消息</span>
+                </a>
+              </li>
+              <li class="site-menu-item">
+                <a href="../law/law-main.html">
+                  <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
+                  <span class="site-menu-title">法令新訊</span>
+                </a>
+              </li>
+              <li class="site-menu-item">
+                <a href="../rule/rule-main.html">
+                  <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
+                  <span class="site-menu-title">行政規章專區</span>
+                </a>
+              </li>
+              <li class="site-menu-item">
+                <a href="../email/email-main.html">
+                  <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
+                  <span class="site-menu-title">地政答客問</span>
+                </a>
+              </li>
+              <li class="site-menu-item">
+                <a href="../director/directorEmail-main.html">
+                  <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
+                  <span class="site-menu-title">主任信箱</span>
+                </a>
+              </li>
+              <li class="site-menu-item">
+                <a href="../vote/question-main.html">
+                  <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
+                  <span class="site-menu-title">問卷調查</span>
+                </a>
+              </li>
+              <li class="site-menu-item">
+                <a href="../qa/qa-main.html">
+                  <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
+                  <span class="site-menu-title">Q & A</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="site-menu-item has-sub active">
+            <a href="javascript:void(0)">
+              <i class="site-menu-icon wb-bookmark" aria-hidden="true"></i>
+              <span class="site-menu-title">員工專區</span>
+              <span class="site-menu-arrow">
+              </span>
+            </a>
+            <ul class="site-menu-sub">
+              <li class="site-menu-item">
+                <a href="../board/board-main.html">
+                  <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
+                  <span class="site-menu-title">公佈欄</span>
+                </a>
+              </li>
+              <li class="site-menu-item">
+                <a href="../meeting/meeting-main.html">
+                  <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
+                  <span class="site-menu-title">會議紀錄</span>
+                </a>
+              </li>
+              <li class="site-menu-item">
+                <a href="../document/document-main.html">
+                  <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
+                  <span class="site-menu-title">表單下載</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="site-menu-item has-sub active">
+            <a href="javascript:void(0)">
+              <i class="site-menu-icon wb-bookmark" aria-hidden="true"></i>
+              <span class="site-menu-title">線上申辦</span>
+              <span class="site-menu-arrow">
+              </span>
+            </a>
+            <ul class="site-menu-sub">
+              <li class="site-menu-item has-sub">
+                <a href="../reservation/reservation-main.html">
+                  <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
+                  <span class="site-menu-title">線上預約服務</span>
+                </a>
+              </li>
+              <li class="site-menu-item has-sub">
+                <a href="../transcript/transcript-main.html">
+                  <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
+                  <span class="site-menu-title">網路申請英文謄本</span>
+                </a>
+              </li>
+              <li class="site-menu-item has-sub">
+                <a href="../copy/copy-main.html">
+                  <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
+                  <span class="site-menu-title">檔案閱覽抄錄複製</span>
+                </a>
+              </li>
+              <li class="site-menu-item has-sub">
+                <a href="../landprice/landprice-main.html">
+                  <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
+                  <span class="site-menu-title">公告地價資料</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="site-menu-item has-sub active open">
+            <a href="javascript:void(0)">
+              <i class="site-menu-icon wb-bookmark" aria-hidden="true"></i>
+              <span class="site-menu-title">網站設定</span>
+              <span class="site-menu-arrow">
+              </span>
+            </a>
+            <ul class="site-menu-sub">
+              <li class="site-menu-item has-sub active">
+                <a href="user-manager-main.html">
+                  <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
+                  <span class="site-menu-title">人員權限管理</span>
+                </a>
+              </li>
+              <li class="site-menu-item has-sub">
+                <a href="typeSetup-main.html">
+                  <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
+                  <span class="site-menu-title">發佈類別設定</span>
+                </a>
+              </li>
+              <li class="site-menu-item has-sub">
+                <a href="emailSetup-main.html">
+                  <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
+                  <span class="site-menu-title">Email 顯示設定</span>
+                </a>
+              </li>
+              <li class="site-menu-item has-sub">
+                <a href="userAccount-main.html">
+                  <i class="site-menu-icon icon fa-dot-circle-o" aria-hidden="true"></i>
+                  <span class="site-menu-title">瀏覽人數統計</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- /左選單 -->
+
+  <!-- Page -->
+  <div class="page">
+    <div class="page-header">
+      <h1 class="page-title">瀏覽人數統計</h1>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="../index.html">首頁</a>
+        </li>
+        <li class="breadcrumb-item active">瀏覽人數統計</li>
+      </ol>
+      <div class="page-header-actions"></div>
+    </div>
+
+    <div class="page-content container-fluid">
+      <form id="exampleFullForm" autocomplete="off">
+        <!-- 內文編輯區 -->
+        <div class="panel panel-bordered">
+          <div class="panel-body">
+            <div class="row row-lg">
+              <div class="col-md-4 form-horizontal">
+                <!-- 瀏覽人數統計 -->
+                <div class="form-group row">
+                  <label class="col-xl-12 col-md-3 form-control-label">瀏覽人數統計
+                    <span class="required">*</span>
+                  </label>
+                  <div class=" col-xl-12 col-md-9">
+                    <input type="text" class="form-control" name="ssmtp" placeholder="" required="" value="123456">
+                  </div>
+                </div>
+                <!-- /瀏覽人數統計 -->
+              </div>
+            </div>
+          </div>
+          <div class="panel-footer">
+            <div class="form-group col-xl-12 text-right padding-top-m">
+              <a href="#" class="btn btn-default" id="validateButton1">取消</a>
+              <button type="submit" class="btn btn-primary" id="validateButton1">確認</button>
+            </div>
+          </div>
+        </div>
+        <!-- /內文編輯區 -->
+      </form>
+
+    </div>
+  </div>
+  <!-- End Page -->
+
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="site-footer-right">© 2018 基隆市安樂地政事務所
+    </div>
+  </footer>
+  <!-- Core  -->
+  <script src="../global/vendor/babel-external-helpers/babel-external-helpers.js"></script>
+  <script src="../global/vendor/jquery/jquery.js"></script>
+  <script src="../global/vendor/popper-js/umd/popper.min.js"></script>
+  <script src="../global/vendor/bootstrap/bootstrap.js"></script>
+  <script src="../global/vendor/animsition/animsition.js"></script>
+  <script src="../global/vendor/mousewheel/jquery.mousewheel.js"></script>
+  <script src="../global/vendor/asscrollbar/jquery-asScrollbar.js"></script>
+  <script src="../global/vendor/asscrollable/jquery-asScrollable.js"></script>
+  <script src="../global/vendor/ashoverscroll/jquery-asHoverScroll.js"></script>
+
+  <!-- Plugins -->
+  <script src="../global/vendor/switchery/switchery.js"></script>
+  <script src="../global/vendor/intro-js/intro.js"></script>
+  <script src="../global/vendor/screenfull/screenfull.js"></script>
+  <script src="../global/vendor/slidepanel/jquery-slidePanel.js"></script>
+  <script src="../global/vendor/formvalidation/formValidation.min.js"></script>
+  <script src="../global/vendor/formvalidation/framework/bootstrap4.min.js"></script>
+  <script src="../global/vendor/select2/select2.full.min.js"></script>
+  <!-- <script src="global/vendor/bootstrap-tokenfield/bootstrap-tokenfield.min.js"></script>
+        <script src="global/vendor/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>-->
+
+  <script src="../global/vendor/bootstrap-select/bootstrap-select.js"></script>
+
+  <script src="../global/vendor/aspaginator/jquery-asPaginator.min.js"></script>
+  <!-- <script src="global/vendor/icheck/icheck.min.js"></script>
+        <script src="global/vendor/switchery/switchery.js"></script>
+        <script src="global/vendor/asrange/jquery-asRange.min.js"></script>
+        <script src="global/vendor/ionrangeslider/ion.rangeSlider.min.js"></script>
+        <script src="global/vendor/asspinner/jquery-asSpinner.min.js"></script>
+        <script src="global/vendor/clockpicker/bootstrap-clockpicker.min.js"></script>
+        <script src="global/vendor/ascolor/jquery-asColor.min.js"></script>
+        <script src="global/vendor/asgradient/jquery-asGradient.min.js"></script>
+        <script src="global/vendor/ascolorpicker/jquery-asColorPicker.min.js"></script>
+        <script src="global/vendor/bootstrap-maxlength/bootstrap-maxlength.js"></script>
+        <script src="global/vendor/jquery-knob/jquery.knob.js"></script>
+        <script src="global/vendor/bootstrap-touchspin/bootstrap-touchspin.min.js"></script>
+        <script src="global/vendor/jquery-labelauty/jquery-labelauty.js"></script>
+        <script src="global/vendor/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+        <script src="global/vendor/timepicker/jquery.timepicker.min.js"></script>
+        <script src="global/vendor/datepair/datepair.min.js"></script>
+        <script src="global/vendor/datepair/jquery.datepair.min.js"></script>
+        <script src="global/vendor/jquery-strength/password_strength.js"></script>
+        <script src="global/vendor/jquery-strength/jquery-strength.min.js"></script> -->
+  <script src="../global/vendor/multi-select/jquery.multi-select.js"></script>
+  <!-- <script src="global/vendor/typeahead-js/bloodhound.min.js"></script>
+        <script src="global/vendor/typeahead-js/typeahead.jquery.min.js"></script>
+        <script src="global/vendor/jquery-placeholder/jquery.placeholder.js"></script> -->
+
+  <!-- Scripts -->
+  <script src="../global/js/Component.js"></script>
+  <script src="../global/js/Plugin.js"></script>
+  <script src="../global/js/Base.js"></script>
+  <script src="../global/js/Config.js"></script>
+
+  <script src="../base/assets/js/Section/Menubar.js"></script>
+  <script src="../base/assets/js/Section/GridMenu.js"></script>
+  <script src="../base/assets/js/Section/Sidebar.js"></script>
+  <script src="../base/assets/js/Section/PageAside.js"></script>
+  <script src="../base/assets/js/Plugin/menu.js"></script>
+
+  <script src="../global/js/config/colors.js"></script>
+  <script src="../base/assets/js/config/tour.js"></script>
+  <script>
+    Config.set('assets', 'base/assets');
+  </script>
+
+  <!-- Page -->
+  <script src="../base/assets/js/Site.js"></script>
+  <script src="../global/js/Plugin/asscrollable.js"></script>
+  <script src="../global/js/Plugin/slidepanel.js"></script>
+  <script src="../global/js/Plugin/switchery.js"></script>
+  <script src="../global/js/Plugin/select2.js"></script>
+  <script src="../global/js/Plugin/bootstrap-tokenfield.js"></script>
+  <script src="../global/js/Plugin/bootstrap-tagsinput.js"></script>
+  <script src="../global/js/Plugin/bootstrap-select.js"></script>
+
+  <script src="../global/js/Plugin/aspaginator.js"></script>
+  <!-- <script src="global/js/Plugin/icheck.js"></script>
+    <script src="global/js/Plugin/switchery.js"></script>
+    <script src="global/js/Plugin/asrange.js"></script>
+    <script src="global/js/Plugin/ionrangeslider.js"></script>
+    <script src="global/js/Plugin/asspinner.js"></script>
+    <script src="global/js/Plugin/clockpicker.js"></script>
+    <script src="global/js/Plugin/ascolorpicker.js"></script>
+    <script src="global/js/Plugin/bootstrap-maxlength.js"></script>
+    <script src="global/js/Plugin/jquery-knob.js"></script>
+    <script src="global/js/Plugin/bootstrap-touchspin.js"></script>
+    <script src="global/js/Plugin/card.js"></script>
+    <script src="global/js/Plugin/jquery-labelauty.js"></script>
+    <script src="global/js/Plugin/bootstrap-datepicker.js"></script>
+    <script src="global/js/Plugin/jt-timepicker.js"></script>
+    <script src="global/js/Plugin/datepair.js"></script>
+    <script src="global/js/Plugin/jquery-strength.js"></script> -->
+  <script src="../global/js/Plugin/multi-select.js"></script>
+  <script src="../global/js/Plugin/jquery-placeholder.js"></script>
+  <script src="../global/js/Plugin/input-group-file.js"></script>
+
+  <script src="../base/assets/examples/js/forms/advanced.js"></script>
+
+  <script src="../base/assets/examples/js/forms/validation.js"></script>
+</body>
+
+</html>

@@ -859,4 +859,11 @@
 .bg-lightreay {
   background-color: #f2f2f2;
 }
+.appendPic {
+  max-width: 35%;
+
+  @include phone-width {
+    max-width: 100%;
+  }
+}
 /*# sourceMappingURL=base.css.map */

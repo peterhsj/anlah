@@ -1,2 +1,0 @@
-# anlah
-Anlah web prototype
